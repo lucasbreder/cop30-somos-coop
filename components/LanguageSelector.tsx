@@ -1,8 +1,9 @@
 import { languages } from "@/data/languages"
+import { motion } from "motion/react"
 
 export const LanguageSelector = () => {
     return (
-        <div className="flex gap-15 justify-center">
+        <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1}}} exit={{opacity: 0}}  className="flex gap-15 justify-center">
             {languages.map(lang => {
                 return (
                     <div className="flex flex-col gap-15 items-center" key={lang.code}>
@@ -11,6 +12,6 @@ export const LanguageSelector = () => {
                     </div>
                 )
             })}
-        </div>
+        </motion.div>
     )
 }
