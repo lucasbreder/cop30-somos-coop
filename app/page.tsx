@@ -1,6 +1,6 @@
-import { Intro } from "@/components/Intro";
+import { BaseLayout } from "@/components/BaseLayout";
 
 
 export default function Home() {
-  return <Intro/>;
+  return <BaseLayout />;
 }

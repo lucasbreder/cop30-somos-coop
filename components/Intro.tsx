@@ -1,12 +1,12 @@
 "use client"
 import { motion } from "motion/react"
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, ReactNode } from "react"
 import { LanguageSelector } from "./LanguageSelector"
 import { ScreenSaver } from "./ScreenSaver"
 import { ScreenSaverTranstion } from "./ScreenSaverTransition"
 import { AnimatePresence } from "motion/react"
 
-export const Intro = () => {
+export const Intro = ({children} :{children?:ReactNode[] | ReactNode}) => {
 
   const [showIntro, setShowIntro] = useState(true)
   const [timer, setTimer] = useState(0)
@@ -54,7 +54,10 @@ export const Intro = () => {
          <AnimatePresence><ScreenSaver /></AnimatePresence>}
          {!showIntro && <ScreenSaverTranstion/>}
          {!showIntro && <AnimatePresence>
-          <LanguageSelector />
+          <motion.div className="w-full h-full" initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8}}} exit={{opacity: 0}}>
+          {children}
+          </motion.div>
+          {!children && <LanguageSelector />}
           <motion.div className="absolute bottom-7 left-1/2" initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1}}} exit={{opacity: 0}}>{timer}</motion.div>
           </AnimatePresence>}
     </div>
