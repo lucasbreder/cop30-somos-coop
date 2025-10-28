@@ -11,7 +11,7 @@ export const Selector = () => {
 
   const data = objectives;
 
-  
+
   const totalItems = data.length;
   
   // 1. Refs e MotionValue
@@ -113,7 +113,7 @@ export const Selector = () => {
               stiffness: 300,
               damping: 25,
             }}
-            key={obj.id}
+            key={index}
           >
             {obj.id}
           </motion.div>

@@ -6,7 +6,7 @@ import { ScreenSaver } from "./ScreenSaver"
 import { ScreenSaverTranstion } from "./ScreenSaverTransition"
 import { AnimatePresence } from "motion/react"
 
-export const Intro = ({children} :{children?:ReactNode[] | ReactNode}) => {
+export const Intro = ({children} :{children?:ReactNode}) => {
 
   const [showIntro, setShowIntro] = useState(true)
   const [timer, setTimer] = useState(0)
@@ -54,12 +54,16 @@ export const Intro = ({children} :{children?:ReactNode[] | ReactNode}) => {
          <AnimatePresence><ScreenSaver /></AnimatePresence>}
          {!showIntro && <ScreenSaverTranstion/>}
          {!showIntro && <AnimatePresence>
-          <motion.div className="w-full h-full" initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8}}} exit={{opacity: 0}}>
+          <motion.div className="w-full h-full" 
+          initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8}}} 
+          exit={{opacity: 0}}>
           {children}
           </motion.div>
-          {!children && <LanguageSelector />}
-          <motion.div className="absolute bottom-7 left-1/2" initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1}}} exit={{opacity: 0}}>{timer}</motion.div>
           </AnimatePresence>}
+          {!children && <LanguageSelector />}
+          <AnimatePresence>
+          <motion.div className="absolute bottom-7 left-1/2" initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1}}} exit={{opacity: 0}}>{timer}</motion.div>
+          </AnimatePresence>
     </div>
   )
 }

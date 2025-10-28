@@ -4,7 +4,7 @@ import { Selector } from "@/components/Selector";
 
 export default function Home() {
   return (
-    <BaseLayout className="flex items-center justify-center">
+    <BaseLayout>
         <div className="basis-full p-20">
           <Selector/>
         </div>

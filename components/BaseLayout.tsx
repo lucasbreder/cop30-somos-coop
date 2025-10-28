@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import { Intro } from "./Intro"
 
-export const BaseLayout = ({children, className} :{children?:ReactNode[] | ReactNode, className?:string}) => {
+export const BaseLayout = ({children} :{children?:ReactNode}) => {
     return (
         <Intro>
             {children}
