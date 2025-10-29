@@ -6,7 +6,7 @@ import { ScreenSaver } from "./ScreenSaver"
 import { ScreenSaverTranstion } from "./ScreenSaverTransition"
 import { AnimatePresence } from "motion/react"
 
-export const Intro = ({children} :{children?:ReactNode}) => {
+export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:boolean}) => {
 
   const [showIntro, setShowIntro] = useState(true)
   const [timer, setTimer] = useState(0)
@@ -24,7 +24,7 @@ export const Intro = ({children} :{children?:ReactNode}) => {
       let timer:NodeJS.Timeout;
 
       function startInterval() {  
-        timer = setInterval(() => setShowIntro(true), 10000);
+        timer = setInterval(() => setShowIntro(true), 30000);
       }
 
       const countdown = setInterval(() => {
@@ -49,21 +49,24 @@ export const Intro = ({children} :{children?:ReactNode}) => {
   }, [showContent]);
 
   return (
-    <div className="bg-blue-950 w-full h-full flex items-center justify-center absolute inset-0 z-50">
-         {showIntro &&  
-         <AnimatePresence><ScreenSaver /></AnimatePresence>}
-         {!showIntro && <ScreenSaverTranstion/>}
-         {!showIntro && <AnimatePresence>
-          <motion.div className="w-full h-full" 
-          initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8}}} 
-          exit={{opacity: 0}}>
-          {children}
-          </motion.div>
-          </AnimatePresence>}
-          {!children && <LanguageSelector />}
+    <div className={`${isHome ? "bg-primary" : ""} w-full h-full flex items-center justify-center z-50 relative`}>
+        {showIntro &&  
           <AnimatePresence>
+            <ScreenSaver />
+          </AnimatePresence>}
+        {!showIntro && <ScreenSaverTranstion/>}
+        {!showIntro && 
+        <AnimatePresence>
+          <motion.div className="w-full h-full" 
+            initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8}}} 
+            exit={{opacity: 0}}>
+            {children}
+            {isHome && <LanguageSelector />}
+          </motion.div>
+        </AnimatePresence>}
+        <AnimatePresence>
           <motion.div className="absolute bottom-7 left-1/2" initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1}}} exit={{opacity: 0}}>{timer}</motion.div>
-          </AnimatePresence>
+        </AnimatePresence>
     </div>
   )
 }

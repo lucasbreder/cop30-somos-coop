@@ -4,7 +4,9 @@ import { motion } from "motion/react"
 export const ScreenSaver = () => {
 
   return (
-   <motion.div  initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} className="bg-blue-950 w-full h-full flex items-center justify-center absolute inset-0 z-50">
+   <motion.div
+    initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} 
+    className="bg-primary w-full h-full flex items-center justify-center absolute inset-0 z-50">
           <motion.div
             className="bg-white h-20 w-20 rounded-full"
             animate={{
