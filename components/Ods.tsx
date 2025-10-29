@@ -46,9 +46,9 @@ export const Ods = () => {
             </div>}
         </div>
         <div>
-         <Map activeCase={activeCase} currentCases={dataCases} />
+         <Map setActiveCase={setActiveCase} activeCase={activeCase} currentCases={dataCases} />
         </div>
-        <div></div>
+        <div className="basis-4/12"></div>
        </div>
     )
 }

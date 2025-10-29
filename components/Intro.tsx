@@ -24,7 +24,7 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
       let timer:NodeJS.Timeout;
 
       function startInterval() {  
-        timer = setInterval(() => setShowIntro(true), 30000);
+        timer = setInterval(() => setShowIntro(true), 60000);
       }
 
       const countdown = setInterval(() => {
@@ -58,7 +58,7 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
         {!showIntro && 
         <AnimatePresence>
           <motion.div className="w-full h-full" 
-            initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8}}} 
+            initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5}}} 
             exit={{opacity: 0}}>
             {children}
             {isHome && <LanguageSelector />}

@@ -1,37 +1,30 @@
 "use client"
-
-import { Case } from "@/types/Case"
 import { useEffect, useRef } from "react"
 import { Pins } from "./Pins"
+import { MapCaseProps } from "@/types/MapCaseProps"
 
-export const Map = ({activeCase, currentCases}:{activeCase?:Case, currentCases?:Case[]}) => {
+export const Map = ({activeCase, currentCases, setActiveCase}:MapCaseProps) => {
   const mapSvg = useRef<SVGSVGElement>(null)
+  
 
   useEffect(() => {
     if(activeCase) {
       const state = mapSvg.current ? mapSvg.current.querySelector(`#${activeCase.state}`) : null
+      const allPaths = mapSvg.current ? mapSvg.current.querySelectorAll('path') : null
+      if(allPaths) {
+        allPaths.forEach((path) => {
+          path.classList.remove('active')
+        })
+      }
       if(state) {
         state.classList.add('active')
       }
     }
   },[activeCase])
 
-  useEffect(() => {
-    if(currentCases) {
-      currentCases.forEach((cs) => {
-        const state = mapSvg.current ? mapSvg.current.querySelector(`#${cs.state}`) : null
-        console.log(state?.scrollLeft)
-        // const path = document.createElement('path')
-        // path.classList.add('pin')
-        // path.style.backgroundColor = `var(--color-ods${cs?.mainOds})`
-        // state?.appendChild(path)
-      })
-    }
-  },[currentCases])
-
     return (
       <div className="relative">
-        {currentCases && <Pins activeCase={activeCase} states={currentCases?.map((item) => (item.state))}/>}
+        {currentCases && <Pins currentCases={currentCases} setActiveCase={setActiveCase} activeCase={activeCase}/>}
       <svg
         ref={mapSvg}
         id="svg2"
