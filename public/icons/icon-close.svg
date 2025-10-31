@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.93 45.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #003a49;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #003a49;
+        font-family: Intro-Book-Alt, 'Intro Book Alt';
+        font-size: 25.59px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <rect class="cls-1" x=".5" y=".5" width="44.93" height="44.93" rx="22.47" ry="22.47"/>
+      <text class="cls-2" transform="translate(14.88 33.02)"><tspan x="0" y="0">X</tspan></text>
+    </g>
+  </g>
+</svg>

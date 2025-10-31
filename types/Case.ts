@@ -14,7 +14,7 @@ export type Case = {
     asideOds: number[]
     state: BrazilianState
     thumbnail?: string
-    galery?: string[]
+    gallery?: string[]
 }
 
 export enum CaseCategory {

@@ -6,87 +6,87 @@ export const ods:Content<Objective> = {
         {
             id: 1,
             name: "Erradicação da Pobreza",
-            seal: "/teste.jpg"
+            seal: "/ods/ods1.svg"
         },
         {
             id: 2,
             name: "Fome Zero e Agricultura Sustentável",
-            seal: "/teste.jpg"
+            seal: "/ods/ods2.svg"
         },
         {
             id: 3,
             name: "Saúde e Bem-Estar",
-            seal: "/teste.jpg"
+            seal: "/ods/ods3.svg"
         },
         {
             id: 4,
             name: "Educação de Qualidade",
-            seal: "/teste.jpg"
+            seal: "/ods/ods4.svg"
         },
         {
             id: 5,
             name: "Igualdade de Gênero",
-            seal: "/teste.jpg"
+            seal: "/ods/ods5.svg"
         },
         {
             id: 6,
             name: "Água Potável e Saneamento",
-            seal: "/teste.jpg"
+            seal: "/ods/ods6.svg"
         },
         {
             id: 7,
             name: "Energia Limpa e Acessível",
-            seal: "/teste.jpg"
+            seal: "/ods/ods7.svg"
         },
         {
             id: 8,
             name: "Trabalho Decente e Crescimento Econômico",
-            seal: "/teste.jpg"
+            seal: "/ods/ods8.svg"
         },
         {
             id: 9,
             name: "Indústria, Inovação e Infraestrutura",
-            seal: "/teste.jpg"
+            seal: "/ods/ods9.svg"
         },
         {
             id: 10,
             name: "Redução das Desigualdades",
-            seal: "/teste.jpg"
+            seal: "/ods/ods10.svg"
         },
         {
             id: 11,
             name: "Cidades e Comunidades Sustentáveis",
-            seal: "/teste.jpg"
+            seal: "/ods/ods11.svg"
         },
         {
             id: 12,
             name: "Consumo e Produção Responsáveis",
-            seal: "/teste.jpg"
+            seal: "/ods/ods12.svg"
         },
         {
             id: 13,
             name: "Ação Contra a Mudança Global do Clima",
-            seal: "/teste.jpg"
+            seal: "/ods/ods13.svg"
         },
         {
             id: 14,
             name: "Vida na Água",
-            seal: "/teste.jpg"
+            seal: "/ods/ods14.svg"
         },
         {
             id: 15,
             name: "Vida Terrestre",
-            seal: "/teste.jpg"
+            seal: "/ods/ods15.svg"
         },
         {
             id: 16,
             name: "Paz, Justiça e Instituições Eficazes",
-            seal: "/teste.jpg"
+            seal: "/ods/ods16.svg"
         },
         {
             id: 17,
             name: "Parcerias e Meios de Implementação",
-            seal: "/teste.jpg"
+            seal: "/ods/ods17.svg"
         }
     ],
     en: [

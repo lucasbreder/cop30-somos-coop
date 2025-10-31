@@ -27,9 +27,9 @@ export const Map = ({activeCase, currentCases, setActiveCase}:MapCaseProps) => {
         {currentCases && <Pins currentCases={currentCases} setActiveCase={setActiveCase} activeCase={activeCase}/>}
       <svg
         ref={mapSvg}
-        id="svg2"
-        width="219.99998mm"
+          width="219.99998mm"
         height="194mm"
+        id="svg2"
         version="1.1"
         viewBox="0 0 219999.98 194010"
         xmlns="http://www.w3.org/2000/svg">

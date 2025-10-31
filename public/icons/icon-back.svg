@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.11 36.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.33px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #f3f2f2;
+      }
+
+      .cls-2 {
+        fill: #003a49;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <circle class="cls-2" cx="18.06" cy="18.06" r="17.56"/>
+      <polygon class="cls-1" points="28.4 13.73 17.94 13.73 17.9 7.87 7.72 18.06 17.9 28.24 17.93 22.44 28.4 22.44 28.4 13.73"/>
+    </g>
+  </g>
+</svg>

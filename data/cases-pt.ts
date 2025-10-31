@@ -15,7 +15,8 @@ export const casesPt:Case[] = [
         development: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
         context: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
         state: BrazilianState.DF,
-        thumbnail: ""
+        thumbnail: "",
+        gallery: ['/teste.jpg', '/teste.jpg']
     },
     {
         id: 2,
@@ -29,7 +30,9 @@ export const casesPt:Case[] = [
         challenge: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
         development: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
         context: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
-        state: BrazilianState.SP
+        state: BrazilianState.SP,
+        thumbnail: "",
+        gallery: ['/teste.jpg', '/teste.jpg']
     },
     {
         id: 3,
@@ -43,7 +46,9 @@ export const casesPt:Case[] = [
         challenge: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
         development: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
         context: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
-        state: BrazilianState.AM
+        state: BrazilianState.AM,
+        thumbnail: "",
+        gallery: ['/teste.jpg', '/teste.jpg']
     }
 ]
     

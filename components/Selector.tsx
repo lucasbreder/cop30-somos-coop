@@ -3,6 +3,7 @@ import { ods } from "@/data/ods";
 import { useState, useRef, useEffect } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { useParams, useRouter } from "next/navigation";
+import Image from "next/image";
 
 
 export const Selector = () => {
@@ -76,7 +77,7 @@ export const Selector = () => {
           onClick={() => {
             router.push(`${locale}/ods/${obj.id}`)
           }}
-            className="transition-all flex flex-col justify-center items-center text-center cursor-pointer -mx-2"
+            className="transition-all flex flex-col justify-center items-center text-center cursor-pointer -mx-2 relative"
             style={{
               backgroundColor: `var(--color-ods${obj.id})`,
               opacity: calculatedOpacity,
@@ -91,7 +92,7 @@ export const Selector = () => {
             }}
             key={index}
           >
-            {obj.id}
+            <Image src={obj.seal} alt={obj.name} fill />
           </motion.div>
         );
       })}

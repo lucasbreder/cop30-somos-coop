@@ -8,7 +8,7 @@ export const LanguageSelector = () => {
         className="flex gap-15 justify-center w-full h-full items-center">
             {languages.map((lang, index) => {
                 return (
-                    <div className="flex flex-col gap-15 items-center" key={index}>
+                    <div className="flex flex-col gap-15 items-center text-white" key={index}>
                         <div className="rounded-full w-30 h-30 border border-white"></div>
                         <div>
                             <Link href={`/${lang.code}`}>{lang.name}</Link>

@@ -49,7 +49,7 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
   }, [showContent]);
 
   return (
-    <div className={`${isHome ? "bg-primary" : ""} w-full h-full flex items-center justify-center z-50 relative`}>
+    <div className={`${isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"} w-full h-full flex items-center justify-center z-50 relative`}>
         {showIntro &&  
           <AnimatePresence>
             <ScreenSaver />

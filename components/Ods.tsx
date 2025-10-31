@@ -4,10 +4,11 @@ import { ods } from "@/data/ods";
 import { Params } from "@/types/Params";
 import Image from "next/image";
 import { cases } from "@/data/cases";
-import { Case } from "./Case";
+import { CaseTechnicalSheet } from "./CaseTechnicalSheet";
 import { Map } from "./Map";
 import { useState } from "react";
 import { Case as CaseData } from "@/types/Case"
+import { CaseList } from "./CaseList";
 
 export const Ods = () => {
    const params = useParams<Params>();
@@ -40,7 +41,7 @@ export const Ods = () => {
                }}>
                {dataCases.map((cs, index) => {
                return (
-                  <Case activeCase={activeCase} setActiveCase={setActiveCase} key={index} data={cs}/>
+                  <CaseList activeCase={activeCase} setActiveCase={setActiveCase} key={index} data={cs}/>
                )
             })}
             </div>}
@@ -48,7 +49,13 @@ export const Ods = () => {
         <div>
          <Map setActiveCase={setActiveCase} activeCase={activeCase} currentCases={dataCases} />
         </div>
-        <div className="basis-4/12"></div>
+        <div className="min-w-1/3 relative">
+            {dataCases && dataCases.map((cs, index) => {
+               return (
+                  <CaseTechnicalSheet activeCase={activeCase} key={index} data={cs}/>
+               )
+            })}
+        </div>
        </div>
     )
 }

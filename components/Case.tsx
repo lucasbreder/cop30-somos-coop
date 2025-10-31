@@ -1,61 +1,47 @@
 "use client"
-import { useRef } from "react";
-import { CaseInfo } from "./CaseInfo"
-import { Case as CaseData } from "@/types/Case"
-import { motion, useMotionValue } from "motion/react"
+
+import { cases } from "@/data/cases";
+import { ods } from "@/data/ods";
+import { Params } from "@/types/Params";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import { CaseContent } from "./CaseContent";
+import { Gallery } from "./Gallery";
+import { OdsList } from "./OdsList";
 
-export const Case = ({data, activeCase, setActiveCase}: {data: CaseData, activeCase?:CaseData, setActiveCase: (arg:CaseData) => void }) => {
+export const Case = () => {
 
-      const trackRef = useRef<HTMLDivElement>(null);
-      const contentRef = useRef<HTMLDivElement>(null);
-      const y = useMotionValue(0);
+  const params = useParams<Params>();
+  const locale = params.lang as keyof typeof cases;
 
-      y.on('change', (latest) => {
-        if (trackRef.current && contentRef.current) {
-          const trackHeight = trackRef.current.clientHeight;
-          const contentHeight = contentRef.current.scrollHeight - contentRef.current.clientHeight;
-          const scrollableDist = contentHeight * (latest / trackHeight);
-          contentRef.current.scrollTop = scrollableDist;
-        }
-      })
+  const dataCase = cases[locale]?.find((cs) => {
+    return cs.mainOds === Number(params.id)
+  })
+  const dataOds = ods[locale]?.find((ods) => {
+        return ods.id === dataCase?.mainOds
+     })
 
-    return (
-       <div>
-        <div className={`cursor-pointer transition-all duration-500 text-sm ${activeCase?.id === data.id ? 'font-bold' : 'font-normal'}`} onClick={() => {
-            setActiveCase(data)
-        }}>{data.title} ({data.state})</div>
-         <div className={`w-3/12 h-4/6 z-20 rounded-2xl p-10 absolute transition-all duration-700 ease-in-out right-20 ${activeCase?.id === data.id ? 'bottom-30' : '-bottom-full'}`} style={{
-            backgroundColor: `var(--color-ods${data.mainOds})`
+     if(dataCase) {
+  return (
+        <div className="flex items-center justify-center h-full">
+        <div className="flex gap-30 w-10/12 h-5/6 rounded-2xl p-10" style={{
+            backgroundColor: `var(--color-ods${dataCase.mainOds})`
         }}>
-           <div ref={contentRef} className="h-full overflow-y-hidden">
-            <div className="bg-gray-100 h-40 w-full mb-5 rounded-2xl relative">
-                {data.thumbnail && <Image src={data.thumbnail} alt={data.title} fill />}
-            </div>
-            <CaseInfo title="Nome da Cooperativa" text={data.cooperName} />
-            <CaseInfo title="Ramo" text={data.branch} />
-            {/* <CaseInfo title="Categorias" text={data.categories[0]} /> */}
-            <CaseInfo title="Resumo" text={data.excerpt} />
-            <CaseInfo title="Resumo" text={data.excerpt} />
-            <CaseInfo title="Resumo" text={data.excerpt} />
-           </div>
-        {contentRef.current && contentRef.current.scrollHeight > 596 && <div 
-        ref={trackRef} 
-        className="absolute bottom-0 -right-8 w-4 m-auto h-[80%] rounded-2xl border border-gray-600 flex flex-col justify-start items-center mt-4"
-    >
-       <motion.div 
-            drag="y" 
-            dragTransition={{
-                power: 0, 
-                timeConstant: 700,
-            }}
-            dragConstraints={trackRef} 
-            style={{y}}
-            className="bg-gray-600 h-15 w-3 rounded-2xl cursor-grab" 
-        />
-    </div>}
+         <div className="basis-1/2">
+           <header>
+            {dataOds?.seal && <div className="w-10 h-10 relative">
+              <Image fill src={dataOds.seal} alt={dataCase.title || ''} />
+            </div>}
+            <div>{dataCase.title}</div>
+          </header>
+          {dataCase && <CaseContent data={dataCase} />}
+          <OdsList odsNumbers={dataCase.asideOds} showTitle={true} />
+         </div>
+        <div className="w-full h-full basis-1/2">
+          {dataCase.gallery && <Gallery gallery={dataCase.gallery} />}
         </div>
-        
-       </div>
-    )
+      </div>
+        </div>
+  )
+  }
 }
