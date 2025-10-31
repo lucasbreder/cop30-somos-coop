@@ -25,18 +25,20 @@ export const Ods = () => {
        <div className="flex justify-between p-20 overflow-hidden h-full relative" style={{
          color: `var(--color-ods${dataOds?.id})`
        }}>
-        <div className="w-4/12">
+        <div className="min-w-3/12">
           {dataOds && <div className="flex flex-col gap-5">
-               {dataOds.cta && <div className="text-5xl uppercase font-bold w-8/12">{dataOds.cta}</div>}
-               {!dataOds.cta && <div className="text-5xl uppercase font-bold w-8/12">
+               {dataOds.cta && <div className="text-5xl uppercase font-bold">{dataOds.cta}</div>}
+               {!dataOds.cta && <div className="text-5xl uppercase font-light">
                Este é o <span className="font-extrabold">Brasil</span> que <span className="font-extrabold">Coopera</span>
                </div>}
-               <div className="bg-gray-200 h-10"></div>
+               <div className="relative w-50 h-10">
+                  <Image src="/logo/ods-logo2.svg" fill alt=""/>
+               </div>
                {dataOds.seal && <div className="w-35 h-35 relative" style={{
                   backgroundColor: `var(--color-ods${dataOds?.id})`
                }}><Image src={dataOds.seal} alt={dataOds.name} fill /></div>}
             </div>}
-            {dataCases && dataCases.length > 0 && <div className="py-2 px-3 border rounded-2xl mt-10 w-5/12" style={{
+            {dataCases && dataCases.length > 0 && <div className="py-5 px-3 border rounded-2xl mt-10 w-7/12" style={{
                   borderColor: `var(--color-ods${dataOds?.id})`
                }}>
                {dataCases.map((cs, index) => {
@@ -46,10 +48,10 @@ export const Ods = () => {
             })}
             </div>}
         </div>
-        <div>
+        <div className="min-w-6/12 -mr-5 -ml-20 mix-blend-multiply">
          <Map setActiveCase={setActiveCase} activeCase={activeCase} currentCases={dataCases} />
         </div>
-        <div className="min-w-1/3 relative">
+        <div className="min-w-4/12 relative">
             {dataCases && dataCases.map((cs, index) => {
                return (
                   <CaseTechnicalSheet activeCase={activeCase} key={index} data={cs}/>

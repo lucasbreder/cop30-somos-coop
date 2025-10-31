@@ -7,15 +7,15 @@ export const Gallery = ({gallery}:{gallery:string[]}) => {
 
     return (
         <div className="flex flex-col h-full">
-            <div className="w-full h-4/6 bg-gray-300 mb-5 relative">
+            <div className="w-full h-4/6 mb-5 relative">
                 <Image src={activeImage} fill alt="" />
             </div>
             <div className="flex gap-5">
                 {gallery.map((image, index) => (
-                <div className="relative h-40 bg-gray-300 flex-1/3" key={index} onClick={() => {
+                <div className="relative h-40 flex-1/3" key={index} onClick={() => {
                     setActiveImage(image)
                 }}>
-                    <Image src={image} fill alt="" />
+                    <Image className="object-cover" src={image} fill alt="" />
                 </div>
             ))}
             </div>

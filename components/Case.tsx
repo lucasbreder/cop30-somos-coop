@@ -28,11 +28,11 @@ export const Case = () => {
             backgroundColor: `var(--color-ods${dataCase.mainOds})`
         }}>
          <div className="basis-1/2">
-           <header>
-            {dataOds?.seal && <div className="w-10 h-10 relative">
+           <header className="flex gap-6">
+            {dataOds?.seal && <div className="w-40 h-40 border-20 -ml-10  border-white relative">
               <Image fill src={dataOds.seal} alt={dataCase.title || ''} />
             </div>}
-            <div>{dataCase.title}</div>
+            <div className="max-w-1/2 font-light text-6xl text-white">{dataCase.title}</div>
           </header>
           {dataCase && <CaseContent data={dataCase} />}
           <OdsList odsNumbers={dataCase.asideOds} showTitle={true} />

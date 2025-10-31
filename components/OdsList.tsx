@@ -16,7 +16,7 @@ export const OdsList = ({odsNumbers, showTitle = false}:{odsNumbers:number[], sh
                   return ods.id === o
                })
             return (
-            <div className="w-20 h-20 relative" key={index}>
+            <div className="w-15 h-15 relative" key={index}>
                {dataOds?.seal && <Image src={dataOds.seal} alt={dataOds.name} fill />}
             </div>
          )

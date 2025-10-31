@@ -9,7 +9,7 @@ export const ScreenSaverTranstion = () => {
    animate={{left: '100%',  transition: {
                 duration: 2,
               }}}
-   className="bg-slate-400 fixed w-full z-10 h-full">
+   className="bg-slate-400 fixed w-full z-9999 h-full">
         </motion.div>
   )
 }

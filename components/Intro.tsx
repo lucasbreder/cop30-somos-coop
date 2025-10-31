@@ -5,6 +5,7 @@ import { LanguageSelector } from "./LanguageSelector"
 import { ScreenSaver } from "./ScreenSaver"
 import { ScreenSaverTranstion } from "./ScreenSaverTransition"
 import { AnimatePresence } from "motion/react"
+import Image from "next/image"
 
 export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:boolean}) => {
 
@@ -49,12 +50,21 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
   }, [showContent]);
 
   return (
-    <div className={`${isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"} w-full h-full flex items-center justify-center z-50 relative`}>
+    <div className={isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"}>
+       {!showIntro && <ScreenSaverTranstion/>}
+    {!isHome && 
+    <div className="px-20 pt-10">
+      <Image src="/logo/coop-logo1.svg" alt="" width={120} height={120} />
+    
+    </div>
+      
+    }
+    <div className={`w-full h-full flex items-center justify-center z-50 relative`}>
         {showIntro &&  
           <AnimatePresence>
             <ScreenSaver />
           </AnimatePresence>}
-        {!showIntro && <ScreenSaverTranstion/>}
+       
         {!showIntro && 
         <AnimatePresence>
           <motion.div className="w-full h-full" 
@@ -68,5 +78,6 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
           <motion.div className="absolute bottom-7 left-1/2" initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1}}} exit={{opacity: 0}}>{timer}</motion.div>
         </AnimatePresence>
     </div>
+        </div>
   )
 }

@@ -6,6 +6,8 @@ import { motion, useMotionValue } from "motion/react"
 import Image from "next/image";
 import { Button } from "./Button";
 import { OdsList } from "./OdsList";
+import { useParams } from "next/navigation";
+import { Params } from "@/types/Params";
 
 export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCase?:CaseData}) => {
 
@@ -13,6 +15,8 @@ export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCa
       const contentRef = useRef<HTMLDivElement>(null);
       const y = useMotionValue(0);
       const [contentScrollHeight, setContentScrollHeight] = useState(0);
+       const params = useParams<Params>();
+      const locale = params.lang;
 
       useEffect(() => (
         y.on('change', (latest) => {
@@ -39,9 +43,9 @@ export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCa
           <div className="absolute -top-10 left-0 uppercase text-2xl text-center w-full" style={{
             color: `var(--color-ods${data.mainOds})`
         }}>Ficha Técnica do Case</div>
-           <div ref={contentRef} className="h-full overflow-y-hidden">
-            <div className="bg-gray-100 h-40 w-full mb-5 rounded-2xl relative">
-                {data.thumbnail && <Image src={data.thumbnail} alt={data.title} fill />}
+           <div ref={contentRef} className="h-full overflow-y-hidden pb-20">
+            <div className=" h-40 w-full mb-5 rounded-2xl relative overflow-hidden">
+                {data.thumbnail && <Image className="object-cover" src={data.thumbnail} alt={data.title} fill />}
             </div>
             <CaseInfo title="Nome da Cooperativa" text={data.cooperName} />
             <CaseInfo title="Ramo" text={data.branch} />
@@ -50,7 +54,7 @@ export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCa
             <OdsList odsNumbers={data.asideOds} />
            </div>
            <div className="absolute -bottom-15 w-full left-0">
-            <Button label="Conhecer o case" url="" ods={data.mainOds}/>
+            <Button label="Conhecer o case" url={`/${locale}/case/${data.id}`} ods={data.mainOds}/>
            </div>
         {contentScrollHeight > 596 && <div 
         ref={trackRef} 
@@ -64,7 +68,7 @@ export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCa
             }}
             dragConstraints={trackRef} 
             style={{y}}
-            className="bg-gray-600 h-15 w-3 rounded-2xl cursor-grab" 
+            className="bg-gray-600 h-15 w-3 rounded-2xl cursor-grab my-0.5" 
         />
     </div>}
         

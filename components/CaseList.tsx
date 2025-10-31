@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { Case as CaseData } from "@/types/Case"
 import { useMotionValue } from "motion/react"
+import Image from "next/image";
 
 export const CaseList = ({data, activeCase, setActiveCase}: {data: CaseData, activeCase?:CaseData, setActiveCase: (arg:CaseData) => void }) => {
 
@@ -22,9 +23,12 @@ export const CaseList = ({data, activeCase, setActiveCase}: {data: CaseData, act
 
     return (
        <div>
-          <div className={`cursor-pointer transition-all duration-500 text-sm ${activeCase?.id === data.id ? 'font-bold' : 'font-normal'}`} onClick={() => {
+          <div className={`flex items-center gap-2 cursor-pointer transition-all duration-500 text-sm ${activeCase?.id === data.id ? 'font-bold' : 'font-normal'}`} onClick={() => {
               setActiveCase(data)
-          }}>{data.title} ({data.state})</div>
+          }}>
+            <Image src="/icons/eye.svg" alt="" width={15} height={10} />
+            <span>{data.title} ({data.state})</span>
+            </div>
 
        </div>
     )

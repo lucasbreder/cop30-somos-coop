@@ -1,7 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 185.31 124.58">
-  <defs>
-    <style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Camada_2"
+   data-name="Camada 2"
+   viewBox="0 0 122.3 122.3"
+   version="1.1"
+   sodipodi:docname="flag-spa.svg"
+   width="122.3"
+   height="122.3"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1169">
+    <style
+       id="style1164">
       .cls-1, .cls-2 {
         fill: none;
       }
@@ -28,19 +42,53 @@
         clip-path: url(#clippath);
       }
     </style>
-    <clipPath id="clippath">
-      <circle class="cls-1" cx="92.64" cy="63.43" r="59.65"/>
+    <clipPath
+       id="clippath">
+      <circle
+         class="cls-1"
+         cx="92.639999"
+         cy="63.43"
+         r="59.650002"
+         id="circle1166" />
     </clipPath>
   </defs>
-  <g id="Camada_1-2" data-name="Camada 1">
-    <g>
-      <g class="cls-5">
-        <g>
-          <rect class="cls-4" width="185.31" height="123.35"/>
-          <rect class="cls-3" y="33.63" width="185.31" height="55.62"/>
+  <g
+     id="g2028">
+    <g
+       id="Camada_1-2"
+       data-name="Camada 1"
+       transform="translate(-31.489998,-2.2799988)">
+      <g
+         id="g1181">
+        <g
+           class="cls-5"
+           clip-path="url(#clippath)"
+           id="g1177">
+          <g
+             id="g1175">
+            <rect
+               class="cls-4"
+               width="185.31"
+               height="123.35"
+               id="rect1171"
+               x="0"
+               y="0" />
+            <rect
+               class="cls-3"
+               y="33.630001"
+               width="185.31"
+               height="55.619999"
+               id="rect1173"
+               x="0" />
+          </g>
         </g>
+        <circle
+           class="cls-2"
+           cx="92.639999"
+           cy="63.43"
+           r="59.650002"
+           id="circle1179" />
       </g>
-      <circle class="cls-2" cx="92.64" cy="63.43" r="59.65"/>
     </g>
   </g>
 </svg>

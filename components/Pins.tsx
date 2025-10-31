@@ -1,10 +1,9 @@
 "use client"
 import { motion } from "motion/react"
 import { statesPosition } from "@/data/statesPosition"
-import { Case } from "@/types/Case"
-import { faLocationDot, faLocationPin } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { MapCaseProps } from "@/types/MapCaseProps"
+import Pin from "./Pin"
+import PinActive from "./PinActive"
 
 export const Pins = ({activeCase, currentCases, setActiveCase}:MapCaseProps) => {
 
@@ -37,7 +36,8 @@ export const Pins = ({activeCase, currentCases, setActiveCase}:MapCaseProps) => 
             }}
             
             className="absolute :hover-translateY[10px] cursor-pointer" key={index}>
-              <FontAwesomeIcon size="5x" icon={activeCase && activeCase.state === key ? faLocationDot : faLocationPin}/>
+              {currentCases && activeCase?.state !== key && <Pin fillColor={`var(--color-ods${currentCases[0]?.mainOds})`} />}
+              {currentCases && activeCase?.state === key && <PinActive fillColor={`var(--color-ods${currentCases[0]?.mainOds})`} />}
             </motion.div>
           )
         })
