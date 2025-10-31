@@ -6,11 +6,16 @@ import { ScreenSaver } from "./ScreenSaver"
 import { ScreenSaverTranstion } from "./ScreenSaverTransition"
 import { AnimatePresence } from "motion/react"
 import Image from "next/image"
+import Link from "next/link"
+import { useParams } from "next/navigation"
+import { Params } from "@/types/Params"
 
 export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:boolean}) => {
 
   const [showIntro, setShowIntro] = useState(true)
   const [timer, setTimer] = useState(0)
+   const params = useParams<Params>();
+   const locale = params.lang;
 
    const showContent = useCallback((timer:NodeJS.Timeout) => {
       setShowIntro(false);
@@ -50,21 +55,20 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
   }, [showContent]);
 
   return (
-    <div className={isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"}>
+    <div className={`${isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"} h-full px-20 overflow-hidden`}>
        {!showIntro && <ScreenSaverTranstion/>}
-    {!isHome && 
-    <div className="px-20 pt-10">
-      <Image src="/logo/coop-logo1.svg" alt="" width={120} height={120} />
-    
-    </div>
-      
-    }
-    <div className={`w-full h-full flex items-center justify-center z-50 relative`}>
         {showIntro &&  
           <AnimatePresence>
             <ScreenSaver />
           </AnimatePresence>}
-       
+    {!isHome && 
+    <header className="py-10">
+     <Link href={locale ? "/"+locale : "/"}> <Image src="/logo/coop-logo1.svg" alt="" width={120} height={120} /></Link>
+    
+    </header>
+      
+    }
+    <div className={`w-full h-full flex items-center justify-center z-50 relative`}>
         {!showIntro && 
         <AnimatePresence>
           <motion.div className="w-full h-full" 

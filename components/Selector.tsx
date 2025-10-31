@@ -57,7 +57,7 @@ export const Selector = () => {
 
 
   return (
-   <div className="flex flex-col justify-center w-10/12 absolute top-1/2 left-1/2 -translate-1/2 overflow-visible">
+   <div className="flex flex-col justify-center w-10/12 absolute top-1/3 left-1/2 -translate-1/2 overflow-visible">
     <div className="uppercase font-light text-4xl text-center w-7/12 m-auto tracking-widest text-primary">Escolha um <span className="font-extrabold">objetivo de desenvolvimento sustentável</span></div>
      <div className="flex justify-center items-center h-64 w-full">
       {data.map((obj, index) => {

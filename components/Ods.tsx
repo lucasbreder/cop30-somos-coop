@@ -22,7 +22,7 @@ export const Ods = () => {
    const [activeCase, setActiveCase] = useState<CaseData>()
 
     return (
-       <div className="flex justify-between p-20 overflow-hidden h-full relative" style={{
+       <div className="flex justify-between overflow-hidden h-full relative" style={{
          color: `var(--color-ods${dataOds?.id})`
        }}>
         <div className="min-w-3/12">

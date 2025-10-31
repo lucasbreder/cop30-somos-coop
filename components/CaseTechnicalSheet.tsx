@@ -37,14 +37,14 @@ export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCa
       }, [data]);
 
     return (
-         <div className={`w-10/12 h-4/6 z-20 rounded-2xl p-10 absolute transition-all duration-700 ease-in-out left-0 ${activeCase?.id === data.id ? 'bottom-30' : '-bottom-full'}`} style={{
+         <div className={`w-10/12 h-4/6 z-20 rounded-2xl p-10 absolute transition-all duration-700 ease-in-out left-0 ${activeCase?.id === data.id ? 'bottom-80' : '-bottom-full'}`} style={{
             backgroundColor: `var(--color-ods${data.mainOds})`
         }}>
           <div className="absolute -top-10 left-0 uppercase text-2xl text-center w-full" style={{
             color: `var(--color-ods${data.mainOds})`
         }}>Ficha Técnica do Case</div>
-           <div ref={contentRef} className="h-full overflow-y-hidden pb-20">
-            <div className=" h-40 w-full mb-5 rounded-2xl relative overflow-hidden">
+           <div ref={contentRef} className="h-full pb-20">
+            <div className=" h-40 w-full mb-5 rounded-2xl relative">
                 {data.thumbnail && <Image className="object-cover" src={data.thumbnail} alt={data.title} fill />}
             </div>
             <CaseInfo title="Nome da Cooperativa" text={data.cooperName} />
