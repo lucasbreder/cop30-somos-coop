@@ -20,6 +20,12 @@
   --color-ods15: #56C02B;
   --color-ods16: #00689D;
   --color-ods17: #19486A;
+  --primary: #013544;
+  --secondary: #6DC6DF;
+  --tertiary: #B4CE48;
+  --quaternary: #F3F2F2;
+  --quinquenary: #3eb5a8;
+
 }
 
 @theme inline {
@@ -27,7 +33,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-primary: #013544;
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-quaternary: var(--quaternary);
+  --color-quinquenary: var(--quinquenary);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -36,7 +46,7 @@
     --foreground: #ededed;
   }
 } */
-
+@layer utilities {
 body {
   background: var(--background);
   color: var(--foreground);
@@ -50,7 +60,6 @@ body {
     text-rendering:geometricPrecision;
   }
   #svg2 path {
-    fill:#cccccc;
     stroke:#ffffff;
     stroke-width:282.237;
     stroke-miterlimit:4;
@@ -58,6 +67,58 @@ body {
     stroke-opacity:1;
     transition: all .5s;
     position: relative;
+        opacity: .2;
+  }
+    #svg2.ods1 path {
+    fill: var(--color-ods1);
+  }
+    #svg2.ods2 path {
+    fill: var(--color-ods2);
+  }
+    #svg2.ods3 path {
+    fill: var(--color-ods3);
+  }
+    #svg2.ods4 path {
+    fill: var(--color-ods4);
+  }
+    #svg2.ods5 path {
+    fill: var(--color-ods5);
+  }
+    #svg2.ods6 path {
+    fill: var(--color-ods6);
+  }
+    #svg2.ods7 path {
+    fill: var(--color-ods7);
+  }
+    #svg2.ods8 path {
+    fill: var(--color-ods8);
+  }
+    #svg2.ods9 path {
+    fill: var(--color-ods9);
+  }
+    #svg2.ods10 path {
+    fill: var(--color-ods10);
+  }
+    #svg2.ods11 path {
+    fill: var(--color-ods11);
+  }
+    #svg2.ods12 path {
+    fill: var(--color-ods12);
+  }
+    #svg2.ods13 path {
+    fill: var(--color-ods13);
+  }
+    #svg2.ods14 path {
+    fill: var(--color-ods14);
+  }
+    #svg2.ods15 path {
+    fill: var(--color-ods15);
+  }
+    #svg2.ods16 path {
+    fill: var(--color-ods16);
+  }
+  #svg2.ods17 path {
+    fill: var(--color-ods17);
   }
 
   .pin {
@@ -71,5 +132,15 @@ body {
   }
 
   #svg2 path.active {
-    fill:#b6b6b6;
+    opacity: .4;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Esconde a barra de rolagem para IE, Edge e Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+}

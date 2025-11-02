@@ -422,7 +422,7 @@ export const casesPt:Case[] = [
         context: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id libero at nunc euismod pretium nec sed quam. Suspendisse eget efficitur quam.",
         state: BrazilianState.SE, // Sergipe
         thumbnail: "/intro/intro-pic12.png", // Fixo: (25 % 14) + 1 = 12
-        gallery: ["/intro/intro-pic4.png", "/intro/intro-pic10.png"]
+        gallery: ["/intro/intro-pic4.png", "/intro/intro-pic1.png", "/intro/intro-pic6.png", "/intro/intro-pic2.png", "/intro/intro-pic1.png", "/intro/intro-pic3.png"]
     },
     {
         id: 27,

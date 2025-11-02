@@ -30,7 +30,7 @@ export const CaseContent = ({data}: {data: CaseData}) => {
       }, [data]);
 
     return (
-         <div className={`w-full h-4/6 z-20 rounded-2xl p-10 transition-all duration-700 ease-in-out left-0 relative border border-white/20 mt-6`}>
+         <div className={`w-full h-7/12 z-20 rounded-2xl p-10 transition-all duration-700 ease-in-out left-0 relative border border-white/20 mt-6`}>
            <div ref={contentRef} className="h-full overflow-y-hidden pb-10">
             <CaseInfo title="Contexto" text={data.context} />
             <CaseInfo title="Desafios" text={data.challenge} />

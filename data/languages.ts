@@ -12,7 +12,7 @@ export const languages:Language[] = [
         name: "English"
     },
     {
-        code: "en",
+        code: "es",
         flag: "/icons/flag-spa.svg",
         name: "Español"
     }

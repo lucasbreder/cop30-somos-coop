@@ -9,6 +9,8 @@ import { Map } from "./Map";
 import { useState } from "react";
 import { Case as CaseData } from "@/types/Case"
 import { CaseList } from "./CaseList";
+import { AnimatedOds } from "./AnimatedOds";
+import { Title } from "./Title";
 
 export const Ods = () => {
    const params = useParams<Params>();
@@ -22,9 +24,12 @@ export const Ods = () => {
    const [activeCase, setActiveCase] = useState<CaseData>()
 
     return (
-       <div className="flex justify-between overflow-hidden h-full relative" style={{
+       <div className="flex justify-between h-full relative mt-34" style={{
          color: `var(--color-ods${dataOds?.id})`
        }}>
+         <div className="w-8/12 -bottom-30 left-[-24%] absolute">
+            <AnimatedOds width="100%" height={450} />
+         </div>
         <div className="min-w-3/12">
           {dataOds && <div className="flex flex-col gap-5">
                {dataOds.cta && <div className="text-5xl uppercase font-bold">{dataOds.cta}</div>}
@@ -32,13 +37,17 @@ export const Ods = () => {
                Este é o <span className="font-extrabold">Brasil</span> que <span className="font-extrabold">Coopera</span>
                </div>}
                <div className="relative w-50 h-10">
-                  <Image src="/logo/ods-logo2.svg" fill alt=""/>
+                  <Image sizes="80vw" src="/logo/ods-logo2.svg" fill alt=""/>
                </div>
                {dataOds.seal && <div className="w-35 h-35 relative" style={{
                   backgroundColor: `var(--color-ods${dataOds?.id})`
-               }}><Image src={dataOds.seal} alt={dataOds.name} fill /></div>}
+               }}><Image sizes="80vw" src={dataOds.seal} alt={dataOds.name} fill /></div>}
             </div>}
-            {dataCases && dataCases.length > 0 && <div className="py-5 px-3 border rounded-2xl mt-10 w-7/12" style={{
+            <div className="w-6/12 mt-10 ml-5 mb-2">
+             <Title className="mb-2" title="Cases" titleLine="center" color={`var(--color-ods${dataOds?.id})`} tag="h2" />
+            </div>
+           
+            {dataCases && dataCases.length > 0 && <div className="py-5 px-3 border rounded-2xl w-7/12" style={{
                   borderColor: `var(--color-ods${dataOds?.id})`
                }}>
                {dataCases.map((cs, index) => {

@@ -3,23 +3,25 @@ import { motion } from "motion/react"
 import { useState, useEffect, useCallback, ReactNode } from "react"
 import { LanguageSelector } from "./LanguageSelector"
 import { ScreenSaver } from "./ScreenSaver"
-import { ScreenSaverTranstion } from "./ScreenSaverTransition"
+import { ScreenSaverTransition } from "./ScreenSaverTransition"
 import { AnimatePresence } from "motion/react"
 import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import { Params } from "@/types/Params"
+import { AnimatedLanguageSelector } from "./AnimatedLanguageSelector"
+import { AnimatedLanguageSelector1 } from "./AnimatedLanguageSelector1"
+import { NavItem } from "./NavItem"
+import { LanguageSelect } from "./LanguageSelect"
 
 export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:boolean}) => {
 
   const [showIntro, setShowIntro] = useState(true)
-  const [timer, setTimer] = useState(0)
    const params = useParams<Params>();
    const locale = params.lang;
 
    const showContent = useCallback((timer:NodeJS.Timeout) => {
       setShowIntro(false);
-      setTimer(0);
       clearInterval(timer)
    },[])
    
@@ -33,11 +35,6 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
         timer = setInterval(() => setShowIntro(true), 60000);
       }
 
-      const countdown = setInterval(() => {
-        setTimer(prev => prev+1);
-      },1000)
-
-
      const handleActivity = () => {
         showContent(timer)
         startInterval()
@@ -49,22 +46,21 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
 
        return () => {
         clearTimeout(timer)
-        clearTimeout(countdown)
        };
 
   }, [showContent]);
 
   return (
-    <div className={`${isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"} h-full px-20 overflow-hidden`}>
-       {!showIntro && <ScreenSaverTranstion/>}
-        {showIntro &&  
+    <div className={`${isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"} h-full px-20 overflow-hidden bg-cover bg-no-repeat`}>
+        
           <AnimatePresence>
-            <ScreenSaver />
-          </AnimatePresence>}
+              {showIntro &&<ScreenSaver />}
+          </AnimatePresence>
+       {!showIntro && <ScreenSaverTransition/>}
+      
     {!isHome && 
-    <header className="py-10">
-     <Link href={locale ? "/"+locale : "/"}> <Image src="/logo/coop-logo1.svg" alt="" width={120} height={120} /></Link>
-    
+    <header className=" flex justify-between py-10 px-20 absolute top-0 left-0 z-99">
+     <Link href={"/"}> <Image src="/logo/coop-logo1.svg" alt="" width={120} height={120} /></Link>
     </header>
       
     }
@@ -75,13 +71,22 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
             initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5}}} 
             exit={{opacity: 0}}>
             {children}
+            {isHome && <div className="absolute left-0 top-20"><AnimatedLanguageSelector width="100%" height={550} delay={2} /></div>}
+            {isHome && <div className="absolute right-0 -bottom-10">
+              <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2}}} 
+            exit={{opacity: 0}} className="absolute -bottom-4 left-16 w-full h-2/4">
+                <Image sizes="80vw" priority className="object-contain" src="/intro/people.png" alt="" fill />
+              </motion.div>
+              <AnimatedLanguageSelector1 width="100%" height={450} delay={1} />
+              </div>}
             {isHome && <LanguageSelector />}
           </motion.div>
         </AnimatePresence>}
-        <AnimatePresence>
-          <motion.div className="absolute bottom-7 left-1/2" initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1}}} exit={{opacity: 0}}>{timer}</motion.div>
-        </AnimatePresence>
     </div>
-        </div>
+    {!isHome && <footer className="absolute bottom-0 left-0 px-20 py-10 z-99 w-full flex justify-between">
+          <NavItem icon="/icons/back.svg" label="Voltar" />
+          <LanguageSelect/>
+    </footer>}
+    </div>
   )
 }

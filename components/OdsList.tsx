@@ -9,15 +9,15 @@ export const OdsList = ({odsNumbers, showTitle = false}:{odsNumbers:number[], sh
    const locale = params.lang as keyof typeof ods || 'pt';
 
     return (
-      <div className="flex gap-4 mt-5 text-white">
+      <div className="flex gap-2 mt-5 text-white">
          {showTitle && <div className="flex-1 border-r border-r-white w-fit flex items-center">ODS relacionadas a esse case</div>}
          {odsNumbers.map((o,index) => {
              const dataOds = ods[locale]?.find((ods) => {
                   return ods.id === o
                })
             return (
-            <div className="w-15 h-15 relative" key={index}>
-               {dataOds?.seal && <Image src={dataOds.seal} alt={dataOds.name} fill />}
+            <div className="w-12 h-12 relative border-4 border-white" key={index}>
+               {dataOds?.seal && <Image sizes="80vw" src={dataOds.seal} alt={dataOds.name} fill />}
             </div>
          )
          })}

@@ -3,6 +3,7 @@ import { BrazilianState } from "./BrazilianState"
 export type Case = {
     id: number
     title: string
+    markdownTitle?: string
     context: string
     challenge: string
     development: string

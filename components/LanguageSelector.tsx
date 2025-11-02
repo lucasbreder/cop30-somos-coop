@@ -11,7 +11,7 @@ export const LanguageSelector = () => {
                 return (
                     <div className="flex flex-col gap-15 items-center text-white" key={index}>
                         <div className="rounded-full w-30 h-30 relative">
-                             <Link href={`/${lang.code}`}><Image src={lang.flag} alt={lang.code} fill /></Link>
+                             <Link href={`/${lang.code}`}><Image sizes="80vw" src={lang.flag} alt={lang.code} fill /></Link>
                         </div>
                         <div>
                             <Link href={`/${lang.code}`}>{lang.name}</Link>

@@ -6,7 +6,7 @@ export const statesPosition = {
     "RO": { x: 27, y: 32 }, // Rondônia
     "RR": { x: 31, y: -2 }, // Roraima
     "TO": { x: 58, y: 29 }, // Tocantins
-    "AL": { x: 87, y: 27 }, // Alagoas
+    "AL": { x: 84, y: 28 }, // Alagoas
     "BA": { x: 72, y: 35 }, // Bahia
     "CE": { x: 77, y: 13 }, // Ceará
     "MA": { x: 67, y: 13 }, // Maranhão

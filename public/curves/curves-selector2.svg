@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 205.93 560.42">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #b4ce49;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 3.88px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #003a49;
+      }
+
+      .cls-3 {
+        stroke: #3fb5a8;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <path class="cls-1" d="M1.94,420.38v-140.38c0-39.86,32.31-72.18,72.18-72.18h60.38c15.37,0,27.82-12.46,27.82-27.82V1.94"/>
+      <path class="cls-4" d="M203.99,1.94v179.59c0,37.54-30.43,67.98-67.98,67.98h-61.42c-17.11,0-30.99,13.87-30.99,30.99v233.79"/>
+      <path class="cls-3" d="M183.96,69.6v106.95c0,29.36-23.81,53.17-53.17,53.17h-55.9c-28.82,0-52.19,23.37-52.19,52.19v62.13"/>
+      <path class="cls-2" d="M27.89,542.58c0-8.78,15.9-28.12,15.9-28.12,0,0,15.9,19.34,15.9,28.12s-7.12,15.9-15.9,15.9-15.9-7.12-15.9-15.9Z"/>
+    </g>
+  </g>
+</svg>
