@@ -40,7 +40,7 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
         startInterval()
       };
 
-      window.addEventListener('mousemove', handleActivity);
+      // window.addEventListener('mousemove', handleActivity);
       window.addEventListener('keydown', handleActivity);
       window.addEventListener('click', handleActivity);
 
