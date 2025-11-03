@@ -10,6 +10,7 @@ export const CaseContent = ({data}: {data: CaseData}) => {
       const contentRef = useRef<HTMLDivElement>(null);
       const y = useMotionValue(0);
       const [contentScrollHeight, setContentScrollHeight] = useState(0);
+      console.log(contentScrollHeight)
 
       useEffect(() => (
         y.on('change', (latest) => {
@@ -29,11 +30,12 @@ export const CaseContent = ({data}: {data: CaseData}) => {
       }, [data]);
 
     return (
-         <div className={`w-full fhd:h-7/12 fhdv:h-8/12 z-20 rounded-2xl fhd:py-10 fhd:px-10 fhdv:py-10 fhdv:px-18 transition-all duration-700 ease-in-out left-0 relative border border-white/20 mt-6`}>
+         <div className={`w-full fhd:h-5/12 fhdv:h-8/12 z-20 rounded-2xl fhd:py-10 fhd:px-10 fhdv:py-10 fhdv:px-18 transition-all duration-700 ease-in-out left-0 relative border border-white/20 mt-6`}>
            <div ref={contentRef} className="h-full overflow-y-hidden pb-10">
             <CaseInfo title="Contexto" text={data.context} />
             <CaseInfo title="Desafios" text={data.challenge} />
             <CaseInfo title="Desenvolvimento" text={data.development} />
+
            </div>
         {contentScrollHeight > 596 && <div 
         ref={trackRef} 
