@@ -7,7 +7,7 @@ export const NavItem = ({icon, label, url}: {icon?:string, label?:string, url?:s
     const router = useRouter()
 
     return (
-       <div className="flex gap-3 cursor-pointer items-center" onClick={() => {
+       <div className="flex gap-3 cursor-pointer items-center z-99" onClick={() => {
                 if(url) router.push(url)
                 if(!url) router.back()
             }}>

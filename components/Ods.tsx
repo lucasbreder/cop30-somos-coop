@@ -24,7 +24,7 @@ export const Ods = () => {
    const [activeCase, setActiveCase] = useState<CaseData>()
 
     return (
-       <div className="flex fhd:flex-nowrap fhdv:flex-wrap fhd:justify-between fhdv:justify-center h-full relative fhd:mt-34 fhdv:mt-80" style={{
+       <div className="flex fhd:flex-nowrap fhdv:flex-wrap fhd:justify-between fhdv:justify-center h-full relative fhd:mt-39 fhdv:mt-80" style={{
          color: `var(--color-ods${dataOds?.id})`
        }}>
          <div className="w-8/12 fhd:-bottom-30 fhdv:bottom-30 fhd:left-[-24%] fhdv:left-[-15%] absolute">

@@ -87,12 +87,12 @@ export const Selector = () => {
           onClick={() => {
             router.push(`${locale}/ods/${obj.id}`)
           }}
-            className={`transition-all duration-500 flex flex-col justify-center items-center text-center cursor-pointer -mx-15 relative hover:scale-120`}
+            className={`transition-all duration-500 flex flex-col justify-center items-center text-center cursor-pointer -mx-12 relative hover:scale-120`}
             style={{
               backgroundColor: `var(--color-ods${obj.id})`,
               opacity: calculatedOpacity,
-              flexBasis: calculatedScale * 150,
-              minHeight: calculatedScale * 150 - 10,
+              flexBasis: calculatedScale * 120,
+              minHeight: calculatedScale * 120 - 10,
               zIndex: index === activeIndex ? 999 : index > activeIndex ? -index : index,
               pointerEvents: index === activeIndex ? 'all' : 'none'
             }}

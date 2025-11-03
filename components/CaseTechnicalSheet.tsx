@@ -39,7 +39,7 @@ export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCa
       }, [data]);
 
     return (
-         <div className={`flex flex-col gap-1 w-10/12 fhd:h-4/6 fhdv:h-3/6 z-20 r absolute transition-all duration-700 ease-in-out fhd:left-0 ${activeCase?.id === data.id ? 'fhd:bottom-90 fhdz:bottom-auto fhd:right-auto fhdv:right-10' : 'fhd:-bottom-full fhdz:bottom-auto fhdv:-right-[150%] fhd:right-auto'}`}>
+         <div className={`flex flex-col gap-1 w-10/12 fhd:h-4/6 fhdv:h-3/6 z-999 r absolute transition-all duration-700 ease-in-out fhd:left-0 ${activeCase?.id === data.id ? 'fhd:bottom-100 fhdz:bottom-auto fhd:right-auto fhdv:right-10' : 'fhd:-bottom-full fhdz:bottom-auto fhdv:-right-[150%] fhd:right-auto'}`}>
           <div className="uppercase text-2xl text-center w-full" style={{
             color: `var(--color-ods${data.mainOds})`
         }}>
@@ -58,7 +58,7 @@ export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCa
             <OdsList odsNumbers={data.asideOds} />
            </div>
            </div>
-           <div className="w-full left-0 flex gap-2 mt-5">
+           <div className="w-full left-0 flex gap-2 mt-5 relative">
             <Button label="Conhecer o case" url={`/${locale}/case/${data.id}`} ods={data.mainOds}/>
            </div>
         {contentScrollHeight > 602 && <div 

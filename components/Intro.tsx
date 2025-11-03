@@ -59,7 +59,7 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
        {!showIntro && <ScreenSaverTransition/>}
       
     {!isHome && 
-    <header className=" flex justify-between py-10 px-20 absolute top-0 left-0 z-99 w-full">
+    <header className=" flex justify-between py-10 px-20 absolute top-0 left-0 w-full">
      <Link href={"/"} className="fhd:m-0 fhdv:mx-auto fhd:w-30 fhdv:w-60 fhd:h-30 fhdv:h-60 relative"> <Image src="/logo/coop-logo1.svg" alt="" fill /></Link>
     </header>
       
@@ -87,7 +87,7 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
           </motion.div>
         </AnimatePresence>}
     </div>
-    {!isHome && <footer className="absolute bottom-0 left-0 px-20 fhd:py-10 fhdv:py-20 z-99 w-full flex justify-between">
+    {!isHome && <footer className="absolute bottom-0 left-0 px-20 fhd:py-10 fhdv:py-20 w-full flex justify-between">
           <NavItem icon="/icons/back.svg" label="Voltar" />
           <LanguageSelect/>
     </footer>}
