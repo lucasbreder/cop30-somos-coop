@@ -20,9 +20,9 @@ export const ScreenSaverTransition = () => {
 
   return (
    <motion.div
-   initial={{left: '-150%'}}
+   initial={{left: '-240%'}}
    animate={{left: '100%',  transition: {
-                duration: 2,
+                duration: 3,
               }}}
    className="fixed z-9999 h-full">
         <div className="flex flex-col h-full">

@@ -47,11 +47,11 @@ export const Gallery = ({gallery}:{gallery:string[]}) => {
     };
 
     return (
-        <div className="flex flex-col h-full relative">
+        <div className="flex fhd:flex-col fhdv:flex-row flex-col h-full relative fhd:gap-0 fhdv:gap-5">
             <motion.div 
             initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: .5}}} 
                 key={activeImage} 
-                className="w-full h-5/6 mb-5 relative transition-opacity duration-500 opacity-100"
+                className="fhd:w-full fhdv:min-w-3/4 h-5/6 mb-5 relative transition-opacity duration-500 opacity-100 fhd:basis-auto fhdv:basis-2/3"
             >
                 <Image objectFit="cover" sizes="80vw" src={activeImage} fill alt="" />
             </motion.div>
@@ -76,12 +76,12 @@ export const Gallery = ({gallery}:{gallery:string[]}) => {
               </>}
                 <div
                     ref={carouselRef}
-                    className="flex gap-4 overflow-x-scroll no-scrollbar" 
+                    className="flex fhd:flex-row fhdv:flex-col gap-4 fhd:overflow-x-scroll fhdv:overflow-y-scroll no-scrollbar" 
                 >
                 {gallery.map((image, index) => (
                     <div 
                         data-index={index} 
-                        className="relative h-30 shrink-0 cursor-pointer" 
+                        className="relative h-30 shrink-0 cursor-pointer fhdv:w-full! fhd:w-1/3!" 
                         key={index} 
                         onClick={() => { setActiveImage(image); setCurrentIndex(index); }}
                         style={{ width: `calc(${itemWidthPercentage}% - 0.6666rem)` }}

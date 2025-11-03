@@ -36,7 +36,7 @@ export const Case = () => {
   return (
         <div className="flex items-center justify-center h-full">
          
-        <div className="flex gap-30 w-10/12 h-9/12 rounded-2xl p-10 relative" style={{
+        <div className="flex fhd:flex-row fhdv:flex-col fhd:gap-30 fhdv:gap-10 fhd:mt-0 fhdv:mt-20 fhd:w-10/12 fhdv:w-12/12 h-9/12 rounded-2xl p-10 relative" style={{
             backgroundColor: `var(--color-ods${dataCase.mainOds})`
         }}>
            <div className="absolute -top-10 -right-10">
@@ -50,7 +50,7 @@ export const Case = () => {
               <Image src="/icons/next.svg" alt="" width={40} height={40}/> <span className="w-1/2 leading-4 border-l pl-2 ml-2 h-4 border-primary">Conheça o próximo case</span>
             </Link>
           </div>}
-         <div className="basis-1/2">
+         <div className="fhd:basis-1/2 fhdv:basis-auto fhdv:h-220">
            <header className="flex gap-6">
             {dataOds?.seal && <div className="w-40 h-40 border-20 -ml-10  border-white relative">
               <Image sizes="80vw" fill src={dataOds.seal} alt={dataCase.title || dataCase.markdownTitle || ''} />
@@ -60,7 +60,7 @@ export const Case = () => {
           {dataCase && <CaseContent data={dataCase} />}
           <OdsList odsNumbers={dataCase.asideOds} showTitle={true} />
          </div>
-        <div className="w-full h-full basis-1/2">
+        <div className="w-full fhd:h-full fhdv:h-fit basis-1/2">
           {dataCase.gallery && <Gallery gallery={dataCase.gallery} />}
         </div>
       </div>

@@ -39,11 +39,11 @@ export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCa
       }, [data]);
 
     return (
-         <div className={`flex flex-col gap-1 w-10/12 h-4/6 z-20 r absolute transition-all duration-700 ease-in-out left-0 ${activeCase?.id === data.id ? 'bottom-90' : '-bottom-full'}`}>
+         <div className={`flex flex-col gap-1 w-10/12 fhd:h-4/6 fhdv:h-3/6 z-20 r absolute transition-all duration-700 ease-in-out fhd:left-0 ${activeCase?.id === data.id ? 'fhd:bottom-90 fhdz:bottom-auto fhd:right-auto fhdv:right-10' : 'fhd:-bottom-full fhdz:bottom-auto fhdv:-right-[150%] fhd:right-auto'}`}>
           <div className="uppercase text-2xl text-center w-full" style={{
             color: `var(--color-ods${data.mainOds})`
         }}>
-          <Title className="text-2xl indent-10 w-10/12 mx-auto" title="Ficha Técnica do Case" titleLine="left" color={`var(--color-ods${data?.mainOds})`} tag="h2" /></div>
+          <Title className="text-2xl fhd:indent-10 fhdv:indent-2 fhdv:w-10/12 mx-auto" title="Ficha Técnica do Case" titleLine="left" color={`var(--color-ods${data?.mainOds})`} tag="h2" /></div>
            <div className="h-full rounded-2xl px-6 py-8" style={{
             backgroundColor: `var(--color-ods${data.mainOds})`
         }}>

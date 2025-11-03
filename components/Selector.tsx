@@ -61,13 +61,13 @@ export const Selector = () => {
 
   return (
    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1}}  className="flex flex-col justify-center items-center w-full h-full absolute top-1/2 left-1/2 -translate-1/2 overflow-visible">
-    <div className="w-10/12 absolute bottom-20 -left-[45%]">
-      <AnimatedSelector width="100%" height={200} />
+    <div className="w-10/12 fhd:h-50 fhdv:h-80 absolute fhd:bottom-20 fhdv:bottom-40 fhd:-left-[45%] fhdv:-left-[60%]">
+      <AnimatedSelector width="100%" height="100%" />
     </div>
-    <div className="w-10/12 absolute -top-10 -right-[43%]">
-      <AnimatedSelector1 width="100%" height={450} />
+    <div className="w-10/12 fhd:h-112 fhdv:h-150 absolute fhd:-top-10 fhdv:-top-40 fhd:-right-[43%] fhdv:-right-[30%]">
+      <AnimatedSelector1 width="100%" height="100%" />
     </div>
-    <div className="uppercase font-light text-4xl text-center w-5/12 mx-auto tracking-widest text-primary mb-20">Escolha um <span className="font-extrabold">objetivo de desenvolvimento sustentável</span></div>
+    <div className="uppercase font-light fhd:text-4xl fhdv:text-5xl text-center fhd:w-5/12 fhdv:w-7/12 mx-auto tracking-widest text-primary mb-20">Escolha um <span className="font-extrabold">objetivo de desenvolvimento sustentável</span></div>
      <div className="flex justify-center items-center mb-10 w-full">
       {data.map((obj, index) => {
 
@@ -87,12 +87,12 @@ export const Selector = () => {
           onClick={() => {
             router.push(`${locale}/ods/${obj.id}`)
           }}
-            className="transition-all duration-500 flex flex-col justify-center items-center text-center cursor-pointer -mx-10 relative hover:scale-120"
+            className={`transition-all duration-500 flex flex-col justify-center items-center text-center cursor-pointer -mx-15 relative hover:scale-120`}
             style={{
               backgroundColor: `var(--color-ods${obj.id})`,
               opacity: calculatedOpacity,
-              flexBasis: calculatedScale * 120,
-              minHeight: calculatedScale * 120 - 10,
+              flexBasis: calculatedScale * 150,
+              minHeight: calculatedScale * 150 - 10,
               zIndex: index === activeIndex ? 999 : index > activeIndex ? -index : index,
               pointerEvents: index === activeIndex ? 'all' : 'none'
             }}

@@ -11,7 +11,7 @@ export const NavItem = ({icon, label, url}: {icon?:string, label?:string, url?:s
                 if(url) router.push(url)
                 if(!url) router.back()
             }}>
-                {icon && <div className="w-8 h-8 relative"><Image sizes="80vw" src={icon} alt="Voltar" fill /></div>}
+                {icon && <div className="fhd:w-8 fhd:h-8 fhdv:w-12 fhdv:h-12 relative"><Image sizes="80vw" src={icon} alt="Voltar" fill /></div>}
                 <div className="uppercase font-light border-l border-primary pl-2">{label}</div>
             </div>
     )

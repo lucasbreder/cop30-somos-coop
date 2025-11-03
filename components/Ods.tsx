@@ -24,13 +24,13 @@ export const Ods = () => {
    const [activeCase, setActiveCase] = useState<CaseData>()
 
     return (
-       <div className="flex justify-between h-full relative mt-34" style={{
+       <div className="flex fhd:flex-nowrap fhdv:flex-wrap fhd:justify-between fhdv:justify-center h-full relative fhd:mt-34 fhdv:mt-80" style={{
          color: `var(--color-ods${dataOds?.id})`
        }}>
-         <div className="w-8/12 -bottom-30 left-[-24%] absolute">
+         <div className="w-8/12 fhd:-bottom-30 fhdv:bottom-30 fhd:left-[-24%] fhdv:left-[-15%] absolute">
             <AnimatedOds width="100%" height={450} />
          </div>
-        <div className="min-w-3/12">
+        <div className="fhd:min-w-3/12 fhdv:basis-1/2">
           {dataOds && <div className="flex flex-col gap-5">
                {dataOds.cta && <div className="text-5xl uppercase font-bold">{dataOds.cta}</div>}
                {!dataOds.cta && <div className="text-5xl uppercase font-light">
@@ -44,10 +44,10 @@ export const Ods = () => {
                }}><Image sizes="80vw" src={dataOds.seal} alt={dataOds.name} fill /></div>}
             </div>}
             <div className="w-6/12 mt-10 ml-5 mb-2">
-             <Title className="mb-2" title="Cases" titleLine="center" color={`var(--color-ods${dataOds?.id})`} tag="h2" />
+             <Title className="mb-2 fhd:text-xl fhdv:text-2xl" title="Cases" titleLine="center" color={`var(--color-ods${dataOds?.id})`} tag="h2" />
             </div>
            
-            {dataCases && dataCases.length > 0 && <div className="py-5 px-3 border rounded-2xl w-7/12" style={{
+            {dataCases && dataCases.length > 0 && <div className="py-5 px-3 rounded-2xl w-7/12 border" style={{
                   borderColor: `var(--color-ods${dataOds?.id})`
                }}>
                {dataCases.map((cs, index) => {
@@ -57,10 +57,10 @@ export const Ods = () => {
             })}
             </div>}
         </div>
-        <div className="min-w-6/12 -mr-5 -ml-20 mix-blend-multiply">
+        <div className="min-w-6/12 -mr-5 -ml-20 mix-blend-multiply fhdv:order-3 fhd:order-0 fhd:mt-0 fhdv:-mt-100">
          <Map setActiveCase={setActiveCase} activeCase={activeCase} currentCases={dataCases} />
         </div>
-        <div className="min-w-4/12 relative">
+        <div className="fhd:min-w-4/12 fhdv:basis-1/2 relative">
             {dataCases && dataCases.map((cs, index) => {
                return (
                   <CaseTechnicalSheet activeCase={activeCase} key={index} data={cs}/>

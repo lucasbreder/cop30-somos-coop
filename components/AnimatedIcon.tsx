@@ -28,7 +28,10 @@ export const AnimatedIcon = ({ url, width = 70, height = 70, duration = 2, anima
           }
         }
       case 'show':
-        return {opacity: 1}
+        return {opacity: 1,  
+          transition: {
+            delay: delay || 0,
+          }}
       case 'rotate':
         return {
         opacity: 1,
@@ -56,6 +59,7 @@ export const AnimatedIcon = ({ url, width = 70, height = 70, duration = 2, anima
     <motion.div
     className='absolute'
     style={{
+      position: 'absolute',
       top: top ? `${top}%` : "auto",
       left: left ? `${left}%` : "auto",
       right: right ? `${right}%` : "auto",

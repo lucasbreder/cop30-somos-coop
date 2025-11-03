@@ -51,7 +51,7 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
   }, [showContent]);
 
   return (
-    <div className={`${isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"} h-full px-20 overflow-hidden bg-cover bg-no-repeat`}>
+    <div className={`${isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"} h-full fhd:px-20 fhdv:px-10 overflow-hidden bg-cover bg-no-repeat`}>
         
           <AnimatePresence>
               {showIntro &&<ScreenSaver />}
@@ -59,8 +59,8 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
        {!showIntro && <ScreenSaverTransition/>}
       
     {!isHome && 
-    <header className=" flex justify-between py-10 px-20 absolute top-0 left-0 z-99">
-     <Link href={"/"}> <Image src="/logo/coop-logo1.svg" alt="" width={120} height={120} /></Link>
+    <header className=" flex justify-between py-10 px-20 absolute top-0 left-0 z-99 w-full">
+     <Link href={"/"} className="fhd:m-0 fhdv:mx-auto fhd:w-30 fhdv:w-60 fhd:h-30 fhdv:h-60 relative"> <Image src="/logo/coop-logo1.svg" alt="" fill /></Link>
     </header>
       
     }
@@ -71,19 +71,23 @@ export const Intro = ({children, isHome = false} :{children?:ReactNode, isHome?:
             initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5}}} 
             exit={{opacity: 0}}>
             {children}
-            {isHome && <div className="absolute left-0 top-20"><AnimatedLanguageSelector width="100%" height={550} delay={2} /></div>}
+            {isHome && <div className="fhd:h-138 fhdv:h-170 absolute left-0 fhdv:top-20 fh:-top-20">
+              <AnimatedLanguageSelector width="100%" height="100%" delay={2} />
+            </div>}
             {isHome && <div className="absolute right-0 -bottom-10">
               <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2}}} 
-            exit={{opacity: 0}} className="absolute -bottom-4 left-16 w-full h-2/4">
+            exit={{opacity: 0}} className="absolute z-10 fhd:-bottom-4 fhdv:-bottom-40 fhd:left-30 fhdv:left-45 w-full fhd:h-2/4 fhdv:w-3/4 h-full">
                 <Image sizes="80vw" priority className="object-contain" src="/intro/people.png" alt="" fill />
               </motion.div>
-              <AnimatedLanguageSelector1 width="100%" height={450} delay={1} />
+              <div className="relative fhd:h-112 fhdv:h-160 fhdv:-top-20">
+                <AnimatedLanguageSelector1 width="100%" height="100%" delay={1} />
+              </div>
               </div>}
             {isHome && <LanguageSelector />}
           </motion.div>
         </AnimatePresence>}
     </div>
-    {!isHome && <footer className="absolute bottom-0 left-0 px-20 py-10 z-99 w-full flex justify-between">
+    {!isHome && <footer className="absolute bottom-0 left-0 px-20 fhd:py-10 fhdv:py-20 z-99 w-full flex justify-between">
           <NavItem icon="/icons/back.svg" label="Voltar" />
           <LanguageSelect/>
     </footer>}
