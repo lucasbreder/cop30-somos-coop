@@ -9,18 +9,22 @@ export const OdsList = ({
   odsNumbers,
   showTitle = false,
   showBorder = true,
-  className,
+  classNameList,
+  classNameContainer,
 }: {
   odsNumbers: number[];
   showTitle?: boolean;
   showBorder?: boolean;
-  className?: string;
+  classNameList?: string;
+  classNameContainer?: string;
 }) => {
   const params = useParams<Params>();
   const locale = (params.lang as keyof typeof ods) || "pt";
 
   return (
-    <div className="flex justify-center fhdv:portrait:justify-end items-center fhd:flex-row fhdv:portrait:flex-row-reverse gap-2 lg:gap-4 mt-5 text-white">
+    <div
+      className={`flex fhdv:portrait:justify-end items-center fhd:flex-row fhdv:portrait:flex-row-reverse gap-2 lg:gap-4 mt-5 text-white ${classNameContainer}`}
+    >
       {showTitle && (
         <div className="text-sm pr-4 fhdv:portrait:pl-4 fhdv:portrait:ml-3 border-r fhdv:portrait:border-r-0 fhdv:portrait:border-l border-white py-4 text-right">
           ODS relacionadas a esse case
@@ -33,7 +37,7 @@ export const OdsList = ({
           });
           return (
             <div
-              className={`w-11 fhdv:portrait:w-16 h-11 fhdv:portrait:h-16 relative ${showBorder ? "border-4" : ""}  border-white ${className}`}
+              className={`w-11 fhdv:portrait:w-16 h-11 fhdv:portrait:h-16 relative ${showBorder ? "border-4" : ""}  border-white ${classNameList}`}
               key={index}
             >
               {dataOds?.seal && (

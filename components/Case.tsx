@@ -75,7 +75,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
               tag="h2"
             />
           </div>
-          <div className="absolute -top-14 right-0 lg:-right-5 flex gap-2">
+          <div className="absolute -top-14 right-0 lg:-right-5 flex gap-2 z-9999">
             <Link href={`/${locale}/ods/${dataCase.mainOds}`}>
               <Image src="/icons/close.svg" alt="" width={40} height={40} />
             </Link>
@@ -125,7 +125,8 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
             </header>
             {dataCase && <CaseContent data={dataCase} />}
             <OdsList
-              className="2xl:w-16 2xl:h-16"
+              classNameList="2xl:w-16 2xl:h-16"
+              classNameContainer="justify-center"
               showBorder={false}
               odsNumbers={dataCase.asideOds}
               showTitle={true}

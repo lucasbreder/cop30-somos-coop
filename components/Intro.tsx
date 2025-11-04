@@ -56,12 +56,10 @@ export const Intro = ({
       className={`${isHome ? "bg-[url(/bg/bg1.png)]" : "bg-[url(/bg/bg2.png)]"} h-full px-3 lg:px-20 fhd:px-20 fhdv:portrait:px-10 overflow-hidden bg-cover bg-no-repeat`}
     >
       <AnimatePresence>{showIntro && <ScreenSaver />}</AnimatePresence>
-      <AnimatePresence>
-        <ScreenSaverTransition />
-      </AnimatePresence>
+      {!showIntro && <ScreenSaverTransition />}
 
       {!isHome && (
-        <header className="flex justify-between px-10 lg:px-20 absolute top-0 left-0 w-full z-99">
+        <header className="flex justify-between px-10 lg:px-20 absolute top-0 left-0 w-full">
           <Link
             href={"/"}
             className="fhd:m-0 fhdv:portrait:mx-auto w-30 h-30 fhd:w-30 fhdv:portrait:w-60 fhd:h-30 fhdv:portrait:h-60 relative"
