@@ -75,14 +75,27 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
               tag="h2"
             />
           </div>
-          <div className="absolute -top-14 right-0 lg:-right-5">
+          <div className="absolute -top-14 right-0 lg:-right-5 flex gap-2">
             <Link href={`/${locale}/ods/${dataCase.mainOds}`}>
               <Image src="/icons/close.svg" alt="" width={40} height={40} />
             </Link>
+            {nextCase && (
+              <Link
+                className="block sm:hidden w-10 h-10 text-primary items-center text-sm"
+                href={`/${locale}/case/${nextCase.id}`}
+              >
+                <Image
+                  src="/icons/next.svg"
+                  alt=""
+                  width={40}
+                  height={40}
+                />{" "}
+              </Link>
+            )}
           </div>
 
           {nextCase && (
-            <div className="absolute -bottom-15 -right-18 fhd:bottom-0 fhd:-right-60 fhdv:portrait:right-1/2 fhdv:portrait:translate-x-4/6">
+            <div className="hidden sm:block absolute -bottom-15 -right-18 fhd:bottom-0 fhd:-right-60 fhdv:portrait:right-1/2 fhdv:portrait:translate-x-4/6">
               <Link
                 className="w-full h-full text-primary flex items-center text-sm"
                 href={`/${locale}/case/${nextCase.id}`}

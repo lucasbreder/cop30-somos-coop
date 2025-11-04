@@ -26,28 +26,30 @@ export const OdsList = ({
           ODS relacionadas a esse case
         </div>
       )}
-      {odsNumbers.map((o, index) => {
-        const dataOds = ods[locale]?.find((ods) => {
-          return ods.id === o;
-        });
-        return (
-          <div
-            className={`w-12 fhdv:portrait:w-16 h-12 fhdv:portrait:h-16 relative ${showBorder ? "border-4" : ""}  border-white ${className}`}
-            key={index}
-          >
-            {dataOds?.seal && (
-              <Link href={`/${locale}/ods/${dataOds.id}`}>
-                <Image
-                  sizes="80vw"
-                  src={dataOds.seal}
-                  alt={dataOds.name}
-                  fill
-                />
-              </Link>
-            )}
-          </div>
-        );
-      })}
+      <div className="flex gap-2 lg:gap-4">
+        {odsNumbers.map((o, index) => {
+          const dataOds = ods[locale]?.find((ods) => {
+            return ods.id === o;
+          });
+          return (
+            <div
+              className={`w-11 fhdv:portrait:w-16 h-11 fhdv:portrait:h-16 relative ${showBorder ? "border-4" : ""}  border-white ${className}`}
+              key={index}
+            >
+              {dataOds?.seal && (
+                <Link href={`/${locale}/ods/${dataOds.id}`}>
+                  <Image
+                    sizes="80vw"
+                    src={dataOds.seal}
+                    alt={dataOds.name}
+                    fill
+                  />
+                </Link>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
