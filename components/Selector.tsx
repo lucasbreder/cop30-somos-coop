@@ -10,17 +10,19 @@ import { AnimatedSelector1 } from "./AnimatedSelector1";
 import useWindowWidth from "@/hooks/useWindowWidth";
 
 // --- FUNÇÃO AUXILIAR PARA COMPATIBILIDADE MOUSE/TOUCH ---
+// Tipagem ajustada para suportar a união de eventos MouseEvent e TouchEvent
 const getClientX = (event: TouchEvent & MouseEvent): number => {
   // Preferir touch se disponível
   if (event.touches && event.touches.length > 0) {
     return event.touches[0].clientX;
   }
-  // Fallback para mouse/drag (usamos o clientX, se não for 0)
-  if (event.clientX !== undefined && event.clientX !== 0) {
-    return event.clientX;
-  }
+  // Fallback para changedTouches (útil no touchend)
   if (event.changedTouches && event.changedTouches.length > 0) {
     return event.changedTouches[0].clientX;
+  }
+  // Fallback para mouse/drag
+  if (event.clientX !== undefined && event.clientX !== 0) {
+    return event.clientX;
   }
   return 0;
 };
@@ -45,19 +47,24 @@ export const Selector = () => {
   // ESTADOS PARA A LÓGICA DE SWIPE/TOUCH
   const [startX, setStartX] = useState<number>(0);
   const [isDragging, setIsDragging] = useState<boolean>(false);
+  // NOVO ESTADO: Sinaliza se um movimento de swipe significativo ocorreu
+  const [hasSwiped, setHasSwiped] = useState<boolean>(false);
 
   // Limite de movimento mínimo (em pixels) para considerar um swipe válido
   const SWIPE_THRESHOLD = 50;
+  // Limite de movimento mínimo para ativar o preventDefault (bloqueia o clique)
+  const MOVEMENT_THRESHOLD = 10;
 
   // Constantes de estilo
   const MAX_SCALE = 1.8;
   const MIN_OPACITY = 0.1;
   const REDUCTION_FACTOR = 0.1;
   const thumbWidthPercent = 100 / totalItems;
+  // Fator de Moderação: Aumenta a distância necessária para pular cada slide
+  const MODERATION_FACTOR = 3;
 
   // Lógica de Framer Motion para a Thumb (não alterada)
   useEffect(() => {
-    // ... (código useEffect Framer Motion inalterado)
     if (!trackRef.current) return;
 
     const trackWidth = trackRef.current.offsetWidth;
@@ -70,7 +77,6 @@ export const Selector = () => {
   }, [activeIndex, totalItems, thumbWidthPercent, x]);
 
   const handleDrag = () => {
-    // ... (código handleDrag inalterado)
     if (stepWidth === 0) return;
 
     const currentX = x.get();
@@ -83,7 +89,6 @@ export const Selector = () => {
   };
 
   const handleDragTransition = (target: number) => {
-    // ... (código handleDragTransition inalterado)
     if (stepWidth === 0) return 0;
     const nearestIndex = Math.round(target / stepWidth);
     return nearestIndex * stepWidth;
@@ -92,31 +97,37 @@ export const Selector = () => {
   // --- HANDLERS DA LÓGICA DE SWIPE/TOUCH ---
 
   const handleStart = useCallback((e: TouchEvent & MouseEvent) => {
-    // ... (código handleStart inalterado)
     const clientX = getClientX(e);
     if (clientX === 0) return;
 
     setIsDragging(true);
     setStartX(clientX);
+    // Reinicia a flag de swipe no início
+    setHasSwiped(false);
 
-    if ("touches" in e) {
-      e.preventDefault();
-    }
+    // NOTA: NÃO chamamos preventDefault() aqui para permitir o clique
   }, []);
 
   const handleMove = useCallback(
     (e: TouchEvent & MouseEvent) => {
-      // ... (código handleMove inalterado)
       if (!isDragging) return;
 
       const currentX = getClientX(e);
       if (currentX === 0) return;
 
-      if ("touches" in e) {
-        e.preventDefault();
+      const dragDelta = currentX - startX;
+
+      if (Math.abs(dragDelta) > MOVEMENT_THRESHOLD) {
+        // Se houver movimento significativo, marcamos como swipe
+        setHasSwiped(true);
+
+        // E AGORA, chamamos preventDefault() para evitar o scroll/bounce do navegador
+        if ("touches" in e) {
+          e.preventDefault();
+        }
       }
     },
-    [isDragging]
+    [isDragging, startX]
   );
 
   const handleEnd = useCallback(
@@ -126,47 +137,48 @@ export const Selector = () => {
       setIsDragging(false);
 
       const endX = getClientX(e);
-      // 1. Calcula o deslocamento total
       const dragDelta = endX - startX;
 
-      // 2. Calcula a largura do slide (ou o item centralizado)
-      // Usamos a largura do contêiner dividido pelo número de itens
-      const containerWidth = contentRef.current.offsetWidth;
-      // O valor do 'pixelPerSlide' deve representar o deslocamento necessário para pular 1 item.
-      // Como a sua visualização é baseada no item central, um bom divisor é a largura do contêiner / total de itens.
-      const pixelPerSlide = containerWidth / totalItems;
-
-      // Se o delta for muito pequeno, tratamos como se não houvesse movimento
-      if (Math.abs(dragDelta) < SWIPE_THRESHOLD) {
-        // Nenhum movimento significativo, mantém o índice
+      // Se não houve swipe ou o movimento foi menor que o SWIPE_THRESHOLD, ignoramos a mudança de índice
+      if (!hasSwiped || Math.abs(dragDelta) < SWIPE_THRESHOLD) {
         return;
       }
 
-      // 3. Calcula o número de itens a pular
-      // Arredondamos o resultado para o número inteiro mais próximo
-      let slidesToSkip = Math.round(Math.abs(dragDelta) / pixelPerSlide);
+      // Se chegou até aqui, é um swipe válido:
 
-      // Garante que pelo menos 1 item seja pulado se o SWIPE_THRESHOLD foi ultrapassado
+      // 1. Calcula a largura do slide
+      const containerWidth = contentRef.current.offsetWidth;
+      const pixelPerSlide = containerWidth / totalItems;
+
+      // 2. Calcula o número de itens a pular
+      const effectiveSlideDistance = pixelPerSlide * MODERATION_FACTOR;
+
+      let slidesToSkip = Math.round(
+        Math.abs(dragDelta) / effectiveSlideDistance
+      );
+
+      // Garante que pelo menos 1 item seja pulado
       slidesToSkip = Math.max(1, slidesToSkip);
 
       let newIndex = activeIndex;
 
       if (dragDelta < 0) {
-        // Deslocamento para a esquerda (delta negativo) = Mover para o PRÓXIMO(S) item(s) (índice aumenta)
+        // Swipe para a esquerda (índice aumenta)
         newIndex = activeIndex + slidesToSkip;
       } else if (dragDelta > 0) {
-        // Deslocamento para a direita (delta positivo) = Mover para o ITEM(S) ANTERIOR(ES) (índice diminui)
+        // Swipe para a direita (índice diminui)
         newIndex = activeIndex - slidesToSkip;
       }
 
-      // 4. Aplica os guarda-chuvas (safeguards)
+      // Aplica os guarda-chuvas (safeguards)
       newIndex = Math.min(totalItems - 1, newIndex);
       newIndex = Math.max(0, newIndex);
 
-      // Garante que o índice final seja atualizado
       setActiveIndex(newIndex);
+      // Resetamos a flag de swipe após a conclusão
+      setHasSwiped(false);
     },
-    [activeIndex, isDragging, startX, totalItems]
+    [activeIndex, isDragging, startX, totalItems, hasSwiped]
   );
 
   // --- USEEFFECT PARA ADICIONAR LISTENERS DE SWIPE/TOUCH ---
@@ -175,8 +187,9 @@ export const Selector = () => {
     if (container) {
       // MOUSE
       container.addEventListener("mousedown", handleStart as EventListener);
-      container.addEventListener("mousemove", handleMove as EventListener);
-      container.addEventListener("mouseup", handleEnd as EventListener);
+      // Os listeners de mouse são adicionados ao document para capturar o movimento/fim
+      // container.addEventListener("mousemove", handleMove as EventListener); // Comentado para simplificar, Framer Motion já gerencia drag
+      // container.addEventListener("mouseup", handleEnd as EventListener);
 
       // TOUCH
       container.addEventListener("touchstart", handleStart as EventListener);
@@ -190,8 +203,8 @@ export const Selector = () => {
           "mousedown",
           handleStart as EventListener
         );
-        container.removeEventListener("mousemove", handleMove as EventListener);
-        container.removeEventListener("mouseup", handleEnd as EventListener);
+        // container.removeEventListener("mousemove", handleMove as EventListener);
+        // container.removeEventListener("mouseup", handleEnd as EventListener);
         // TOUCH
         container.removeEventListener(
           "touchstart",
@@ -201,7 +214,7 @@ export const Selector = () => {
         container.removeEventListener("touchend", handleEnd as EventListener);
       };
     }
-  }, [handleStart, handleMove, handleEnd]); // Dependências dos Handlers useCallback
+  }, [handleStart, handleMove, handleEnd]);
 
   return (
     <motion.div
@@ -225,7 +238,6 @@ export const Selector = () => {
       </div>
       <div
         ref={contentRef}
-        // cursor-grab adicionado para feedback visual do mouse
         className="flex justify-center items-center mb-10 w-full cursor-grab"
       >
         {data.map((obj, index) => {
@@ -242,7 +254,13 @@ export const Selector = () => {
 
           return (
             <motion.div
-              onClick={() => {
+              onClick={(e) => {
+                // VERIFICAÇÃO CRÍTICA: Se houve um swipe (movimento > 10px), bloqueia a navegação
+                if (hasSwiped) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return;
+                }
                 router.push(`${locale}/ods/${obj.id}`);
               }}
               className={`select-none transition-all duration-500 flex flex-col justify-center items-center text-center cursor-pointer -mx-10 lg:-mx-10 fhd:-mx-12 relative hover:scale-120`}
@@ -263,6 +281,7 @@ export const Selector = () => {
                     : index > activeIndex
                       ? -index
                       : index,
+                // Permite cliques/taps apenas no item ativo para evitar navegação acidental
                 pointerEvents: index === activeIndex ? "all" : "none",
               }}
               transition={{
@@ -308,7 +327,6 @@ export const Selector = () => {
       </div>
       <div className="w-40 h-40 fhd:w-50 fhd:h-50 relative mx-auto mt-6 fhd:mt-10">
         <Link href={locale ? "/" + locale : "/"}>
-          {" "}
           <Image src="/logo/ods-logo1.svg" alt="" fill />
         </Link>
       </div>
