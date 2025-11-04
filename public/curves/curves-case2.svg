@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Camada_2"
+   data-name="Camada 2"
+   viewBox="0 0 650.1 330.91"
+   version="1.1"
+   sodipodi:docname="curves-case2.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview401"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.37919"
+     inkscape:cx="339.32961"
+     inkscape:cy="202.65518"
+     inkscape:window-width="1854"
+     inkscape:window-height="1009"
+     inkscape:window-x="66"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Camada_2" />
+  <defs
+     id="defs381">
+    <style
+       id="style379">
+      .cls-1 {
+        stroke: #b4ce49;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.64px;
+      }
+
+      .cls-2 {
+        stroke: #003a49;
+      }
+
+      .cls-3 {
+        stroke: #3fb5a8;
+      }
+    </style>
+  </defs>
+  <g
+     id="Camada_1-2"
+     data-name="Camada 1">
+    <g
+       id="g397">
+      <path
+         class="cls-1"
+         d="m 98.36,1.82 h 219.91 c 37.42,0 67.75,30.33 67.75,67.75 v 194.29 c 0,14.42 11.69,26.12 26.12,26.12 h 167.14"
+         id="path383" />
+      <path
+         class="cls-2"
+         d="M 579.27,329.09 H 410.7 c -35.24,0 -63.81,-28.57 -63.81,-63.81 V 70.02 c 0,-16.06 -13.02,-29.09 -29.09,-29.09 H 98.36"
+         id="path385" />
+      <path
+         class="cls-3"
+         d="M 515.76,310.28 H 415.37 c -27.56,0 -49.91,-22.34 -49.91,-49.91 V 70.3 c 0,-27.05 -21.93,-48.99 -48.99,-48.99 h -58.31"
+         id="path387" />
+      <path
+         class="cls-2"
+         d="m 85.66,41.23 c 0,0 -38.73,-0.77 -50.96,25.69 -8.4,18.17 -22.63,15.72 -27.33,11.66 0,0 -7.85,-4.96 -4.88,-14.85 0.74,-2.47 2.04,-4.76 3.95,-6.5 2.59,-2.36 7.01,-4.48 13.07,-0.59"
+         id="path389" />
+      <path
+         class="cls-2"
+         d="m 76.5,57.6 c 0,0 -18.43,0.76 -28.97,16.89 0,0 -5.86,13.34 -14.47,15.77"
+         id="path391" />
+      <path
+         class="cls-1"
+         d="m 593.99,289.88 c 0,0 54.92,0.85 54.29,-39.43 -0.72,-46.16 -40.57,-37.24 -40.57,-37.24 0,0 -32.27,4.03 -31.68,37.59 0.62,34.95 35.16,20.69 36.57,1.09"
+         id="path393" />
+      <path
+         class="cls-1"
+         d="m 605.88,266.33 c 0,0 -13.34,-17.63 1.45,-27.67 l 14.8,-10.05 c 0,0 6.46,14.14 2.08,25.56 -4.37,11.42 -10.85,11.29 -18.33,12.16 z"
+         id="path395" />
+    </g>
+  </g>
+</svg>

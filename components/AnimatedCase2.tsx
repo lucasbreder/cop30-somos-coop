@@ -1,6 +1,6 @@
 import { motion, Transition } from "motion/react";
 
-export const AnimatedCase = ({
+export const AnimatedCase2 = ({
   width,
   height,
   strokeWidth = 5,
@@ -70,7 +70,7 @@ export const AnimatedCase = ({
         initial={initial}
         animate={animate}
         transition={transition}
-        stroke={strokeColor}
+        stroke={"var(--primary)"}
         strokeWidth={strokeWidth}
         fill="transparent"
         d="m 85.66,41.23 c 0,0 -38.73,-0.77 -50.96,25.69 -8.4,18.17 -22.63,15.72 -27.33,11.66 0,0 -7.85,-4.96 -4.88,-14.85 0.74,-2.47 2.04,-4.76 3.95,-6.5 2.59,-2.36 7.01,-4.48 13.07,-0.59"
@@ -79,7 +79,7 @@ export const AnimatedCase = ({
         initial={initial}
         animate={animate}
         transition={transition}
-        stroke={strokeColor}
+        stroke={"var(--primary)"}
         strokeWidth={strokeWidth}
         fill="transparent"
         d="m 76.5,57.6 c 0,0 -18.43,0.76 -28.97,16.89 0,0 -5.86,13.34 -14.47,15.77"

@@ -1,82 +1,134 @@
-"use client"
-import { useEffect, useRef, useState } from "react";
-import { CaseInfo } from "./CaseInfo"
-import { Case as CaseData } from "@/types/Case"
-import { motion, useMotionValue } from "motion/react"
+"use client";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { CaseInfo } from "./CaseInfo";
+import { Case, Case as CaseData } from "@/types/Case";
+import { motion, useMotionValue } from "motion/react";
 import Image from "next/image";
 import { Button } from "./Button";
 import { OdsList } from "./OdsList";
 import { useParams } from "next/navigation";
 import { Params } from "@/types/Params";
 import { Title } from "./Title";
-import { CaseInfoList } from "./CaseInfoLIst";
+import { CaseInfoList } from "./CaseInfoList";
+import { useScrollContent } from "@/hooks/useScrollContent";
 
-export const CaseTechnicalSheet = ({data, activeCase}: {data: CaseData, activeCase?:CaseData}) => {
+export const CaseTechnicalSheet = ({
+  data,
+  activeCase,
+  setActiveCase,
+  hasBakground = true,
+}: {
+  data: CaseData;
+  activeCase?: CaseData;
+  hasBakground?: boolean;
+  setActiveCase: Dispatch<SetStateAction<Case | undefined>>;
+}) => {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const thumbRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const y = useMotionValue(0);
+  const [contentScrollHeight, setContentScrollHeight] = useState(0);
+  const params = useParams<Params>();
+  const locale = params.lang;
 
-      const trackRef = useRef<HTMLDivElement>(null);
-      const contentRef = useRef<HTMLDivElement>(null);
-      const y = useMotionValue(0);
-      const [contentScrollHeight, setContentScrollHeight] = useState(0);
-       const params = useParams<Params>();
-      const locale = params.lang;
+  useScrollContent({
+    contentRef,
+    data,
+    setContentScrollHeight,
+    thumbRef,
+    trackRef,
+    y,
+  });
 
-      useEffect(() => (
-        y.on('change', (latest) => {
-        if (trackRef.current && contentRef.current) {
-          const trackHeight = trackRef.current.clientHeight;
-          const contentHeight = contentRef.current.scrollHeight - contentRef.current.clientHeight;
-          const scrollableDist = contentHeight * (latest / trackHeight);
-          contentRef.current.scrollTop = scrollableDist;
-        }
-      })
-      ),[y])
-
-      useEffect(() => {
-        if (contentRef.current) {
-          // Access ref.current safely after the component has mounted
-          setContentScrollHeight(contentRef.current.scrollHeight);
-        }
-      }, [data]);
-
-    return (
-         <div className={`flex flex-col gap-1 w-10/12 fhd:h-4/6 fhdv:h-3/6 z-999 r absolute transition-all duration-700 ease-in-out fhd:left-0 ${activeCase?.id === data.id ? 'fhd:bottom-100 fhdz:bottom-auto fhd:right-auto fhdv:right-10' : 'fhd:-bottom-full fhdz:bottom-auto fhdv:-right-[150%] fhd:right-auto'}`}>
-          <div className="uppercase text-2xl text-center w-full" style={{
-            color: `var(--color-ods${data.mainOds})`
-        }}>
-          <Title className="text-2xl fhd:indent-10 fhdv:indent-2 fhdv:w-10/12 mx-auto" title="Ficha Técnica do Case" titleLine="left" color={`var(--color-ods${data?.mainOds})`} tag="h2" /></div>
-           <div className="h-full rounded-2xl px-6 py-8" style={{
-            backgroundColor: `var(--color-ods${data.mainOds})`
-        }}>
-          <div ref={contentRef} className="w-full h-full overflow-hidden pb-20">
-            <div className=" h-40 w-full mb-5 relative">
-                {data.thumbnail && <Image sizes="80vw" className="object-cover rounded-2xl" src={data.thumbnail} alt={data.title} fill />}
-            </div>
-            <CaseInfo title="Nome da Cooperativa" text={data.cooperName} />
-            <CaseInfo title="Ramo" text={data.branch} />
-            <CaseInfoList title="Categorias" text={data.categories} />
-            <CaseInfo title="Resumo" text={data.excerpt} />
-            <OdsList odsNumbers={data.asideOds} />
-           </div>
-           </div>
-           <div className="w-full left-0 flex gap-2 mt-5 relative">
-            <Button label="Conhecer o case" url={`/${locale}/case/${data.id}`} ods={data.mainOds}/>
-           </div>
-        {contentScrollHeight > 602 && <div 
-        ref={trackRef} 
-        className="absolute bottom-0 -right-8 w-4 m-auto h-[80%] rounded-2xl border border-primary flex flex-col justify-start items-center mt-4"
+  return (
+    <div
+      className={`flex flex-col md:ml-2 fhd:ml-0 fhdv:portrait:ml-0 gap-1 w-10/12 h-[56%] lg:h-[45%] fhd:h-4/6 fhdv:portrait:h-3/6 z-999 fixed lg:absolute fhdv:portrait:absolute transition-all duration-700 ease-in-out left-5 fhd:left-auto fhdv:portrait:left-auto ${activeCase?.id === data.id ? "bottom-[30%] lg:bottom-[35%] fhd:bottom-100 fhdv:portrait:bottom-auto fhd:right-auto fhdv:portrait:right-10" : "-bottom-full fhdv:portrait:bottom-auto fhdv:portrait:-right-[150%] fhd:right-auto"}`}
     >
-       <motion.div 
-            drag="y" 
-            dragTransition={{
-                power: 0, 
-                timeConstant: 700,
-            }}
-            dragConstraints={trackRef} 
-            style={{y}}
-            className="bg-gray-400 h-15 w-3 rounded-2xl cursor-grab my-0.5" 
+      <div
+        className="uppercase text-2xl text-center w-full"
+        style={{
+          color: `var(--color-ods${data.mainOds})`,
+        }}
+      >
+        <div
+          className="absolute z-999 top-10 -right-10 md:hidden fhdv:portrait:hidden"
+          onClick={() => {
+            setActiveCase(undefined);
+          }}
+        >
+          <Image src="/icons/close.svg" alt="" width={35} height={35} />
+        </div>
+        <Title
+          className="text-xl fhd:portrait:text-2xl fhd:text-2xl fhd:indent-10 fhdv:portrait:indent-2 fhdv:portrait:w-10/12 mx-auto"
+          title="Ficha Técnica do Case"
+          titleLine="left"
+          color={`var(--color-ods${data?.mainOds})`}
+          tag="h2"
         />
-    </div>}
-        
-       </div>
-    )
-}
+      </div>
+      <div
+        className="h-full rounded-2xl px-6 py-8"
+        style={{
+          backgroundColor: hasBakground
+            ? `var(--color-ods${data.mainOds})`
+            : "transparent",
+          borderColor: !hasBakground
+            ? `var(--color-ods${data.mainOds})`
+            : "transparent",
+          borderWidth: !hasBakground ? 2 : 0,
+          borderStyle: "solid",
+          color: !hasBakground
+            ? `var(--color-ods${data.mainOds}) !important`
+            : "white",
+        }}
+      >
+        <div
+          ref={contentRef}
+          className="w-full h-full overflow-hidden overflow-y-auto no-scrollbar"
+        >
+          <div className="h-40 w-full mb-5 relative">
+            {data.thumbnail && (
+              <Image
+                sizes="80vw"
+                className="object-cover rounded-2xl"
+                src={data.thumbnail}
+                alt={data.title}
+                fill
+              />
+            )}
+          </div>
+          <CaseInfo title="Nome da Cooperativa" text={data.cooperName} />
+          <CaseInfo title="Ramo" text={data.branch} />
+          <CaseInfoList title="Categorias" text={data.categories} />
+          <CaseInfo title="Resumo" text={data.excerpt} />
+          <OdsList odsNumbers={data.asideOds} />
+        </div>
+      </div>
+      <div className="w-full left-0 flex gap-2 mt-5 relative">
+        <Button
+          label="Conhecer o case"
+          url={`/${locale}/case/${data.id}`}
+          ods={data.mainOds}
+        />
+      </div>
+      {contentScrollHeight > 0 && (
+        <div
+          ref={trackRef}
+          className="absolute bottom-0 -right-8 w-4 m-auto h-[80%] rounded-2xl border border-primary flex flex-col justify-start items-center mt-4"
+        >
+          <motion.div
+            ref={thumbRef}
+            drag="y"
+            dragTransition={{
+              power: 0,
+              timeConstant: 700,
+            }}
+            dragConstraints={trackRef}
+            style={{ y }}
+            className="bg-gray-400 h-15 w-3 rounded-2xl cursor-grab my-0.5"
+          />
+        </div>
+      )}
+    </div>
+  );
+};

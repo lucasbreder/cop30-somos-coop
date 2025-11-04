@@ -29,7 +29,7 @@ export const ScreenSaverTransition = () => {
           {screenSaverTranstion.groups.map((group, index) => (
              <div className={`flex w-fit h-full gap-2 border-white rounded-full px-40 relative ${styleByIndex(index)}`} key={index}>
               {group.map((image, indexGroup) => (
-                <div className="relative min-w-100 h-full" key={indexGroup}>
+                <div className="relative min-w-100 fhd:min-w-100 lg:min-w-60 h-full" key={indexGroup}>
                   <Image sizes="80vw" className="object-cover rounded-[50px] py-2" src={image} alt="" fill />
                 </div>
               ))}

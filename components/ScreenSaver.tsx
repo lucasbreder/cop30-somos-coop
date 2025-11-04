@@ -1,5 +1,5 @@
-"use client"
-import { motion } from "motion/react"
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { AnimatedIcon } from "./AnimatedIcon";
 import { AnimatedBrasilPath } from "./AnimatedBrasilPath";
@@ -7,105 +7,203 @@ import { AnimatedIntro } from "./AnimatedIntro";
 import { AnimatedIntroLine } from "./AnimatedIntroLine";
 
 export const ScreenSaver = () => {
-
   return (
-   <motion.div
-    initial={{opacity: 1}}
-    exit={{opacity: 0, transition: {delay: .5, duration: .4}}}
-    className="bg-[url(/bg/bg1.png)] bg-cover bg-no-repeat w-full h-full flex items-center justify-center absolute inset-0 z-999 overflow-hidden">
-       <div className="absolute bottom-40 portrait:bottom-90 left-0 portrait:left-[-15%] w-[25%] portrait:w-[50%]">
+    <motion.div
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { delay: 0.5, duration: 0.4 } }}
+      className="bg-[url(/bg/bg1.png)] bg-cover bg-no-repeat w-full h-full flex items-center justify-center absolute inset-0 z-999 overflow-hidden"
+    >
+      <div className="absolute -bottom-10 lg:bottom-0 fhd:bottom-20 fhdv:portrait:bottom-50 -left-20 md:-left-30 lg:-left-10 fhd:-left-20 fhdv:portrait:left-[-15%] w-[25%] portrait:w-[50%]">
         <AnimatedIntro
-              width="100%" 
-              height={300}
-              strokeWidth={8} 
-              duration={3}
-              delay={3}
-              />
-          </div>
-          <div className="hidden fhd:block">
-            <AnimatedIcon url="/icons/shine1.svg" delay={1} bottom={30} right={30} />
-            <AnimatedIcon url="/icons/shine1.svg" delay={.5} top={10} left={20} />
-            <AnimatedIcon url="/icons/shine1.svg" delay={.8} top={75} left={10} />
-            <AnimatedIcon url="/icons/shine1.svg" delay={.3} top={22} right={40} />
-            <AnimatedIcon url="/icons/plus1.svg" animation="show" width={40} height={40} top={50} left={18} delay={.3} />
-            <AnimatedIcon url="/icons/plus1.svg" animation="show" width={40} height={40} top={12} left={50} delay={.3} />
-            <AnimatedIcon url="/icons/plus1.svg" animation="show" width={40} height={40} top={10} left={35} delay={.3} />
-            <AnimatedIcon url="/icons/plus1.svg" animation="show" width={40} height={40} bottom={25} right={42} delay={.3} />
-          </div>
-           <div className="hidden fhd:hidden fhdv:block">
-            <AnimatedIcon url="/icons/shine1.svg" delay={1} bottom={30} right={15} />
-            <AnimatedIcon url="/icons/shine1.svg" delay={.5} top={32} left={10} />
-            <AnimatedIcon url="/icons/shine1.svg" delay={.8} top={55} left={5} />
-            <AnimatedIcon url="/icons/shine1.svg" delay={.3} top={36} right={10} />
-            <AnimatedIcon url="/icons/plus1.svg" animation="show" width={40} height={40} top={65} left={18} delay={.3} />
-            <AnimatedIcon url="/icons/plus1.svg" animation="show" width={40} height={40} top={32} left={50} delay={.3} />
-            <AnimatedIcon url="/icons/plus1.svg" animation="show" width={40} height={40} top={75} right={22} delay={.3} />
-            <AnimatedIcon url="/icons/plus1.svg" animation="show" width={40} height={40} top={32} right={22} delay={.3} />
-          </div>
-        <motion.div
-          initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2}}} 
-          className="h-7/12 w-full absolute top-20 left-0">
-            <div className="
-            fhd:max-w-2/6
-            fhdv:max-w-4/6
-            fhd:text-[35px] 
-            fhdv:text-[55px]
+          width="100%"
+          height={300}
+          strokeWidth={8}
+          duration={3}
+          delay={3}
+        />
+      </div>
+      <div>
+        <AnimatedIcon
+          url="/icons/shine1.svg"
+          className="w-6 md:w-12 h-6 md:h-12 fhd:w-20 fhd:h-20 fhdv:portrait:w-20! fhdv:portrait:h-20 fhdv:portrait:bottom-[25%] fhdv:portrait:right-[10%] bottom-[30%] right-[30%] border-amber-600"
+          delay={1}
+        />
+        <AnimatedIcon
+          url="/icons/shine1.svg"
+          className="w-6 md:w-12 h-6 md:h-12 fhd:w-20 fhd:h-20 fhdv:portrait:w-20 fhdv:portrait:h-20 fhdv:portrait:top-[35%] fhdv:portrait:left-[15%] top-[15%] left-[6%] lg:top-[10%] lg:left-[20%] border-red-600"
+          delay={0.5}
+        />
+        <AnimatedIcon
+          url="/icons/shine1.svg"
+          className="w-6 md:w-12 h-6 md:h-12 fhd:w-20 fhd:h-20 fhdv:portrait:w-20 fhdv:portrait:h-20 fhdv:portrait:top-[55%] fhdv:portrait:left-[3%]  xl:top-[30%] top-[70%] left-[10%] lg:top-[75%] lg:left-[10%] border-blue-600"
+          delay={0.8}
+        />
+        <AnimatedIcon
+          url="/icons/shine1.svg"
+          className="w-6 md:w-12 h-6 md:h-12 fhd:w-20 fhd:h-20 fhdv:portrait:w-20 fhdv:portrait:h-20 fhdv:portrait:top-[40%] fhdv:portrait:right-[15%] top-[38%] right-[25%] lg:top-[22%] lg:right-[40%] border-green-600"
+          delay={0.3}
+        />
+        <AnimatedIcon
+          url="/icons/plus1.svg"
+          animation="show"
+          className="w-6 md:w-8 h-6 md:h-8 fhd:w-12 fhd:h-12 fhdv:portrait:w-12 fhdv:portrait:h-12  fhdv:portrait:top-[64%] fhdv:portrait:left-[10%] top-[42%] left-[18%] lg:top-[50%] lg:left-[18%] border-gray-600"
+          delay={0.3}
+        />
+        <AnimatedIcon
+          url="/icons/plus1.svg"
+          animation="show"
+          className="w-6 md:w-8 h-6 md:h-8 fhd:w-12 fhd:h-12 fhdv:portrait:w-12 fhdv:portrait:h-12 fhdv:portrait:top-[36%] fhdv:portrait:left-[40%] top-[12%] left-[50%] lg:top-[12%] lg:left-[50%] border-orange-600"
+          delay={0.3}
+        />
+        <AnimatedIcon
+          url="/icons/plus1.svg"
+          animation="show"
+          className="w-6 md:w-8 h-6 md:h-8 fhd:w-12 fhd:h-12 fhdv:portrait:w-12 fhdv:portrait:h-12 fhdv:portrait:top-[38%] fhdv:portrait:left-[65%] top-[17%] left-[75%] lg:top-[10%] lg:left-[35%] border-purple-600"
+          delay={0.3}
+        />
+        <AnimatedIcon
+          url="/icons/plus1.svg"
+          animation="show"
+          className="w-6 md:w-8 h-6 md:h-8 fhd:w-12 fhd:h-12 fhdv:portrait:w-12 fhdv:portrait:h-12 fhdv:portrait:bottom-[18%] fhdv:portrait:right-[25%] bottom-[20%] right-[12%] lg:bottom-[25%] lg:right-[42%] border-pink-600"
+          delay={0.3}
+        />
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 2 } }}
+        className="h-7/12 w-full absolute top-[15%] md:top-[15%] lg:top-[30%] fhd:top-20 -left-10 md:-left-25 fhd:left-0"
+      >
+        <div
+          className="
+            xl:max-w-2/6
+            max-w-4/6
+            md:max-w-3/6
+            lg:max-w-2/8
+            fhdv:portrait:max-w-4/6
+            text-[20px]
+            xl:text-[25px] 
+            2xl:text-[35px] 
+            fhdv:portrait:text-[55px]
             text-white
             font-light
-            uppercase italic absolute fhdv:top-[100px] fhd:top-[250px] fhdv:right-[10%] fhd:right-[5%]
-            ">
-              <motion.span 
-                initial={{opacity: 0, translateX: -100}} animate={{opacity: 1, translateX: 0, transition: {delay: 3.8, duration: .6}}} 
-              className="fhd:-mb-10 fhdv:-mb-15 block">Conheça</motion.span>
-              <motion.span className="flex items-center">
-                <motion.span 
-                  initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 3.5}}} 
-                className="fhd:text-[150px] fhdv:text-[220px] font-black block tracking-[-20px] text-quinquenary">60</motion.span> 
-                <motion.span 
-                initial={{opacity: 0, translateX: -100}} animate={{opacity: 1, translateX: 0, transition: {delay: 4, duration: .6}}}
-                className="max-w-1/6 fhd:text-[51px] ml-8 fhdv:ml-12 fhd:leading-14 fhdv:text-[75px] fhdv:leading-22">boas práticas</motion.span>
-              </motion.span>
-              <motion.span 
-                initial={{opacity: 0, translateX: -100}} animate={{opacity: 1, translateX: 0, transition: {delay: 4.4, duration: .6}}}
-              className="fhd:text-[42px] fhd:-mt-12 fhdv:-mt-16 block fhd:leading-12 fhdv:text-[65px] fhdv:leading-16">das cooperativas brasileiras</motion.span>
-              </div>
-              <motion.div
-                  initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.5}}} 
-              >
-              </motion.div>
-        </motion.div>
-          <div className="absolute top-5 fhdv:top-10 left-5 fhd:w-4/6 fhdv:w-full">
-            <AnimatedIntroLine
-                width="100%" 
-                height={20}
-                duration={.5}
-                 />
-          </div>
-           <div className="absolute fhd:bottom-5 fhdv:bottom-10 fhd:right-5 fhdv:-right-20 fhd:w-3/6 fhdv:w-full">
-            <AnimatedIntroLine
-                width="100%"  
-                height={20}
-                duration={.5}
-                fillIcons="var(--secondary)"
-                fillDots="var(--tertiary)"
-                 />
-          </div>
-          
-          <div className="relative h-full w-full fhdv:w-9/12 fhdv:-ml-10 fhdv:-mb-300 fhd:mb-0">
+            uppercase italic absolute 
+            fhdv:portrait:-top-[360px] fhd:top-[250px] 
+            fhdv:portrait:right-[10%]
+            right-5
+            2xl:right-0
+            xl:-right-10
+            fhd:right-[2%]
+            "
+        >
+          <motion.span
+            initial={{ opacity: 0, translateX: -100 }}
+            animate={{
+              opacity: 1,
+              translateX: 0,
+              transition: { delay: 3.8, duration: 0.6 },
+            }}
+            className="-mb-5 2xl:-mb-10 fhdv:portrait:-mb-15 block"
+          >
+            Conheça
+          </motion.span>
+          <motion.span className="flex items-center">
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 3.5 } }}
+              className="text-[100px] xl:text-[120px] 2xl:text-[150px] fhdv:portrait:text-[220px] font-black block tracking-[-20px] text-quinquenary"
+            >
+              60
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, translateX: -100 }}
+              animate={{
+                opacity: 1,
+                translateX: 0,
+                transition: { delay: 4, duration: 0.6 },
+              }}
+              className="max-w-1/6 text-[25px] xl:text-[35px] 2xl:text-[51px] ml-8 fhdv:portrait:ml-12 leading-8 2xl:leading-14 fhdv:portrait:text-[75px] fhdv:portrait:leading-22"
+            >
+              boas práticas
+            </motion.span>
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, translateX: -100 }}
+            animate={{
+              opacity: 1,
+              translateX: 0,
+              transition: { delay: 4.4, duration: 0.6 },
+            }}
+            className="text-[24px] 2xl:text-[42px] xl:text-[32px] -mt-8 xl:-mt-11 fhd:-mt-11 fhdv:portrait:-mt-16 block leading-8 xl:leading-10 2xl:leading-12 fhdv:portrait:text-[65px] fhdv:portrait:leading-16"
+          >
+            das cooperativas brasileiras
+          </motion.span>
+        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 2.5 } }}
+        ></motion.div>
+      </motion.div>
+      <div className="absolute top-5 fhdv:portrait:top-10 left-5 fhd:w-4/6 fhdv:portrait:w-full">
+        <AnimatedIntroLine width="100%" height={20} duration={0.5} />
+      </div>
+      <div className="absolute bottom-5 right-0 fhdv:portrait:bottom-10 fhd:right-5 fhdv:portrait:-right-20 md:w-5/6 lg:w-3/6 fhdv:portrait:w-full">
+        <AnimatedIntroLine
+          width="100%"
+          height={20}
+          duration={0.5}
+          fillIcons="var(--secondary)"
+          fillDots="var(--tertiary)"
+        />
+      </div>
 
-           <div className="fhdv:w-full fhd:w-5/12  h-full absolute -bottom-60 portrait:bottom-60 left-[18%] portrait:left-10">
-             <AnimatedBrasilPath
-              width="100%" 
-              height="100%"
-              strokeColor="var(--color-quinquenary)" 
-              strokeWidth={8} 
-              duration={3} />
-           </div>
-              <div className="fhdv:w-full fhd:w-4/12 relative h-full top-0 portrait:-top-140 left-[25%] portrait:left-10">
-                  <Image sizes="80vw" priority className="object-contain" src="/intro/people.png" alt="" fill />
-                </div>
-          </div>
-            
+      <div className="relative h-full w-full fhdv:portrait:w-9/12 fhdv:portrait:-ml-10 fhdv:portrait:-mb-300 fhd:mb-0">
+        <div
+          className="w-[80%] 
+           md:w-[65%] 
+           fhdv:portrait:w-full fhd:w-5/12 h-full absolute -bottom-60 
+           fhd:-bottom-60
+           fhd:left-[18%] 
+           md:left-[18%]
+           lg:left-[5%]
+           left-10
+           fhdv:portrait:bottom-35
+           fhdv:portrait:left-10
+           xl:-bottom-[20%]
+           lg:-bottom-[20%]"
+        >
+          <AnimatedBrasilPath
+            width="100%"
+            height="100%"
+            strokeColor="var(--color-quinquenary)"
+            strokeWidth={8}
+            duration={3}
+          />
+        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 2.5 } }}
+          className="w-8/12 
+              lg:w-[34%] 
+              fhdv:portrait:w-full 
+              fhd:w-[37%] 
+              relative
+              h-full
+              top-26
+              lg:top-0
+              xl:top-0
+              fhd:-top-6 
+              fhdv:portrait:-top-100 left-[20%] lg:left-[24%] fhd:left-[24%] fhdv:portrait:left-10"
+        >
+          <Image
+            sizes="80vw"
+            priority
+            className="object-contain"
+            src="/intro/people.png"
+            alt=""
+            fill
+          />
         </motion.div>
-  )
-}
+      </div>
+    </motion.div>
+  );
+};

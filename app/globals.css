@@ -3,29 +3,28 @@
 :root {
   --background: #f4f4f4;
   --foreground: #171717;
-  --color-ods1: #E5243B;
-  --color-ods2: #DDA63A;
-  --color-ods3: #4C9F38;
-  --color-ods4: #C5192D;
-  --color-ods5: #FF3A21;
-  --color-ods6: #26BDE2;
-  --color-ods7: #FCC30B;
-  --color-ods8: #A21942;
-  --color-ods9: #FD6925;
-  --color-ods10: #DD1367;
-  --color-ods11: #FD9D24;
-  --color-ods12: #BF8B2E;
-  --color-ods13: #3F7E44;
-  --color-ods14: #0A97D9;
-  --color-ods15: #56C02B;
-  --color-ods16: #00689D;
-  --color-ods17: #19486A;
+  --color-ods1: #e5243b;
+  --color-ods2: #dda63a;
+  --color-ods3: #4c9f38;
+  --color-ods4: #c5192d;
+  --color-ods5: #ff3a21;
+  --color-ods6: #26bde2;
+  --color-ods7: #fcc30b;
+  --color-ods8: #a21942;
+  --color-ods9: #fd6925;
+  --color-ods10: #dd1367;
+  --color-ods11: #fd9d24;
+  --color-ods12: #bf8b2e;
+  --color-ods13: #3f7e44;
+  --color-ods14: #0a97d9;
+  --color-ods15: #56c02b;
+  --color-ods16: #00689d;
+  --color-ods17: #19486a;
   --primary: #013544;
-  --secondary: #6DC6DF;
-  --tertiary: #B4CE48;
-  --quaternary: #F3F2F2;
+  --secondary: #6dc6df;
+  --tertiary: #b4ce48;
+  --quaternary: #f3f2f2;
   --quinquenary: #3eb5a8;
-
 }
 
 @theme inline {
@@ -38,8 +37,14 @@
   --color-tertiary: var(--tertiary);
   --color-quaternary: var(--quaternary);
   --color-quinquenary: var(--quinquenary);
+  --breakpoint-xs: 300px;
+  --breakpoint-sm: 400px;
+  --breakpoint-md: 500px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1500px;
+  --breakpoint-fhd: 1920px;
   --breakpoint-fhdv: 1080px;
-  --breakpoint-fhd: 1200px;
   --breakpoint-4k: 2560px;
 }
 
@@ -50,74 +55,74 @@
   }
 } */
 @layer utilities {
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
   #svg2 {
-    fill-rule:evenodd;
-    image-rendering:optimizeQuality;
-    shape-rendering:geometricPrecision;
-    text-rendering:geometricPrecision;
+    fill-rule: evenodd;
+    image-rendering: optimizeQuality;
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
   }
   #svg2 path {
-    stroke:#ffffff;
-    stroke-width:282.237;
-    stroke-miterlimit:4;
-    stroke-dasharray:none;
-    stroke-opacity:1;
-    transition: all .5s;
+    stroke: #ffffff;
+    stroke-width: 282.237;
+    stroke-miterlimit: 4;
+    stroke-dasharray: none;
+    stroke-opacity: 1;
+    transition: all 0.5s;
     position: relative;
-        opacity: .2;
+    opacity: 0.2;
   }
-    #svg2.ods1 path {
+  #svg2.ods1 path {
     fill: var(--color-ods1);
   }
-    #svg2.ods2 path {
+  #svg2.ods2 path {
     fill: var(--color-ods2);
   }
-    #svg2.ods3 path {
+  #svg2.ods3 path {
     fill: var(--color-ods3);
   }
-    #svg2.ods4 path {
+  #svg2.ods4 path {
     fill: var(--color-ods4);
   }
-    #svg2.ods5 path {
+  #svg2.ods5 path {
     fill: var(--color-ods5);
   }
-    #svg2.ods6 path {
+  #svg2.ods6 path {
     fill: var(--color-ods6);
   }
-    #svg2.ods7 path {
+  #svg2.ods7 path {
     fill: var(--color-ods7);
   }
-    #svg2.ods8 path {
+  #svg2.ods8 path {
     fill: var(--color-ods8);
   }
-    #svg2.ods9 path {
+  #svg2.ods9 path {
     fill: var(--color-ods9);
   }
-    #svg2.ods10 path {
+  #svg2.ods10 path {
     fill: var(--color-ods10);
   }
-    #svg2.ods11 path {
+  #svg2.ods11 path {
     fill: var(--color-ods11);
   }
-    #svg2.ods12 path {
+  #svg2.ods12 path {
     fill: var(--color-ods12);
   }
-    #svg2.ods13 path {
+  #svg2.ods13 path {
     fill: var(--color-ods13);
   }
-    #svg2.ods14 path {
+  #svg2.ods14 path {
     fill: var(--color-ods14);
   }
-    #svg2.ods15 path {
+  #svg2.ods15 path {
     fill: var(--color-ods15);
   }
-    #svg2.ods16 path {
+  #svg2.ods16 path {
     fill: var(--color-ods16);
   }
   #svg2.ods17 path {
@@ -135,7 +140,7 @@ body {
   }
 
   #svg2 path.active {
-    opacity: .4;
+    opacity: 0.4;
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -143,7 +148,7 @@ body {
 
   /* Esconde a barra de rolagem para IE, Edge e Firefox */
   .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
