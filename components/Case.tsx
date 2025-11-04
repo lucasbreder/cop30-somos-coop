@@ -46,7 +46,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
           <AnimatedCase2 width="100%" height={300} />
         </div>
         <div
-          className="flex gap-10 fhd:flex-row fhdv:portrait:flex-col lg:mt-8 fhd:mt-0 fhdv:portrait:mt-20 h-8/12 sm:h-8/12 xs:h-9/12 lg:h-8/12 fhdv:portrait:h-[71%] rounded-2xl p-10 relative w-11/12 fhd:w-10/12 top-8 sm:top-0"
+          className="flex gap-10 fhd:flex-row fhdv:portrait:flex-col lg:mt-8 fhd:mt-0 fhdv:portrait:mt-20 h-8/12 sm:h-8/12 xs:h-9/12 lg:h-8/12 fhdv:portrait:h-[71%] rounded-2xl px-3 py-8 lg:px-10 lg:py-10 relative w-11/12 fhd:w-10/12 top-8 sm:top-0"
           style={{
             backgroundColor: hasBakground
               ? `var(--color-ods${dataCase.mainOds})`
@@ -97,7 +97,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
           <div className="fhd:basis-1/2 fhdv:portrait:basis-auto fhdv:portrait:h-220">
             <header className="flex gap-6 items-center">
               {dataOds?.seal && (
-                <div className="w-20 h-20 border-4 fhd:w-40 fhd:h-40 fhdv:portrait:w-60 fhdv:portrait:h-60 fhd:border-20 fhdv:portrait:border-20 -ml-10  border-white relative">
+                <div className="w-20 h-20 border-4 fhd:w-40 fhd:h-40 fhdv:portrait:w-60 fhdv:portrait:h-60 fhd:border-20 fhdv:portrait:border-20 -ml-3 lg:-ml-10  border-white relative">
                   <Image
                     sizes="80vw"
                     fill

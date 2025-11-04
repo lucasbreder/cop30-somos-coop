@@ -79,7 +79,7 @@ export const Gallery = ({ gallery }: { gallery: string[] }) => {
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
-              className={`fhdv:portrait:hidden cursor-pointer absolute left-1 top-1/2 -translate-y-1/2 z-20  text-white p-2 rounded-full opacity-70 ${currentIndex === 0 ? "opacity-10! cursor-not-allowed!" : "hover:opacity-100"}`}
+              className={`idden lg:block cursor-pointer absolute left-1 top-1/2 -translate-y-1/2 z-20  text-white p-2 rounded-full opacity-70 ${currentIndex === 0 ? "opacity-10! cursor-not-allowed!" : "hover:opacity-100"}`}
             >
               <Image
                 className="rotate-180"
@@ -92,7 +92,7 @@ export const Gallery = ({ gallery }: { gallery: string[] }) => {
             <button
               onClick={handleNext}
               disabled={currentIndex >= gallery.length - itemsPerView}
-              className={`fhdv:portrait:hidden cursor-pointer absolute right-1 top-1/2 -translate-y-1/2 z-20 text-white p-2 rounded-full opacity-70 ${currentIndex >= gallery.length - itemsPerView ? "opacity-10! cursor-not-allowed!" : "hover:opacity-100"}`}
+              className={`hidden lg:block cursor-pointer absolute right-1 top-1/2 -translate-y-1/2 z-20 text-white p-2 rounded-full opacity-70 ${currentIndex >= gallery.length - itemsPerView ? "opacity-10! cursor-not-allowed!" : "hover:opacity-100"}`}
             >
               <Image
                 src={"/icons/chevron-right-solid-full.svg"}
