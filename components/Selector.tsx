@@ -1,6 +1,6 @@
 "use client";
 import { ods } from "@/data/ods";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo, useCallback } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
@@ -9,27 +9,55 @@ import { AnimatedSelector } from "./AnimatedSelector";
 import { AnimatedSelector1 } from "./AnimatedSelector1";
 import useWindowWidth from "@/hooks/useWindowWidth";
 
+// --- FUNÇÃO AUXILIAR PARA COMPATIBILIDADE MOUSE/TOUCH ---
+const getClientX = (event: TouchEvent & MouseEvent): number => {
+  // Preferir touch se disponível
+  if (event.touches && event.touches.length > 0) {
+    return event.touches[0].clientX;
+  }
+  // Fallback para mouse/drag (usamos o clientX, se não for 0)
+  if (event.clientX !== undefined && event.clientX !== 0) {
+    return event.clientX;
+  }
+  if (event.changedTouches && event.changedTouches.length > 0) {
+    return event.changedTouches[0].clientX;
+  }
+  return 0;
+};
+
 export const Selector = () => {
   const params = useParams<{ lang: string }>();
   const router = useRouter();
   const locale = params.lang as keyof typeof ods;
-  // Estado para rastrear o índice atualmente focado (central)
-  const [activeIndex, setActiveIndex] = useState(
-    Math.floor((ods[locale] ? ods[locale].length : ods["pt"].length) / 2)
-  );
-  const data = ods[locale] || ods["pt"];
+
+  const data = useMemo(() => ods[locale] || ods["pt"], [locale]);
   const totalItems = data.length;
+
+  const [activeIndex, setActiveIndex] = useState(Math.floor(totalItems / 2));
+
   const trackRef = useRef<HTMLDivElement>(null);
+  const thumbRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const [stepWidth, setStepWidth] = useState(0);
   const windowWidth = useWindowWidth();
 
+  // ESTADOS PARA A LÓGICA DE SWIPE/TOUCH
+  const [startX, setStartX] = useState<number>(0);
+  const [isDragging, setIsDragging] = useState<boolean>(false);
+
+  // Limite de movimento mínimo (em pixels) para considerar um swipe válido
+  const SWIPE_THRESHOLD = 50;
+
+  // Constantes de estilo
   const MAX_SCALE = 1.8;
   const MIN_OPACITY = 0.1;
   const REDUCTION_FACTOR = 0.1;
   const thumbWidthPercent = 100 / totalItems;
 
+  // Lógica de Framer Motion para a Thumb (não alterada)
   useEffect(() => {
+    // ... (código useEffect Framer Motion inalterado)
     if (!trackRef.current) return;
 
     const trackWidth = trackRef.current.offsetWidth;
@@ -42,6 +70,7 @@ export const Selector = () => {
   }, [activeIndex, totalItems, thumbWidthPercent, x]);
 
   const handleDrag = () => {
+    // ... (código handleDrag inalterado)
     if (stepWidth === 0) return;
 
     const currentX = x.get();
@@ -54,10 +83,125 @@ export const Selector = () => {
   };
 
   const handleDragTransition = (target: number) => {
+    // ... (código handleDragTransition inalterado)
     if (stepWidth === 0) return 0;
     const nearestIndex = Math.round(target / stepWidth);
     return nearestIndex * stepWidth;
   };
+
+  // --- HANDLERS DA LÓGICA DE SWIPE/TOUCH ---
+
+  const handleStart = useCallback((e: TouchEvent & MouseEvent) => {
+    // ... (código handleStart inalterado)
+    const clientX = getClientX(e);
+    if (clientX === 0) return;
+
+    setIsDragging(true);
+    setStartX(clientX);
+
+    if ("touches" in e) {
+      e.preventDefault();
+    }
+  }, []);
+
+  const handleMove = useCallback(
+    (e: TouchEvent & MouseEvent) => {
+      // ... (código handleMove inalterado)
+      if (!isDragging) return;
+
+      const currentX = getClientX(e);
+      if (currentX === 0) return;
+
+      if ("touches" in e) {
+        e.preventDefault();
+      }
+    },
+    [isDragging]
+  );
+
+  const handleEnd = useCallback(
+    (e: TouchEvent & MouseEvent) => {
+      if (!isDragging || !contentRef.current) return;
+
+      setIsDragging(false);
+
+      const endX = getClientX(e);
+      // 1. Calcula o deslocamento total
+      const dragDelta = endX - startX;
+
+      // 2. Calcula a largura do slide (ou o item centralizado)
+      // Usamos a largura do contêiner dividido pelo número de itens
+      const containerWidth = contentRef.current.offsetWidth;
+      // O valor do 'pixelPerSlide' deve representar o deslocamento necessário para pular 1 item.
+      // Como a sua visualização é baseada no item central, um bom divisor é a largura do contêiner / total de itens.
+      const pixelPerSlide = containerWidth / totalItems;
+
+      // Se o delta for muito pequeno, tratamos como se não houvesse movimento
+      if (Math.abs(dragDelta) < SWIPE_THRESHOLD) {
+        // Nenhum movimento significativo, mantém o índice
+        return;
+      }
+
+      // 3. Calcula o número de itens a pular
+      // Arredondamos o resultado para o número inteiro mais próximo
+      let slidesToSkip = Math.round(Math.abs(dragDelta) / pixelPerSlide);
+
+      // Garante que pelo menos 1 item seja pulado se o SWIPE_THRESHOLD foi ultrapassado
+      slidesToSkip = Math.max(1, slidesToSkip);
+
+      let newIndex = activeIndex;
+
+      if (dragDelta < 0) {
+        // Deslocamento para a esquerda (delta negativo) = Mover para o PRÓXIMO(S) item(s) (índice aumenta)
+        newIndex = activeIndex + slidesToSkip;
+      } else if (dragDelta > 0) {
+        // Deslocamento para a direita (delta positivo) = Mover para o ITEM(S) ANTERIOR(ES) (índice diminui)
+        newIndex = activeIndex - slidesToSkip;
+      }
+
+      // 4. Aplica os guarda-chuvas (safeguards)
+      newIndex = Math.min(totalItems - 1, newIndex);
+      newIndex = Math.max(0, newIndex);
+
+      // Garante que o índice final seja atualizado
+      setActiveIndex(newIndex);
+    },
+    [activeIndex, isDragging, startX, totalItems]
+  );
+
+  // --- USEEFFECT PARA ADICIONAR LISTENERS DE SWIPE/TOUCH ---
+  useEffect(() => {
+    const container = contentRef.current;
+    if (container) {
+      // MOUSE
+      container.addEventListener("mousedown", handleStart as EventListener);
+      container.addEventListener("mousemove", handleMove as EventListener);
+      container.addEventListener("mouseup", handleEnd as EventListener);
+
+      // TOUCH
+      container.addEventListener("touchstart", handleStart as EventListener);
+      container.addEventListener("touchmove", handleMove as EventListener);
+      container.addEventListener("touchend", handleEnd as EventListener);
+
+      // --- CLEANUP (LIMPEZA) ---
+      return () => {
+        // MOUSE
+        container.removeEventListener(
+          "mousedown",
+          handleStart as EventListener
+        );
+        container.removeEventListener("mousemove", handleMove as EventListener);
+        container.removeEventListener("mouseup", handleEnd as EventListener);
+        // TOUCH
+        container.removeEventListener(
+          "touchstart",
+          handleStart as EventListener
+        );
+        container.removeEventListener("touchmove", handleMove as EventListener);
+        container.removeEventListener("touchend", handleEnd as EventListener);
+      };
+    }
+  }, [handleStart, handleMove, handleEnd]); // Dependências dos Handlers useCallback
 
   return (
     <motion.div
@@ -79,7 +223,11 @@ export const Selector = () => {
           objetivo de desenvolvimento sustentável
         </span>
       </div>
-      <div className="flex justify-center items-center mb-10 w-full">
+      <div
+        ref={contentRef}
+        // cursor-grab adicionado para feedback visual do mouse
+        className="flex justify-center items-center mb-10 w-full cursor-grab"
+      >
         {data.map((obj, index) => {
           const distance = Math.abs(activeIndex - index);
 
@@ -97,7 +245,7 @@ export const Selector = () => {
               onClick={() => {
                 router.push(`${locale}/ods/${obj.id}`);
               }}
-              className={`transition-all duration-500 flex flex-col justify-center items-center text-center cursor-pointer -mx-10 lg:-mx-10 fhd:-mx-12 relative hover:scale-120`}
+              className={`select-none transition-all duration-500 flex flex-col justify-center items-center text-center cursor-pointer -mx-10 lg:-mx-10 fhd:-mx-12 relative hover:scale-120`}
               style={{
                 backgroundColor: `var(--color-ods${obj.id})`,
                 opacity: calculatedOpacity,
@@ -126,7 +274,7 @@ export const Selector = () => {
             >
               <Image
                 sizes="80vw"
-                className={`p-1 transition-all duration-500 ${index === activeIndex ? "shadow-2xl" : ""}`}
+                className={`select-none p-1 transition-all duration-500 ${index === activeIndex ? "shadow-2xl" : ""}`}
                 src={obj.seal}
                 alt={obj.name}
                 fill

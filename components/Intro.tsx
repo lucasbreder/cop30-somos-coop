@@ -7,8 +7,6 @@ import { ScreenSaverTransition } from "./ScreenSaverTransition";
 import { AnimatePresence } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { Params } from "@/types/Params";
 import { AnimatedLanguageSelector } from "./AnimatedLanguageSelector";
 import { AnimatedLanguageSelector1 } from "./AnimatedLanguageSelector1";
 import { NavItem } from "./NavItem";
@@ -22,8 +20,8 @@ export const Intro = ({
   isHome?: boolean;
 }) => {
   const [showIntro, setShowIntro] = useState(true);
-  const params = useParams<Params>();
-  const locale = params.lang;
+  // const params = useParams<Params>();
+  // const locale = params.lang;
 
   const showContent = useCallback((timer: NodeJS.Timeout) => {
     setShowIntro(false);
