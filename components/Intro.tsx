@@ -62,7 +62,7 @@ export const Intro = ({
         <header className="flex justify-between px-10 lg:px-20 absolute top-0 left-0 w-full">
           <Link
             href={"/"}
-            className="fhd:m-0 fhdv:portrait:mx-auto w-30 h-30 fhd:w-30 fhdv:portrait:w-60 fhd:h-30 fhdv:portrait:h-60 relative"
+            className="fhd:m-0 fhdv:portrait:mx-auto w-30 h-30 fhd:w-30 fhdv:portrait:w-60 fhd:h-30 fhdv:portrait:h-60 relative z-99"
           >
             {" "}
             <Image src="/logo/coop-logo1.svg" alt="" fill />
