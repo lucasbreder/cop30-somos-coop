@@ -11,6 +11,9 @@ import { AnimatedLanguageSelector } from "./AnimatedLanguageSelector";
 import { AnimatedLanguageSelector1 } from "./AnimatedLanguageSelector1";
 import { NavItem } from "./NavItem";
 import { LanguageSelect } from "./LanguageSelect";
+import { interfaceData } from "@/data/interface";
+import { useParams } from "next/navigation";
+import { Params } from "@/types/Params";
 
 export const Intro = ({
   children,
@@ -20,8 +23,8 @@ export const Intro = ({
   isHome?: boolean;
 }) => {
   const [showIntro, setShowIntro] = useState(true);
-  // const params = useParams<Params>();
-  // const locale = params.lang;
+  const params = useParams<Params>();
+  const locale = params.lang as string;
 
   const showContent = useCallback((timer: NodeJS.Timeout) => {
     setShowIntro(false);
@@ -57,7 +60,7 @@ export const Intro = ({
       {!showIntro && <ScreenSaverTransition />}
 
       {!isHome && (
-        <header className="flex justify-between px-10 lg:px-20 absolute top-0 left-0 w-full">
+        <header className="flex justify-between px-10 lg:px-30 absolute top-0 left-0 w-full">
           <Link
             href={"/"}
             className="fhd:m-0 fhdv:portrait:mx-auto w-30 h-30 fhd:w-30 fhdv:portrait:w-60 fhd:h-30 fhdv:portrait:h-60 relative z-99"
@@ -124,7 +127,10 @@ export const Intro = ({
       </div>
       {!isHome && (
         <footer className="absolute bottom-0 left-0 px-10 py-5 fhd:py-6 fhdv:portrait:px-15 fhdv:portrait:py-10 w-full flex justify-between">
-          <NavItem icon="/icons/back.svg" label="Voltar" />
+          <NavItem
+            icon="/icons/back.svg"
+            label={interfaceData[locale]["back-button"].value}
+          />
           <LanguageSelect />
         </footer>
       )}

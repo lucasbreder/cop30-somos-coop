@@ -1451,8 +1451,7 @@ export const casesPt: Case[] = [
     branch: "Crédito",
     mainOds: 2,
     asideOds: [9, 11, 13],
-    // state: "BR",
-    state: "DF",
+    state: "BR",
     objectives:
       "Com o objetivo de aprimorar a identificação e o monitoramento dos riscos climáticos, o Sicredi implementou o novo sistema de Quantificação de Riscos Climáticos. A meta central do projeto era desenvolver uma ferramenta capaz de mensurar os riscos físicos e os riscos de transição, gerando scores detalhados para cada vertente de riscos. A iniciativa buscou criar um sistema que permitisse ao Sicredi definir sua estratégia climática com um conhecimento profundo dos riscos e oportunidades aos quais seus associados estão submetidos. O público-alvo principal do projeto é interno, abrangendo colaboradores das cooperativas, centrais e áreas técnicas do Centro Administrativo Sicredi (CAS) que atuam na gestão de riscos e oportunidades climáticas. Indiretamente, os associados e comunidades locais também se beneficiam, por meio de produtos, serviços e políticas mais resilientes e sustentáveis.",
     result:
@@ -1650,8 +1649,7 @@ export const casesPt: Case[] = [
     branch: "Crédito",
     mainOds: 2,
     asideOds: [5, 7, 8, 10],
-    // state: "BR",
-    state: "DF",
+    state: "BR",
     objectives:
       "O principal objetivo do projeto era ampliar o portfólio de crédito sustentável do Sicredi e fomentar o desenvolvimento de novas linhas sustentáveis nas cooperativas. A iniciativa buscou alinhar a atuação da instituição às metas de transição verde do Brasil e aos princípios ESG. Além do financiamento, o Sicredi buscava criar um modelo de captação que fosse replicável e que permitisse absorver conhecimento técnico. A meta era construir relacionamentos sólidos com as principais instituições financeiras de desenvolvimento do mundo.",
     result:
@@ -1674,8 +1672,7 @@ export const casesPt: Case[] = [
     branch: "Crédito",
     mainOds: 13,
     asideOds: [],
-    // state: "BR",
-    state: "DF",
+    state: "BR",
     objectives:
       "O projeto nasceu da resposta emergencial às enchentes no Rio Grande do Sul (RS) e tem como objetivo principal estruturar uma frente de Resiliência Climática para todo o Sistema Sicredi. A meta é fortalecer e antecipar a capacidade de resposta das mais de 100 cooperativas que compõem o sistema frente a eventos climáticos extremos. O foco central da iniciativa é a proteção e a resiliência dos associados. Embora a resposta inicial tenha se concentrado nos associados e comunidades do RS, a estruturação da nova frente de resiliência expande essa atuação para o nível nacional, selecionando regiões e públicos com alta exposição ao tema.",
     result:

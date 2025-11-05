@@ -5,8 +5,13 @@ import { AnimatedIcon } from "./AnimatedIcon";
 import { AnimatedBrasilPath } from "./AnimatedBrasilPath";
 import { AnimatedIntro } from "./AnimatedIntro";
 import { AnimatedIntroLine } from "./AnimatedIntroLine";
+import { interfaceData } from "@/data/interface";
+import { useParams } from "next/navigation";
+import { Params } from "@/types/Params";
 
 export const ScreenSaver = () => {
+  const params = useParams<Params>();
+  const locale = params.lang || "pt";
   return (
     <motion.div
       initial={{ opacity: 1 }}
@@ -118,7 +123,7 @@ export const ScreenSaver = () => {
             }}
             className="-mb-5 2xl:-mb-10 fhdv:portrait:-mb-15 block"
           >
-            Conheça
+            {interfaceData[locale]["home-title"].array?.[0] || "Conheça"}
           </motion.span>
           <motion.span className="flex items-center">
             <motion.span
@@ -126,7 +131,7 @@ export const ScreenSaver = () => {
               animate={{ opacity: 1, transition: { delay: 3.5 } }}
               className="text-[100px] xl:text-[120px] 2xl:text-[150px] fhdv:portrait:text-[220px] font-black block tracking-[-20px] text-quinquenary"
             >
-              60
+              {interfaceData[locale]["home-title"].array?.[1]}
             </motion.span>
             <motion.span
               initial={{ opacity: 0, translateX: -100 }}
@@ -137,7 +142,7 @@ export const ScreenSaver = () => {
               }}
               className="max-w-1/6 text-[25px] xl:text-[35px] 2xl:text-[51px] ml-8 fhdv:portrait:ml-12 leading-8 2xl:leading-14 fhdv:portrait:text-[75px] fhdv:portrait:leading-22"
             >
-              boas práticas
+              {interfaceData[locale]["home-title"].array?.[2]}
             </motion.span>
           </motion.span>
           <motion.span
@@ -149,7 +154,7 @@ export const ScreenSaver = () => {
             }}
             className="text-[24px] 2xl:text-[42px] xl:text-[32px] -mt-8 xl:-mt-11 fhd:-mt-11 fhdv:portrait:-mt-16 block leading-8 xl:leading-10 2xl:leading-12 fhdv:portrait:text-[65px] fhdv:portrait:leading-16"
           >
-            das cooperativas brasileiras
+            {interfaceData[locale]["home-title"].array?.[3]}
           </motion.span>
         </motion.div>
         <motion.div

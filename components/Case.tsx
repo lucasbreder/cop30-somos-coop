@@ -16,6 +16,7 @@ import { images } from "@/data/images";
 import { useRef, useState } from "react";
 import { useMotionValue, motion } from "motion/react";
 import { useScrollContent } from "@/hooks/useScrollContent";
+import { interfaceData } from "@/data/interface";
 
 export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
   const params = useParams<Params>();
@@ -147,7 +148,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
               >
                 <Image src="/icons/next.svg" alt="" width={40} height={40} />{" "}
                 <span className="w-1/2 leading-4 border-l pl-2 ml-2 h-4 border-primary">
-                  Conheça o próximo case
+                  {interfaceData[locale]["next-case"].value}
                 </span>
               </Link>
             </div>
@@ -221,7 +222,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
   }
   return (
     <div className="flex items-center justify-center h-full">
-      Nada Encontrado
+      {interfaceData[locale]["not-found"].value}
     </div>
   );
 };

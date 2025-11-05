@@ -13,6 +13,7 @@ import { CaseInfoList } from "./CaseInfoList";
 import { useScrollContent } from "@/hooks/useScrollContent";
 import { images } from "@/data/images";
 import { Objective } from "@/types/Objective";
+import { interfaceData } from "@/data/interface";
 
 export const CaseTechnicalSheet = ({
   data,
@@ -33,7 +34,7 @@ export const CaseTechnicalSheet = ({
   const y = useMotionValue(0);
   const [contentScrollHeight, setContentScrollHeight] = useState(0);
   const params = useParams<Params>();
-  const locale = params.lang;
+  const locale = params.lang as keyof typeof dataOds;
   const imagesData = images.find((img) => {
     return img.id === data.id;
   });
@@ -67,7 +68,7 @@ export const CaseTechnicalSheet = ({
         </div>
         <Title
           className="text-xl fhd:portrait:text-2xl fhd:text-2xl fhd:indent-10 fhdv:portrait:indent-2 fhdv:portrait:w-10/12 mx-auto"
-          title="Ficha Técnica do Case"
+          title={interfaceData[locale]["technical-sheet-title"].value}
           titleLine="left"
           color={`var(--color-ods${dataOds?.id})`}
           tag="h2"
@@ -105,17 +106,29 @@ export const CaseTechnicalSheet = ({
             </div>
           )}
 
-          <CaseInfo title="Nome da Cooperativa" text={data.cooperName} />
-          <CaseInfo title="Ramo" text={data.branch} />
-          <CaseInfoList title="Categorias" text={data.categories} />
-          <CaseInfo title="Resumo" text={data.excerpt} />
+          <CaseInfo
+            title={interfaceData[locale]["cooper-name"].value}
+            text={data.cooperName}
+          />
+          <CaseInfo
+            title={interfaceData[locale]["branch"].value}
+            text={data.branch}
+          />
+          <CaseInfoList
+            title={interfaceData[locale]["categories"].value}
+            text={data.categories}
+          />
+          <CaseInfo
+            title={interfaceData[locale]["excerpt"].value}
+            text={data.excerpt}
+          />
           <OdsList odsNumbers={data.asideOds} />
         </div>
       </div>
       <div className="w-full left-0 flex gap-2 mt-5 relative">
         {dataOds && (
           <Button
-            label="Conhecer o case"
+            label={interfaceData[locale]["go-case-button"].value}
             url={`/${locale}/case/${data.id}?currentOds=${dataOds.id}`}
             ods={dataOds?.id}
           />

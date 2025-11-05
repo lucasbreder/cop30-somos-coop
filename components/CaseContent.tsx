@@ -3,8 +3,13 @@ import { CaseInfo } from "./CaseInfo";
 import { Case as CaseData } from "@/types/Case";
 import { Gallery } from "./Gallery";
 import { OdsList } from "./OdsList";
+import { interfaceData } from "@/data/interface";
+import { useParams } from "next/navigation";
+import { Params } from "@/types/Params";
 
 export const CaseContent = ({ data }: { data: CaseData }) => {
+  const params = useParams<Params>();
+  const locale = params.lang as keyof typeof data;
   return (
     <div className="w-full flex relative">
       <div
@@ -12,14 +17,28 @@ export const CaseContent = ({ data }: { data: CaseData }) => {
         fhdv:portrait:w-[96%] pb-10 p-5 fhdv:portrait:p-5 rounded-2xl no-scrollbar"
       >
         <div className="overflow-hidden h-full">
-          <CaseInfo title="Contexto" text={data.context} />
+          <CaseInfo
+            title={interfaceData[locale]["context"].value}
+            text={data.context}
+          />
           {data.objectives && (
-            <CaseInfo title="Objetivos" text={data.objectives} />
+            <CaseInfo
+              title={interfaceData[locale]["objectives"].value}
+              text={data.objectives}
+            />
           )}
           {data.development && (
-            <CaseInfo title="Desenvolvimento" text={data.development} />
+            <CaseInfo
+              title={interfaceData[locale]["development"].value}
+              text={data.development}
+            />
           )}
-          {data.result && <CaseInfo title="Resultado" text={data.result} />}
+          {data.result && (
+            <CaseInfo
+              title={interfaceData[locale]["result"].value}
+              text={data.result}
+            />
+          )}
         </div>
         <div className="lg:hidden">
           {data.gallery && <Gallery gallery={data.gallery} />}
@@ -29,7 +48,7 @@ export const CaseContent = ({ data }: { data: CaseData }) => {
             classNameList="2xl:w-16 2xl:h-16"
             classNameContainer="justify-center"
             showBorder={false}
-            odsNumbers={data.asideOds}
+            odsNumbers={[...data.asideOds, data.mainOds]}
             showTitle={true}
           />
         </div>

@@ -12,6 +12,7 @@ import { CaseList } from "./CaseList";
 import { AnimatedOds } from "./AnimatedOds";
 import { Title } from "./Title";
 import { AnimatePresence, motion } from "motion/react";
+import { interfaceData } from "@/data/interface";
 
 export const Ods = () => {
   const params = useParams<Params>();
@@ -26,7 +27,6 @@ export const Ods = () => {
     );
   });
   const [activeCase, setActiveCase] = useState<CaseData | undefined>();
-
   return (
     <AnimatePresence>
       <motion.div
@@ -54,12 +54,23 @@ export const Ods = () => {
               )}
               {!dataOds.cta && (
                 <div className="text-2xl xl:text-3xl 2xl:text-4xl fhd:text-5xl fhdv:portrait:text-5xl uppercase font-light text-center lg:text-left">
-                  Este é o <span className="font-extrabold">Brasil</span> que{" "}
-                  <span className="font-extrabold">Coopera</span>
+                  {interfaceData[locale]["map-title"].array?.[0]}{" "}
+                  <span className="font-extrabold">
+                    {interfaceData[locale]["map-title"].array?.[1]}
+                  </span>{" "}
+                  {interfaceData[locale]["map-title"].array?.[2]}{" "}
+                  <span className="font-extrabold">
+                    {interfaceData[locale]["map-title"].array?.[3]}
+                  </span>
                 </div>
               )}
               <div className="relative w-50 h-10 mx-auto lg:mx-0">
-                <Image sizes="80vw" src="/logo/ods-logo2.svg" fill alt="" />
+                <Image
+                  sizes="80vw"
+                  src={interfaceData[locale]["map-ods-logo"].value}
+                  fill
+                  alt=""
+                />
               </div>
               {dataOds.seal && (
                 <div

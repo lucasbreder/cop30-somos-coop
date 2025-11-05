@@ -8,6 +8,8 @@ import Link from "next/link";
 import { AnimatedSelector } from "./AnimatedSelector";
 import { AnimatedSelector1 } from "./AnimatedSelector1";
 import useWindowWidth from "@/hooks/useWindowWidth";
+import { interfaceData } from "@/data/interface";
+import Markdown from "react-markdown";
 
 // --- FUNÇÃO AUXILIAR PARA COMPATIBILIDADE MOUSE/TOUCH ---
 // Tipagem ajustada para suportar a união de eventos MouseEvent e TouchEvent
@@ -231,9 +233,10 @@ export const Selector = () => {
         <AnimatedSelector1 width="100%" height="100%" />
       </div>
       <div className="mb-10 mt-20 fhd:mb-20 uppercase font-light text-xl 2xl:text-3xl fhd:text-4xl fhdv:portrait:text-4xl text-center w-12/12 xl:w-5/12 md:w-8/12 lg:w-6/12 fhd:w-7/12 fhdv:portrait:w-8/12 mx-auto tracking-widest text-primary">
-        Escolha um{" "}
+        <Markdown>{}</Markdown>
+        {interfaceData[locale]["ods-title"].array?.[0]}{" "}
         <span className="font-extrabold">
-          objetivo de desenvolvimento sustentável
+          {interfaceData[locale]["ods-title"].array?.[1]}
         </span>
       </div>
       <div
@@ -327,7 +330,7 @@ export const Selector = () => {
       </div>
       <div className="w-40 h-40 fhd:w-50 fhd:h-50 relative mx-auto mt-6 fhd:mt-10">
         <Link href={locale ? "/" + locale : "/"}>
-          <Image src="/logo/ods-logo1.svg" alt="" fill />
+          <Image src={interfaceData[locale]["ods-logo"].value} alt="" fill />
         </Link>
       </div>
     </motion.div>

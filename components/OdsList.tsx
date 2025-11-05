@@ -4,6 +4,7 @@ import { ods } from "@/data/ods";
 import { Params } from "@/types/Params";
 import Image from "next/image";
 import Link from "next/link";
+import { interfaceData } from "@/data/interface";
 
 export const OdsList = ({
   odsNumbers,
@@ -27,7 +28,7 @@ export const OdsList = ({
     >
       {showTitle && (
         <div className="hidden md:block text-sm pr-4 fhdv:portrait:pl-4 fhdv:portrait:ml-3 border-r fhdv:portrait:border-r-0 fhdv:portrait:border-l border-white py-4 text-right">
-          ODS relacionadas a esse case
+          {interfaceData[locale]["related-ods"].value}
         </div>
       )}
       <div className="flex flex-wrap gap-2 lg:gap-4">
