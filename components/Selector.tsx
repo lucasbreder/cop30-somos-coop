@@ -238,7 +238,7 @@ export const Selector = () => {
       </div>
       <div
         ref={contentRef}
-        className="flex justify-center items-center mb-10 w-full cursor-grab"
+        className="flex justify-center items-center mb-10 w-full cursor-grab h-45"
       >
         {data.map((obj, index) => {
           const distance = Math.abs(activeIndex - index);

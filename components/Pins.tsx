@@ -9,6 +9,7 @@ export const Pins = ({
   activeCase,
   currentCases,
   setActiveCase,
+  dataOds,
 }: MapCaseProps) => {
   const states = currentCases?.map((item) => item.state);
 
@@ -35,20 +36,15 @@ export const Pins = ({
               transition={{
                 ease: [0, 0.71, 0.2, 1.01],
                 duration: 1.2,
-                delay: index * 0.5,
               }}
               className="absolute :hover-translateY[10px] cursor-pointer"
               key={index}
             >
               {currentCases && activeCase?.state !== key && (
-                <Pin
-                  fillColor={`var(--color-ods${currentCases[0]?.mainOds})`}
-                />
+                <Pin fillColor={`var(--color-ods${dataOds?.id})`} />
               )}
               {currentCases && activeCase?.state === key && (
-                <PinActive
-                  fillColor={`var(--color-ods${currentCases[0]?.mainOds})`}
-                />
+                <PinActive fillColor={`var(--color-ods${dataOds?.id})`} />
               )}
             </motion.div>
           );

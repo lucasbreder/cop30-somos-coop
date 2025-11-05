@@ -20,7 +20,10 @@ export const Ods = () => {
     return ods.id === Number(params.id);
   });
   const dataCases = cases[locale]?.filter((cs) => {
-    return cs.mainOds === Number(params.id);
+    return (
+      cs.mainOds === Number(params.id) ||
+      cs.asideOds.includes(Number(params.id))
+    );
   });
   const [activeCase, setActiveCase] = useState<CaseData | undefined>();
 
@@ -30,20 +33,17 @@ export const Ods = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { delay: 0.5 } }}
         exit={{ opacity: 0 }}
-        className="flex fhd:flex-nowrap fhdv:portrait:flex-wrap fhd:justify-between fhdv:portrait:justify-center h-full relative mt-30 fhd:mt-39 fhdv:portrait:mt-80"
+        className="flex px-10 fhd:flex-nowrap fhdv:portrait:flex-wrap fhd:justify-between fhdv:portrait:justify-center h-full relative mt-30 fhd:mt-39 fhdv:portrait:mt-80"
         style={{
           color: `var(--color-ods${dataOds?.id})`,
         }}
       >
-        <div className="hidden 2xl:block fhdv:portrait:block w-8/12 -bottom-30 fhd:-bottom-30 fhdv:portrait:bottom-30 left-[-24%] fhd:left-[-24%] fhdv:portrait:left-[-15%] absolute">
-          <AnimatedOds width="100%" height={450} />
+        <div className="hidden 2xl:block fhdv:portrait:block w-8/12 -bottom-45 2xl:-bottom-40 fhd:-bottom-10! fhdv:portrait:bottom-60 left-[-24%] fhd:left-[-24%] fhdv:portrait:left-[-15%] absolute">
+          <AnimatedOds width="100%" height={430} />
         </div>
         <div
-          className={`${activeCase ? "opacity-0" : "opacity-100"} transtion-all duration-200 flex flex-col flex-wrap min-w-full lg:min-w-auto 
-        items-center lg:items-start fhd:min-w-3/12 fhdv:portrait:basis-1/2 
-        lg:opacity-100 
-        fhdv:portrait:opacity-100
-        `}
+          className={`${activeCase ? "opacity-0" : "opacity-100"} transtion-all duration-200 flex flex-col min-w-full lg:min-w-auto 
+        items-center lg:items-start fhd:min-w-3/12 fhdv:portrait:basis-1/2 lg:opacity-100 fhdv:portrait:opacity-100`}
         >
           {dataOds && (
             <div className="flex flex-col gap-5">
@@ -89,31 +89,21 @@ export const Ods = () => {
           </div>
 
           {dataCases && dataCases.length > 0 && (
-            <div
-              className="py-5 px-3 rounded-2xl w-full 2xl:w-5/12 fhdv:portrait:w-7/12 border max-h-[20%] overflow-auto"
-              style={{
-                borderColor: `var(--color-ods${dataOds?.id})`,
-              }}
-            >
-              {dataCases.map((cs, index) => {
-                return (
-                  <CaseList
-                    activeCase={activeCase}
-                    setActiveCase={setActiveCase}
-                    key={index}
-                    data={cs}
-                  />
-                );
-              })}
-            </div>
+            <CaseList
+              activeCase={activeCase}
+              setActiveCase={setActiveCase}
+              data={dataCases}
+              dataOds={dataOds}
+            />
           )}
         </div>
-        <div className="hidden -ml-45 -mr-45 2xl:mr-0 -mt-40 2xl:mt-10 2xl:-ml-70  basis-1/3 lg:block min-w-fit fhd:min-w-6/12 fhd:-mr-5 fhd:-ml-20 mix-blend-multiply fhdv:portrait:order-3 fhd:order-0 fhd:mt-0 fhdv:portrait:-mt-100">
+        <div className="hidden -ml-45 -mr-45 2xl:mr-0 -mt-40 2xl:mt-10 2xl:-ml-10  basis-1/3 lg:block min-w-fit fhd:min-w-6/12 fhd:-mr-5 fhd:-ml-20 mix-blend-multiply fhdv:portrait:order-3 fhd:order-0 fhd:mt-0 fhdv:portrait:-mt-360">
           <Map
             className="scale-60 2xl:scale-100 fhd:scale-100 fhdv:portrait:scale-100"
             setActiveCase={setActiveCase}
             activeCase={activeCase}
             currentCases={dataCases}
+            dataOds={dataOds}
           />
         </div>
         <div className="2xl:min-w-[32%] lg:min-w-[38%] -mt-40 lg:-mt-60 fhdv:portrait:mt-0 fhd:mt-0 basis-1/3 fhd:min-w-4/12 fhdv:portrait:basis-1/2 relative">
@@ -122,6 +112,7 @@ export const Ods = () => {
               return (
                 <CaseTechnicalSheet
                   activeCase={activeCase}
+                  dataOds={dataOds}
                   setActiveCase={setActiveCase}
                   key={index}
                   data={cs}

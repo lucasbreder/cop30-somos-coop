@@ -1,3 +1,5 @@
+import Markdown from "react-markdown";
+
 export const CaseInfo = ({
   title,
   text,
@@ -9,7 +11,9 @@ export const CaseInfo = ({
   return (
     <div className={"mb-3"}>
       <h3 className="border-b border-inherit pb-1 w-1/2 font-bold">{title}</h3>
-      <p className="mt-3">{text}</p>
+      <div className="mt-3 case-content">
+        <Markdown>{text}</Markdown>
+      </div>
     </div>
   );
 };

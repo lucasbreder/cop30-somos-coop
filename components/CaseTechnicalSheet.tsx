@@ -11,16 +11,20 @@ import { Params } from "@/types/Params";
 import { Title } from "./Title";
 import { CaseInfoList } from "./CaseInfoList";
 import { useScrollContent } from "@/hooks/useScrollContent";
+import { images } from "@/data/images";
+import { Objective } from "@/types/Objective";
 
 export const CaseTechnicalSheet = ({
   data,
   activeCase,
   setActiveCase,
+  dataOds,
   hasBakground = true,
 }: {
   data: CaseData;
   activeCase?: CaseData;
   hasBakground?: boolean;
+  dataOds?: Objective;
   setActiveCase: Dispatch<SetStateAction<Case | undefined>>;
 }) => {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -30,6 +34,9 @@ export const CaseTechnicalSheet = ({
   const [contentScrollHeight, setContentScrollHeight] = useState(0);
   const params = useParams<Params>();
   const locale = params.lang;
+  const imagesData = images.find((img) => {
+    return img.id === data.id;
+  });
 
   useScrollContent({
     contentRef,
@@ -42,12 +49,12 @@ export const CaseTechnicalSheet = ({
 
   return (
     <div
-      className={`flex flex-col md:ml-2 fhd:ml-0 fhdv:portrait:ml-0 gap-1 w-10/12 h-[56%] lg:h-[45%] fhd:h-4/6 fhdv:portrait:h-3/6 z-999 fixed lg:absolute fhdv:portrait:absolute transition-all duration-700 ease-in-out left-5 fhd:left-auto fhdv:portrait:left-auto ${activeCase?.id === data.id ? "bottom-[30%] lg:bottom-[35%] fhd:bottom-100 fhdv:portrait:bottom-auto fhd:right-auto fhdv:portrait:right-10" : "-bottom-full fhdv:portrait:bottom-auto fhdv:portrait:-right-[150%] fhd:right-auto"}`}
+      className={`flex flex-col md:ml-2 fhd:ml-0 fhdv:portrait:ml-0 gap-1 w-10/12 h-[56%] lg:h-[45%] fhd:h-4/6 fhdv:portrait:h-3/12 z-999 fixed lg:absolute fhdv:portrait:absolute transition-all duration-700 ease-in-out left-5 fhd:left-auto fhdv:portrait:left-auto ${activeCase?.id === data.id ? "bottom-[30%] lg:bottom-[35%] fhd:bottom-100 fhdv:portrait:bottom-auto fhd:right-auto fhdv:portrait:right-10" : "-bottom-full fhdv:portrait:bottom-auto fhdv:portrait:-right-[150%] fhd:right-auto"}`}
     >
       <div
         className="uppercase text-2xl text-center w-full"
         style={{
-          color: `var(--color-ods${data.mainOds})`,
+          color: `var(--color-ods${dataOds?.id})`,
         }}
       >
         <div
@@ -62,7 +69,7 @@ export const CaseTechnicalSheet = ({
           className="text-xl fhd:portrait:text-2xl fhd:text-2xl fhd:indent-10 fhdv:portrait:indent-2 fhdv:portrait:w-10/12 mx-auto"
           title="Ficha Técnica do Case"
           titleLine="left"
-          color={`var(--color-ods${data?.mainOds})`}
+          color={`var(--color-ods${dataOds?.id})`}
           tag="h2"
         />
       </div>
@@ -70,15 +77,15 @@ export const CaseTechnicalSheet = ({
         className="h-full rounded-2xl px-6 py-8"
         style={{
           backgroundColor: hasBakground
-            ? `var(--color-ods${data.mainOds})`
+            ? `var(--color-ods${dataOds?.id})`
             : "transparent",
           borderColor: !hasBakground
-            ? `var(--color-ods${data.mainOds})`
+            ? `var(--color-ods${dataOds?.id})`
             : "transparent",
           borderWidth: !hasBakground ? 2 : 0,
           borderStyle: "solid",
           color: !hasBakground
-            ? `var(--color-ods${data.mainOds}) !important`
+            ? `var(--color-ods${dataOds?.id}) !important`
             : "white",
         }}
       >
@@ -86,17 +93,18 @@ export const CaseTechnicalSheet = ({
           ref={contentRef}
           className="w-full h-full overflow-hidden overflow-y-auto no-scrollbar"
         >
-          <div className="h-40 w-full mb-5 relative">
-            {data.thumbnail && (
+          {imagesData && imagesData.gallery?.length > 0 && (
+            <div className="h-40 w-full mb-5 relative">
               <Image
                 sizes="80vw"
                 className="object-cover rounded-2xl"
-                src={data.thumbnail}
+                src={imagesData.gallery[0]}
                 alt={data.title}
                 fill
               />
-            )}
-          </div>
+            </div>
+          )}
+
           <CaseInfo title="Nome da Cooperativa" text={data.cooperName} />
           <CaseInfo title="Ramo" text={data.branch} />
           <CaseInfoList title="Categorias" text={data.categories} />
@@ -105,11 +113,13 @@ export const CaseTechnicalSheet = ({
         </div>
       </div>
       <div className="w-full left-0 flex gap-2 mt-5 relative">
-        <Button
-          label="Conhecer o case"
-          url={`/${locale}/case/${data.id}`}
-          ods={data.mainOds}
-        />
+        {dataOds && (
+          <Button
+            label="Conhecer o case"
+            url={`/${locale}/case/${data.id}?currentOds=${dataOds.id}`}
+            ods={dataOds?.id}
+          />
+        )}
       </div>
       {contentScrollHeight > 0 && (
         <div

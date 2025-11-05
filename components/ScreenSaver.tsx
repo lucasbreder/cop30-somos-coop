@@ -69,11 +69,25 @@ export const ScreenSaver = () => {
         />
       </div>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 2 } }}
-        className="h-7/12 w-full absolute top-[15%] md:top-[15%] lg:top-[30%] fhd:top-20 -left-10 md:-left-25 fhd:left-0"
+        initial={{ opacity: 1, scale: 1 }} // Garante que a escala inicial seja 1
+        animate={{
+          // Adicione a animação de pulsação aqui:
+          scale: [1, 1.05, 1], // Inicia em 1, vai para 1.01 (aumenta 1%), e volta para 1
+          transition: {
+            // Configurações para o fade-in inicial:
+            // Configurações para o pulsar (scale):
+            scale: {
+              duration: 4, // Duração de um ciclo de pulso (2 segundos)
+              delay: 3,
+              repeat: Infinity, // Repete indefinidamente
+              repeatType: "reverse", // Alterna entre os valores [1, 1.01, 1]
+              ease: "easeInOut",
+            },
+          },
+        }}
+        className="h-7/12 w-full absolute top-[15%] md:top-[15%] lg:top-[30%] fhd:top-20 -left-5 md:-left-25 fhd:left-0"
       >
-        <div
+        <motion.div
           className="
             xl:max-w-2/6
             max-w-4/6
@@ -88,7 +102,7 @@ export const ScreenSaver = () => {
             font-light
             uppercase italic absolute 
             fhdv:portrait:-top-[360px] fhd:top-[250px] 
-            fhdv:portrait:right-[10%]
+            fhdv:portrait:right-[4%]
             right-5
             2xl:right-0
             xl:-right-10
@@ -137,7 +151,7 @@ export const ScreenSaver = () => {
           >
             das cooperativas brasileiras
           </motion.span>
-        </div>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 2.5 } }}

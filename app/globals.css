@@ -151,4 +151,11 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  .case-content p {
+    margin: 15px 0;
+  }
+  .case-content li {
+    list-style: disc;
+    margin-left: 40px;
+  }
 }

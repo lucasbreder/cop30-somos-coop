@@ -8,6 +8,7 @@ export const Map = ({
   currentCases,
   setActiveCase,
   className,
+  dataOds,
 }: MapCaseProps) => {
   const mapSvg = useRef<SVGSVGElement>(null);
 
@@ -37,6 +38,7 @@ export const Map = ({
           currentCases={currentCases}
           setActiveCase={setActiveCase}
           activeCase={activeCase}
+          dataOds={dataOds}
         />
       )}
       <svg
@@ -44,7 +46,7 @@ export const Map = ({
         width="219.99998mm"
         height="194mm"
         id="svg2"
-        className={currentCases ? "ods" + currentCases[0]?.mainOds : ""}
+        className={dataOds ? "ods" + dataOds.id : ""}
         version="1.1"
         viewBox="0 0 219999.98 194010"
         xmlns="http://www.w3.org/2000/svg"

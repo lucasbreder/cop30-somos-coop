@@ -32,7 +32,7 @@ export const Intro = ({
     let timer: NodeJS.Timeout;
 
     function startInterval() {
-      timer = setInterval(() => setShowIntro(true), 60000);
+      timer = setInterval(() => setShowIntro(true), 120000);
     }
 
     const handleActivity = () => {

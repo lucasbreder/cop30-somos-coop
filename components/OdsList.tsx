@@ -23,14 +23,14 @@ export const OdsList = ({
 
   return (
     <div
-      className={`flex fhdv:portrait:justify-end items-center fhd:flex-row fhdv:portrait:flex-row-reverse gap-2 lg:gap-4 mt-5 text-white ${classNameContainer}`}
+      className={`flex flex-col fhdv:portrait:justify-end items-center md:flex-row fhdv:portrait:flex-row-reverse gap-2 lg:gap-4 mt-5 text-white ${classNameContainer}`}
     >
       {showTitle && (
-        <div className="text-sm pr-4 fhdv:portrait:pl-4 fhdv:portrait:ml-3 border-r fhdv:portrait:border-r-0 fhdv:portrait:border-l border-white py-4 text-right">
+        <div className="hidden md:block text-sm pr-4 fhdv:portrait:pl-4 fhdv:portrait:ml-3 border-r fhdv:portrait:border-r-0 fhdv:portrait:border-l border-white py-4 text-right">
           ODS relacionadas a esse case
         </div>
       )}
-      <div className="flex gap-2 lg:gap-4">
+      <div className="flex flex-wrap gap-2 lg:gap-4">
         {odsNumbers.map((o, index) => {
           const dataOds = ods[locale]?.find((ods) => {
             return ods.id === o;
