@@ -23,7 +23,7 @@ export const ScreenSaverTransition = () => {
       animate={{
         left: "100%",
         transition: {
-          duration: 3,
+          duration: 5,
         },
       }}
       className="fixed z-9999 h-full -left-[710%] lg:-left-[280%]"

@@ -200,7 +200,6 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
               <OdsList
                 classNameList="2xl:w-16 2xl:h-16"
                 classNameContainer="justify-center"
-                showBorder={false}
                 odsNumbers={dataCase.asideOds}
                 showTitle={true}
               />

@@ -24,7 +24,7 @@ export const Intro = ({
 }) => {
   const [showIntro, setShowIntro] = useState(true);
   const params = useParams<Params>();
-  const locale = params.lang as string;
+  const locale = (params.lang as string) || "pt";
 
   const showContent = useCallback((timer: NodeJS.Timeout) => {
     setShowIntro(false);
