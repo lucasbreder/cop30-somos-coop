@@ -1113,4 +1113,163 @@ export const casesEn: Case[] = [
     result:
       "The initiative has brought about a profound transformation in the Vargem do Sal community. The number of artisans involved grew from 40 to around 60, and the purchase guaranteed by Cresol generated a stable income and a new sense of self-confidence and productive capacity. The appreciation of handicrafts has opened doors to participation in various fairs, expanding the market and the recognition of products. Socially, the project has strengthened quilombola culture and promoted inclusion and reduced the need to migrate to the cities, consolidating the permanence of the 315 people in the territory. Environmentally, the initiative has improved the sustainable management of the Licuri palm, which is crucial for the ecosystem and the hyacinth macaw, demonstrating a commitment to conservation and biodiversity.",
   },
+  {
+    id: 43,
+    title:
+      "Cresol promotes agroecological transition to strengthen family farming in Brazil and Uruguay",
+    markdownTitle:
+      "# Cresol promotes agroecological transition to strengthen family farming in Brazil and Uruguay",
+    context:
+      "The Cresol System, with more than 1 million members in 19 states, has a strong commitment to family farming. However, its members face growing challenges: agroecological practices, although they exist, are scattered and difficult to access.",
+    challenge:
+      "The seeds used were often of poor quality and lacked resilience to climate change, and there was a lack of a consolidated methodology to support producers wishing to make the transition from a conventional model to a more sustainable one. This scenario left farmers vulnerable both to environmental impacts, such as degraded soils and droughts, and to dependence on chemical and fossil-based inputs. The absence of a structured program that valued local knowledge limited the sector's potential for innovation and its ability to adapt to new climatic and market realities.",
+    development:
+      "The project was developed using a participatory action research methodology, in which family farmers played a leading role in identifying problems, planning and experimenting with agroecological solutions. The Reference Units (URs) in Brazil and the co-innovation buildings in Uruguay were the locations chosen for the project. They functioned as living laboratories to validate agroecological practices such as the No-Tillage System for Vegetables (SPDH), the production of bioinputs, agroecological pest management, and the production of seeds and seedlings, combining traditional knowledge with scientific rigor. The initiative was made possible by AgriCord, an international network that acted as a global liaison for fundraising in the European Union. The institution presented the project in a European call for proposals for food security and agroecological transition, highlighting the originality of placing producer organizations as leaders in agroecological research and innovation. To encourage agroecological practices, the project structured a knowledge management platform and promoted workshops, exchanges and systematization of practices. Processes for the selection, genetic evaluation, and conservation of traditional/native seeds were also implemented, strengthening agricultural biodiversity. In addition, the project validated and adjusted methodologies for converting conventional systems, making it possible to increase the number of farmers in transition.",
+    cooperName:
+      "National Confederation of Central Cooperatives of Family and Solidarity Credit and Economy (Cresol Confederation)",
+    excerpt:
+      "In an innovative project, Cresol is promoting the agroecological transition of family farmers in Brazil and Uruguay. Through a participatory methodology, the initiative creates spaces in the countryside to develop and disseminate low-carbon practices, such as direct planting of vegetables and the production of bioinputs. The project has already activated 45 reference units, strengthened the climate resilience of farms and positioned farmers as protagonists of innovation.",
+    categories: ["agroecological transition", "family farming", "innovation"],
+    branch: "Credit",
+    mainOds: 2,
+    asideOds: [5, 8, 12, 13, 15],
+    state: "PR",
+    objectives:
+      "The project was created to promote the agroecological transition of the vegetable and fruit chains in Brazil and Uruguay, reducing the use of chemical inputs and carbon emissions, and expanding the adoption of sustainable practices among family farmers. The initiative was born to meet a demand from the cooperative members themselves and is aligned with European Union priorities, such as the Green Deal, focusing on food security, adaptation to climate change and social inclusion. The project’s goals include strengthening the climate resilience of rural communities through more diverse and integrated agricultural systems; valuing farmers’ traditional knowledge; and increasing the participation of women and youth in decision-making processes. The ultimate goal was to generate evidence and measurable indicators of the socio-environmental and economic impact of agroecology.",
+    result:
+      "The implementation of the project has brought about concrete change in the countryside. 45 Reference Units were activated (30 in Brazil and 15 in Uruguay), where 100% of the participants incorporated at least one innovative practice, such as the use of bioinputs and agroforestry, reducing the use of chemicals. The project also strengthened agricultural biodiversity by creating seed houses and networks of guardians to increase access to more ecological and resistant varieties. The project has directly involved 159 women and 57 young people until 2025. Women took the lead, while many young people took part in decision-making processes. Environmentally, practices such as SPDH, biofertilizers, green manure and agroecological management have increased the climate resilience of agroecosystems, bringing improvements to the soil and the efficient use of water.",
+  },
+  {
+    id: 44,
+    title:
+      "Lar builds a poultry production chain that generates income for farmers and drives regional development.",
+    markdownTitle:
+      "# Lar builds a poultry production chain that generates income for farmers and drives regional development.",
+    context:
+      "With more than half a century of history and as the single cooperative with the highest number of employees in Brazil, Lar has a solid track record in agriculture. However, in the 1990s, the country's unstable economic scenario, marked by hyperinflation and the stabilization brought about by the Real Plan in 1994, required the cooperative to look for new strategies to ensure the stability and competitiveness of its more than 15,000 members, mostly small and medium-sized producers. Exclusive dependence on agriculture left the cooperative members vulnerable.",
+    challenge:
+      "It was essential to diversify activities in order to strengthen the production base, create new sources of income and reduce the rural exodus, keeping families in the countryside. It was in this context that Lar began studies to identify a new activity with high profitability potential that could be adapted to the reality of small properties.",
+    development:
+      "The cooperative has structured its actions in different phases, with a focus on strengthening small farms and generating sustainable economic development. Initially, he looked for new alternatives to make farming viable on small properties, identifying opportunities with greater potential for profitability. This study led to the choice of poultry farming as a new strategic activity for the members. Then the slaughtering industry was set up. On September 9, 1999, the Poultry Industrial Unit in Matelândia (PR) carried out its first slaughter, marking the beginning of the verticalization of production. This gave birth to an integrated production chain that would add value to production and generate more consistent results for producers. At the same time as building the industry, the cooperative invested in infrastructure, technology and people training, ensuring that the sector's growth was supported by modern resources and skilled labor. With these initiatives, the cooperative adopted a gradual and planned approach that integrated opportunity analysis, industrial implementation and human development in order to bring consistent and lasting results to the region and its members. In terms of resources, suppliers of inputs and genetics, technological partners, regulatory bodies and financial institutions were mobilized to provide the necessary support for the project.",
+    cooperName: "Lar Agroindustrial Cooperative",
+    excerpt:
+      "Faced with the economic instability of the 1990s, Lar Cooperativa diversified its activities by creating a poultry chain from scratch. The project has transformed small farms, generating a monthly income of R$61.5 million for integrated producers. Today, Lar is the 3rd largest poultry slaughtering company in Brazil, exports to over 90 countries and employs 19,000 people in the sector, proving to be a powerful model for economic and social development.",
+    categories: [
+      "poultry farming",
+      "verticalization",
+      "regional development",
+      "family farming",
+    ],
+    branch: "Agropecuário",
+    mainOds: 2,
+    asideOds: [8, 9],
+    state: "PR",
+    objectives:
+      "The project was born with the main aim of diversifying income alternatives for members, offering support so that small farms could explore new business opportunities. The goal was to identify a livestock activity with the potential to add value and which could be verticalized, i.e. controlled by the cooperative from production in the field to the industry, guaranteeing better results for the producer. Based on studies and strategic planning, poultry farming was chosen as the new bet. The aim was to transform the local economic landscape by creating a support network that would stimulate regional growth. The initiative aimed to integrate economic development, livestock appreciation and social strengthening, consolidating the role of the Lar as a transforming agent.",
+    result:
+      "After 25 years, the commitment to poultry farming has transformed Lar and the entire region in which it operates. The project, which began by slaughtering 40,000 birds a day, now exceeds the mark of 1 million birds slaughtered daily, considering its operations in 136 cities in Paraná and Rio Grande do Sul. Lar has thus become the third largest poultry slaughtering company in Brazil and the fourth in Latin America, with its products recognized in more than 90 countries. In Paraná, the cooperative accounts for 15.35% of all chicken meat exports from the state. The social and economic impact is also significant. The cooperative's livestock activity, which today also includes pigs and fish, generates a monthly income of R$61.5 million for integrated producers. In addition, the initiative has boosted the region with the growth of cities, the emergence of new businesses and improved quality of life.",
+  },
+  {
+    id: 45,
+    title:
+      "Lar innovates with enzymes in feed and reduces carbon emissions in poultry farming",
+    markdownTitle:
+      "# Lar innovates with enzymes in feed and reduces carbon emissions in poultry farming",
+    context:
+      "In conventional poultry production, a significant portion of the nutrients present in ingredients such as corn and soybean meal were not fully absorbed by the birds. This scenario created a double challenge: on the one hand, it meant lower production performance and higher feed costs for producers. On the other hand, it had an environmental impact.",
+    challenge:
+      "The undigested nutrients, mainly nitrogen and phosphorus, were excreted into the environment, contributing to soil and water contamination. This excretion is a precursor to the emission of powerful greenhouse gases (GHG) such as methane and nitrous oxide. In addition, there was a need to supplement the feed with high doses of inorganic phosphorus, a finite mineral resource that is extracted with a high environmental impact.",
+    development:
+      "The cooperative's strategy consisted of incorporating industrially produced enzymes into feed formulations, which act by breaking down complex molecules and increasing the digestibility of ingredients such as corn and soybean meal. The implementation process included pilot-scale tests to prove efficiency, adjustments to nutritional formulations, training for technicians and nutritionists and continuous monitoring of zootechnical and environmental results. Financed with direct investment from Lar itself, the project was strengthened by strategic partnerships with technology suppliers and the expertise of the in-house technical team. In this way, the initiative directly benefits cooperative poultry producers, especially small and medium-sized ones, who get a lower cost per kilo of meat produced. Indirectly, it reaches consumers and international markets, which now have access to more sustainably produced animal protein.",
+    cooperName: "Lar Agroindustrial Cooperative",
+    excerpt:
+      "Lar Cooperativa Agroindustrial has implemented the use of nutritional enzymes in the formulation of poultry feed. The innovation has increased feed efficiency and reduced production costs for cooperative members, while minimizing the environmental impact of the activity, reducing the excretion of polluting nutrients and the emission of greenhouse gases",
+    categories: ["Enzymes", "Animal Feed", "Poultry"],
+    branch: "Agriculture",
+    mainOds: 2,
+    asideOds: [12, 13, 15],
+    state: "PR",
+    objectives:
+      "Given this context, Lar Cooperativa sought a solution that combined production efficiency and sustainability. The project adopted the use of exogenous nutritional enzymes (proteases, carbohydrases and phytase) in the formulation of poultry feed, with the aims of increasing feed efficiency, reducing production costs and, fundamentally, minimizing the environmental impact of the animal protein chain. The initiative aimed to tackle the root of the problem: reducing the excretion of undigested nutrients, reducing GHG emissions and dependence on finite inputs such as phosphorus. The goal was clear: to produce more, at a lower cost and with a smaller carbon footprint, contributing directly to climate mitigation and the conscious use of natural resources.",
+    result:
+      "The adoption of enzymes has generated concrete and measurable gains. Economically, there has been an increase in feed efficiency and a reduction in the cost of production for cooperative members. Environmentally, the project reduced the need for inorganic phosphorus supplementation and avoided the emission of more than 650 tons of CO₂ equivalent in 2024 alone. For illustrative purposes, this volume is equivalent to planting millions of trees. These results have consolidated Lar's competitiveness in the global sustainable protein market. The project, therefore, is an example of innovation applied to climate mitigation on a large scale, with high potential to be replicated by other cooperatives and companies in the sector. The initiative demonstrates how the application of science and technology can simultaneously reduce emissions, increase production efficiency and guarantee food security in a sustainable way, directly aligned with the challenges of the global climate agenda.",
+  },
+  {
+    id: 46,
+    title: "Lar promotes resource efficiency and energy generation from waste",
+    markdownTitle:
+      "# Lar promotes resource efficiency and energy generation from waste",
+    context:
+      "With more than 15,000 members, Lar Cooperativa Agroindustrial is a benchmark in Brazilian agribusiness, operating in several markets. The grain processing process, which is essential for guaranteeing the quality of products such as soya, corn and wheat, involves stages such as cleaning, drying and grading.",
+    challenge:
+      "However, this activity generates a significant amount of waste, such as soybean pods, corn cobs and straw. In Lar, this waste accounted for between 1% and 12% of the volume of soybeans and between 0.7% and 1% of the volume of corn processed. Before the project was implemented, this waste was disposed of in landfills or composted. As well as representing a cost, this practice generated environmental liabilities, such as the proliferation of insects, the generation of odors and the risk of groundwater contamination, impacting the communities around the operating units.",
+    development:
+      "To turn the challenge into an opportunity, Lar adopted a multi-phase strategy. The process began with the identification of the problem and the search for technological partners. Through a partnership, the cooperative has developed an innovative solution for turning waste into briquettes. The implementation followed the preparation of a detailed project, the allocation of resources and the definition of a pilot plant to carry out tests, validating the effectiveness of the solution under controlled conditions. The cooperative relied on the support of consultancies, project integrators and engineering, automation and maintenance companies to ensure the technical success of the initiative. After validation, the organization applied for a patent on the solution to protect the innovation and expanded the project to other units. The target audience benefiting from the initiative includes workers at grain processing plants and local communities, who have come to live in a cleaner and more sustainable environment.",
+    cooperName: "Lar Agroindustrial Cooperative",
+    excerpt:
+      "Lar Cooperativa Agroindustrial has turned an environmental challenge into a sustainable business opportunity. The large amount of waste generated from grain processing, which previously posed a disposal problem, has become raw material for the production of high-calorific briquettes. The initiative has reduced environmental impact, optimized the cooperative's energy matrix with a clean energy source and generated a new value chain, strengthening the principles of the circular economy.",
+    categories: [
+      "Bioeconomy",
+      "Renewable Energy",
+      "Agricultural Waste",
+      "Circular Economy",
+    ],
+    branch: "Agriculture",
+    mainOds: 7,
+    asideOds: [12, 13],
+    state: "PR",
+    objectives:
+      "Motivated by the need to find a sustainable solution for the management of its waste and to align its operations with the best environmental practices, the cooperative defined the following objectives for the initiative:\n* Reuse the waste generated in the post-harvest of soybeans and corn, eliminating improper disposal.\n* Reducing emissions of polluting gases, contributing to a cleaner energy matrix.\n* To generate briquettes with high calorific value, capable of replacing fossil fuels and other forms of conventional biomass.\n* Creating new business and income opportunities from the recovery of waste that was previously a problem.",
+    result:
+      "The implementation of the project has brought concrete and transformative results. After being dried, ground and pressed, agricultural waste is converted into high-energy briquettes with a calorific value of between 4,500 and 5,000 kcal. These briquettes are used as fuel in the cooperative's own boilers and grain dryers, replacing traditional biomass. This circular economy solution has optimized Lar's energy matrix, reduced the environmental problems associated with waste disposal and does not use chemical additives in the process. In addition to the environmental gains, the initiative has generated logistical and economic gains, transforming what was a cost into a value-added product that contributes to sustainability and the preservation of natural resources. In this way, the project demonstrates in practice how the bioeconomy can transform waste into a source of clean energy, with high potential for replication in other agro-industries, reinforcing the cooperative's commitment to the energy transition.",
+  },
+  {
+    id: 47,
+    title: "Lar invests in biodiesel production and drives energy transition",
+    markdownTitle:
+      "# Lar invests in biodiesel production and drives energy transition",
+    context:
+      "Founded in 1964 and with revenues of more than R$20 billion in 2024, Lar is a giant in the Brazilian agro-industrial cooperative sector, with more than 15,000 members and 25,000 workers. Given its scale of production, the cooperative faced challenges directly linked to the sustainability of its operations.",
+    challenge:
+      "Before the implementation of the biodiesel project, Lar had a greater dependence on fossil fuels in its activities, which resulted in a higher carbon footprint and intensified greenhouse gas (GHG) emissions. In addition, there was an untapped opportunity to harness the full productive potential of soybeans — its main commodity — and strategically integrate it into the national energy matrix. This scenario limited job creation in the region's renewable energy chain and distanced the cooperative from the growing global demands for a low-carbon economy.",
+    development:
+      "To achieve its goals, Lar modernized its soybean crushing plant in Caarapó, Mato Grosso do Sul, optimizing processes to achieve greater energy efficiency. The production of biodiesel from soybeans follows an integrated process that begins with receiving and preparing the grains supplied by the cooperative members themselves. After extraction, the crude oil undergoes a refining process and then transesterification — a chemical reaction that converts it into biodiesel and glycerin. The biofuel is then purified to ensure compliance with the specifications of the National Petroleum, Natural Gas and Biofuels Agency (ANP) before being stored and distributed. To ensure the product's place in the market, the cooperative has consolidated strategic alliances with fuel distributors, expanding its national reach. The initiative directly benefits the 305 employees working at the biodiesel plant, as well as 430 member farmers from Mato Grosso do Sul who supply the raw material, thereby strengthening the local economy.",
+    cooperName: "Lar Agroindustrial Cooperative",
+    excerpt:
+      "Lar Agroindustrial Cooperative, one of the largest in the sector in Brazil, consolidated its entry into biodiesel production as part of its sustainability and business diversification strategy. By modernizing its soybean crushing plant, the cooperative started producing renewable fuel, reducing its dependence on fossil sources and significantly reducing greenhouse gas emissions. The initiative generates skilled jobs and strengthens the production chain, adding value to its members' production and contributing to Brazil's energy transition.",
+    categories: ["Biodiesel", "Energy Transition", "Sustainability"],
+    branch: "Agriculture",
+    mainOds: 7,
+    asideOds: [8, 9, 12, 13],
+    state: "PR",
+    objectives:
+      "The decision to invest in biodiesel production came about as a strategic opportunity for Lar, aligning business diversification with a robust energy transition plan. The initiative was motivated both by the need to reduce dependence on fossil fuels and by the vision of aligning the cooperative with global demands for renewable energy. The main objectives of the project were:\n* To diversify the business chain through soybean crushing for the production of meal, oil, and biodiesel.\n* Contribute to the cooperative's energy transition plan by producing a biofuel with lower emissions compared to fossil fuels.\n* Reduce dependence on non-renewable energy sources, strengthening the autonomy and sustainability of operations.\n* Consolidate Lar as a benchmark in sustainability, reinforcing its strategic commitment to the environment and innovation.",
+    result:
+      "With the expansion of the industrial unit in Caarapó (MS), the project has generated concrete, high-impact results. Lar currently produces approximately 4.5 million liters of B100 biodiesel per month, derived entirely from its members' soybean oil. The main environmental gain is the significant reduction in emissions: Lar's biodiesel provides a reduction of up to 95% in GHG emissions compared to fossil diesel, which prevented the release of 10,000 tons of CO₂ into the atmosphere in 2024 alone. On the socio-economic front, the initiative has stimulated the local economy by generating skilled jobs. The project also strengthened the cooperative's sustainable cycle, integrating its members' agricultural production into the biofuel chain and adding value to soybeans. In this way, Lar has advanced its energy transition agenda while strengthening its role as a driver of sustainable development in the communities where it operates.",
+  },
+  {
+    id: 48,
+    title:
+      "Lar turns swine waste into clean energy and reduces methane emissions.",
+    markdownTitle:
+      "# Lar turns swine waste into clean energy and reduces methane emissions.",
+    context:
+      "Founded in 1964 by 55 farmers, Lar Agroindustrial Cooperative has grown into a powerhouse in agribusiness, with more than 25,000 employees and 15,000 members. Pig farming is one of its important activities and generates a significant volume of waste.",
+    challenge:
+      "Without proper treatment, this material decomposes and releases methane, a greenhouse gas with high global warming potential. The previous scenario was marked by the emission of this gas into the atmosphere and total dependence on electricity from the conventional grid, at a high cost. Waste was seen only as an environmental liability, with no added value. Lar's challenge was to find a solution that would solve the environmental problem of methane emissions and, at the same time, create a new opportunity from production waste.",
+    development:
+      "The implementation of the project was planned in stages, starting with market studies to select equipment suppliers and specialized construction companies. This initial phase ensured the technical and financial viability of the initiative, which also included the search for lines of financing for renewable energy projects. The strategy continued with the purchase of equipment and the hiring of skilled labor to install the biodigesters and energy generation units. Lar has also set up a monitoring system to ensure the continuous operation and maintenance of the biogas plants. The technical process is cyclical and sustainable. First, the waste from the farms is collected and taken to a closed chamber, the biodigester. There, microorganisms break down the organic matter in a process of anaerobic digestion, which produces biogas, a methane-rich compound. This gas is captured, stored and used as fuel in motor-generators, which produce clean electricity. The solid waste left over from the process, called digestate, is sent to treatment ponds, completing the cycle of sustainable use.",
+    cooperName: "Lar Agroindustrial Cooperative",
+    excerpt:
+      "Lar Agroindustrial Cooperative implemented biodigesters in its swine production units to treat waste and generate renewable energy. The initiative transforms an environmental liability into biogas, which is used to produce electricity. In 2024, the project prevented the emission of 120 tons of carbon dioxide equivalent and generated savings of R$1.1 million for the cooperative.",
+    categories: ["Biogas", "Renewable Energy", "Methane"],
+    branch: "Agriculture",
+    mainOds: 7,
+    asideOds: [12, 13],
+    state: "PR",
+    objectives:
+      "The central aim of the project was to implement a system to transform pig farm waste into clean energy. The initiative aimed to reduce methane emissions and simultaneously generate electricity from the biogas captured in the process. The specific goals included reducing dependence on the purchase of energy from the electricity grid, promoting the correct disposal of an environmental liability and giving new value to waste. In addition, the cooperative sought to contribute to the energy transition and climate change mitigation by encouraging the use of biodigesters as an emissions control tool throughout the pig farming chain.",
+    result:
+      "The initiative has transformed pig farm waste into a valuable energy input. In 2024, the generation of 1.6 GWh (Gigawatt-hours) of electricity from the burning of almost 800,000 cubic meters of biogas at three Lar units generated savings of R$1.1 million. The most significant environmental impact was the reduction in greenhouse gas emissions. In 2024 alone, the use of methane prevented the emission of 120 tons of carbon dioxide equivalent into the atmosphere. The project also ensured greater energy autonomy, reduced operating costs and strengthened the renewable energy matrix.",
+  },
 ];
