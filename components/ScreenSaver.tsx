@@ -11,25 +11,33 @@ import { Params } from "@/types/Params";
 
 export const ScreenSaver = ({
   image = "/intro/people.png",
-  color1 = "var(--primary)",
-  color2 = "var(--secondary)",
-  color3 = "var(--tertiary)",
-  color4 = "var(--quaternary)",
-  color5 = "var(--quinquenary)",
-  color6 = "var(--sextenary)",
+  colorMap1 = "var(--primary)",
+  colorMap2 = "var(--secondary)",
+  colorMap3 = "var(--tertiary)",
+  colorCurve1 = "var(--quaternary)",
+  colorCurve2 = "var(--quinquenary)",
+  colorCurve3 = "var(--sextenary)",
+  colorLine1 = "var(--tertiary)",
+  colorLine2 = "var(--quaternary)",
+  colorBg = "var(--primary)",
   icon1 = "/icons/shine1.svg",
   icon2 = "/icons/plus1.svg",
   title = "default",
+  imageClassName = "",
 }: {
   image?: string;
   icon1?: string;
   icon2?: string;
-  color1?: string;
-  color2?: string;
-  color3?: string;
-  color4?: string;
-  color5?: string;
-  color6?: string;
+  colorMap1?: string;
+  colorMap2?: string;
+  colorMap3?: string;
+  colorCurve1?: string;
+  colorCurve2?: string;
+  colorCurve3?: string;
+  colorLine1?: string;
+  colorLine2?: string;
+  colorBg?: string;
+  imageClassName?: string;
   title?: "default" | "cresol" | "sicredi" | "sicoob";
 }) => {
   const params = useParams<Params>();
@@ -39,7 +47,7 @@ export const ScreenSaver = ({
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { delay: 0.5, duration: 0.4 } }}
       style={{
-        backgroundColor: color1,
+        backgroundColor: colorBg,
       }}
       className={`bg-[url("/bg/bg2.png")] bg-blend-multiply bg-cover bg-no-repeat w-full h-full flex items-center justify-center absolute inset-0 z-999 overflow-hidden`}
     >
@@ -50,9 +58,9 @@ export const ScreenSaver = ({
           strokeWidth={8}
           duration={3}
           delay={3}
-          color1={color4}
-          color2={color6}
-          color3={color2}
+          color1={colorCurve1}
+          color2={colorCurve2}
+          color3={colorCurve3}
         />
       </div>
       <div>
@@ -104,18 +112,15 @@ export const ScreenSaver = ({
 
       {title === "default" && (
         <motion.div
-          initial={{ opacity: 1, scale: 1 }} // Garante que a escala inicial seja 1
+          initial={{ opacity: 1, scale: 1 }}
           animate={{
-            // Adicione a animação de pulsação aqui:
-            scale: [1, 1.05, 1], // Inicia em 1, vai para 1.01 (aumenta 1%), e volta para 1
+            scale: [1, 1.05, 1],
             transition: {
-              // Configurações para o fade-in inicial:
-              // Configurações para o pulsar (scale):
               scale: {
-                duration: 4, // Duração de um ciclo de pulso (2 segundos)
+                duration: 4,
                 delay: 3,
-                repeat: Infinity, // Repete indefinidamente
-                repeatType: "reverse", // Alterna entre os valores [1, 1.01, 1]
+                repeat: Infinity,
+                repeatType: "reverse",
                 ease: "easeInOut",
               },
             },
@@ -195,24 +200,77 @@ export const ScreenSaver = ({
         </motion.div>
       )}
 
-      {title === "cresol" ||
-        title === "sicoob" ||
-        (title === "sicredi" && (
-          <div className="border teste">
-            <div>{interfaceData[locale]["company-title"].array?.[0]}</div>
-            <div>
-              <Image width={100} src={`/logo/${title}-branca.svg`} alt="" />
-            </div>
-            <div>{interfaceData[locale]["company-title"].array?.[1]}</div>
-          </div>
-        ))}
+      {title === "cresol" && (
+        <div
+          className="absolute top-25 right-3 lg:top-50
+         lg:right-[10%]
+         md:right-[18%] fhd:right-[18%] xl:top-1/2 xl:-translate-y-1/2 text-white uppercase w-80 
+         2xl:w-110 fhdv:portrait:w-180 fhdv:portrait:right-[10%] fhdv:portrait:top-60"
+        >
+          <motion.div
+            initial={{ opacity: 0, translateX: -100 }}
+            animate={{
+              opacity: 1,
+              translateX: 0,
+              transition: { delay: 3.4, duration: 0.6 },
+            }}
+            className="text-xl xl:text-2xl 2xl:text-3xl fhdv:portrait:text-5xl font-light"
+          >
+            {interfaceData[locale]["company-title"].array?.[0]}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateX: -100 }}
+            animate={{
+              opacity: 1,
+              translateX: 0,
+              transition: { delay: 3.8, duration: 0.6 },
+            }}
+            className="relative"
+          >
+            <motion.div
+              initial={{ opacity: 1, scale: 1 }}
+              animate={{
+                scale: [1, 1.08, 1],
+                transition: {
+                  scale: {
+                    duration: 4,
+                    delay: 3,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "easeInOut",
+                  },
+                },
+              }}
+              className="w-[230px] h-18 md:w-3/4 2xl:w-[340px] 2xl:h-25 fhdv:portrait:w-[600px] fhdv:portrait:h-40"
+            >
+              <Image
+                className="object-contain"
+                fill
+                src={`/logo/${title}-branca.svg`}
+                alt=""
+              />
+            </motion.div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateX: -100 }}
+            animate={{
+              opacity: 1,
+              translateX: 0,
+              transition: { delay: 3.8, duration: 0.6 },
+            }}
+            className="text-3xl 2xl:text-5xl font-light italic fhdv:portrait:text-7xl"
+          >
+            {interfaceData[locale]["company-title"].array?.[1]}
+          </motion.div>
+        </div>
+      )}
       <div className="absolute top-5 fhdv:portrait:top-10 left-5 fhd:w-4/6 fhdv:portrait:w-full">
         <AnimatedIntroLine
           width="100%"
           height={20}
           duration={0.5}
-          fillIcons={color3}
-          fillDots={color2}
+          fillIcons={colorLine1}
+          fillDots={colorLine2}
         />
       </div>
       <div className="absolute bottom-5 right-0 fhdv:portrait:bottom-10 fhd:right-5 fhdv:portrait:-right-20 md:w-5/6 lg:w-3/6 fhdv:portrait:w-full">
@@ -220,8 +278,8 @@ export const ScreenSaver = ({
           width="100%"
           height={20}
           duration={0.5}
-          fillIcons={color2}
-          fillDots={color3}
+          fillIcons={colorLine2}
+          fillDots={colorLine1}
         />
       </div>
 
@@ -243,9 +301,9 @@ export const ScreenSaver = ({
           <AnimatedBrasilPath
             width="100%"
             height="100%"
-            strokeColor1={color6}
-            strokeColor2={color3}
-            strokeColor3={color4}
+            strokeColor1={colorMap1}
+            strokeColor2={colorMap2}
+            strokeColor3={colorMap3}
             strokeWidth={8}
             duration={3}
           />
@@ -253,7 +311,8 @@ export const ScreenSaver = ({
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 2.5 } }}
-          className="w-8/12 
+          className={`
+              w-8/12 
               lg:w-[34%] 
               fhdv:portrait:w-full 
               fhd:w-[37%] 
@@ -263,7 +322,7 @@ export const ScreenSaver = ({
               lg:top-0
               xl:top-0
               fhd:-top-6 
-              fhdv:portrait:-top-100 left-[20%] lg:left-[24%] fhd:left-[24%] fhdv:portrait:left-10"
+              fhdv:portrait:-top-100 left-[20%] lg:left-[24%] fhd:left-[24%] fhdv:portrait:left-10 ${imageClassName}`}
         >
           <Image
             sizes="80vw"

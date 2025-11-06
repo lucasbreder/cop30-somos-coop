@@ -5,9 +5,9 @@ export const AnimatedIntro = ({
   width,
   height,
   strokeWidth = 3,
-  color1 = "var(--tertiary)",
-  color2 = "var(--quaternary)",
-  color3 = "var(--secondary)",
+  color1 = "var(--secondary)",
+  color2 = "var(--tertiary)",
+  color3 = "var(--quaternary)",
   delay = 0,
 }: {
   duration?: number;
@@ -40,7 +40,7 @@ export const AnimatedIntro = ({
       <motion.path
         id="wind"
         d="M 562.75977 3.0292969 L 553.89062 44.970703 L 562.75977 3.0292969 z M 551.51953 45.089844 C 546.48706 45.072207 541.96789 48.592193 540.90039 53.710938 C 539.68039 59.560932 543.43907 65.289767 549.28906 66.509766 C 555.13906 67.729764 560.86984 63.969135 562.08984 58.119141 C 563.30984 52.269146 559.54921 46.540311 553.69922 45.320312 C 552.96797 45.167813 552.23846 45.092363 551.51953 45.089844 z M 539.25 57.519531 L 495.84961 72.949219 L 539.25 57.519531 z M 563.33008 65.019531 L 601.10938 96.779297 L 563.33008 65.019531 z "
-        stroke="var(--quaternary)"
+        stroke={color2}
         fill="transparent"
         strokeWidth={strokeWidth}
         strokeLinecap="round"

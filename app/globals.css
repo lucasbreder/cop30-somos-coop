@@ -26,8 +26,9 @@
   --quaternary: #f3f2f2;
   --quinquenary: #3eb5a8;
   --sextenary: #4fa4f2;
+  --septenary: #ee7d00;
   --cresol-primary: #ee7d00;
-  --cresol-secondary: red;
+  --sicoob-primary: #ee7d00;
 }
 
 @theme inline {

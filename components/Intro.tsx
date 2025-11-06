@@ -80,7 +80,7 @@ export const Intro = ({
           lg:px-20 
           fhd:px-20
            bg-cover
-      bg-no-repeat
+            bg-no-repeat
           fhdv:portrait:px-10  ${
             isHome || pathname === `/credito/${creditCompany}`
               ? "bg-[url(/bg/bg1.png)]"
@@ -88,16 +88,46 @@ export const Intro = ({
           } `}
       >
         <AnimatePresence>
-          {showIntro && !creditCompany && <ScreenSaver />}
+          {showIntro && !creditCompany && (
+            <ScreenSaver
+              colorMap1="var(--secondary)"
+              colorMap2="var(--quaternary)"
+              colorMap3="var(--tertiary)"
+              colorCurve1="var(--tertiary)"
+              colorCurve2="var(--quaternary)"
+              colorCurve3="var(--secondary)"
+              colorBg="var(--primary)"
+            />
+          )}
           {showIntro && creditCompany === "cresol" && (
             <ScreenSaver
-              color1="var(--cresol-primary)"
-              color2="var(--sextenary)"
-              color3="var(--sextenary)"
-              color4="var(--tertiary)"
-              color5="var(--tertiary)"
-              color6="var(--quaternary)"
-              image="/intro/cresol-intro.png"
+              colorBg="var(--cresol-primary)"
+              colorMap1="var(--quaternary)"
+              colorMap2="var(--secondary)"
+              colorMap3="var(--tertiary)"
+              colorCurve1="var(--tertiary)"
+              colorCurve2="var(--quaternary)"
+              colorCurve3="var(--secondary)"
+              colorLine1="var(--tertiary)"
+              colorLine2="var(--secondary)"
+              image="/intro/intro-cresol.png"
+              icon1="/icons/shine2.svg"
+              icon2="/icons/plus3.svg"
+              title="cresol"
+            />
+          )}
+          {showIntro && creditCompany === "sicoob" && (
+            <ScreenSaver
+              colorBg="var(--sicoob-primary)"
+              colorMap1="var(--quaternary)"
+              colorMap2="var(--secondary)"
+              colorMap3="var(--tertiary)"
+              colorCurve1="var(--tertiary)"
+              colorCurve2="var(--quaternary)"
+              colorCurve3="var(--secondary)"
+              colorLine1="var(--tertiary)"
+              colorLine2="var(--secondary)"
+              image="/intro/intro-cresol.png"
               icon1="/icons/shine2.svg"
               icon2="/icons/plus3.svg"
               title="cresol"
@@ -125,7 +155,7 @@ export const Intro = ({
               <motion.div
                 className="w-full h-full"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 0.5 } }}
+                animate={{ opacity: 1, transition: { delay: 3 } }}
                 exit={{ opacity: 0 }}
               >
                 <div
@@ -162,7 +192,11 @@ export const Intro = ({
                         sizes="80vw"
                         priority
                         className="object-contain"
-                        src="/intro/people.png"
+                        src={
+                          creditCompany
+                            ? `/intro/${creditCompany}-intro.png`
+                            : "/intro/people.png"
+                        }
                         alt=""
                         fill
                       />

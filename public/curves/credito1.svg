@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg256"
+   width="596.06"
+   height="355.28638"
+   viewBox="0 0 596.06 355.28638"
+   sodipodi:docname="25-Layout Tela Interativa-COOPsCREDITO - Estande ONU_CRESOL_v2.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs260">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2593">
+      <g
+         id="g2597"
+         transform="translate(-589.47638,-81.13512)">
+        <path
+           d="M 8.4535807,1770.3716 H 1088.4536 V -149.62838 H 8.4535807 Z"
+           id="path2595" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2599">
+      <g
+         id="g2603"
+         transform="translate(-583.80158,-91.28102)">
+        <path
+           d="M 8.4535807,1770.3716 H 1088.4536 V -149.62838 H 8.4535807 Z"
+           id="path2601" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2605">
+      <g
+         id="g2609"
+         transform="translate(-230.32448,265.89678)">
+        <path
+           d="M 8.4535807,1770.3716 H 1088.4536 V -149.62838 H 8.4535807 Z"
+           id="path2607" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2611">
+      <g
+         id="g2615"
+         transform="translate(-190.96338,277.55328)">
+        <path
+           d="M 8.4535807,1770.3716 H 1088.4536 V -149.62838 H 8.4535807 Z"
+           id="path2613" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2617">
+      <g
+         id="g2621"
+         transform="translate(-575.93158,-115.70892)">
+        <path
+           d="M 8.4535807,1770.3716 H 1088.4536 V -149.62838 H 8.4535807 Z"
+           id="path2619" />
+      </g>
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview258"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     id="g262"
+     inkscape:groupmode="layer"
+     inkscape:label="25-Layout Tela Interativa-COOPsCREDITO - Estande ONU_CRESOL_v2"
+     transform="matrix(1.3333333,0,0,-1.3333333,-75.025742,-71.901123)">
+    <g
+       id="g2685">
+      <g
+         id="g400"
+         transform="translate(442.36501,-55.053409)"
+         clip-path="url(#clipPath2617)">
+        <path
+           d="m 0,0 h -223.205 c -23.189,0 -41.988,-18.799 -41.988,-41.988 v -310.843 c 0,-8.94 -7.247,-16.187 -16.186,-16.187 h -103.589"
+           style="fill:none;stroke:#adcf22;stroke-width:2.255;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path402" />
+      </g>
+      <g
+         id="g404"
+         transform="translate(57.396806,-448.31561)"
+         clip-path="url(#clipPath2611)">
+        <path
+           d="m 0,0 h 104.475 c 21.84,0 39.545,17.705 39.545,39.544 v 311.447 c 0,9.956 8.071,18.027 18.027,18.027 h 222.921"
+           style="fill:none;stroke:#003b4b;stroke-width:2.255;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path406" />
+      </g>
+      <g
+         id="g408"
+         transform="translate(96.757906,-436.65911)"
+         clip-path="url(#clipPath2605)">
+        <path
+           d="M 0,0 H 62.218 C 79.3,0 93.149,13.848 93.149,30.931 v 308.235 c 0,16.768 13.593,30.361 30.36,30.361 h 123.056"
+           style="fill:none;stroke:#ff7500;stroke-width:2.255;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path410" />
+      </g>
+      <g
+         id="g412"
+         transform="translate(450.23501,-79.481309)"
+         clip-path="url(#clipPath2599)">
+        <path
+           d="m 0,0 c 0,0 24.006,0.477 31.585,-15.925 5.204,-11.26 14.028,-9.744 16.938,-7.226 0,0 4.865,3.075 3.021,9.205 -0.46,1.531 -1.264,2.951 -2.445,4.028 -1.608,1.466 -4.348,2.78 -8.099,0.368"
+           style="fill:none;stroke:#003b4b;stroke-width:2.255;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path414" />
+      </g>
+      <g
+         id="g416"
+         transform="translate(455.90981,-89.627209)"
+         clip-path="url(#clipPath2593)">
+        <path
+           d="m 0,0 c 0,0 11.422,-0.473 17.956,-10.471 0,0 3.63,-8.267 8.971,-9.775"
+           style="fill:none;stroke:#003b4b;stroke-width:2.255;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path418" />
+      </g>
+    </g>
+  </g>
+</svg>

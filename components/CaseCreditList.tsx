@@ -39,7 +39,7 @@ export const CaseCreditList = ({
     <div className={`relative ${hasOverflow ? "h-full" : "h-fit"} pr-7`}>
       <div
         ref={contentRef}
-        className="py-5 px-3 rounded-2xl w-full h-full border overflow-y-scroll no-scrollbar"
+        className="py-5 px-3 hdv:portrait:py-8 fhdv:portrait:px-10 rounded-2xl fhdv:portrait:rounded-4xl w-full h-full border overflow-y-scroll no-scrollbar"
         style={{
           borderColor: dataCompany && `var(--${dataCompany?.name}-primary)`,
         }}
@@ -47,7 +47,7 @@ export const CaseCreditList = ({
         {data.map((item, index) => (
           <div
             key={index}
-            className={`flex mb-2 items-start gap-2 cursor-pointer transition-all duration-500 text-sm`}
+            className={`flex mb-2 fhdv:portrait:mb-8 items-start gap-2 fhdv:portrait:gap-6 cursor-pointer transition-all duration-500 text-sm lg:text-xl fhdv:portrait:text-3xl`}
             style={{
               color: dataCompany && `var(--${dataCompany?.name}-primary)`,
             }}
@@ -57,13 +57,9 @@ export const CaseCreditList = ({
               );
             }}
           >
-            <Image
-              className="mt-2"
-              src="/icons/eye.svg"
-              alt=""
-              width={15}
-              height={10}
-            />
+            <div className="min-w-4 min-h-4 fhdv:portrait:min-w-10 fhdv:portrait:min-h-10 mt-2 relative ">
+              <Image src="/icons/eye.svg" alt="" fill />
+            </div>
             <span>{item.title}</span>
           </div>
         ))}
