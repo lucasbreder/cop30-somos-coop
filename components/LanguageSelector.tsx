@@ -3,7 +3,11 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const LanguageSelector = () => {
+export const LanguageSelector = ({
+  creditCompany,
+}: {
+  creditCompany?: string;
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,12 +22,26 @@ export const LanguageSelector = () => {
             key={index}
           >
             <div className="rounded-full fhd:w-30 fhd:h-30 fhdv:portrait:w-30 fhdv:portrait:h-30 w-20 h-20 relative">
-              <Link href={`/${lang.code}`}>
+              <Link
+                href={
+                  creditCompany
+                    ? `/${lang.code}/credito/${creditCompany}`
+                    : `/${lang.code}`
+                }
+              >
                 <Image sizes="80vw" src={lang.flag} alt={lang.code} fill />
               </Link>
             </div>
             <div>
-              <Link href={`/${lang.code}`}>{lang.name}</Link>
+              <Link
+                href={
+                  creditCompany
+                    ? `/${lang.code}/credito/${creditCompany}`
+                    : `/${lang.code}`
+                }
+              >
+                {lang.name}
+              </Link>
             </div>
           </div>
         );

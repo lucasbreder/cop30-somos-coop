@@ -10,7 +10,9 @@ export const CaseInfo = ({
 }) => {
   return (
     <div className={"mb-3"}>
-      <h3 className="border-b border-inherit pb-1 w-1/2 font-bold">{title}</h3>
+      <h3 className="border-b border-inherit pb-1 w-1/2 max-w-[200px] font-bold">
+        {title}
+      </h3>
       <div className="mt-3 case-content">
         <Markdown>{text}</Markdown>
       </div>

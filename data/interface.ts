@@ -62,6 +62,9 @@ export const interfaceData: InterfaceData = {
     "not-found": {
       value: "Nada Encontrado",
     },
+    "company-cases-title": {
+      value: "Boas Práticas",
+    },
   },
   en: {
     "home-title": {

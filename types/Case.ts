@@ -16,4 +16,19 @@ export type Case = {
   gallery?: string[];
   objectives?: string;
   result?: string;
+  company?: string;
+};
+
+export type CaseCompany = {
+  id: number;
+  title: string;
+  markdownTitle?: string;
+  context: string;
+  challenge?: string;
+  development: string;
+  thumbnail?: string;
+  gallery?: string[];
+  objectives?: string;
+  result?: string;
+  company?: string;
 };

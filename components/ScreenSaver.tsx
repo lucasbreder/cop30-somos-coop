@@ -8,15 +8,41 @@ import { AnimatedIntroLine } from "./AnimatedIntroLine";
 import { interfaceData } from "@/data/interface";
 import { useParams } from "next/navigation";
 import { Params } from "@/types/Params";
+import { title } from "process";
 
-export const ScreenSaver = () => {
+export const ScreenSaver = ({
+  titleKey = "home-title",
+  image = "/intro/people.png",
+  color1 = "var(--primary)",
+  color2 = "var(--secondary)",
+  color3 = "var(--tertiary)",
+  color4 = "var(--quaternary)",
+  color5 = "var(--quinquenary)",
+  color6 = "var(--sextenary)",
+  icon1 = "/icons/shine1.svg",
+  icon2 = "/icons/plus1.svg",
+}: {
+  image?: string;
+  titleKey?: string;
+  icon1?: string;
+  icon2?: string;
+  color1?: string;
+  color2?: string;
+  color3?: string;
+  color4?: string;
+  color5?: string;
+  color6?: string;
+}) => {
   const params = useParams<Params>();
   const locale = params.lang || "pt";
   return (
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { delay: 0.5, duration: 0.4 } }}
-      className="bg-[url(/bg/bg1.png)] bg-cover bg-no-repeat w-full h-full flex items-center justify-center absolute inset-0 z-999 overflow-hidden"
+      style={{
+        backgroundColor: color1,
+      }}
+      className={`bg-[url("/bg/bg2.png")] bg-blend-multiply bg-cover bg-no-repeat w-full h-full flex items-center justify-center absolute inset-0 z-999 overflow-hidden`}
     >
       <div className="absolute -bottom-10 lg:bottom-0 fhd:bottom-20 fhdv:portrait:bottom-50 -left-20 md:-left-30 lg:-left-10 fhd:-left-20 fhdv:portrait:left-[-15%] w-[25%] portrait:w-[50%]">
         <AnimatedIntro
@@ -29,45 +55,45 @@ export const ScreenSaver = () => {
       </div>
       <div>
         <AnimatedIcon
-          url="/icons/shine1.svg"
+          url={icon1}
           className="w-6 md:w-12 h-6 md:h-12 fhd:w-20 fhd:h-20 fhdv:portrait:w-20! fhdv:portrait:h-20 fhdv:portrait:bottom-[25%] fhdv:portrait:right-[10%] bottom-[30%] right-[30%] border-amber-600"
           delay={1}
         />
         <AnimatedIcon
-          url="/icons/shine1.svg"
+          url={icon1}
           className="w-6 md:w-12 h-6 md:h-12 fhd:w-20 fhd:h-20 fhdv:portrait:w-20 fhdv:portrait:h-20 fhdv:portrait:top-[35%] fhdv:portrait:left-[15%] top-[15%] left-[6%] lg:top-[10%] lg:left-[20%] border-red-600"
           delay={0.5}
         />
         <AnimatedIcon
-          url="/icons/shine1.svg"
+          url={icon1}
           className="w-6 md:w-12 h-6 md:h-12 fhd:w-20 fhd:h-20 fhdv:portrait:w-20 fhdv:portrait:h-20 fhdv:portrait:top-[55%] fhdv:portrait:left-[3%]  xl:top-[30%] top-[70%] left-[10%] lg:top-[75%] lg:left-[10%] border-blue-600"
           delay={0.8}
         />
         <AnimatedIcon
-          url="/icons/shine1.svg"
+          url={icon1}
           className="w-6 md:w-12 h-6 md:h-12 fhd:w-20 fhd:h-20 fhdv:portrait:w-20 fhdv:portrait:h-20 fhdv:portrait:top-[40%] fhdv:portrait:right-[15%] top-[38%] right-[25%] lg:top-[22%] lg:right-[40%] border-green-600"
           delay={0.3}
         />
         <AnimatedIcon
-          url="/icons/plus1.svg"
+          url={icon2}
           animation="show"
           className="w-6 md:w-8 h-6 md:h-8 fhd:w-12 fhd:h-12 fhdv:portrait:w-12 fhdv:portrait:h-12  fhdv:portrait:top-[64%] fhdv:portrait:left-[10%] top-[42%] left-[18%] lg:top-[50%] lg:left-[18%] border-gray-600"
           delay={0.3}
         />
         <AnimatedIcon
-          url="/icons/plus1.svg"
+          url={icon2}
           animation="show"
           className="w-6 md:w-8 h-6 md:h-8 fhd:w-12 fhd:h-12 fhdv:portrait:w-12 fhdv:portrait:h-12 fhdv:portrait:top-[36%] fhdv:portrait:left-[40%] top-[12%] left-[50%] lg:top-[12%] lg:left-[50%] border-orange-600"
           delay={0.3}
         />
         <AnimatedIcon
-          url="/icons/plus1.svg"
+          url={icon2}
           animation="show"
           className="w-6 md:w-8 h-6 md:h-8 fhd:w-12 fhd:h-12 fhdv:portrait:w-12 fhdv:portrait:h-12 fhdv:portrait:top-[38%] fhdv:portrait:left-[65%] top-[17%] left-[75%] lg:top-[10%] lg:left-[35%] border-purple-600"
           delay={0.3}
         />
         <AnimatedIcon
-          url="/icons/plus1.svg"
+          url={icon2}
           animation="show"
           className="w-6 md:w-8 h-6 md:h-8 fhd:w-12 fhd:h-12 fhdv:portrait:w-12 fhdv:portrait:h-12 fhdv:portrait:bottom-[18%] fhdv:portrait:right-[25%] bottom-[20%] right-[12%] lg:bottom-[25%] lg:right-[42%] border-pink-600"
           delay={0.3}
@@ -123,7 +149,7 @@ export const ScreenSaver = () => {
             }}
             className="-mb-5 2xl:-mb-10 fhdv:portrait:-mb-15 block"
           >
-            {interfaceData[locale]["home-title"].array?.[0] || "Conheça"}
+            {interfaceData[locale][titleKey].array?.[0] || "Conheça"}
           </motion.span>
           <motion.span className="flex items-center">
             <motion.span
@@ -131,7 +157,7 @@ export const ScreenSaver = () => {
               animate={{ opacity: 1, transition: { delay: 3.5 } }}
               className="text-[100px] xl:text-[120px] 2xl:text-[150px] fhdv:portrait:text-[220px] font-black block tracking-[-20px] text-quinquenary"
             >
-              {interfaceData[locale]["home-title"].array?.[1]}
+              {interfaceData[locale][titleKey].array?.[1]}
             </motion.span>
             <motion.span
               initial={{ opacity: 0, translateX: -100 }}
@@ -142,7 +168,7 @@ export const ScreenSaver = () => {
               }}
               className="max-w-1/6 text-[25px] xl:text-[35px] 2xl:text-[51px] ml-8 fhdv:portrait:ml-12 leading-8 2xl:leading-14 fhdv:portrait:text-[75px] fhdv:portrait:leading-22"
             >
-              {interfaceData[locale]["home-title"].array?.[2]}
+              {interfaceData[locale][titleKey].array?.[2]}
             </motion.span>
           </motion.span>
           <motion.span
@@ -154,7 +180,7 @@ export const ScreenSaver = () => {
             }}
             className="text-[24px] 2xl:text-[42px] xl:text-[32px] -mt-8 xl:-mt-11 fhd:-mt-11 fhdv:portrait:-mt-16 block leading-8 xl:leading-10 2xl:leading-12 fhdv:portrait:text-[65px] fhdv:portrait:leading-16"
           >
-            {interfaceData[locale]["home-title"].array?.[3]}
+            {interfaceData[locale][titleKey].array?.[3]}
           </motion.span>
         </motion.div>
         <motion.div
@@ -163,15 +189,21 @@ export const ScreenSaver = () => {
         ></motion.div>
       </motion.div>
       <div className="absolute top-5 fhdv:portrait:top-10 left-5 fhd:w-4/6 fhdv:portrait:w-full">
-        <AnimatedIntroLine width="100%" height={20} duration={0.5} />
+        <AnimatedIntroLine
+          width="100%"
+          height={20}
+          duration={0.5}
+          fillIcons={color3}
+          fillDots={color2}
+        />
       </div>
       <div className="absolute bottom-5 right-0 fhdv:portrait:bottom-10 fhd:right-5 fhdv:portrait:-right-20 md:w-5/6 lg:w-3/6 fhdv:portrait:w-full">
         <AnimatedIntroLine
           width="100%"
           height={20}
           duration={0.5}
-          fillIcons="var(--secondary)"
-          fillDots="var(--tertiary)"
+          fillIcons={color2}
+          fillDots={color3}
         />
       </div>
 
@@ -193,7 +225,9 @@ export const ScreenSaver = () => {
           <AnimatedBrasilPath
             width="100%"
             height="100%"
-            strokeColor="var(--color-quinquenary)"
+            strokeColor1="#4FA4F2"
+            strokeColor2={color3}
+            strokeColor3={color4}
             strokeWidth={8}
             duration={3}
           />
@@ -217,7 +251,7 @@ export const ScreenSaver = () => {
             sizes="80vw"
             priority
             className="object-contain"
-            src="/intro/people.png"
+            src={image}
             alt=""
             fill
           />

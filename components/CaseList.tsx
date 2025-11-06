@@ -15,7 +15,7 @@ export const CaseList = ({
   data: CaseData[];
   activeCase?: CaseData;
   dataOds?: Objective;
-  setActiveCase: (arg: CaseData) => void;
+  setActiveCase?: (arg: CaseData) => void;
 }) => {
   const trackRef = useRef<HTMLDivElement>(null);
   const thumbRef = useRef<HTMLDivElement>(null);
@@ -46,7 +46,7 @@ export const CaseList = ({
             key={index}
             className={`flex mb-2 items-start gap-2 cursor-pointer transition-all duration-500 text-sm ${activeCase?.id === item.id ? "font-bold" : "font-normal"}`}
             onClick={() => {
-              setActiveCase(item);
+              if (setActiveCase) setActiveCase(item);
             }}
           >
             <Image

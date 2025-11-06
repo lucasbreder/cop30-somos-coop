@@ -1,4 +1,5 @@
-export type Params = { 
-    lang?: string, 
-    id?: string 
-}
+export type Params = {
+  lang?: string;
+  company?: string;
+  id?: string;
+};

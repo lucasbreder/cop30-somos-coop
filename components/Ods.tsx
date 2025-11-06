@@ -108,7 +108,7 @@ export const Ods = () => {
             />
           )}
         </div>
-        <div className="hidden -ml-45 -mr-45 2xl:mr-0 -mt-40 2xl:mt-10 2xl:-ml-10  basis-1/3 lg:block min-w-fit fhd:min-w-6/12 fhd:-mr-5 fhd:-ml-20 mix-blend-multiply fhdv:portrait:order-3 fhd:order-0 fhd:mt-0 fhdv:portrait:-mt-360">
+        <div className="hidden -ml-45 -mr-45 2xl:mr-0 -mt-40 2xl:mt-10 2xl:-ml-10  basis-1/3 lg:block min-w-fit fhd:min-w-6/12 fhd:-mr-5 fhd:-ml-20 mix-blend-multiply fhdv:portrait:order-3 fhd:order-0 fhd:mt-0 fhdv:portrait:-mt-280">
           <Map
             className="scale-60 2xl:scale-100 fhd:scale-100 fhdv:portrait:scale-100"
             setActiveCase={setActiveCase}
