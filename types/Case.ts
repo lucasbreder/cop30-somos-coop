@@ -22,6 +22,10 @@ export type Case = {
 export type CaseCompany = {
   id: number;
   title: string;
+  excerpt: string;
+  cooperName: string;
+  categories: string[];
+  branch: string;
   markdownTitle?: string;
   context: string;
   challenge?: string;

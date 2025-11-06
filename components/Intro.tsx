@@ -15,6 +15,8 @@ import { interfaceData } from "@/data/interface";
 import { useParams, usePathname } from "next/navigation";
 import { Params } from "@/types/Params";
 import { CreditCompany } from "@/types/CreditCompany";
+import { AnimatedLanguageSelector2 } from "./AnimatedLanguageSelector2";
+import { AnimatedLanguageSelector3 } from "./AnimatedLanguageSelector3";
 
 export const Intro = ({
   children,
@@ -187,11 +189,19 @@ export const Intro = ({
                 </div>
                 {(isHome || pathname === `/credito/${creditCompany}`) && (
                   <div className="absolute h-100 left-0 fhd:h-138 fhdv:portrait:h-170 fhdv:portrait:top-20 -top-40 xl:top-10 xl:left-14 fhd:left-0">
-                    <AnimatedLanguageSelector
-                      width="100%"
-                      height="100%"
-                      delay={2}
-                    />
+                    {!creditCompany ? (
+                      <AnimatedLanguageSelector
+                        width="100%"
+                        height="100%"
+                        delay={2}
+                      />
+                    ) : (
+                      <AnimatedLanguageSelector2
+                        width="100%"
+                        height="100%"
+                        delay={2}
+                      />
+                    )}
                   </div>
                 )}
                 {(isHome || pathname === `/credito/${creditCompany}`) && (
@@ -219,11 +229,19 @@ export const Intro = ({
                       />
                     </motion.div>
                     <div className="relative h-80 fhd:h-112 fhdv:portrait:h-160 fhdv:portrait:-top-40 xl:-top-40">
-                      <AnimatedLanguageSelector1
-                        width="100%"
-                        height="100%"
-                        delay={1}
-                      />
+                      {!creditCompany ? (
+                        <AnimatedLanguageSelector1
+                          width="100%"
+                          height="100%"
+                          delay={1}
+                        />
+                      ) : (
+                        <AnimatedLanguageSelector3
+                          width="100%"
+                          height="100%"
+                          delay={1}
+                        />
+                      )}
                     </div>
                   </div>
                 )}

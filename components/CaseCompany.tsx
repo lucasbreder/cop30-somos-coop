@@ -16,6 +16,7 @@ import { useMotionValue, motion } from "motion/react";
 import { useScrollContent } from "@/hooks/useScrollContent";
 import { interfaceData } from "@/data/interface";
 import { casesCompany } from "@/data/cases-company";
+import { AnimatedCaseCompany } from "./AnimatedCaseCompany";
 
 export const CaseCompany = ({
   hasBakground = true,
@@ -66,7 +67,13 @@ export const CaseCompany = ({
 
   if (dataCase && casesCompanyIds) {
     return (
-      <div className="flex flex-col items-center justify-center h-full pt-20 -mx-15 fhdv:portrait:-mx-5 fhdv:portrait:pt-5">
+      <div className="flex flex-col items-center justify-center h-full pt-20 mlg-mx-15 fhdv:portrait:-mx-5 fhdv:portrait:pt-5">
+        <div className="absolute h-50 fhdv:portrait:h-80  hidden lg:block left-[-18%] 2xl:left-[-10%] -bottom-30 fhdv:portrait:-bottom-16 fhdv:portrait:-left-[12%]">
+          <AnimatedCaseCompany width="100%" height="100%" delay={1} />
+        </div>
+        <div className="absolute h-50 fhdv:portrait:h-80 -top-20 -right-[120%] fhdv:portrait:-right-[60%] md:-right-[75%] md:-top-10 lg:-right-[25%] lg:-top-20  2xl:-bottom-30">
+          <AnimatedCaseCompany width="100%" height="100%" delay={1} />
+        </div>
         <div
           className="basis-1/4 fhdv:portrait:basis-auto"
           style={{
@@ -81,7 +88,7 @@ export const CaseCompany = ({
           </div>
         </div>
         <div
-          className=" sm:h-8/12 
+          className="w-full sm:h-8/12 
           xs:h-9/12 
           lg:h-8/12 rounded-2xl px-3 py-8 relative"
           style={{

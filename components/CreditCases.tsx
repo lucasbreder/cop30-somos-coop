@@ -8,6 +8,7 @@ import { CaseCreditList } from "./CaseCreditList";
 import { casesCompany } from "@/data/cases-company";
 import Image from "next/image";
 import { interfaceData } from "@/data/interface";
+import { AnimatedCaseCompanyList } from "./AnimatedCaseCompanyList";
 
 export const CreditCases = () => {
   const params = useParams<Params>();
@@ -28,7 +29,10 @@ export const CreditCases = () => {
           color: `var(--${company}-primary)`,
         }}
       >
-        <div className="relative flex flex-col h-full pb-8">
+        <div className="hidden 2xl:block fhdv:portrait:block w-8/12 -bottom-35 2xl:-bottom-80 fhd:-bottom-70 fhdv:portrait:-bottom-50 left-[-40%] fhd:left-[-40%] fhdv:portrait:left-[-28%] absolute">
+          <AnimatedCaseCompanyList width="100%" height={430} delay={2} />
+        </div>
+        <div className="relative flex flex-col h-full pb-12">
           <div className="basis-1/4 fhdv:portrait:basis-auto">
             <div className="text-xl lg:text-3xl fhdv:portrait:text-6xl uppercase font-extrabold text-center mt-5 fhdv:portrait:mt-25 ">
               {interfaceData[locale]["company-cases-title"].value}
