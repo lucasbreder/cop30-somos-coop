@@ -38,8 +38,8 @@ export const Ods = () => {
           color: `var(--color-ods${dataOds?.id})`,
         }}
       >
-        <div className="hidden 2xl:block fhdv:portrait:block w-8/12 -bottom-45 2xl:-bottom-70 fhd:-bottom-30 fhdv:portrait:bottom-10 left-[-24%] fhd:left-[-24%] fhdv:portrait:left-[-15%] absolute">
-          <AnimatedOds width="100%" height={430} />
+        <div className="hidden 2xl:block fhdv:portrait:block w-8/12 -bottom-45 2xl:-bottom-80 fhd:-bottom-30 fhdv:portrait:bottom-10 left-[-24%] fhd:left-[-24%] fhdv:portrait:left-[-15%] absolute h-107 2xl:left-[-15%]">
+          <AnimatedOds width="100%" height="100%" />
         </div>
         <div
           className={`${activeCase ? "opacity-0" : "opacity-100"} transtion-all duration-200 flex flex-col min-w-full lg:min-w-auto 
