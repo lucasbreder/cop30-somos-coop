@@ -818,4 +818,299 @@ export const casesEn: Case[] = [
     result:
       "After years of work, Três Meninas Farm has become a global reference in sustainable coffee farming. The property is certified as carbon neutral, with a sequestration of more than 5 tons of CO₂ per hectare/year. Soil health has been restored and productivity has increased with the use of more resilient varieties and biological techniques. The quality of the coffee reached a new level, earning recognition as a finalist in the Sustainability Award at the 2024 Specialty Coffee Expo. Três Meninas Farm serves as a replicable model farm, inspiring around 4,500 coffee producers in the Cerrado Mineiro region and proving the economic viability of regenerative agriculture. In addition, the farm protects the spring of a river that supplies the municipality of Iraí de Minas, home to more than 7,000 inhabitants.",
   },
+  {
+    id: 32,
+    title: "Unicred União achieves 100% renewable energy with partnerships",
+    markdownTitle:
+      "# Unicred União achieves 100% renewable energy with partnerships",
+    context:
+      "Unicred União, a credit union serving more than 32,000 members in Santa Catarina and Paraná, operated under a conventional energy model and was fully dependent on the national power grid. This situation created challenges such as vulnerability to constant rate and tariff fluctuations, indirect CO₂ emissions, and the missed opportunity to position itself as a leader in the ESG agenda.",
+    challenge:
+      "The regulatory complexity and the lack of internal technical expertise in clean energy discouraged the search for alternatives, keeping the cooperative dependent on conventional suppliers. To break out of this cycle and align its operation with its purpose, Unicred União understood that it needed a structured and innovative solution that would guarantee both cost savings and a complete transition to a clean energy matrix.",
+    development:
+      "Unicred União has adopted a strategy with two complementary fronts. The first step was a direct investment of more than R$400,000 in the cooperative’s own micro solar plants, with an installed capacity of 209 kWp, ensuring a foundation of self-generation and energy autonomy. For the technical management of this front, the cooperative has signed a partnership with the specialized company ECOA Energias. The second front, focused on scalability, was joining a shared generation model with ALKA Energia. In this energy-as-a-service format, the organization now receives clean energy credits without the need for an initial investment, paying only for performance. This combination allowed Unicred União to diversify risks, optimize resources and expand its renewable matrix in an unlimited way, without the complexity of internal technical management.",
+    cooperName: "Unicred União Credit Union (Unicred União)",
+    excerpt:
+      "Unicred União, a credit union with more than 32,000 members in Santa Catarina and Paraná, implemented an innovative energy model. Combining investment in its own micro solar plants with a shared generation system, the initiative eliminated dependence on the conventional grid and generated an energy surplus, becoming a replicable case for a complete energy transition within the cooperative movement.",
+    categories: ["Renewable Energy", "Energy Transition", "Innovation"],
+    branch: "Credit",
+    mainOds: 7,
+    asideOds: [8, 13, 17],
+    state: "SC",
+    objectives:
+      "The project was born out of a long-term strategic vision to achieve maximum decarbonization of the cooperative's operations. The aim was to implement an integrated and complete renewable energy model, combining self-investment with innovation in shared generation. Unicred União wasn't just looking for a solution, but to create an energy transition framework that could be replicated by other cooperatives. The goal was to demonstrate the economic viability of a 100% sustainable system, taking advantage of ANEEL's regulatory framework (Law 14,300/2022). With this, the cooperative aimed to eliminate its dependence on the conventional grid, gain energy autonomy and consolidate itself as a benchmark for sustainability in the cooperative system, positively impacting its almost 200 employees and more than 32,000 members.",
+    result:
+      "The implementation of the project has led Unicred União to achieve a 100% renewable energy matrix and eliminate its dependence on conventional sources. In the first 33 months of operation, the cooperative’s own micro solar plants generated 734.74 MWh, while the partnership system offset the remaining demand with an efficiency rate of 96.6%. As a result, the cooperative has accumulated a balance of 104,762 kWh in credits, guaranteeing energy security for the future. The project positioned Unicred União as a reference in sustainability and innovation within the cooperative movement, developing an adaptable and replicable energy transition model.",
+  },
+  {
+    id: 33,
+    title:
+      "Turiarte: cooperative transforms handicrafts and tourism into income and preservation",
+    markdownTitle:
+      "# Turiarte: cooperative transforms handicrafts and tourism into income and preservation",
+    context:
+      "In 2015, the Tourism and Forest Handicraft Cooperative (Turiarte) was founded through the mobilization of women artisans and community leaders who sought to strengthen their communities through the cooperative model and promote sustainable income-generating alternatives. Tourism in the region took place in a disorganized way and without any direct return for the families.",
+    challenge:
+      "The lack of opportunities, especially for women and young people, created a dependency on informal and sometimes environmentally predatory activities, such as the disorderly extraction of resources. The absence of an organization limited access to training, markets and public policies, generating a risk of loss of ancestral knowledge, cultural devaluation and rural exodus, which threatened the dignified permanence of communities in their territories.",
+    development:
+      "Turiarte's strategy was built in a participatory way, with the collective help of the communities. Through discussion circles, the cooperative mapped out the productive potential and local knowledge, formalizing itself legally to guarantee democratic management and access to partnerships. The next step was to invest in training for its cooperative members, with training on improving craft techniques, management, leadership, etc. With the support of strategic partners such as the OCB System, the Health and Happiness Project, GIZ, Natura and The Nature Conservancy, Turiarte has structured production centers and community tourism routes, with trails, cultural experiences and family accommodation. The cooperative has developed its own marketing channels, such as social networks and participation in fairs, breaking its dependence on middlemen and strengthening its brand.",
+    cooperName: "Tourism and Forest Handicraft Cooperative (Turiarte)",
+    excerpt:
+      "Turiarte was born with the aim of generating sustainable income for local communities. Founded in 2015, the cooperative structured handicraft production and community-based tourism, benefiting families through increased income and becoming a business model that values local culture, promotes women’s empowerment, and contributes to the conservation of the Amazon.",
+    categories: ["Tourism", "Handicrafts", "Bioeconomy"],
+    branch: "Workers’ Cooperative",
+    mainOds: 1,
+    asideOds: [5, 8, 10, 11, 12, 15],
+    state: "PA",
+    objectives:
+      "Turiarte was founded in 2015 with the central aim of creating sustainable income-generating alternatives for communities. The goal was to organize the commercialization of traditional handicrafts and community-based tourism as viable economic activities that valued local culture and promoted the conservation of the territory and natural resources. The cooperative was born with the strong purpose of strengthening female protagonism, valuing the knowledge of women artisans in the production chain. It also sought to reduce dependence on environmentally predatory activities by offering a business model based on cooperation, solidarity economy and social justice.",
+    result:
+      "Turiarte has had a major impact on its members and on the region. More than 180 families now have a regular source of income and the initiative has led to a significant increase in the average income of the cooperative members. It has also repositioned the role of women, who have left the margins of the economy to become protagonists in business management. The now-structured community-based tourism generates a steady flow of visitors, and the project has strengthened territorial conservation by creating economic alternatives that reduce impacts on natural resources. The cooperative members report an increase in self-esteem and pride in their culture, consolidating Turiarte as a model of bioeconomy that generates development.",
+  },
+  {
+    id: 34,
+    title: "Coomflona protects the Amazon with community forest management",
+    markdownTitle:
+      "# Coomflona protects the Amazon with community forest management",
+    context:
+      "Before the creation of Coomflona, the Tapajós National Forest faced the constant threat of predatory exploitation and illegal deforestation. The traditional, riverside and indigenous communities that live in the region and depend directly on the forest lacked sustainable income alternatives. This scenario left them vulnerable to external pressures and environmental degradation that compromised their livelihoods and local biodiversity.",
+    challenge:
+      "The absence of a structured model for forest use resulted in unsustainable practices, weakening the local economy and limiting access to opportunities. It was in this context, based on the mobilization of the communities themselves, that the idea of creating a cooperative was born to guarantee the protection of the territory and, at the same time, the economic dignity of its residents.",
+    development:
+      "The initiative began with an experimental project covering 100 hectares, involving 24 pioneering cooperative members who received technical training and dedicated themselves to community organization. With the success of the initial phase, the project has gradually expanded, today managing 1,500 hectares of forest and involving 310 cooperative members.\n\nThe development of the project was made possible thanks to strategic partnerships. Initial support came from programs such as PPG7, financed by the German Development Bank (KFW), and the Ambé Project. Over the years, the cooperative has strengthened ties with NGOs, government agencies such as ICMBio and IBAMA, universities and other associations, ensuring support for training in management, governance and the development of new production chains, such as furniture, handicrafts and non-timber products.",
+    cooperName: "Mixed Cooperative of the Tapajós National Forest (Coomflona)",
+    excerpt:
+      "Founded in 2005 to combat predatory exploitation in the Tapajós National Forest (Pará), Coomflona has become a model of conservation led by traditional, riverside, and Indigenous communities. Through 100% community forest management, the cooperative generates a stable income for 310 families and protects 1,500 hectares of forest, proving that it is possible to combine economic development, social justice and keeping the forest standing.",
+    categories: ["Forest Management", "Conservation", "Amazon", "Bioeconomy"],
+    branch: "Agriculture",
+    mainOds: 2,
+    asideOds: [3, 4, 5, 6, 8, 13, 17],
+    state: "PA",
+    objectives:
+      "Coomflona's main objective is to consolidate 100% community forest management as a model of sustainable development. The goal is to reconcile environmental conservation with income generation and the strengthening and autonomy of the region's traditional, riverside and indigenous communities. The cooperative seeks to resolve the dilemma between preservation and development, showing that it is possible to use forest resources responsibly. The specific objectives include ensuring the sustainable use of the forest to preserve biodiversity and carbon stocks; generating stable income and social inclusion for cooperative members; and training youth and women to strengthen generational succession and community leadership in territorial management.",
+    result:
+      "Coomflona’s work has significantly transformed the landscape of the Tapajós National Forest. Sustainable management has reduced illegal deforestation, helping to preserve biodiversity and maintain the forest's carbon stocks. Today, the 310 cooperative members have forest management as their main source of income, with technical training and active participation in the management of the territory. The cooperative's impact also indirectly benefits around 1,200 families in the region by strengthening the local economy and environmental conservation. The creation of new production chains, such as furniture and handicrafts, generates more jobs and added value for forest products. In this way, Coomflona has established itself as a replicable model that demonstrates that it is possible to combine economic development, social inclusion and the conservation of the Amazon in a lasting way.",
+  },
+  {
+    id: 35,
+    title:
+      "Led by women, Coopsertão inaugurates a factory and spearheads the restoration of the Caatinga in the hinterlands of Bahia.",
+    markdownTitle:
+      "# Led by women, Coopsertão inaugurates a factory and spearheads the restoration of the Caatinga in the hinterlands of Bahia.",
+    context:
+      "The Ser do Sertão Cooperative (Coopsertão) was founded in 2008 to promote the strengthening of the cooperative model through agroecological practices and professional development. Initially focused on the artisanal production of jams, marmalades, and typical fruit pulps, the cooperative grew and expanded its operations. A fundamental aspect of Coopsertão is its concern for sustainability, which is reflected in its audience of more than 326 cooperative families, the majority of whom are women. The entire surplus from operations is reinvested in the implementation of agroecological and resilient techniques to guarantee production that is resistant to adversities such as drought.",
+    challenge:
+      "As Coopsertão grew, the old agroindustry became insufficient to meet demand, limiting the cooperative's expansion and the number of families benefiting from it. In addition, the cooperative is located in the semi-arid region of Bahia, which is highly vulnerable to climate change.",
+    development:
+      "The project, called Women of the Caatinga: Producing and Conserving, had as its central pillar the construction of the new agro-industrial facility. The work was made possible by an investment of R$2.5 million, financed by the PRS-Caatinga project, a UNDP initiative with resources from the Global Environment Facility (GEF). While the factory was being built, Coopsertão intensified its work in the fields. The cooperative offered technical assistance to 120 families, covering an area of 2,400 hectares. The team of agronomists and agricultural technicians guided the producers in implementing low-carbon practices, such as sustainable soil management, growing native fruit and recovering degraded areas. To ensure the quality and added value of its products, the cooperative invested in pursuing certifications. Commercial management has also been improved. In addition to seeking new clients in the private sector, Coopsertão strengthened its participation in public procurement programs such as the National School Feeding Program (PNAE) and the Food Acquisition Program (PAA), which ensure the sale of part of its production.",
+    cooperName: "Cooperative Ser do Sertão (Coopsertão)",
+    excerpt:
+      "Coopsertão, a predominantly female cooperative, invested R$2.5 million in the construction of a new agro-industrial facility for processing native fruits from the Caatinga biome. The initiative, named Factory of Dreams, aims to expand production sustainably by applying low-carbon agriculture techniques to restore degraded areas.",
+    categories: ["Caatinga", "Family Farming", "Degraded Areas"],
+    branch: "Agriculture",
+    mainOds: 1,
+    asideOds: [2, 5, 6, 8, 10, 12],
+    state: "BA",
+    objectives:
+      "To overcome the limited infrastructure and expand its impact, Coopsertão has structured a project to promote sustainable production in the Caatinga. The most urgent step was the construction of a new agro-industrial facility, the Factory of Dreams, to scale up production, reach new markets, and include more families in the production process. At the same time, the project set itself the goal of promoting a sustainable production model in the Caatinga. The aim was to train cooperative members in low-carbon agricultural practices, such as the recovery of degraded pastures and the implementation of systems that integrate farming, livestock and forestry. In the social pillar, the initiative focused on strengthening income generation and the role of women and young people. The project was designed to offer technical training in sustainable management, product management and processing. Finally, Coopsertão sought to strengthen its commercial and institutional capacity. The idea was to obtain organic production certifications and access fairer markets.",
+    result:
+      "With the Factory of Dreams in operation, Coopsertão increased its processing capacity from 100 to 800 tons of fruit per year. The project benefited 120 families directly and more than a thousand people indirectly, with a 40% increase in the average income of the cooperative members. In the environmental field, the initiative has already promoted the recovery of 500 hectares of degraded areas, contributing to the conservation of the Caatinga and water security in the region.",
+  },
+  {
+    id: 36,
+    title:
+      "Aurora Winery adopts sustainable soil management and minimizes climate impacts in the Serra Gaúcha region",
+    markdownTitle:
+      "# Aurora Winery adopts sustainable soil management and minimizes climate impacts in the Serra Gaúcha region",
+    context:
+      "Founded in 1931, the Aurora Wine Cooperative has become the largest in Brazil, with 1,100 member families who keep viticulture as their main source of income in the Serra Gaúcha. With over 90 years of history, the cooperative is facing its biggest challenge: the impacts of climate change.",
+    challenge:
+      "In recent years, the region has faced the challenges posed by climate change, which has caused instability in production. Until 2015, around 90% of vineyard areas did not adopt cultivation practices that protected the soil, causing the loss of fertile soil due to erosion and a decrease in water reserves. In addition, the intensive use of herbicides to eliminate competing plants was common, and erosion even made it difficult for farm machinery to move. Faced with this scenario, Aurora mobilized to find solutions that would guarantee the sustainability of the business and the quality of life of its cooperative members.",
+    development:
+      "The work began in 2015, in partnership with teaching and research institutions such as Embrapa Uva e Vinho and the Federal University of Santa Maria, UFSM. The first stage was the creation of Knowledge Dissemination Units, UDCs, on the properties of volunteer cooperative members, which served as laboratories for research and demonstration of the new techniques. The second stage, focused on dissemination, began after the results had been validated in the UDCs. Over the last five years, the cooperative has held more than 50 activities on the subject, including lectures, field days and the Vitis Aurora fair. Knowledge was also disseminated through technical bulletins, newspapers and radio programs. In addition, the cooperative invests more than R$2 million a year in training its members, with the support of 10 technical professionals who work directly with the producers.",
+    cooperName: "Aurora Winery Cooperative Ltd.",
+    excerpt:
+      "Aurora Winery Cooperative implemented a sustainable soil management system for its 1,100 members in Serra Gaúcha. The initiative, which began in 2015, promotes the use of cover crops to reduce erosion, conserve moisture and improve soil health, resulting in environmental gains, such as reduced use of herbicides, and greater resilience of vineyards to climate change.",
+    categories: ["Sustainable Management", "Erosion", "Soil Health"],
+    branch: "Agriculture",
+    mainOds: 12,
+    asideOds: [13],
+    state: "RS",
+    objectives:
+      "The central aim of the project was to establish a wine production system with processes that improve soil health and increase the resilience of vineyards. The goals included reducing erosion risks, conserving moisture and improving soil fertility and structure. The initiative also aims to promote biodiversity and the balance of the ecosystem, minimizing contamination of waterways. In addition to the environmental aspect, the project aims to improve and spread knowledge about sustainable management among the cooperative members. With this, the cooperative seeks to guarantee the preservation of natural resources and the permanence of farmers in the countryside, in harmonious coexistence between work and the environment.",
+    result:
+      "After 10 years, all of the cooperative's 1,100 members are already using sustainable soil management techniques on different scales. The initiative went beyond Aurora's walls and many winegrowers in the region also adopted the practices. Research carried out in partnership with UFSM shows that soil quality has improved, with an increase in organic matter and microorganisms. One of the direct impacts most reported by cooperative members was the reduction in the use of herbicides, which fell from five to just one application a year in many cases. Producers have also observed greater resilience in the vineyards. In an extreme weather event in May 2024, with more than 1,000 mm of rain in seven days, the areas with cover crops suffered noticeably less impact.",
+  },
+  {
+    id: 37,
+    title:
+      "Coopercitrus uses precision agriculture to cut emissions and increase income",
+    markdownTitle:
+      "# Coopercitrus uses precision agriculture to cut emissions and increase income",
+    context:
+      "Founded in 1976 and now one of the largest cooperatives in Brazil in the commercialization of inputs, machinery, and agricultural equipment, Coopercitrus serves more than 38,000 producers in São Paulo, Minas Gerais, and Goiás. Its members, who grow crops such as sugarcane, soybeans, and coffee, faced challenges that threatened the viability of their businesses: low productivity areas, soil erosion caused by heavy rainfall, and high operational costs.",
+    challenge:
+      "In addition, there was excessive diesel consumption, high pollutant emissions, and waste of agricultural inputs. This scenario reduced producers’ profitability and represented a barrier to the advancement of low-carbon agriculture. The lack of territorial planning led to an inefficient and unsustainable system — a problem Coopercitrus decided to tackle through technology and innovation.",
+    development:
+      "The Coopercitrus strategy was structured around three technological pillars: diagnosis, planning, and execution. In the diagnosis phase, the cooperative uses UAVs (Unmanned Aerial Vehicles) and remote sensing to produce detailed property maps, identifying slope gradients, runoff patterns, and unproductive or compacted areas. With this data, the technical team moves to the planning phase, using digital modeling software to redesign plots, define optimal locations for access roads, and orient planting lines to reduce machinery maneuvers and maximize usable area. During the execution phase, measures such as terracing, water dividers, traffic control, and management recommendations are implemented. The entire process is supported by the cooperative’s own resources and partnerships with agricultural technology organizations.",
+    cooperName: "Rural Producers' Cooperative (Coopercitrus)",
+    excerpt:
+      "Coopercitrus is transforming rural landscapes with its Precision Agricultural Systematization project. Using UAVs and digital technologies, the initiative redesigns farms to optimize land and resource use. The project has already benefited more than 4,000 members across 750,000 hectares, resulting in up to 20% fuel savings, increased productive area, and a significant reduction in greenhouse gas emissions.",
+    categories: [
+      "precision agriculture",
+      "systematization",
+      "technology",
+      "low carbon",
+    ],
+    branch: "Agriculture",
+    mainOds: 2,
+    asideOds: [6, 12, 13, 15],
+    state: "SP",
+    objectives:
+      "The Precision Agricultural Systematization project was created with the goal of radically transforming rural land management, turning topographical and water-use challenges into productive and climate opportunities. The central objective is to redesign cultivation areas and machinery traffic lines to optimize space. Through this, the cooperative seeks to expand the usable planting area and productivity, reduce the consumption of inputs and diesel, preserve soil and water, and mitigate greenhouse gas (GHG) emissions. The ultimate goal is to generate economic gains for members while establishing a model of low-carbon agriculture.",
+    result:
+      "Since its creation in 2014, the project has served more than 4,000 members, systematizing approximately 750,000 hectares. Producers have reported up to a 4% increase in productivity, a 21% reduction in operation time, and up to 20% fuel savings. In one 1,300-hectare project, for example, cumulative savings exceeded 8,000 liters of diesel. Beyond the economic benefits for producers, the environmental impact is remarkable. The optimization of operations has led to reduced greenhouse gas emissions, better soil conservation and water retention, and more rational use of agricultural inputs. The initiative stands as an example of how territorial engineering and digital agriculture can simultaneously deliver productivity, income, and environmental benefits — strengthening the cooperative model’s leadership in the transition to sustainable agriculture.",
+  },
+  {
+    id: 38,
+    title:
+      "Coopercitrus and Credicitrus join forces to restore springs and guarantee water security",
+    markdownTitle:
+      "# Coopercitrus and Credicitrus join forces to restore springs and guarantee water security",
+    context:
+      "Coopercitrus, a cooperative with more than 38,000 farmer members, operates in regions that are strategic for agriculture and for the country’s water security — in the countryside of São Paulo and the Triângulo Mineiro region. These areas, despite their importance for the recharge of major aquifers such as Guarani and Serra Geral, have a low rate of native vegetation cover.",
+    challenge:
+      "This situation threatened both sustainability, agricultural productivity and the municipal water supply. It was to meet this challenge that Coopercitrus, together with Credicitrus, structured its operations through the Coopercitrus Credicitrus Foundation (FCC).",
+    development:
+      "The FCC, whose target audience includes rural producers and the communities surrounding the operations of its supporting institutions, built a strategy based on a network of multisector partnerships to mobilize resources, knowledge, and technical support. The Foundation made use of public and private partnerships, access to socio-environmental credit lines, calls for tenders and cooperation with financial institutions. The first alliances were established with agricultural sector companies NORTOX and BASF, which provided resources and consulting services for spring restoration and reforestation. Based on the initial results achieved, and through the supporting cooperatives’ network of contacts, FCC secured new partnerships with organizations such as Bradesco Bank, Mosaic Company, the Cooperative of Family Farming Producers (Coperfam), and municipalities including Bebedouro and Barretos. In 2025, the FCC also teamed up with Banco do Brasil and Ambipar to sign an agreement with the aim of attracting new investors to restore 50,000 hectares in the Cerrado and Atlantic Forest biomes, who will receive carbon credits generated by the restoration in return. The process was carried out by desilting and protecting the surroundings of the springs and reforesting the areas. As well as intervening in the areas to maintain the hydrological cycle, the cooperative also sought to raise awareness about environmental preservation in the local communities, taking public school students to learn about the project in practice.",
+    cooperName: "Coopercitrus Cooperative of Rural Producers (Coopercitrus)",
+    excerpt:
+      "Coopercitrus and Credicitrus created a foundation that helps combat water scarcity in the Southeast region. The project has already restored more than a thousand springs, increasing their flow and benefiting producers with increased productivity. In addition, the project guarantees water for several cities, becoming a model of cooperation for climate resilience.",
+    categories: ["spring restoration", "water security", "bioeconomy"],
+    branch: "Agriculture",
+    mainOds: 2,
+    asideOds: [6, 13, 15, 17],
+    state: "SP",
+    objectives:
+      "The purpose of the Coopercitrus Credicitrus Foundation (FCC) is to catalyze socio-environmental solutions for sustainable farming. Its central objective is to mitigate climate risks, such as water scarcity, by restoring springs and reclaiming degraded areas. Thus, the intercooperation aims to strengthen the water cycle and ensure water security for both agriculture and cities. In addition to the direct environmental impact, the initiative seeks to disseminate a culture of preservation among rural producers and the community. The aim is to inspire replicable practices in line with environmental and agricultural resilience, proving that it is possible to combine increased agricultural productivity with the conservation of natural resources.",
+    result:
+      "The Foundation's actions have had a major environmental impact. So far, the project has restored 1,041 springs, resulting in an increase in the total flow of water from 3.3 million to 12.4 million liters per day. 397 hectares were recovered by planting 231,000 seedlings, benefiting 240 producers in 107 municipalities in the states of São Paulo, Minas Gerais and Goiás. The results are already visible: on Fazenda Trindade (CRO Agropecuária), for example, the restoration of 20 springs increased water flow by 40%, allowing the irrigated area to double and enabling up to three harvests per year. In Bebedouro, in the countryside of São Paulo, the restoration of springs revitalized the lake in the Ecological Park, which had been dry for more than three years. The project also engaged 800 public school students, strengthening environmental education and consolidating the cooperative model as a key player in building a more sustainable future.",
+  },
+  {
+    id: 39,
+    title:
+      "Coopmetro: intercooperation enables fleet renewal and reduces emissions by 22%",
+    markdownTitle:
+      "# Coopmetro: intercooperation enables fleet renewal and reduces emissions by 22%",
+    context:
+      "Founded in 1999 by 22 transporters, Coopmetro was born from the dream of competing formally in the market with better results and fewer intermediaries. Over the years, however, the cooperative and its members faced a structural challenge in the sector: vehicle aging.",
+    challenge:
+      "Before the Fleet Renewal Program (PAV), most of the trucks used in operations were old, highly polluting, and required frequent maintenance. The inadequate fleet resulted in operational failures such as issues with cargo refrigeration and losses in the cooperative’s reputation. For members, the main obstacle was the lack of access to fair credit lines that would allow the purchase of new vehicles. This situation limited work opportunities for drivers, kept the cooperative’s carbon emissions high, and compromised both logistical efficiency and safety.",
+    development:
+      "The PAV strategy relied on intercooperation, uniting the transport, credit, and agribusiness sectors. Sicoob Centro-Sul Mineiro acted as the financial partner, providing R$17.35 million in credit at social rates for the cooperative’s members. Coopmetro was responsible for mobilizing the transporters and acquiring the vehicles. Aurora Cooperative, from the agribusiness sector, ensured the logistics contract and supported operations. In addition to the cooperative alliance, the program established strategic partnerships with maintenance, refrigeration, telemetry, and equipment suppliers — including companies such as Dibracam, Frigoking, and Pavan — to guarantee the efficiency and sustainability of the entire operation.",
+    cooperName:
+      "Cooperative of Autonomous Cargo and Passenger Transporters (Coopmetro)",
+    excerpt:
+      "Through intercooperation, Coopmetro (Transport), Sicoob (Credit), and Aurora (Agriculture) created the Fleet Renewal Program (PAV). With R$17.35 million in facilitated credit, the program replaced old trucks with newer, less-polluting vehicles, reducing emissions by 22%. The initiative ensured income for members and became a model of sustainable mobility, achieving zero default.",
+    categories: [
+      "Intercooperation",
+      "fleet renewal",
+      "decarbonization",
+      "credit",
+    ],
+    branch: "Transport",
+    mainOds: 8,
+    asideOds: [9, 11, 13],
+    state: "MG",
+    objectives:
+      "The Fleet Renewal Program (PAV) was created with the goal of reducing Coopmetro’s carbon footprint while ensuring income generation for its members. The aim was to create an accessible financing mechanism that would enable the replacement of old vehicles with modern, less-polluting models. With the initiative, the cooperative sought to expand access to green mobility solutions and promote climate justice by offering conditions for transporters with lower investment capacity to acquire better vehicles. The program was designed to benefit the entire chain — including the cooperative’s clients, such as multinational companies with decarbonization goals, and the municipalities where it operates.",
+    result:
+      "The PAV delivered quick and impressive results. In just 60 days, the program enabled the renewal of 30 trucks serving Aurora Cooperative, maintaining 60 professionals in operation. Currently, 52% of Coopmetro’s fleet is composed of vehicles acquired through the program, directly benefiting cooperative members. The success of the model is reflected in participants’ income, with an average gross revenue of R$30,000 per month. The environmental impact was equally significant, with a 22% reduction in CO₂ emissions — from 2.68 kg to 0.56 kg of CO₂ per liter of diesel. For clients such as Aurora, the gains included more punctual deliveries and reduced losses in the cold chain. Moreover, the project proved to be an economic and social success, with a zero default rate among Sicoob-financed members, consolidating itself as a sustainable and replicable business model.",
+  },
+  {
+    id: 40,
+    title:
+      "Cooxupé creates Generations Protocol to include family coffee farmers in regenerative agriculture",
+    markdownTitle:
+      "# Cooxupé creates Generations Protocol to include family coffee farmers in regenerative agriculture",
+    context:
+      "Cooxupé has more than 21,000 members in more than 330 municipalities in Minas Gerais and São Paulo, the vast majority of whom are small producers who make their living from family farming. These coffee growers are directly facing the growing impacts of climate change, such as changes in rainfall, heat waves and extreme events, which generate instability in productivity.",
+    challenge:
+      "Before the protocol was created, producers dealt with these challenges in isolation and with little support. Many did not have access to certification programs or climate monitoring tools, which left them in a very vulnerable position, both in the field and on the international market, which is demanding increasingly sustainable and resilient production chains.",
+    development:
+      "The Generations Protocol strategy is based on an adaptive climate system, structured around three pillars: environmental, social and economic.\n\nIn the environmental pillar, regenerative agriculture and water conservation practices are prioritized. In the social pillar, rural succession, climate training and the inclusion of young people and women are promoted. In the economic pillar, finally, the aim is to add value to sustainable coffee in order to increase access to demanding markets. In this scenario, the protocol allows each producer to advance in gradual levels of sustainability, according to their own reality. To make the initiative possible, Cooxupé invested its own resources and entered into strategic partnerships with universities, NGOs and specialized companies such as SCS Global Services. The quality and robustness of the program ensured its recognition by the Global Coffee Platform (GCP), the Ministry of Agriculture and Livestock (MAPA) and its inclusion on the UN Standards Map, validating its effectiveness as a climate adaptation model.",
+    cooperName: "Regional Cooperative of Coffee Growers in Guaxupé (Cooxupé)",
+    excerpt:
+      "Cooxupé created the Generations Protocol to strengthen the climate resilience of its more than 20,000 members, 97% of whom are family farmers. The initiative operates as an “umbrella” for projects that support producers in the transition toward low-carbon practices and soil regeneration, ensuring the continuity of production and access to demanding international markets.",
+    categories: [
+      "Regenerative agriculture",
+      "climate resilience",
+      "coffee",
+      "family farming",
+    ],
+    branch: "Agriculture",
+    mainOds: 2,
+    asideOds: [6, 7, 8, 10, 11, 12, 13, 15, 17],
+    state: "MG",
+    objectives:
+      "The Generations Protocol was born out of the urgent need to strengthen the climate resilience of family coffee farming. The central objective is to include cooperative members in verification and certification protocols, supporting them in a realistic and gradual transition towards low-carbon practices, water conservation and soil regeneration. The initiative was designed to function as a large umbrella for sustainable projects such as Regenerative Coffee Growing, reforestation and the rational use of water. The goal is to guarantee the continuity of coffee production for future generations, strengthening security in the face of climate instability.",
+    result:
+      "With the implementation of the Generations Protocol, cooperative members now have structured support to deal with the effects of climate change. The adoption of regenerative practices, the more efficient use of water and the diversification of the agricultural landscape have resulted in properties that are more resistant to extreme weather events. Inclusion in verification and certification protocols has increased the visibility of the coffee produced on the global market, adding economic value to the product. The project directly benefits more than 21,000 cooperative members and, indirectly, the surrounding communities, which gain from the strengthening of water and environmental security in the region. The project's recognition in the market reinforces the Generations Protocol as a benchmark for inclusive and scalable climate adaptation.",
+  },
+  {
+    id: 41,
+    title:
+      "Creral creates renewable polymer from rice husks and boosts the bioeconomy in RS",
+    markdownTitle:
+      "# Creral creates renewable polymer from rice husks and boosts the bioeconomy in RS",
+    context:
+      "Rio Grande do Sul, a major rice producer, generates a huge volume of rice husks every year, an agricultural waste that has historically been treated as a low-value by-product and often disposed of inappropriately. Creral, an energy cooperative, already used some of this biomass in its thermoelectric plant, but the burning process itself generated a second waste product: ash, which also needed a sustainable destination.",
+    challenge:
+      "This scenario posed a double environmental and economic challenge: the waste of abundant biomass and the problem of disposing of the ash. At the same time, the plastics processing industry faced innovation limitations, with no access to high-performance materials that could replace fossil polymers. It was at the intersection of these challenges that Creral saw the opportunity to create an innovative solution, transforming agricultural waste into raw material for industry.",
+    development:
+      "The first step in the project was to carry out a technical study to assess the feasibility of using rice husks and ash as the basis for a new material. With the positive results, the cooperative submitted a project to Finep (Financier of Studies and Projects), which approved funding to set up a pilot plant in São Sepé (Rio Grande do Sul). The development of the biopolymer was carried out with institutional and technical support from Creral, assistance from Sepé Geração de Energia, and scientific cooperation from Feevale University. The methodology involved testing the application of the new material in industrial processes (injection, extrusion and blowing), patenting the technology and production on a pilot scale, with the focus on creating a model that could be replicated in other production chains.",
+    cooperName: "Energy Generation and Development Cooperative (Creral)",
+    excerpt:
+      "Creral, a Rio Grande do Sul cooperative that is a pioneer in generating energy from rice husks, has innovated by transforming this agricultural waste into a 100% renewable biopolymer. The Bioroz and Cinroz project has created a sustainable alternative to fossil plastic, validated its market potential and positioned the region as a new bioeconomy hub, connecting agribusiness to the processing industry.",
+    categories: ["bioeconomy", "biopolymer", "rice husk", "innovation"],
+    branch: "Infrastructure",
+    mainOds: 9,
+    asideOds: [12, 13],
+    state: "RS",
+    objectives:
+      "The Bioroz e Cinroz project was born with the aim of transforming rice husk and ash waste into a sustainable, high-value biopolymer, creating a sustainable, renewable alternative to fossil-based plastics. The cooperative's goal was to go beyond recycling, inserting the rice production chain into a circular economy model, where what was once waste would become raw material. With the initiative, Creral sought to strengthen innovation within cooperatives, develop a product that would generate environmental, social and economic benefits, and position the region as a bioeconomy hub. The project ultimately aimed to prove that it is possible to create new value chains from waste, reducing environmental impact and generating prosperity for members and the community",
+    result:
+      "The implementation of the project resulted in the creation of Bioroz and Cinroz, an innovative, 100% renewable, non-toxic and biodegradable biopolymer developed from the micronization of rice husks and ash. Tests have shown that the new material has the same physical and mechanical performance as fossil plastics, with the advantage of being an environmentally friendly solution that reduces the disposal of agricultural waste in the environment. The project validated the biopolymer's market potential, with good industrial acceptance and production scalability, positioning the region as a benchmark in the bioeconomy. The initiative engaged the cooperative members in a process of innovation that opened doors to new value chains and sources of income, transforming an environmental problem into a technological solution.",
+  },
+  {
+    id: 42,
+    title:
+      "Cresol leads alliance that transforms handicrafts into income and autonomy for quilombola community",
+    markdownTitle:
+      "# Cresol leads alliance that transforms handicrafts into income and autonomy for quilombola community",
+    context:
+      "The Cresol System, with more than 1 million members in 19 states, works to promote the development of its communities. In the quilombola community of Vargem do Sal, in Caetité (Bahia), the reality was one of vulnerability.",
+    challenge:
+      "The main source of income, family farming, was severely impacted by the prolonged droughts of the Caatinga, making the community dependent on government assistance programs. The handicraft of licuri palm straw, an ancestral tradition, was the only alternative source of income that could be practiced all year round, but suffered from devaluation. The products were sold at prices far below what was fair, generating financial instability and a constant need to look for alternative work in the cities, which put the families' permanence in the territory and the preservation of quilombola culture at risk. Furthermore, although the community was concerned about the preservation of the licuri palm, exploitation without a sustainable management plan posed a long-term threat to the raw material and the local ecosystem.",
+    development:
+      "The first step was to diagnose the situation. The cooperative was invited by the Caetité Rural Workers' Union to understand the needs of the community. Cresol identified the potential of handicrafts and, instead of investing in other ideas that would be unsustainable due to the drought, proposed a project to enhance existing production. The initial action was the guaranteed purchase of a thousand hats at a fair price for a fair, promoting capital and confidence for the community. The second phase of the project focused on marketing for added value and access to markets. With the support of Cresol's service base, a brand was developed for the products, telling the story of the quilombola community's history and culture. Thus, Cresol acted as a link, connecting the community to a powerful network of partners, including the COOTRAF (technical assistance) and COOMADAC (marketing) cooperatives, as well as other cooperatives in the Cresol system as financial agents.",
+    cooperName:
+      "National Confederation of Central Cooperatives of Family and Solidarity Credit and Economy (Cresol Confederation)",
+    excerpt:
+      "Cresol has organized a project that is transforming the reality of the Vargem do Sal quilombola community (BA). The initiative gave value to handicrafts made from licuri straw, a palm native to the Caatinga, guaranteeing purchases at a fair price, creating a brand with an identity and generating a stable income for 60 artisans. The project strengthens local culture, promotes sustainable forest management and reduces dependence on assistance programs.",
+    categories: [
+      "bioeconomy",
+      "sustainable extractivism",
+      "quilombola",
+      "licuri",
+    ],
+    branch: "Credit",
+    mainOds: 1,
+    asideOds: [2, 5, 8, 12, 13, 15, 17],
+    state: "PR",
+    objectives:
+      "The project was born with the aim of generating sustainable income for the Vargem do Sal community, transforming licuri handicrafts into a stable and valued economic activity. To this end, Cresol and its partners sought to create a brand with a quilombola identity that would be recognized in the market, adding cultural value and opening up access to green markets. The initiative also aimed to train the community in responsible palm extraction, reconciling income generation with environmental conservation. The goal was to spread the word about the importance of sustainable licuri forest management and, at the same time, to strengthen community organization in order to reduce dependence on assistance programs and prevent rural exodus, guaranteeing the community's autonomy and prosperity.",
+    result:
+      "The initiative has brought about a profound transformation in the Vargem do Sal community. The number of artisans involved grew from 40 to around 60, and the purchase guaranteed by Cresol generated a stable income and a new sense of self-confidence and productive capacity. The appreciation of handicrafts has opened doors to participation in various fairs, expanding the market and the recognition of products. Socially, the project has strengthened quilombola culture and promoted inclusion and reduced the need to migrate to the cities, consolidating the permanence of the 315 people in the territory. Environmentally, the initiative has improved the sustainable management of the Licuri palm, which is crucial for the ecosystem and the hyacinth macaw, demonstrating a commitment to conservation and biodiversity.",
+  },
 ];
