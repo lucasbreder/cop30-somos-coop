@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1154"
+   width="704.12427"
+   height="712.21655"
+   viewBox="0 0 704.12427 712.21655"
+   sodipodi:docname="25-Layout Tela Interativa-COOPsCREDITO - Estande ONU_SICOOB_v2.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1158">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1598">
+      <path
+         d="M 0,1920 H 1080 V 0 H 0 Z"
+         id="path1596" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2040">
+      <g
+         id="g2044"
+         transform="translate(-965.7283,-483.9533)">
+        <path
+           d="M 0,1920 H 1080 V 0 H 0 Z"
+           id="path2042" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2046">
+      <g
+         id="g2050"
+         transform="translate(-844.7109,-230.8296)">
+        <path
+           d="M 0,1920 H 1080 V 0 H 0 Z"
+           id="path2048" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2052">
+      <g
+         id="g2056"
+         transform="translate(-988.0853,-592.6434)">
+        <path
+           d="M 0,1920 H 1080 V 0 H 0 Z"
+           id="path2054" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2058">
+      <g
+         id="g2062"
+         transform="translate(-821.5431,-163.6353)">
+        <path
+           d="M 0,1920 H 1080 V 0 H 0 Z"
+           id="path2060" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2064">
+      <g
+         id="g2068"
+         transform="translate(-673.7723,-402.3202)">
+        <path
+           d="M 0,1920 H 1080 V 0 H 0 Z"
+           id="path2066" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2070">
+      <g
+         id="g2074"
+         transform="translate(-821.5431,-230.8296)">
+        <path
+           d="M 0,1920 H 1080 V 0 H 0 Z"
+           id="path2072" />
+      </g>
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1156"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     id="g1160"
+     inkscape:groupmode="layer"
+     inkscape:label="25-Layout Tela Interativa-COOPsCREDITO - Estande ONU_SICOOB_v22"
+     transform="matrix(1.3333333,0,0,-1.3333333,1093.5059,1142.7444)">
+    <g
+       id="g1258"
+       transform="translate(-507.0787,401.74454)"
+       clip-path="url(#clipPath2070)">
+      <path
+         d="m 0,0 v 90.143 c 0,19.214 -15.633,34.846 -34.846,34.846 h -178.358"
+         style="fill:none;stroke:#b4ce49;stroke-width:4.343;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path1260" />
+    </g>
+    <g
+       id="g1262"
+       transform="translate(-654.8495,573.23514)"
+       clip-path="url(#clipPath2064)">
+      <path
+         d="m 0,0 h 112.924 c 44.856,0 81.348,-36.492 81.348,-81.348 v -90.143"
+         style="fill:none;stroke:#3fb5a8;stroke-width:4.343;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path1264" />
+    </g>
+    <g
+       id="g1266"
+       transform="translate(-507.0787,334.55024)"
+       clip-path="url(#clipPath2058)">
+      <path
+         d="m 0,0 v 102.33 c 0,31.706 25.703,57.409 57.409,57.409 h 31.586 c 17.146,0 31.046,13.9 31.046,31.046 v 28.859"
+         style="fill:none;stroke:#b4ce49;stroke-width:4.343;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path1268" />
+    </g>
+    <g
+       id="g1270"
+       transform="translate(-340.5365,763.55834)"
+       clip-path="url(#clipPath2052)">
+      <path
+         d="m 0,0 v -239.924 c 0,-41.889 -33.958,-75.846 -75.846,-75.846 h -27.09 c -9.447,0 -17.105,-7.658 -17.105,-17.105 v -105.616"
+         style="fill:none;stroke:#3fb5a8;stroke-width:4.343;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path1272" />
+    </g>
+    <g
+       id="g1274"
+       transform="translate(-483.9109,401.74454)"
+       clip-path="url(#clipPath2046)">
+      <path
+         d="m 0,0 v 88.449 c 0,33.303 -26.997,60.301 -60.3,60.301 h -273.747"
+         style="fill:none;stroke:#ee7d00;stroke-width:4.343;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path1276" />
+    </g>
+    <g
+       id="g1278"
+       transform="translate(-362.8935,654.86824)"
+       clip-path="url(#clipPath2040)">
+      <path
+         d="m 0,0 v -125.677 c 0,-32.766 -26.561,-59.327 -59.327,-59.327 h -30.041 c -17.479,0 -31.649,-14.17 -31.649,-31.65 v -68.103"
+         style="fill:none;stroke:#ee7d00;stroke-width:4.343;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path1280" />
+    </g>
+    <g
+       id="g1592"
+       transform="translate(-1328.6218,170.91494)">
+      <g
+         id="g1594"
+         clip-path="url(#clipPath1598)">
+        <g
+           id="g1600"
+           transform="translate(1001.8005,644.9612)">
+          <path
+             d="m 0,0 c 0,7.573 -6.146,13.71 -13.713,13.71 -6.708,0 -12.3,-5.298 -12.3,-11.769 0,-13.917 24.879,-4.912 24.879,-20.189 0,-6.122 -6.171,-10.339 -12.579,-10.339 -7.579,0 -13.717,6.14 -13.717,13.717"
+             style="fill:none;stroke:#3fb5a8;stroke-width:7;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1602" />
+        </g>
+        <g
+           id="g1604"
+           transform="translate(988.0872,658.6711)">
+          <path
+             d="M 0,0 V 7.301"
+             style="fill:none;stroke:#3fb5a8;stroke-width:7;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1606" />
+        </g>
+        <g
+           id="g1608"
+           transform="translate(988.0872,609.3145)">
+          <path
+             d="M 0,0 V 7.059"
+             style="fill:none;stroke:#3fb5a8;stroke-width:7;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1610" />
+        </g>
+        <g
+           id="g1612"
+           transform="translate(946.6216,620.1274)">
+          <path
+             d="m 0,0 c -2.277,5.384 -3.536,11.303 -3.536,17.516 0,24.853 20.147,45 45,45 24.853,0 45,-20.147 45,-45 0,-24.853 -20.147,-45 -45,-45"
+             style="fill:none;stroke:#3fb5a8;stroke-width:7;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1614" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

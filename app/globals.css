@@ -26,9 +26,10 @@
   --quaternary: #f3f2f2;
   --quinquenary: #3eb5a8;
   --sextenary: #4fa4f2;
-  --septenary: #ee7d00;
+  --septinary: #ee7d00;
   --cresol-primary: #ee7d00;
-  --sicoob-primary: #ee7d00;
+  --sicoob-primary: #00ae9d;
+  --sicredi-primary: #64c832;
 }
 
 @theme inline {

@@ -51,7 +51,9 @@ export const ScreenSaver = ({
       }}
       className={`bg-[url("/bg/bg2.png")] bg-blend-multiply bg-cover bg-no-repeat w-full h-full flex items-center justify-center absolute inset-0 z-999 overflow-hidden`}
     >
-      <div className="absolute -bottom-10 lg:bottom-0 fhd:bottom-20 fhdv:portrait:bottom-50 -left-20 md:-left-30 lg:-left-10 fhd:-left-20 fhdv:portrait:left-[-15%] w-[25%] portrait:w-[50%]">
+      <div
+        className={`absolute -bottom-10 lg:bottom-0 fhd:bottom-20 fhdv:portrait:bottom-50 -left-20 md:-left-30 lg:-left-10 fhd:-left-20 fhdv:portrait:left-[-15%] w-[25%] portrait:w-[50%] ${title ? "fhdv:portrait:bottom-25!" : ""}`}
+      >
         <AnimatedIntro
           width="100%"
           height={300}
@@ -200,7 +202,7 @@ export const ScreenSaver = ({
         </motion.div>
       )}
 
-      {title === "cresol" && (
+      {(title === "cresol" || title === "sicoob" || title === "sicredi") && (
         <div
           className="absolute top-25 right-3 lg:top-50
          lg:right-[10%]
@@ -216,7 +218,7 @@ export const ScreenSaver = ({
             }}
             className="text-xl xl:text-2xl 2xl:text-3xl fhdv:portrait:text-5xl font-light"
           >
-            {interfaceData[locale]["company-title"].array?.[0]}
+            {interfaceData[locale][`company-title-${title}`].array?.[0]}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, translateX: -100 }}
@@ -241,7 +243,7 @@ export const ScreenSaver = ({
                   },
                 },
               }}
-              className="w-[230px] h-18 md:w-3/4 2xl:w-[340px] 2xl:h-25 fhdv:portrait:w-[600px] fhdv:portrait:h-40"
+              className="w-[230px] h-18 md:w-3/4 2xl:w-[340px] 2xl:h-25 fhdv:portrait:w-[600px] fhdv:portrait:h-43 relative"
             >
               <Image
                 className="object-contain"
@@ -260,11 +262,13 @@ export const ScreenSaver = ({
             }}
             className="text-3xl 2xl:text-5xl font-light italic fhdv:portrait:text-7xl"
           >
-            {interfaceData[locale]["company-title"].array?.[1]}
+            {interfaceData[locale][`company-title-${title}`].array?.[1]}
           </motion.div>
         </div>
       )}
-      <div className="absolute top-5 fhdv:portrait:top-10 left-5 fhd:w-4/6 fhdv:portrait:w-full">
+      <div
+        className={`absolute top-5 fhdv:portrait:top-10 left-5 fhd:w-4/6 fhdv:portrait:w-full`}
+      >
         <AnimatedIntroLine
           width="100%"
           height={20}

@@ -119,18 +119,35 @@ export const Intro = ({
           {showIntro && creditCompany === "sicoob" && (
             <ScreenSaver
               colorBg="var(--sicoob-primary)"
-              colorMap1="var(--quaternary)"
-              colorMap2="var(--secondary)"
+              colorMap1="var(--primary)"
+              colorMap2="var(--septinary)"
               colorMap3="var(--tertiary)"
               colorCurve1="var(--tertiary)"
-              colorCurve2="var(--quaternary)"
-              colorCurve3="var(--secondary)"
+              colorCurve2="var(--septinary)"
+              colorCurve3="var(--primary)"
               colorLine1="var(--tertiary)"
-              colorLine2="var(--secondary)"
-              image="/intro/intro-cresol.png"
-              icon1="/icons/shine2.svg"
-              icon2="/icons/plus3.svg"
-              title="cresol"
+              colorLine2="var(--quaternary)"
+              image="/intro/intro-sicoob.png"
+              icon1="/icons/shine3.svg"
+              icon2="/icons/plus4.svg"
+              title="sicoob"
+            />
+          )}
+          {showIntro && creditCompany === "sicredi" && (
+            <ScreenSaver
+              colorBg="var(--sicredi-primary)"
+              colorMap1="var(--primary)"
+              colorMap2="var(--quaternary)"
+              colorMap3="var(--septinary)"
+              colorCurve1="var(--quaternary)"
+              colorCurve2="var(--septinary)"
+              colorCurve3="var(--primary)"
+              colorLine1="var(--quaternary)"
+              colorLine2="var(--primary)"
+              image="/intro/intro-sicredi.png"
+              icon1="/icons/shine3.svg"
+              icon2="/icons/plus4.svg"
+              title="sicredi"
             />
           )}
         </AnimatePresence>
@@ -168,7 +185,7 @@ export const Intro = ({
                 >
                   {children}
                 </div>
-                {isHome && (
+                {(isHome || pathname === `/credito/${creditCompany}`) && (
                   <div className="absolute h-100 left-0 fhd:h-138 fhdv:portrait:h-170 fhdv:portrait:top-20 -top-40 xl:top-10 xl:left-14 fhd:left-0">
                     <AnimatedLanguageSelector
                       width="100%"
@@ -177,16 +194,16 @@ export const Intro = ({
                     />
                   </div>
                 )}
-                {isHome && (
+                {(isHome || pathname === `/credito/${creditCompany}`) && (
                   <div className="absolute right-10 fhd:-bottom-10 -bottom-25">
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1, transition: { delay: 2 } }}
                       exit={{ opacity: 0 }}
                       className="absolute z-10 
-            fhd:-bottom-4 
-            fhdv:portrait:-bottom-15 
-            left-30 bottom-5 xl:left-20 fhdv:portrait:left-45 w-2/3 fhd:w-full fhd:h-3/4 xl:w-3/4 fhdv:portrait:w-3/4 h-full"
+                      fhd:-bottom-4 
+                      fhdv:portrait:-bottom-15 
+                      left-30 bottom-5 xl:left-20 fhdv:portrait:left-45 w-2/3 fhd:w-full fhd:h-3/4 xl:w-3/4 fhdv:portrait:w-3/4 h-full"
                     >
                       <Image
                         sizes="80vw"
@@ -194,7 +211,7 @@ export const Intro = ({
                         className="object-contain"
                         src={
                           creditCompany
-                            ? `/intro/${creditCompany}-intro.png`
+                            ? `/intro/intro-${creditCompany}.png`
                             : "/intro/people.png"
                         }
                         alt=""
@@ -218,8 +235,10 @@ export const Intro = ({
             </AnimatePresence>
           )}
         </div>
-        {!isHome && (
-          <footer className="absolute bottom-0 left-0 px-10 py-5 fhd:py-6 fhdv:portrait:px-15 fhdv:portrait:py-10 w-full flex justify-between items-end">
+        {!isHome && pathname !== `/credito/${creditCompany}` && (
+          <footer
+            className={`absolute bottom-0 ${creditCompany && "bottom-4"} left-0 px-10 py-5 fhd:py-6 fhdv:portrait:px-15 fhdv:portrait:py-10 w-full flex justify-between items-end`}
+          >
             <NavItem
               icon="/icons/back.svg"
               label={interfaceData[locale]["back-button"].value}
@@ -228,7 +247,10 @@ export const Intro = ({
             {!isHome &&
               pathname !== `/credito/${creditCompany}` &&
               creditCompany && (
-                <Link href={"/"} className="w-22 h-15 md:w-35 relative">
+                <Link
+                  href={"/"}
+                  className="w-22 h-15 md:w-35 relative  fhdv:portrait:h-30 fhdv:portrait:w-55"
+                >
                   <Image src="/logo/coop-logo1.svg" alt="" fill />
                 </Link>
               )}

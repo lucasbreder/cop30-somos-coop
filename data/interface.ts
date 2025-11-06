@@ -65,7 +65,15 @@ export const interfaceData: InterfaceData = {
     "company-cases-title": {
       value: "Boas Práticas",
     },
-    "company-title": {
+    "company-title-sicoob": {
+      value: "",
+      array: ["VOCÊ SABE COMO O", "CONSTRÓI UM MUNDO MELHOR?"],
+    },
+    "company-title-sicredi": {
+      value: "",
+      array: ["VOCÊ SABE COMO O", "CONSTRÓI UM MUNDO MELHOR?"],
+    },
+    "company-title-cresol": {
       value: "",
       array: ["VOCÊ SABE COMO A", "CONSTRÓI UM MUNDO MELHOR?"],
     },

@@ -66,7 +66,20 @@ export const CaseCompany = ({
 
   if (dataCase && casesCompanyIds) {
     return (
-      <div className="flex flex-col items-center justify-center h-full pt-20">
+      <div className="flex flex-col items-center justify-center h-full pt-20 -mx-15 fhdv:portrait:-mx-5 fhdv:portrait:pt-5">
+        <div
+          className="basis-1/4 fhdv:portrait:basis-auto"
+          style={{
+            color: `var(--${dataCase.company}-primary)`,
+          }}
+        >
+          <div className="text-xl lg:text-3xl fhdv:portrait:text-6xl uppercase font-extrabold text-center mt-5 fhdv:portrait:mt-2 ">
+            {interfaceData[locale]["company-cases-title"].value}
+          </div>
+          <div className="relative w-40 h-10 mx-auto my-3 fhdv:portrait:h-15 fhdv:portrait:w-85 fhdv:portrait:mb-20">
+            <Image src={`/logo/${dataCase.company}.svg`} alt="" fill />
+          </div>
+        </div>
         <div
           className=" sm:h-8/12 
           xs:h-9/12 
