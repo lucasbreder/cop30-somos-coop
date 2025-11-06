@@ -39,7 +39,6 @@ export const CaseCompany = ({
     y,
   });
 
-  console.log(params);
   const dataCase = casesCompany[locale]?.find((cs) => {
     return cs.id === Number(params.id);
   });
@@ -67,36 +66,11 @@ export const CaseCompany = ({
 
   if (dataCase && casesCompanyIds) {
     return (
-      <div className="flex items-center justify-center h-full">
-        <div className="hidden xl:block fhdv:portrait:block w-8/12 -top-30 fhdv:portrait:-top-35 fhdv:portrait:left-165 fhdv:portrait:scale-x-[-1]  xl:-top-48 2xl:-top-40 left-20 absolute">
-          <AnimatedCase width="100%" height={270} />
-        </div>
-        <div className="hidden fhdv:portrait:block absolute -bottom-40 left-20 fhdv:portrait:scale-x-[-1]">
-          <AnimatedCase2 width="100%" height={300} />
-        </div>
+      <div className="flex flex-col items-center justify-center h-full pt-20">
         <div
-          className="
-          flex 
-          gap-10 
-          fhd:flex-row 
-          fhdv:portrait:flex-col 
-          lg:mt-8 fhd:mt-0 
-          fhdv:portrait:mt-20 
-          h-8/12 
-          sm:h-8/12 
+          className=" sm:h-8/12 
           xs:h-9/12 
-          lg:h-8/12 
-          fhdv:portrait:h-[71%] 
-          rounded-2xl
-          px-3 
-          py-8 
-          lg:px-10 
-          lg:py-10 
-          relative 
-          w-11/12 
-          fhd:w-10/12 
-          top-8 
-          sm:top-0"
+          lg:h-8/12 rounded-2xl px-3 py-8 relative"
           style={{
             backgroundColor: hasBakground
               ? `var(--${dataCase.company}-primary)`
@@ -165,21 +139,25 @@ export const CaseCompany = ({
                     ? "#fff"
                     : `var(--${dataCase.company}-primary)`,
                 }}
-                className="max-w-8/12 font-light text-xl lg:text-lg 2xl:text-2xl fhd:text-3xl fhdv:portrait:text-5xl text-white overflow-hidden"
+                className="font-light text-lg lg:text-lg 2xl:text-2xl fhd:text-3xl fhdv:portrait:text-5xl text-white overflow-hidden"
               >
                 {dataCase.title}
               </div>
             </header>
             <div
               ref={contentRef}
-              className="basis-10/12 relative flex flex-col overflow-y-scroll no-scrollbar w-10/12 md:w-full"
+              className="basis-full relative flex flex-col overflow-y-scroll no-scrollbar w-11/12 md:w-full"
             >
               {dataCase && <CaseContent data={dataCase} />}
             </div>
             {contentScrollHeight > 0 && (
               <div
                 ref={trackRef}
-                className="absolute bottom-0 fhdv:portrait:top-50 fhdv:portrait:bottom-auto right-6 md:right-0 w-4 m-auto h-7/12 md:h-10/12 fhdv:portrait:h-1/2 rounded-2xl border border-white flex flex-col justify-start items-center opacity-60"
+                className={`absolute 
+                  bottom-0 fhdv:portrait:top-50 fhdv:portrait:bottom-auto right-0 md:right-0 w-4 m-auto h-7/12 md:h-10/12 
+                  
+                  ${imagesData && imagesData.gallery.length ? "fhdv:portrait:basis-1/2 " : "fhdv:portrait:basis-full "}
+                  rounded-2xl border border-white flex flex-col justify-start items-center opacity-60`}
                 style={{
                   borderColor: `var(--${dataCase.company}-primary)`,
                 }}

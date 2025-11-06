@@ -65,6 +65,10 @@ export const interfaceData: InterfaceData = {
     "company-cases-title": {
       value: "Boas Práticas",
     },
+    "company-title": {
+      value: "",
+      array: ["VOCÊ SABE COMO A", "CONSTRÓI UM MUNDO MELHOR?"],
+    },
   },
   en: {
     "home-title": {

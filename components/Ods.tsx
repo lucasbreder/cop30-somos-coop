@@ -38,7 +38,7 @@ export const Ods = () => {
           color: `var(--color-ods${dataOds?.id})`,
         }}
       >
-        <div className="hidden 2xl:block fhdv:portrait:block w-8/12 -bottom-45 2xl:-bottom-40 fhd:-bottom-10! fhdv:portrait:bottom-60 left-[-24%] fhd:left-[-24%] fhdv:portrait:left-[-15%] absolute">
+        <div className="hidden 2xl:block fhdv:portrait:block w-8/12 -bottom-45 2xl:-bottom-70 fhd:-bottom-30 fhdv:portrait:bottom-10 left-[-24%] fhd:left-[-24%] fhdv:portrait:left-[-15%] absolute">
           <AnimatedOds width="100%" height={430} />
         </div>
         <div
@@ -108,7 +108,7 @@ export const Ods = () => {
             />
           )}
         </div>
-        <div className="hidden -ml-45 -mr-45 2xl:mr-0 -mt-40 2xl:mt-10 2xl:-ml-10  basis-1/3 lg:block min-w-fit fhd:min-w-6/12 fhd:-mr-5 fhd:-ml-20 mix-blend-multiply fhdv:portrait:order-3 fhd:order-0 fhd:mt-0 fhdv:portrait:-mt-280">
+        <div className="hidden -ml-45 -mr-45 2xl:mr-0 -mt-40 2xl:mt-10 2xl:-ml-10  basis-1/3 lg:block min-w-fit fhd:min-w-6/12 fhd:-mr-5 fhd:-ml-20 mix-blend-multiply fhdv:portrait:order-3 fhd:order-0 fhd:mt-0 fhdv:portrait:-mt-380">
           <Map
             className="scale-60 2xl:scale-100 fhd:scale-100 fhdv:portrait:scale-100"
             setActiveCase={setActiveCase}

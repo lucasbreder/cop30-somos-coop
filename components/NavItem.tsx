@@ -25,7 +25,7 @@ export const NavItem = ({
           <Image sizes="80vw" src={icon} alt="Voltar" fill />
         </div>
       )}
-      <div className="uppercase font-light border-l border-primary pl-2">
+      <div className="uppercase text-xs md:text-base font-light border-l border-primary pl-2">
         {label}
       </div>
     </div>

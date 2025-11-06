@@ -67,8 +67,7 @@ export const Intro = ({
       w-full
       h-full
       overflow-hidden 
-      bg-cover
-      bg-no-repeat`}
+     `}
     >
       <div
         style={{
@@ -80,6 +79,8 @@ export const Intro = ({
           px-3
           lg:px-20 
           fhd:px-20
+           bg-cover
+      bg-no-repeat
           fhdv:portrait:px-10  ${
             isHome || pathname === `/credito/${creditCompany}`
               ? "bg-[url(/bg/bg1.png)]"
@@ -91,7 +92,15 @@ export const Intro = ({
           {showIntro && creditCompany === "cresol" && (
             <ScreenSaver
               color1="var(--cresol-primary)"
+              color2="var(--sextenary)"
+              color3="var(--sextenary)"
+              color4="var(--tertiary)"
+              color5="var(--tertiary)"
+              color6="var(--quaternary)"
               image="/intro/cresol-intro.png"
+              icon1="/icons/shine2.svg"
+              icon2="/icons/plus3.svg"
+              title="cresol"
             />
           )}
         </AnimatePresence>
@@ -123,7 +132,7 @@ export const Intro = ({
                   style={{
                     height:
                       !isHome && pathname !== `/credito/${creditCompany}`
-                        ? "calc(100% - 80px)"
+                        ? "calc(100% - 100px)"
                         : "auto",
                   }}
                 >
@@ -185,7 +194,7 @@ export const Intro = ({
             {!isHome &&
               pathname !== `/credito/${creditCompany}` &&
               creditCompany && (
-                <Link href={"/"} className="w-35 h-20 relative">
+                <Link href={"/"} className="w-22 h-15 md:w-35 relative">
                   <Image src="/logo/coop-logo1.svg" alt="" fill />
                 </Link>
               )}

@@ -8,10 +8,8 @@ import { AnimatedIntroLine } from "./AnimatedIntroLine";
 import { interfaceData } from "@/data/interface";
 import { useParams } from "next/navigation";
 import { Params } from "@/types/Params";
-import { title } from "process";
 
 export const ScreenSaver = ({
-  titleKey = "home-title",
   image = "/intro/people.png",
   color1 = "var(--primary)",
   color2 = "var(--secondary)",
@@ -21,9 +19,9 @@ export const ScreenSaver = ({
   color6 = "var(--sextenary)",
   icon1 = "/icons/shine1.svg",
   icon2 = "/icons/plus1.svg",
+  title = "default",
 }: {
   image?: string;
-  titleKey?: string;
   icon1?: string;
   icon2?: string;
   color1?: string;
@@ -32,6 +30,7 @@ export const ScreenSaver = ({
   color4?: string;
   color5?: string;
   color6?: string;
+  title?: "default" | "cresol" | "sicredi" | "sicoob";
 }) => {
   const params = useParams<Params>();
   const locale = params.lang || "pt";
@@ -51,6 +50,9 @@ export const ScreenSaver = ({
           strokeWidth={8}
           duration={3}
           delay={3}
+          color1={color4}
+          color2={color6}
+          color3={color2}
         />
       </div>
       <div>
@@ -99,27 +101,29 @@ export const ScreenSaver = ({
           delay={0.3}
         />
       </div>
-      <motion.div
-        initial={{ opacity: 1, scale: 1 }} // Garante que a escala inicial seja 1
-        animate={{
-          // Adicione a animação de pulsação aqui:
-          scale: [1, 1.05, 1], // Inicia em 1, vai para 1.01 (aumenta 1%), e volta para 1
-          transition: {
-            // Configurações para o fade-in inicial:
-            // Configurações para o pulsar (scale):
-            scale: {
-              duration: 4, // Duração de um ciclo de pulso (2 segundos)
-              delay: 3,
-              repeat: Infinity, // Repete indefinidamente
-              repeatType: "reverse", // Alterna entre os valores [1, 1.01, 1]
-              ease: "easeInOut",
-            },
-          },
-        }}
-        className="h-7/12 w-full absolute top-[15%] md:top-[15%] lg:top-[30%] fhd:top-20 -left-5 md:-left-25 fhd:left-0"
-      >
+
+      {title === "default" && (
         <motion.div
-          className="
+          initial={{ opacity: 1, scale: 1 }} // Garante que a escala inicial seja 1
+          animate={{
+            // Adicione a animação de pulsação aqui:
+            scale: [1, 1.05, 1], // Inicia em 1, vai para 1.01 (aumenta 1%), e volta para 1
+            transition: {
+              // Configurações para o fade-in inicial:
+              // Configurações para o pulsar (scale):
+              scale: {
+                duration: 4, // Duração de um ciclo de pulso (2 segundos)
+                delay: 3,
+                repeat: Infinity, // Repete indefinidamente
+                repeatType: "reverse", // Alterna entre os valores [1, 1.01, 1]
+                ease: "easeInOut",
+              },
+            },
+          }}
+          className="h-7/12 w-full absolute top-[15%] md:top-[15%] lg:top-[30%] fhd:top-20 -left-5 md:-left-25 fhd:left-0"
+        >
+          <motion.div
+            className="
             xl:max-w-2/6
             max-w-4/6
             md:max-w-3/6
@@ -139,55 +143,69 @@ export const ScreenSaver = ({
             xl:-right-10
             fhd:right-[2%]
             "
-        >
-          <motion.span
-            initial={{ opacity: 0, translateX: -100 }}
-            animate={{
-              opacity: 1,
-              translateX: 0,
-              transition: { delay: 3.8, duration: 0.6 },
-            }}
-            className="-mb-5 2xl:-mb-10 fhdv:portrait:-mb-15 block"
           >
-            {interfaceData[locale][titleKey].array?.[0] || "Conheça"}
-          </motion.span>
-          <motion.span className="flex items-center">
             <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { delay: 3.5 } }}
-              className="text-[100px] xl:text-[120px] 2xl:text-[150px] fhdv:portrait:text-[220px] font-black block tracking-[-20px] text-quinquenary"
+              initial={{ opacity: 0, translateX: -100 }}
+              animate={{
+                opacity: 1,
+                translateX: 0,
+                transition: { delay: 3.8, duration: 0.6 },
+              }}
+              className="-mb-5 2xl:-mb-10 fhdv:portrait:-mb-15 block"
             >
-              {interfaceData[locale][titleKey].array?.[1]}
+              {interfaceData[locale]["home-title"].array?.[0] || "Conheça"}
+            </motion.span>
+            <motion.span className="flex items-center">
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { delay: 3.5 } }}
+                className="text-[100px] xl:text-[120px] 2xl:text-[150px] fhdv:portrait:text-[220px] font-black block tracking-[-20px] text-quinquenary"
+              >
+                {interfaceData[locale]["home-title"].array?.[1]}
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, translateX: -100 }}
+                animate={{
+                  opacity: 1,
+                  translateX: 0,
+                  transition: { delay: 4, duration: 0.6 },
+                }}
+                className="max-w-1/6 text-[25px] xl:text-[35px] 2xl:text-[51px] ml-8 fhdv:portrait:ml-12 leading-8 2xl:leading-14 fhdv:portrait:text-[75px] fhdv:portrait:leading-22"
+              >
+                {interfaceData[locale]["home-title"].array?.[2]}
+              </motion.span>
             </motion.span>
             <motion.span
               initial={{ opacity: 0, translateX: -100 }}
               animate={{
                 opacity: 1,
                 translateX: 0,
-                transition: { delay: 4, duration: 0.6 },
+                transition: { delay: 4.4, duration: 0.6 },
               }}
-              className="max-w-1/6 text-[25px] xl:text-[35px] 2xl:text-[51px] ml-8 fhdv:portrait:ml-12 leading-8 2xl:leading-14 fhdv:portrait:text-[75px] fhdv:portrait:leading-22"
+              className="text-[24px] 2xl:text-[42px] xl:text-[32px] -mt-8 xl:-mt-11 fhd:-mt-11 fhdv:portrait:-mt-16 block leading-8 xl:leading-10 2xl:leading-12 fhdv:portrait:text-[65px] fhdv:portrait:leading-16"
             >
-              {interfaceData[locale][titleKey].array?.[2]}
+              {interfaceData[locale]["home-title"].array?.[3]}
             </motion.span>
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, translateX: -100 }}
-            animate={{
-              opacity: 1,
-              translateX: 0,
-              transition: { delay: 4.4, duration: 0.6 },
-            }}
-            className="text-[24px] 2xl:text-[42px] xl:text-[32px] -mt-8 xl:-mt-11 fhd:-mt-11 fhdv:portrait:-mt-16 block leading-8 xl:leading-10 2xl:leading-12 fhdv:portrait:text-[65px] fhdv:portrait:leading-16"
-          >
-            {interfaceData[locale][titleKey].array?.[3]}
-          </motion.span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 2.5 } }}
+          ></motion.div>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 2.5 } }}
-        ></motion.div>
-      </motion.div>
+      )}
+
+      {title === "cresol" ||
+        title === "sicoob" ||
+        (title === "sicredi" && (
+          <div className="border teste">
+            <div>{interfaceData[locale]["company-title"].array?.[0]}</div>
+            <div>
+              <Image width={100} src={`/logo/${title}-branca.svg`} alt="" />
+            </div>
+            <div>{interfaceData[locale]["company-title"].array?.[1]}</div>
+          </div>
+        ))}
       <div className="absolute top-5 fhdv:portrait:top-10 left-5 fhd:w-4/6 fhdv:portrait:w-full">
         <AnimatedIntroLine
           width="100%"
@@ -225,7 +243,7 @@ export const ScreenSaver = ({
           <AnimatedBrasilPath
             width="100%"
             height="100%"
-            strokeColor1="#4FA4F2"
+            strokeColor1={color6}
             strokeColor2={color3}
             strokeColor3={color4}
             strokeWidth={8}

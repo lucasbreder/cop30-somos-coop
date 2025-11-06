@@ -33,7 +33,7 @@ export const CaseList = ({
   });
 
   return (
-    <div className="relative z-99 max-h-[20%] sm:max-h-[30%] md:max-h-[35%] lg:max-h-[20%] w-full lg:w-full fhd:w-4/6 fhdv:portrait:w-3/6">
+    <div className="relative z-99 max-h-[20%] sm:max-h-[30%] md:max-h-[35%] lg:max-h-[20%] 2xl:max-h-[28%]  w-full lg:w-full fhd:w-4/6 fhdv:portrait:w-3/6">
       <div
         ref={contentRef}
         className="py-5 px-3 rounded-2xl w-full border h-full fhdv:portrait:h-3/6 overflow-y-scroll no-scrollbar"
