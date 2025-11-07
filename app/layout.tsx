@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Coop na Coop 30",
+  title: "Coop na COP30",
 };
 
 const intro = localFont({
