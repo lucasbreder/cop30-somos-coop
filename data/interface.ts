@@ -77,6 +77,9 @@ export const interfaceData: InterfaceData = {
       value: "",
       array: ["VOCÊ SABE COMO A", "CONSTRÓI UM MUNDO MELHOR?"],
     },
+    "more": {
+      value: "Conheça mais cases em:"
+    }
   },
   en: {
     "home-title": {
@@ -154,6 +157,9 @@ export const interfaceData: InterfaceData = {
       value: "",
       array: ["Do you know how", "builds a better world?"],
     },
+    "more": {
+      value: "Learn more about other cases at:"
+    }
   },
   es: {
     "home-title": {
@@ -236,5 +242,8 @@ export const interfaceData: InterfaceData = {
       value: "",
       array: ["¿Sabes cómo", "está construyendo un mundo mejor?"],
     },
+    "more": {
+      value: "Obtenga más información sobre los casos en:"
+    }
   },
 };

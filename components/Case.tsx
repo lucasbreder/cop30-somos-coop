@@ -182,7 +182,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
             {contentScrollHeight > 0 && (
               <div
                 ref={trackRef}
-                className="absolute bottom-0 fhdv:portrait:top-60 fhdv:portrait:bottom-auto right-6 md:right-0 w-4 m-auto h-7/12 md:h-10/12 fhdv:portrait:h-5/12 rounded-2xl border border-white flex flex-col justify-start items-center opacity-60"
+                className="absolute bottom-0 xl:bottom-20 fhdv:portrait:top-60 fhdv:portrait:bottom-auto right-6 md:right-0 w-4 m-auto h-7/12 md:h-8/12 fhdv:portrait:h-/12 rounded-2xl border border-white flex flex-col justify-start items-center opacity-60"
               >
                 <motion.div
                   ref={thumbRef}

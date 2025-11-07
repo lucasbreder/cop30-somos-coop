@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const AnimatedMouse = () => {
   return (
-    <div className="hidden lg:flex flex-col justify-center gap-5 absolute z-999 bottom-30">
-      <div className="border border-dashed border-white p-6 rounded-full">
+    <div className="hidden lg:flex flex-col justify-center  gap-5 absolute z-999 bottom-30 fhdv:portrait:right-20 hdv:portrait:bottom-40">
+      <div className="border border-dashed border-white p-6 fhd:p-10 fhdv:portrait:p-10 rounded-full">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
@@ -25,7 +25,7 @@ const AnimatedMouse = () => {
           // Estilos para o elemento ser visível (exemplo)
           className="cursor-pointer text-white"
         >
-          <div className="w-7 h-7">
+          <div className="w-7 h-7 fhd:h-10 fhd:w-10 fhdv:portrait:h-15 fhdv:portrait:w-15">
             <Image fill src={"/icons/pointer.svg"} alt="" />
           </div>
         </motion.div>
