@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { BaseLayout } from "@/components/BaseLayout";
 import localFont from "next/font/local";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Coop na Coop 30",
@@ -60,7 +61,9 @@ export default function RootLayout({
   return (
     <html className="h-full" lang="en">
       <body className={`${intro.className} antialiased h-full`}>
-        <BaseLayout>{children}</BaseLayout>
+        <Suspense fallback={<div>Cargando...</div>}>
+          <BaseLayout>{children}</BaseLayout>
+        </Suspense>
       </body>
     </html>
   );
