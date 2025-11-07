@@ -1,3 +1,4 @@
 export type ScreenSaverTranstion = {
-    groups: string[][]
-}
+  groupsOds: string[][];
+  groupsCredito: string[][];
+};

@@ -24,12 +24,23 @@ export const images: Images[] = [
     gallery: ["/images/02/FECOOGAP.2.jpeg"],
   },
   {
+    id: 3,
+    gallery: [
+      "/images/03/03-000.jpg",
+      "/images/03/03-001.jpg",
+      "/images/03/03-002.jpg",
+      "/images/03/03-003.jpg",
+      "/images/03/03-004.jpg",
+      "/images/03/03-005.jpg",
+    ],
+  },
+  {
     id: 5,
     gallery: ["/images/05/5.jpeg"],
   },
   {
     id: 8,
-    gallery: ["/images/08/0J6A1284 (1).jpg", "/images/08/0J6A1284.jpg"],
+    gallery: ["/images/08/0J6A1284.jpg"],
   },
   {
     id: 9,
@@ -119,6 +130,17 @@ export const images: Images[] = [
     gallery: [], // Pasta vazia, mantida
   },
   {
+    id: 25,
+    gallery: ["/images/25/251.png", "/images/25/252.png", "/images/25/253.png"],
+  },
+  {
+    id: 28,
+    gallery: [
+      "/images/28/whatsapp-image-2024-05-20-at-09.16.35.avif",
+      "/images/28/whatsapp-image-2024-05-20-at-09.16.54.avif",
+    ],
+  },
+  {
     id: 29,
     gallery: [
       "/images/29/ANEXOS_20-_20IMAGENS_20_2B_20CONTRATO-1-004.jpg",
@@ -128,6 +150,10 @@ export const images: Images[] = [
       "/images/29/ANEXOS_20-_20IMAGENS_20_2B_20CONTRATO-4-004.jpg",
       "/images/29/ANEXOS_20-_20IMAGENS_20_2B_20CONTRATO-5-004.jpg",
     ],
+  },
+  {
+    id: 31,
+    gallery: ["/images/31/210824tresmeni36.avif"],
   },
   {
     id: 34,
@@ -251,5 +277,9 @@ export const images: Images[] = [
   {
     id: 66,
     gallery: ["/images/66/31_1.png"],
+  },
+  {
+    id: 67,
+    gallery: ["/images/67/31_1.png"],
   },
 ];

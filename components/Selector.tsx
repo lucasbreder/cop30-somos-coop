@@ -40,7 +40,6 @@ export const Selector = () => {
   const [activeIndex, setActiveIndex] = useState(Math.floor(totalItems / 2));
 
   const trackRef = useRef<HTMLDivElement>(null);
-  const thumbRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const [stepWidth, setStepWidth] = useState(0);
@@ -226,10 +225,10 @@ export const Selector = () => {
       transition={{ duration: 1 }}
       className="flex flex-col justify-center items-center w-full h-full absolute top-1/2 left-1/2 -translate-1/2 overflow-visible"
     >
-      <div className="hidden md:block w-10/12 h-40 fhd:h-50 fhdv:portrait:h-80 absolute bottom-20 fhdv:portrait:bottom-40 -left-[40%] md:-left-[45%] fhd:-left-[45%] fhdv:portrait:-left-[50%]">
+      <div className="hidden md:block w-10/12 h-40 fhd:h-50 fhdv:portrait:h-80 absolute bottom-20 fhdv:portrait:bottom-40 -left-[40%] md:-left-[50%] fhd:-left-[45%] fhdv:portrait:-left-[50%]">
         <AnimatedSelector width="100%" height="100%" />
       </div>
-      <div className="hidden md:block w-10/12 h-90 fhd:h-112 fhdv:portrait:h-150 absolute -top-15 fhd:-top-10 md:-top-30 fhdv:portrait:-top-40 -right-[38%] fhd:-right-[43%] fhdv:portrait:-right-[30%]">
+      <div className="hidden md:block w-10/12 h-90 fhd:h-112 fhdv:portrait:h-150 absolute -top-15 fhd:-top-10 md:-top-30 lg:-top-50 xl:-top-30 fhdv:portrait:-top-40 -right-[38%] fhd:-right-[43%] fhdv:portrait:-right-[30%]">
         <AnimatedSelector1 width="100%" height="100%" />
       </div>
       <div className="mb-10 mt-20 fhd:mb-20 uppercase font-light text-xl 2xl:text-3xl fhd:text-4xl fhdv:portrait:text-4xl text-center w-12/12 xl:w-5/12 md:w-8/12 lg:w-6/12 fhd:w-7/12 fhdv:portrait:w-8/12 mx-auto tracking-widest text-primary">

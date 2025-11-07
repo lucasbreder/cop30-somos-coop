@@ -4,7 +4,7 @@ export const interfaceData: InterfaceData = {
   pt: {
     "home-title": {
       value: "",
-      array: ["Conheça", "60", "boas práticas", "das cooperativas brasileiras"],
+      array: ["Conheça", "67", "boas práticas", "das cooperativas brasileiras"],
     },
     "back-button": {
       value: "Voltar",
@@ -81,7 +81,7 @@ export const interfaceData: InterfaceData = {
   en: {
     "home-title": {
       value: "",
-      array: ["Discover", "60", "best practices", "from Brazilian coops"],
+      array: ["Discover", "67", "best practices", "from Brazilian coops"],
     },
     "back-button": {
       value: "Back",
@@ -139,13 +139,28 @@ export const interfaceData: InterfaceData = {
     "not-found": {
       value: "not found",
     },
+    "company-cases-title": {
+      value: "Good practices",
+    },
+    "company-title-sicoob": {
+      value: "",
+      array: ["Do you know how", "builds a better world?"],
+    },
+    "company-title-sicredi": {
+      value: "",
+      array: ["Do you know how", "builds a better world?"],
+    },
+    "company-title-cresol": {
+      value: "",
+      array: ["Do you know how", "builds a better world?"],
+    },
   },
   es: {
     "home-title": {
       value: "",
       array: [
         "Descubre",
-        "60",
+        "67",
         "buenas prácticas",
         "de cooperativas brasileñas",
       ],
@@ -205,6 +220,21 @@ export const interfaceData: InterfaceData = {
     },
     "not-found": {
       value: "No se encontró nada",
+    },
+    "company-cases-title": {
+      value: "Boas Práticas",
+    },
+    "company-title-sicoob": {
+      value: "",
+      array: ["¿Sabes cómo", "está construyendo un mundo mejor?"],
+    },
+    "company-title-sicredi": {
+      value: "",
+      array: ["¿Sabes cómo", "está construyendo un mundo mejor?"],
+    },
+    "company-title-cresol": {
+      value: "",
+      array: ["¿Sabes cómo", "está construyendo un mundo mejor?"],
     },
   },
 };

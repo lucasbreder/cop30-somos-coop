@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { useState, useEffect, useCallback, ReactNode } from "react";
+import { useState, useEffect, useCallback, ReactNode, useMemo } from "react";
 import { LanguageSelector } from "./LanguageSelector";
 import { ScreenSaver } from "./ScreenSaver";
 import { ScreenSaverTransition } from "./ScreenSaverTransition";
@@ -12,7 +12,12 @@ import { AnimatedLanguageSelector1 } from "./AnimatedLanguageSelector1";
 import { NavItem } from "./NavItem";
 import { LanguageSelect } from "./LanguageSelect";
 import { interfaceData } from "@/data/interface";
-import { useParams, usePathname } from "next/navigation";
+import {
+  useParams,
+  usePathname,
+  useRouter,
+  useSearchParams,
+} from "next/navigation";
 import { Params } from "@/types/Params";
 import { CreditCompany } from "@/types/CreditCompany";
 import { AnimatedLanguageSelector2 } from "./AnimatedLanguageSelector2";
@@ -29,19 +34,56 @@ export const Intro = ({
 }) => {
   const [showIntro, setShowIntro] = useState(true);
   const params = useParams<Params>();
+  const searchParams = useSearchParams();
   const locale = (params.lang as string) || "pt";
   const pathname = usePathname();
+  const router = useRouter();
+
+  const backUrl = useMemo(() => {
+    if (pathname.includes("ods")) {
+      return `/${locale}`;
+    }
+    if (pathname.includes("case") && !pathname.includes("credito")) {
+      const currentOds = searchParams.get("currentOds");
+      return currentOds ? `/${locale}/ods/${currentOds}` : `/${locale}`;
+    }
+    if (!pathname.includes("case") && pathname.includes("credito")) {
+      return `/credito/${params.company}/`;
+    }
+
+    if (pathname.includes("case") && pathname.includes("credito")) {
+      return `/${locale}/credito/${params.company}/`;
+    }
+    return "/";
+  }, [pathname, locale, searchParams, params]);
 
   const showContent = useCallback((timer: NodeJS.Timeout) => {
     setShowIntro(false);
     clearInterval(timer);
   }, []);
 
+  const restartHome = useCallback((timer: NodeJS.Timeout) => {
+    setShowIntro(false);
+    clearInterval(timer);
+  }, []);
+
   useEffect(() => {
     let timer: NodeJS.Timeout;
+    let timerHome: NodeJS.Timeout;
+
+    const homeUrl = pathname.includes("credito")
+      ? `/credito/${params.company}/`
+      : "/";
 
     function startInterval() {
       timer = setInterval(() => setShowIntro(true), 120000);
+    }
+
+    function gotoHome() {
+      timerHome = setInterval(() => {
+        if (pathname !== homeUrl) router.push(homeUrl);
+        setShowIntro(true);
+      }, 300000);
     }
 
     const handleActivity = () => {
@@ -49,14 +91,21 @@ export const Intro = ({
       startInterval();
     };
 
+    const handleGoHome = () => {
+      restartHome(timerHome);
+      gotoHome();
+    };
+
     // window.addEventListener('mousemove', handleActivity);
     window.addEventListener("keydown", handleActivity);
     window.addEventListener("click", handleActivity);
+    window.addEventListener("click", handleGoHome);
 
     return () => {
       clearTimeout(timer);
+      clearTimeout(timerHome);
     };
-  }, [showContent]);
+  }, [showContent, router, pathname, params, restartHome]);
 
   return (
     <div
@@ -73,11 +122,11 @@ export const Intro = ({
     >
       <div
         style={{
-          width: `calc(100% - ${!isHome && pathname !== `/credito/${creditCompany}` ? "40px" : "0px"})`,
-          height: `calc(100% - ${!isHome && pathname !== `/credito/${creditCompany}` ? "24px" : "0px"})`,
+          width: `calc(100% - ${creditCompany && !isHome && pathname !== `/credito/${creditCompany}` ? "40px" : "0px"})`,
+          height: `calc(100% - ${creditCompany && !isHome && pathname !== `/credito/${creditCompany}` ? "24px" : "0px"})`,
         }}
         className={`
-          ${!isHome && pathname !== `/credito/${creditCompany}` ? "mx-5 my-3 rounded-3xl" : ""}
+          ${creditCompany && !isHome && pathname !== `/credito/${creditCompany}` ? "mx-5 my-3 rounded-3xl" : ""}
           px-3
           lg:px-20 
           fhd:px-20
@@ -258,6 +307,7 @@ export const Intro = ({
             className={`absolute bottom-0 ${creditCompany && "bottom-4"} left-0 px-10 py-5 fhd:py-6 fhdv:portrait:px-15 fhdv:portrait:py-10 w-full flex justify-between items-end`}
           >
             <NavItem
+              url={backUrl}
               icon="/icons/back.svg"
               label={interfaceData[locale]["back-button"].value}
             />

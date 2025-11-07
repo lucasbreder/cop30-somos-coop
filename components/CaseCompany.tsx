@@ -3,13 +3,11 @@
 import { cases } from "@/data/cases";
 import { Params } from "@/types/Params";
 import Image from "next/image";
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { CaseContent } from "./CaseContent";
 import { Gallery } from "./Gallery";
 import Link from "next/link";
-import { AnimatedCase } from "./AnimatedCase";
 import { Title } from "./Title";
-import { AnimatedCase2 } from "./AnimatedCase2";
 import { images } from "@/data/images";
 import { useRef, useState } from "react";
 import { useMotionValue, motion } from "motion/react";
@@ -67,7 +65,7 @@ export const CaseCompany = ({
 
   if (dataCase && casesCompanyIds) {
     return (
-      <div className="flex flex-col items-center justify-center h-full pt-20 mlg-mx-15 fhdv:portrait:-mx-5 fhdv:portrait:pt-5">
+      <div className="flex flex-col items-center justify-center h-full pt-20 mlg-mx-15 fhdv:portrait:-mx-5 fhdv:portrait:-pt-5">
         <div className="absolute h-50 fhdv:portrait:h-80  hidden lg:block left-[-18%] 2xl:left-[-10%] -bottom-30 fhdv:portrait:-bottom-16 fhdv:portrait:-left-[12%]">
           <AnimatedCaseCompany width="100%" height="100%" delay={1} />
         </div>
@@ -75,12 +73,12 @@ export const CaseCompany = ({
           <AnimatedCaseCompany width="100%" height="100%" delay={1} />
         </div>
         <div
-          className="basis-1/4 fhdv:portrait:basis-auto"
+          className="fhdv:portrait:basis-auto"
           style={{
             color: `var(--${dataCase.company}-primary)`,
           }}
         >
-          <div className="text-xl lg:text-3xl fhdv:portrait:text-6xl uppercase font-extrabold text-center mt-5 fhdv:portrait:mt-2 ">
+          <div className="text-xl lg:text-3xl fhdv:portrait:text-6xl uppercase font-extrabold text-center fhdv:portrait:-mt-55 ">
             {interfaceData[locale]["company-cases-title"].value}
           </div>
           <div className="relative w-40 h-10 mx-auto my-3 fhdv:portrait:h-15 fhdv:portrait:w-85 fhdv:portrait:mb-20">
@@ -88,9 +86,28 @@ export const CaseCompany = ({
           </div>
         </div>
         <div
-          className="w-full sm:h-8/12 
+          className="
+          flex 
+          gap-10 
+          fhd:flex-row 
+          fhdv:portrait:flex-col 
+          lg:mt-8 fhd:mt-0 
+          fhdv:portrait:mt-3 
+          h-8/12 
+          sm:h-8/12 
           xs:h-9/12 
-          lg:h-8/12 rounded-2xl px-3 py-8 relative"
+          lg:h-8/12 
+          fhdv:portrait:h-[71%] 
+          rounded-2xl
+          px-3 
+          py-8 
+          lg:px-10 
+          lg:py-10 
+          relative 
+          w-11/12 
+          fhd:w-10/12 
+          top-8 
+          sm:top-0"
           style={{
             backgroundColor: hasBakground
               ? `var(--${dataCase.company}-primary)`
@@ -111,13 +128,13 @@ export const CaseCompany = ({
               color: `var(--${dataCase.company}-primary)`,
             }}
           >
-            <Title
+            {/* <Title
               className="fhd:text-xl fhdv:portrait:text-2xl max-w-4/6"
               title={`CASE - ${dataCase.title}`}
               titleLine="left"
               color={`var(--${dataCase.company}-primary)`}
               tag="h2"
-            />
+            /> */}
           </div>
           <div className="absolute -top-14 right-0 lg:-right-5 flex gap-2 z-9999">
             <Link href={`/${locale}/credito/${dataCase.company}`}>
@@ -126,7 +143,7 @@ export const CaseCompany = ({
             {nextCase && (
               <Link
                 className="block sm:hidden w-10 h-10 text-primary items-center text-sm"
-                href={`/${locale}/case/${nextCase.id}`}
+                href={`/${locale}/credito/${dataCase.company}/case/${nextCase.id}`}
               >
                 <Image
                   src="/icons/next.svg"
@@ -142,7 +159,7 @@ export const CaseCompany = ({
             <div className="hidden sm:block absolute -bottom-15 -right-18 fhd:bottom-0 fhd:-right-60 fhdv:portrait:right-1/2 fhdv:portrait:translate-x-4/6">
               <Link
                 className="w-full h-full text-primary flex items-center text-sm"
-                href={`/${locale}/case/${nextCase.id}`}
+                href={`/${locale}/credito/${dataCase.company}/case/${nextCase.id}`}
               >
                 <Image src="/icons/next.svg" alt="" width={40} height={40} />{" "}
                 <span className="w-1/2 leading-4 border-l pl-2 ml-2 h-4 border-primary">
@@ -176,7 +193,7 @@ export const CaseCompany = ({
                 className={`absolute 
                   bottom-0 fhdv:portrait:top-50 fhdv:portrait:bottom-auto right-0 md:right-0 w-4 m-auto h-7/12 md:h-10/12 
                   
-                  ${imagesData && imagesData.gallery.length ? "fhdv:portrait:basis-1/2 " : "fhdv:portrait:basis-full "}
+                  ${imagesData && imagesData.gallery.length > 0 ? "fhdv:portrait:h-5/12!" : "fhdv:portrait:h-10/12"}
                   rounded-2xl border border-white flex flex-col justify-start items-center opacity-60`}
                 style={{
                   borderColor: `var(--${dataCase.company}-primary)`,

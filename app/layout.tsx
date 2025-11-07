@@ -4,8 +4,7 @@ import { BaseLayout } from "@/components/BaseLayout";
 import localFont from "next/font/local";
 
 export const metadata: Metadata = {
-  title: "Teste",
-  description: "Teste Coop",
+  title: "Coop na Coop 30",
 };
 
 const intro = localFont({

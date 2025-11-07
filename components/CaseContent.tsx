@@ -14,7 +14,7 @@ export const CaseContent = ({ data }: { data: CaseData | CaseCompany }) => {
     <div className="w-full flex relative">
       <div
         className="h-full overflow-y-scroll md:w-11/12 xl:w-[96%] 
-        fhdv:portrait:w-[96%] rounded-2xl no-scrollbar"
+        fhdv:portrait:w-[96%] no-scrollbar"
       >
         <div className="overflow-hidden h-full">
           <CaseInfo

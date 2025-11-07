@@ -8,6 +8,8 @@ import { AnimatedIntroLine } from "./AnimatedIntroLine";
 import { interfaceData } from "@/data/interface";
 import { useParams } from "next/navigation";
 import { Params } from "@/types/Params";
+import AnimatedPulse from "./AnimatedMouse";
+import AnimatedMouse from "./AnimatedMouse";
 
 export const ScreenSaver = ({
   image = "/intro/people.png",
@@ -51,6 +53,7 @@ export const ScreenSaver = ({
       }}
       className={`bg-[url("/bg/bg2.png")] bg-blend-multiply bg-cover bg-no-repeat w-full h-full flex items-center justify-center absolute inset-0 z-999 overflow-hidden`}
     >
+      <AnimatedMouse />
       <div
         className={`absolute -bottom-10 lg:bottom-0 fhd:bottom-20 fhdv:portrait:bottom-50 -left-20 md:-left-30 lg:-left-10 fhd:-left-20 fhdv:portrait:left-[-15%] w-[25%] portrait:w-[50%] ${title ? "fhdv:portrait:bottom-25!" : ""}`}
       >
@@ -113,22 +116,7 @@ export const ScreenSaver = ({
       </div>
 
       {title === "default" && (
-        <motion.div
-          initial={{ opacity: 1, scale: 1 }}
-          animate={{
-            scale: [1, 1.05, 1],
-            transition: {
-              scale: {
-                duration: 4,
-                delay: 3,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-              },
-            },
-          }}
-          className="h-7/12 w-full absolute top-[15%] md:top-[15%] lg:top-[30%] fhd:top-20 -left-5 md:-left-25 fhd:left-0"
-        >
+        <motion.div className="h-7/12 w-full absolute top-[15%] md:top-[15%] lg:top-[30%] fhd:top-20 -left-5 md:-left-25 fhd:left-0">
           <motion.div
             className="
             xl:max-w-2/6
@@ -164,8 +152,21 @@ export const ScreenSaver = ({
             </motion.span>
             <motion.span className="flex items-center">
               <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 3.5 } }}
+                initial={{ opacity: 0, scale: 1 }}
+                animate={{
+                  scale: [1, 1.5, 1],
+                  opacity: [0, 1],
+                  transition: {
+                    scale: {
+                      duration: 3,
+                      delay: 3,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut",
+                    },
+                    opacity: { delay: 3.8, duration: 0.6 },
+                  },
+                }}
                 className="text-[100px] xl:text-[120px] 2xl:text-[150px] fhdv:portrait:text-[220px] font-black block tracking-[-20px] text-quinquenary"
               >
                 {interfaceData[locale]["home-title"].array?.[1]}

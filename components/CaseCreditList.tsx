@@ -39,7 +39,7 @@ export const CaseCreditList = ({
     <div className={`relative ${hasOverflow ? "h-full" : "h-fit"} pr-7`}>
       <div
         ref={contentRef}
-        className="py-5 px-3 hdv:portrait:py-8 fhdv:portrait:px-10 rounded-2xl fhdv:portrait:rounded-4xl w-full h-full border overflow-y-scroll no-scrollbar"
+        className="py-5 px-3 hdv:portrait:py-8 fhdv:portrait:px-10 rounded-2xl fhdv:portrait:rounded-4xl w-full h-full fhdv:portrait:h-10/12 border overflow-y-scroll no-scrollbar"
         style={{
           borderColor: dataCompany && `var(--${dataCompany?.name}-primary)`,
         }}
@@ -66,7 +66,7 @@ export const CaseCreditList = ({
         {hasOverflow && (
           <div
             ref={trackRef}
-            className="absolute border top-0 bottom-auto right-0 w-4 m-auto h-full fhdv:portrait:h-3/6 rounded-2xl flex flex-col justify-start items-center opacity-60"
+            className="absolute border top-0 bottom-auto right-0 w-4 fhdv:portrait:w-5 m-auto h-full fhdv:portrait:h-10/12 rounded-2xl flex flex-col justify-start items-center opacity-60"
             style={{
               color: dataCompany && `var(--${dataCompany?.name}-primary)`,
             }}
@@ -84,7 +84,7 @@ export const CaseCreditList = ({
                 backgroundColor:
                   dataCompany && `var(--${dataCompany?.name}-primary)`,
               }}
-              className="bg-inherit h-15 w-3 rounded-2xl cursor-grab mt-0.5"
+              className="bg-inherit h-15 w-3 fhdv:portrait:w-4 rounded-2xl cursor-grab mt-0.5"
             />
           </div>
         )}

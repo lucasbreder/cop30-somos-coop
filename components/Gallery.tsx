@@ -67,19 +67,19 @@ export const Gallery = ({ gallery }: { gallery: string[] }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.5 } }}
         key={activeImage}
-        className="h-full xl:h-[380px] fhd:h-full fhdv:portrait:h-full hidden md:block w-full fhdv:portrait:min-w-3/4 lg:h-5/6 mb-5 relative transition-opacity duration-500 opacity-100 fhd:basis-auto fhdv:portrait:basis-2/3 min-w-[300px] 2xl:min-w-[600px]"
+        className="grow h-full xl:h-[380px] fhd:h-full fhdv:portrait:h-full hidden md:block w-full fhdv:portrait:min-w-3/4 lg:h-5/6 mb-5 relative transition-opacity duration-500 opacity-100 fhd:basis-auto fhdv:portrait:basis-2/3 min-w-[300px] 2xl:min-w-[600px]"
       >
         <Image objectFit="cover" sizes="80vw" src={activeImage} fill alt="" />
       </motion.div>
 
       {/* Carrossel de Miniaturas */}
-      <div className="w-full relative flex-1 h-full">
+      <div className="w-full relative flex-1">
         {gallery.length > 4 && (
           <>
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
-              className={`idden lg:block cursor-pointer absolute left-1 top-1/2 -translate-y-1/2 z-20  text-white p-2 rounded-full opacity-70 ${currentIndex === 0 ? "opacity-10! cursor-not-allowed!" : "hover:opacity-100"}`}
+              className={`hidden lg:block fhdv:portrait:hidden cursor-pointer absolute left-1 top-1/2 -translate-y-1/2 z-20  text-white p-2 rounded-full opacity-70 ${currentIndex === 0 ? "opacity-10! cursor-not-allowed!" : "hover:opacity-100"}`}
             >
               <Image
                 className="rotate-180"
@@ -92,7 +92,7 @@ export const Gallery = ({ gallery }: { gallery: string[] }) => {
             <button
               onClick={handleNext}
               disabled={currentIndex >= gallery.length - itemsPerView}
-              className={`hidden lg:block cursor-pointer absolute right-1 top-1/2 -translate-y-1/2 z-20 text-white p-2 rounded-full opacity-70 ${currentIndex >= gallery.length - itemsPerView ? "opacity-10! cursor-not-allowed!" : "hover:opacity-100"}`}
+              className={`hidden lg:block fhdv:portrait:hidden cursor-pointer absolute right-1 top-1/2 -translate-y-1/2 z-20 text-white p-2 rounded-full opacity-70 ${currentIndex >= gallery.length - itemsPerView ? "opacity-10! cursor-not-allowed!" : "hover:opacity-100"}`}
             >
               <Image
                 src={"/icons/chevron-right-solid-full.svg"}

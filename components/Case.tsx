@@ -76,12 +76,13 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
           gap-10 
           fhd:flex-row 
           fhdv:portrait:flex-col 
-          lg:mt-8 fhd:mt-0 
+          lg:mt-24
+          fhd:mt-25
           fhdv:portrait:mt-20 
           h-8/12 
           sm:h-8/12 
-          xs:h-9/12 
-          lg:h-8/12 
+          xs:h-9/12
+          lg:h-10/12
           fhdv:portrait:h-[71%] 
           rounded-2xl
           px-3 
@@ -108,13 +109,13 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
           }}
         >
           <div
-            className="hidden fhd:block absolute -top-20 fhdv:portrait:-top-25 left-0"
+            className="hidden fhd:block absolute -top-13 fhdv:portrait:-top-25 left-0"
             style={{
               color: `var(--color-ods${dataCase.mainOds})`,
             }}
           >
             <Title
-              className="fhd:text-xl fhdv:portrait:text-2xl max-w-4/6"
+              className="hidden fhd:text-xl fhdv:portrait:text-2xl max-w-6/6"
               title={`CASE - ${dataCase.cooperName}`}
               titleLine="left"
               color={`var(--color-ods${dataOds?.id})`}
@@ -144,7 +145,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
             <div className="hidden sm:block absolute -bottom-15 -right-18 fhd:bottom-0 fhd:-right-60 fhdv:portrait:right-1/2 fhdv:portrait:translate-x-4/6">
               <Link
                 className="w-full h-full text-primary flex items-center text-sm"
-                href={`/${locale}/case/${nextCase.id}`}
+                href={`/${locale}/case/${nextCase.id}?currentOds=${dataOds?.id}`}
               >
                 <Image src="/icons/next.svg" alt="" width={40} height={40} />{" "}
                 <span className="w-1/2 leading-4 border-l pl-2 ml-2 h-4 border-primary">
@@ -174,14 +175,14 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
             </header>
             <div
               ref={contentRef}
-              className="basis-10/12 relative flex flex-col overflow-y-scroll no-scrollbar w-10/12 md:w-full"
+              className="basis-10/12 h-full relative flex flex-col overflow-y-scroll no-scrollbar w-10/12 md:w-full"
             >
               {dataCase && <CaseContent data={dataCase} />}
             </div>
             {contentScrollHeight > 0 && (
               <div
                 ref={trackRef}
-                className="absolute bottom-0 fhdv:portrait:top-50 fhdv:portrait:bottom-0 right-6 md:right-0 w-4 m-auto h-7/12 md:h-10/12 fhdv:portrait:h-1/2 rounded-2xl border border-white flex flex-col justify-start items-center opacity-60"
+                className="absolute bottom-0 fhdv:portrait:top-60 fhdv:portrait:bottom-auto right-6 md:right-0 w-4 m-auto h-7/12 md:h-10/12 fhdv:portrait:h-5/12 rounded-2xl border border-white flex flex-col justify-start items-center opacity-60"
               >
                 <motion.div
                   ref={thumbRef}
@@ -196,14 +197,16 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
                 />
               </div>
             )}
-            <div className="hidden lg:block basis-2/12">
-              <OdsList
-                classNameList="2xl:w-16 2xl:h-16"
-                classNameContainer="justify-center"
-                odsNumbers={dataCase.asideOds}
-                showTitle={true}
-              />
-            </div>
+            {dataCase.asideOds?.length > 0 && (
+              <div className="hidden lg:block basis-2/12 pr-10">
+                <OdsList
+                  classNameList="2xl:w-16 2xl:h-16"
+                  classNameContainer="justify-center"
+                  odsNumbers={dataCase.asideOds}
+                  showTitle={true}
+                />
+              </div>
+            )}
             {imagesData && imagesData.gallery.length > 0 && (
               <div className="hidden fhdv:portrait:block w-full lg:basis-1/2 mt-15">
                 <Gallery gallery={imagesData.gallery} />

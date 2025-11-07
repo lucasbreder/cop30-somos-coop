@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg252"
+   sodipodi:docname="pointer.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs256" />
+  <sodipodi:namedview
+     id="namedview254"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.2546875"
+     inkscape:cx="319.60149"
+     inkscape:cy="320"
+     inkscape:window-width="1854"
+     inkscape:window-height="1009"
+     inkscape:window-x="66"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg252" />
+  <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+  <path
+     d="m 224,104 c 0,-22.1 17.9,-40 40,-40 22.1,0 40,17.9 40,40 v 148.2 c 8.5,-7.6 19.7,-12.2 32,-12.2 20.6,0 38.2,13 45,31.2 8.8,-9.3 21.2,-15.2 35,-15.2 25.3,0 46,19.5 47.9,44.3 8.5,-7.7 19.8,-12.3 32.1,-12.3 26.5,0 48,21.5 48,48 v 112 c 0,70.7 -57.3,128 -128,128 h -85.3 c -5,0 -9.9,-0.3 -14.7,-1 -55.3,-5.6 -106.2,-34 -140,-79 l -72,-96 c -13.3,-17.7 -9.7,-42.7 8,-56 17.7,-13.3 42.7,-9.7 56,8 l 56,74.7 z"
+     id="path250"
+     sodipodi:nodetypes="ssscscscssssscccsccs"
+     style="fill:#ffffff" />
+</svg>
