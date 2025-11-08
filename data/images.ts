@@ -58,7 +58,6 @@ export const images: Images[] = [
     id: 11,
     gallery: [
       "/images/11/_MG_7712.jpg",
-      "/images/11/_MG_7740 (1).jpg",
       "/images/11/_MG_7740.jpg",
       "/images/11/_MG_7768.jpg",
       "/images/11/_MG_7796.jpg",
