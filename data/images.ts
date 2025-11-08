@@ -278,10 +278,6 @@ export const images: Images[] = [
     gallery: ["/images/65/image_(49).png", "/images/65/image_(50).png"],
   },
   {
-    id: 66,
-    gallery: ["/images/66/31_1.png"],
-  },
-  {
     id: 67,
     gallery: ["/images/67/31_1.png"],
   },
