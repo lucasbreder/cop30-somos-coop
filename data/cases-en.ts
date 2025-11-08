@@ -1272,4 +1272,511 @@ export const casesEn: Case[] = [
     result:
       "The initiative has transformed pig farm waste into a valuable energy input. In 2024, the generation of 1.6 GWh (Gigawatt-hours) of electricity from the burning of almost 800,000 cubic meters of biogas at three Lar units generated savings of R$1.1 million. The most significant environmental impact was the reduction in greenhouse gas emissions. In 2024 alone, the use of methane prevented the emission of 120 tons of carbon dioxide equivalent into the atmosphere. The project also ensured greater energy autonomy, reduced operating costs and strengthened the renewable energy matrix.",
   },
+  {
+    id: 49,
+    title: "Lar promotes water security through a spring restoration program",
+    markdownTitle:
+      "# Lar promotes water security through a spring restoration program",
+    context:
+      "Founded in 1964, Lar Agroindustrial Cooperative is one of the largest in the sector in Brazil, with more than 15,000 members and 25,000 employees. Operating in a production chain that depends directly on natural resources, the cooperative identified a critical challenge: the degradation of springs on rural properties.",
+    challenge:
+      "Many water sources were unprotected and exposed to siltation, contamination and degradation. The absence of native vegetation in the surroundings compromised the infiltration of water into the soil and the maintenance of river flow, a problem aggravated by climate change. This water vulnerability posed a risk both to the cooperative members' agricultural production and to the supply of the surrounding communities. The challenge was to create a structured program to reverse this scenario and guarantee water security in the region.",
+    development:
+      "The program is run by Lar's Environmental Management team, with the support of unit managers. The strategy begins with publicizing and registering interested members. The springs are then identified and given a diagnosis so that a recovery plan can be drawn up. Practical actions in the field include clearing the area, restructuring the bed of the spring and installing catchment pipes. The water source is protected with stones and a tarp to prevent clogging and ensure free flow, following the Protected Springs guidelines of the State Department of the Environment. After the spring is protected, the member receives guidance on maintenance and revegetation of the surrounding area. The program, which relies on the cooperative's own resources and institutional partnerships, has already reached 280 rural properties owned by small and medium-sized producers.",
+    cooperName: "Lar Agroindustrial Cooperative",
+    excerpt:
+      "Lar Agroindustrial Cooperative developed a program to restore and protect springs on the properties of its members. The initiative promotes the isolation and revegetation of degraded areas, improving both the quality and availability of water. By August 2025, the program had already recovered 468 springs on 280 properties in the states of Paraná, Santa Catarina and Mato Grosso do Sul.",
+    categories: ["Spring Recovery", "Water Security", "Sustainability"],
+    branch: "Agriculture",
+    mainOds: 2,
+    asideOds: [6],
+    state: "PR",
+    objectives:
+      "The central objective of the program was to protect water resources and increase the availability of quality water. The initiative was designed to restore degraded spring areas, conserve native vegetation and strengthen ecosystem services. The goals include reducing soil erosion, improving infiltration and groundwater recharge, as well as preserving local biodiversity. The program also aims to promote carbon capture by reforesting protected areas. Aimed at cooperative members, the project seeks to provide resources and technical support so that they can conduct their activities in a more sustainable and resilient manner, generating environmental, social and economic benefits for the entire community.",
+    result:
+      "By August 2025, the program had already recovered 468 springs in Paraná, Santa Catarina and Mato Grosso do Sul. The initiative has resulted in increased water availability and improved water quality, directly benefiting producers and communities. It is estimated that restoring a spring can increase water availability by up to 300% compared to its original condition. Many farmers report greater stability in their water supply, especially during periods of drought. The revegetation of the areas contributes to carbon sequestration, erosion reduction, and the restoration of biodiversity. The program also strengthened environmental awareness among cooperative members, who began to spontaneously multiply protection practices on neighboring properties.",
+  },
+  {
+    id: 50,
+    title:
+      "Lar establishes a sustainability program and aligns producers with the global market.",
+    markdownTitle:
+      "# Lar establishes a sustainability program and aligns producers with the global market.",
+    context:
+      "Founded in 1964, Lar Agroindustrial Cooperative is one of the largest in the sector in Brazil, with more than 15,000 members and 25,000 employees. In order to align its vast production chain with the demands for sustainability, the cooperative identified the need for a program that would organize and recognize good practices in the field.",
+    challenge:
+      "Before the initiative, sustainability actions on the properties were scattered and not very standardized. There was a lack of a formal structure for measuring the socio-environmental evolution of cooperative members, which made it difficult to trace and define ESG commitments for the cooperative as a whole. The lack of clarity regarding the best pathways for production aligned with care for the environment and people exposed producers to risks and limited their access to more demanding markets. The challenge was to create a qualification system that valued the producer.",
+    development:
+      "The program originated from a leadership development project and was structured in stages. First, an evaluation checklist was drawn up based on international references, such as the RTRS (Round Table on Responsible Soy) certification, which guarantees responsible soy production. The regulations and awards were then defined. Management is carried out by the Sustainability and Quality teams, together with the cooperative's technical areas. The program is open to all cooperative members and has already had more than 450 participating properties in its first three editions. In the fourth edition, launched in 2025, there are already 314 entries. Each cycle, the cooperative promotes registration and evaluation visits to the properties. Cooperative members receive technical support and take part in training for continuous improvement, with the help of partners such as SENAR and Sescoop. The program organizes participants into levels, such as beginner, intermediate and advanced, and provides for an additional payment to those who achieve the best scores, thus valuing the producers' efforts in practice.",
+    cooperName: "Lar Agroindustrial Cooperative",
+    excerpt:
+      "Lar Agroindustrial Cooperative created a sustainability program to qualify and recognize the good practices of its members. The initiative assesses the properties based on environmental, social, and governance criteria, offering technical support and training. The program has already involved more than 450 farms and is strengthening the production chain to meet the demands of national and international markets.",
+    categories: ["Sustainability", "Good Practices", "ESG"],
+    branch: "Agriculture",
+    mainOds: 2,
+    asideOds: [8, 12, 13],
+    state: "PR",
+    objectives:
+      "The central objective of the program was to encourage, recognize and value cooperative members who adopt environmental, social and governance (ESG) practices on their farms. The initiative seeks to foster continuous evolution in rural property management and expand the use of sustainable technologies. The goals include strengthening members' competitiveness and ensuring that the cooperative's economic development is aligned with environmental preservation and social inclusion. In this way, the program reinforces the role of cooperatives in the region where they operate, guaranteeing a more sustainable, transparent and responsible production chain.",
+    result:
+      "With the program, good sustainability practices are now organized, monitored and recognized in a structured way. Clear socio-environmental indicators have been defined, which make it possible to measure the evolution of the properties and generate comparative reports. Ongoing training has strengthened producers' knowledge of the environment, farm management and social welfare, which has reduced regulatory risks and increased compliance with laws. The initiative also created a solid basis for traceability and the cooperative's ESG commitments. In practice, the program adds value to participating farms and increases their access to markets that demand increasingly responsible and transparent production.",
+  },
+  {
+    id: 51,
+    title:
+      "Lar Cooperative optimizes input use with a management system and precision agriculture.",
+    markdownTitle:
+      "# Lar Cooperative optimizes input use with a management system and precision agriculture.",
+    context:
+      "With around 15,000 members and more than 25,000 employees, the Paraná-based Lar Agroindustrial Cooperative is one of the largest cooperatives in Brazil’s agricultural sector. Founded in 1964, the organization has a strong presence in grain production. However, the cooperative realized that many farmers faced soil stress problems, aggravated by the lack of a precise diagnosis.",
+    challenge:
+      "The intensive and poorly optimized use of fertilizers and soil amendments resulted in high production costs, increased greenhouse gas emissions, and a productive potential below what was ideal. Inefficient soil management limited the sustainability of the cooperative members' production. Therefore, the cooperative's challenge was to implement an impact tool that combined productivity and environmental responsibility.",
+    development:
+      "The program is run in partnership with Laboratório Agronômico S.A., the company responsible for collections, analysis and technical reports. The process begins with defining the areas and drawing up performance maps, followed by georeferenced soil sampling. The samples are then sent for chemical, physical and biological analysis. Based on the results, technical recommendations for correctives and fertilizers are generated, which are transformed into variable rate application maps for precision agriculture. The cooperative's agronomist is responsible for presenting the results to the cooperative members and guiding them in implementing the practices. Producers also undergo a training process in the conscious use of inputs and in monitoring results. In addition to directly benefiting its members, Lar’s initiative supported local communities by increasing the efficiency of natural resource use.",
+    cooperName: "Lar Agroindustrial Cooperative",
+    excerpt:
+      "Lar Agroindustrial Cooperative implemented the Soil Management System (SMS) to provide its members with a detailed assessment of their rural properties. Based on soil analysis, the initiative promotes the rational use of inputs, reducing environmental impacts and increasing productivity, combining economic gains with sustainability in grain production.",
+    categories: ["Soil Management", "Sustainability", "Productivity"],
+    branch: "Agriculture",
+    mainOds: 2,
+    asideOds: [13],
+    state: "PR",
+    objectives:
+      "The main objective of the Soil Management System (SMS) was to identify the factors that limit agricultural productivity, providing technical diagnoses to guide best practices. The initiative was born out of the need to increase members' productive efficiency in a sustainable way. The program's goals include optimizing the use of agricultural inputs to reduce waste and minimize the environmental impacts of improper management. With the tool, the estimate is to achieve a 1.6% reduction in fertilizer use and an 8% increase in crop yields. The program also seeks to strengthen the relationship between the cooperative's agronomists and the producers, reinforcing the commitment to proper soil management and building loyalty among the membership.",
+    result:
+      "The implementation of the SMS has led to a significant improvement in soil management and conservation. The precise diagnosis allowed for a more rational use of inputs, correcting deficiencies and optimizing fertilization, resulting in productivity gains. The program has contributed to reducing greenhouse gas emissions by promoting low-carbon agriculture. In addition, it has generated greater security in technical guidance and more assertiveness in management decisions on the part of producers. In the first year of the program, 36 cooperative members joined, totaling 1,591 hectares analyzed in Paraná and Mato Grosso do Sul. The SMS has also established itself as the tool that strengthens the economic and environmental sustainability of agricultural activity in the region where Lar Cooperative operates.",
+  },
+  {
+    id: 52,
+    title:
+      "Lar strengthens climate risk management with agricultural insurance",
+    markdownTitle:
+      "# Lar strengthens climate risk management with agricultural insurance",
+    context:
+      "Before the project was implemented, farming in Lar Cooperative's area of operation was highly exposed to the risks of unpredictable climatic factors, such as droughts, heavy rains and frosts, as well as volatile commodity prices. These events had a direct impact on production, causing severe damage that jeopardized producers' incomes, community food security and business sustainability.",
+    challenge:
+      "The low uptake of rural insurance worsened the situation, resulting from lack of awareness, the perception of high cost, and the absence of qualified technical guidance. As a result, thousands of families remained vulnerable to significant financial losses in bad weather, which increased the risk of indebtedness and weakened the social and economic fabric of the region. It was from there that Lar Cooperative Insurance Brokerage was born.",
+    development:
+      "The implementation strategy was carried out in stages, targeting the cooperative's membership. Currently, Lar's agricultural insurance covers an area of 1,000 hectares, benefiting an average of 250 producers per harvest. Initially, Lar Cooperative Insurance Brokerage was set up as an institutional unit dedicated to this market. The cooperative then invested in training its teams through the \"Insurance Journey\", a technical and commercial training program for managers, employees and field teams that consolidated knowledge and trained multipliers. The next phase involved practical engagement actions, such as quotation simulations, technical visits and advisory services, showing producers that agricultural insurance is a viable alternative. Finally, the product was integrated into the cooperative's portfolio of solutions, expanding its scale and reach. To make the initiative possible, the project relied on strategic partners, including large insurance companies and global reinsurers. Joining the federal government's Rural Insurance Premium Subsidy Program (PSR) was also key to reducing costs for cooperative members. The institutional support of Lar Agroindustrial Cooperative itself and its members was decisive in ensuring adhesion and the sustainability of the initiative.",
+    cooperName: "Lar Cooperative Insurance Brokerage",
+    excerpt:
+      "Lar Coop Insurance Brokerage implemented an initiative against climate risks through a customized agricultural insurance product. The strategy involved training teams, engaging producers, and forming strategic partnerships to offer an accessible solution. The project has increased the financial resilience of producers, ensuring the sustainability of farming in the region.",
+    categories: ["Agricultural Insurance", "Climate Risks", "Risk Management"],
+    branch: "Agribusiness",
+    mainOds: 2,
+    asideOds: [11, 13],
+    state: "PR",
+    objectives:
+      "The initiative was created to protect the assets of cooperative members and guarantee the sustainability of agricultural activity even in the face of climatic losses. The project sought to provide financial security so that rural producers could invest with more confidence, knowing that they would have support in crops affected by adverse weather events. The aim, therefore, went beyond simply making up for losses. The project was conceived with the aim of consolidating a culture of risk management, strengthening the resilience of the entire production chain by offering personalized and affordable insurance to producers.",
+    result:
+      "After implementation, the results were significant, with consistent growth in the uptake of agricultural insurance. This has provided cooperative members with greater financial resilience and rapid recovery in harvests affected by climatic events. The project strengthened confidence in the cooperative as an agent of protection, preserved jobs, ensured stable incomes for families and boosted the competitiveness of regional agribusiness. In addition to the economic benefits, the initiative consolidated a culture of risk management and prevention in the countryside, promoting practices that are essential for the sustainability and longevity of farming. In this way, the initiative protects crops, people and communities, ensuring that cooperation remains an engine for sustainable development.",
+  },
+  {
+    id: 53,
+    title: "Primato turns pig waste into clean energy for its fleet",
+    markdownTitle: "# Primato turns pig waste into clean energy for its fleet",
+    context:
+      "Founded in 1997 with a focus on pig farming and milk production, Primato Agroindustrial Cooperative has grown and diversified its activities, but has always faced one of the sector's biggest sustainability bottlenecks: the correct disposal of pig waste. The accumulation of waste generated a bad smell, the risk of river and soil contamination and the release of greenhouse gases into the atmosphere.",
+    challenge:
+      "Before the project, farm waste was a major environmental and social problem for producers in western Paraná and the surrounding communities. Many cooperative members found it difficult to deal with the large volume of waste and feared environmental sanctions. At the same time, the cooperative's fleet of trucks, responsible for transporting production, depended entirely on diesel, an expensive and polluting fossil fuel, which increased operating costs and Primato's carbon footprint. With this scenario, waste that was once seen only as a burden has become an opportunity.",
+    development:
+      "Primato structured the project in integrated stages of innovation and sustainability. The first step was to carry out a diagnosis to map the generation of pig waste and its environmental impacts. On the basis of this study, the cooperative moved on to the implementation phase of the technology, installing biodigesters directly on the cooperative members' properties to capture and treat the waste at source. The next step was to build a biomethane plant, centralizing the purification process and ensuring a continuous supply of renewable fuel. To make the project technologically feasible, Primato entered into a strategic partnership with MWM, a Tupy group organization, which provided the technology and expertise to make the transformation of pig waste possible. With the plant in operation, the cooperative's fleet of trucks can now be fueled directly with the biomethane produced, closing the circular economy cycle. In addition to the financial and technical investment made by the partner company, the cooperative relied on its employees to plan, operate and monitor the project.",
+    cooperName: "Primato Agroindustrial Cooperative",
+    excerpt:
+      "Primato, a cooperative with more than 10,800 members, created the Green Pig Project to transform the environmental liabilities of pig farming into an energy asset. Using biodigesters and a biomethane plant, the project converts pig waste into renewable fuel to power the cooperative's own fleet of trucks, reducing emissions, costs and the environmental impact of the activity.",
+    categories: ["Biomethane", "circular economy", "clean energy", "waste"],
+    branch: "Agriculture",
+    mainOds: 7,
+    asideOds: [12, 13],
+    state: "PR",
+    objectives:
+      "The Green Pig Project was born with the main objective of giving pig farming waste an environmentally correct destination, transforming environmental liabilities into an energy opportunity. The goal was to create a sustainable solution for the treatment of waste, reducing the environmental impacts of the activity and, at the same time, generating value for the entire production chain. With this initiative, Primato sought to develop a circular economy model that could be applied directly to its operations. The project aimed to solve the problem of waste disposal, generate a renewable fuel capable of reducing dependence on diesel, reduce logistics costs and contribute to the decarbonization of the cooperative's activities.",
+    result:
+      "With the Green Pig Project, pig waste, which used to be a problem, has been transformed into biomethane to fuel the cooperative's fleet. The risks of soil and water contamination, as well as bad smells, have been significantly reduced, improving the quality of life for producers and the surrounding communities. The cooperative members also saw a reduction in waste management costs and gained more environmental security for their properties. In addition, three trucks in the fleet now use 100% renewable fuel, reducing dependence on diesel and greenhouse gas emissions.",
+  },
+  {
+    id: 54,
+    title:
+      "With the support of Sicoob Conexão, a farmer develops a sustainable chocolate factory and leads female empowerment",
+    markdownTitle:
+      "# With the support of Sicoob Conexão, a farmer develops a sustainable chocolate factory and leads female empowerment",
+    context:
+      "Based in Linhares, Espírito Santo, Sicoob Conexão has 35 years of history and support for the local community. The cooperative supported Fabiani Reinholz when she decided to return to the family farm in Colatina (Espírito Santo) after her father was diagnosed with Parkinson's disease, a condition associated with his long exposure to pesticides. Motivated to change this reality, she saw cocoa as an opportunity to add value and adopt more sustainable practices. With the support of Sicoob Conexão, the project evolved into the creation of a handmade chocolate factory, Reinholz Chocolates.",
+    challenge:
+      "However, artisanal production, free of preservatives, required continuous refrigeration of artisanal products, which generated high electricity costs. This dependence on conventional energy compromised the financial viability of the business, limited its growth potential and made it difficult to reinvest in improvements to production and the community. For the dream of a sustainable factory to become a reality, a solution had to be found to this energy and financial bottleneck.",
+    development:
+      "Sicoob Conexão played a key role as a strategic partner in the initiative, going beyond simply granting credit. The cooperative welcomed Fabiani's request with a consultative and humanized service, dedicating managers and technical teams to guarantee the necessary guidance and support. The strategy began with a detailed diagnosis of the factory's energy needs, which suffered from the high costs of artisanal production, especially continuous refrigeration. With the problem identified, the cooperative helped with the technical planning of the solar energy system and the mobilization of resources from the Safra Plan, a subsidized program by the Brazilian government that offers credit at affordable conditions. The work of the Sicoob Conexão team was crucial in providing support at every stage, from the bureaucracy involved in obtaining the funds to the execution and implementation of the solar panels, ensuring that the project became a viable reality for the cooperative member. Alongside the energy transition, the project gained a strong social-impact component with the creation of the Women of Cocoa Association, founded and led by Fabiani herself. The association began with five women and today benefits 19 families, promoting training and productive inclusion for family farmers in the region. This coordination with local producers and support institutions has strengthened the dissemination of sustainable practices and consolidated the initiative's role as a hub for community development.",
+    cooperName: "Sicoob Conexão",
+    excerpt:
+      "Motivated by a family health challenge linked to the use of pesticides, cooperative member Fabiani Reinholz, with the support of Sicoob Conexão, created Reinholz Chocolates. The initiative transformed the family farm into a model of sustainability, with chocolate production, 100% solar energy, and 40% of the area dedicated to conservation. In addition, Fabiani founded the Women of Cocoa Association, empowering 19 families and demonstrating the power of the cooperative model as an agent of social and climate transformation.",
+    categories: ["Female Protagonism", "Solar Energy", "Cocoa"],
+    branch: "Credit",
+    mainOds: 2,
+    asideOds: [5, 7, 8, 12, 13, 15],
+    state: "ES",
+    objectives:
+      "The project was born with the main objective of enabling Reinholz Chocolates to grow in line with its sustainability values. The goal was to implement a photovoltaic energy system to reduce operating costs and make production cleaner and more self-sufficient. Thus, the initiative aimed to achieve 100% independence from conventional electricity, allowing the savings generated to be reinvested in expanding crops and training other producers. In addition to the energy pillar, the project had socio-environmental objectives: to strengthen the role of women in the cocoa chain through the creation of a women's association, to promote community development and to train small producers. Another objective was to adopt regenerative practices, such as making full use of the cocoa fruit to reduce waste and maintaining 40% of the property as an environmental conservation area.",
+    result:
+      "The implementation of the project generated a complete transformation. With the installation of solar panels, Reinholz Chocolates has drastically reduced its production costs, which has ensured the continuity and sustainable expansion of the factory. The production of chocolates has increased, always respecting the preservation of 40% of the property as an environmental reserve, contributing to carbon capture and the protection of biodiversity. The biggest impact, however, was social. The creation of the Women of Cocoa Association has promoted female inclusion, training and income generation. Today, Reinholz Chocolates makes full use of cocoa (husk, pulp and beans), and Fabiani has become a voice for female empowerment and rural succession, proving how a cooperative's support for local leadership can generate a wave of positive change.",
+  },
+  {
+    id: 55,
+    title:
+      "With support from Sicoob Confiança, producer recovers degraded area and practices 100% self-sustainable fish farming",
+    markdownTitle:
+      "# With support from Sicoob Confiança, producer recovers degraded area and practices 100% self-sustainable fish farming",
+    context:
+      "Founded in 2004 by entrepreneurs in Marechal Cândido Rondon (Paraná), Sicoob Confiança was born with the aim of supporting local development. It was in this context of regional development that the cooperative came across the project of a rural producer who had acquired an abandoned property in the community of Margarida. The existing ponds and buildings were degraded, with no investment, maintenance, or productive activity.",
+    challenge:
+      "The area represented a waste of natural potential and a risk of ongoing environmental degradation. The site generated no income, jobs or fiscal contribution for the municipality, creating a scenario of economic and social stagnation that needed to be reversed.",
+    development:
+      "The strategy adopted was structured in stages. Initially, the area was cleared and reorganized, eliminating abandoned buildings and ponds. Next, financing was sought from Sicoob Confiança for the excavation of the ponds, the purchase of equipment, and the installation of aerators, feeders, and silos. The transformation of the property was driven by the help of Sicoob Confiança, which not only made the project possible with a credit line of R$ 451,000, but also provided technical guidance and ongoing support to the producer. Subsequently, the photovoltaic energy system was installed, which helped achieve the goal of making the property self-sustainable in energy terms. To further strengthen the circular economy model, the property has diversified its production with vegetables, an orchard and animal husbandry for its own consumption, taking advantage of resources and consolidating itself as an example of clean production.",
+    cooperName: "Sicoob Confiança",
+    excerpt:
+      "With R$ 451,000 in credit from Sicoob Confiança, a rural producer in Marechal Cândido Rondon (Paraná) has transformed an abandoned area into a 100% self-sustainable tilapia fish farm. The project uses solar energy to reduce energy costs to zero, integrates production with the C.Vale cooperative to guarantee sales and has become a benchmark for the circular economy, generating income and restoring the environment.",
+    categories: [
+      "fish farming",
+      "solar energy",
+      "self-sustainable",
+      "intercooperation",
+      "environmental recovery",
+    ],
+    branch: "Credit",
+    mainOds: 2,
+    asideOds: [7, 8, 12, 13, 15],
+    state: "PR",
+    objectives:
+      "The project was born with the main objective of setting up a tilapia fish farm that was totally sustainable, focusing on product quality and respect for the environment. The goal was to transform the degraded and abandoned area into a productive and self-sustaining property. The specific objectives included ensuring energy-efficient production from photovoltaics, optimizing the use of water resources through responsible management, generating jobs and income for the local community, as well as helping to strengthen the regional economy.",
+    result:
+      "With the implementation of the project, the abandoned property was completely revitalized. The space now houses organized and equipped tanks, with automated systems for feeding and oxygenation, and is 100% self-sufficient in energy thanks to the photovoltaic system. Tilapia production has grown in quality and volume, and the partnership with C.Vale has guaranteed the sale of production, including for export. The project generated direct jobs and indirect income for the entire Margarida community, involving suppliers, transporters and technicians. In addition, sustainable management practices have ensured the preservation of springs and the full use of resources, turning the farm into a benchmark for self-sustainability.",
+  },
+  {
+    id: 56,
+    title:
+      "Sicoob Metropolitano uses blockchain technology to preserve the Atlantic Forest",
+    markdownTitle:
+      "# Sicoob Metropolitano uses blockchain technology to preserve the Atlantic Forest",
+    context:
+      'Sicoob Metropolitano believes that the cooperative model is the path toward building a more just and sustainable society. With 25 years of history and more than 138,000 members in the states of Paraná and São Paulo, the cooperative has developed the innovative and pioneering "Digital Green Asset" initiative to promote the preservation of an area of Atlantic Forest using **blockchain technology**.',
+    challenge:
+      "The Serra da Bocaina National Park, although a legally protected area, did not have digital and traceable monitoring mechanisms accessible to civil society. Conservation depended exclusively on current legislation, with no tools to concretely demonstrate the positive impact of preservation. For Sicoob Metropolitano, this gap represented an opportunity to connect technological **innovation** and socio-environmental responsibility, transforming its **ESG commitment** into a tangible and educational action.",
+    development:
+      "To achieve its objectives, the cooperative has structured the initiative strategically, combining a vision of the future, partnerships and engagement. The methodology followed these steps:\n* **Identifying the opportunity:** the cooperative recognized the ecological importance of the Serra da Bocaina and the need to combine sustainability and innovation in a single project.\n* **Strategic partnership:** startup Preservaland has been selected. It specializes in transforming conservation areas into **NFTs (Non-Fungible Tokens)** that can be monitored by satellite and validated via **blockchain**.\n* **Acquisition of the asset:** Sicoob Metropolitano acquired an NFT corresponding to one hectare of native vegetation, focused exclusively on **preservation** and with the potential to capture up to 20 tons of CO₂ per year.\n* **Implementation and monitoring:** the NFT was registered as a digital asset traceable in real time, connecting the cooperative's ESG commitment to a concrete and verifiable conservation action.\n* **Engagement and communication:** the initiative was widely publicized among employees, cooperative members and the external public to reinforce the cooperative's image as an innovative and socio-environmentally responsible institution.\n\nThe cooperative mobilized its own financial resources to purchase the NFT, demonstrating its direct commitment to the ESG agenda. The project also involved its employees and cooperative members in actions to raise awareness and disseminate knowledge. The institutional partnership with Preservaland was key to guaranteeing the tracking and monitoring technology for the area.",
+    cooperName: "Sicoob Metropolitano",
+    excerpt:
+      "Sicoob Metropolitano reinforced its commitment to sustainability by acquiring an **NFT** (Non-Fungible Token) for Environmental Preservation, which represents 1 hectare of **Atlantic Forest** in the Serra da Bocaina National Park. The initiative uses **blockchain technology** to guarantee the traceability and monitoring of the area, contributing to the **protection of biodiversity**, the **mitigation of climate change** and the engagement of cooperative members and the community in the **ESG agenda**.",
+    categories: [
+      "Blockchain",
+      "sustainability",
+      "NFT",
+      "environmental preservation",
+    ],
+    branch: "Credit",
+    mainOds: 4,
+    asideOds: [9, 12, 13, 15, 17],
+    state: "PR",
+    objectives:
+      'The "Digital Green Asset" project was born with the main objective of reinforcing, in a concrete and innovative way, Sicoob Metropolitano\'s commitment to **environmental sustainability**. The initiative sought to combine **blockchain technology** with traceability to ensure the integrity of 1 hectare of preserved **Atlantic Forest**, making a direct contribution to **protecting biodiversity** and **mitigating climate change**. It is estimated that the preserved area acts as a **carbon sink**, with the capacity to sequester between 10 and 20 tons of CO₂ per year. In addition to the environmental impact, the action aims to engage employees, cooperative members and the community in the **ESG agenda**, strengthening a culture of sustainability.',
+    result:
+      "With the acquisition of the NFT, one hectare of Atlantic Forest in the Serra da Bocaina National Park now has a digital record and satellite monitoring, guaranteeing the traceability and **permanent preservation of native vegetation**. In this way, the initiative has made it possible for environmental preservation to be converted into a **digital asset**, which can generate **economic value** for landowners without the need to exploit the biome. Sicoob Metropolitano, in turn, strengthened its position as a cooperative that combines innovation and sustainability, actively engaging its members and employees in the environmental cause. For the local community, the project has brought more visibility and security to the conservation of the area.",
+  },
+  {
+    id: 57,
+    title:
+      "Sicredi Integração MT/AP/PA leads project that has planted over 145,000 trees in 12 years",
+    markdownTitle:
+      "# Sicredi Integração MT/AP/PA leads project that has planted over 145,000 trees in 12 years",
+    context:
+      "Twelve years ago, the scenario on many rural properties in Mato Grosso was worrying: springs were drying up and areas of riparian forest were being devastated to raise cattle. Many producers, for lack of information, opened up areas without knowing that they were compromising the soil, biodiversity and the very water that sustained their families and the community.",
+    challenge:
+      "Degradation was progressing silently, increasing the risk of environmental fines and water shortages. Sensitive to this reality and listening to the reports of distressed producers, the board of Sicredi Integração MT/AP/PA decided to take action, creating a project to turn concern into purpose.",
+    development:
+      "The project's strength lies in its methodology, which combines science, planning and intense community engagement, all financed entirely with the cooperative's own resources. The strategy is carried out in a well-defined cycle, starting with the registration of the landowner, who expresses the desire to restore a spring. From there, the cooperative's technical team begins an in-depth diagnosis of the area, carrying out a complete assessment of the soil, identifying the most suitable native species for the local ecosystem and planning all the necessary logistics for the reforestation action. With the technical plan in hand, the project enters its implementation phase, which is the heart of the initiative: organizing monthly planting activities. These events have become a tradition and a powerful engine for social mobilization, bringing together dozens of volunteers, including the cooperative's employees, members, young people, women and the community in general. Together, they plant the seedlings, irrigate and clean up the area, in a collective effort that strengthens bonds and environmental awareness. The work, however, doesn't end with planting. The monitoring phase is ongoing, with the areas being mapped and closely monitored to ensure the healthy development of the new forest. In this process, the landowner takes on a role of co-responsibility, committing to the physical protection of the reclaimed area and becoming a true guardian of the spring.",
+    cooperName: "Sicredi Integração MT/AP/PA",
+    excerpt:
+      'For 12 years, Sicredi Integração MT/AP/PA has been developing the "Recovering Springs" project to revitalize water sources in rural areas through reforestation and community engagement. With more than 145,000 trees planted by volunteers, the initiative recovers biodiversity, sequesters carbon and guarantees the preservation of water resources for thousands of people, transforming rural producers into protagonists of environmental conservation.',
+    categories: [
+      "Spring Recovery",
+      "Reforestation",
+      "Volunteering",
+      "Water Resources",
+    ],
+    branch: "Crédito",
+    mainOds: 6,
+    asideOds: [11, 13, 15, 17],
+    state: "MT",
+    objectives:
+      'The "Recovering Springs" project was born with the central objective of promoting the revitalization of springs through reforestation, the mobilization of volunteers and environmental education. The initiative seeks to guarantee the preservation of water resources for present and future generations, strengthen local biodiversity and contribute to mitigating climate change. In addition, the project aims to engage the community, turning producers into conservation agents and strengthening sustainable development in the regions where the cooperative operates.',
+    result:
+      "Over the course of 12 years, the project has radically transformed the landscape and mentality of the communities it serves. Previously degraded areas were restored, springs came back to life, and rural producers—who were once uninformed—became protagonists of conservation. The concrete result of this mobilization is the planting of more than 145,000 trees, which are now capable of sequestering 1,384 tons of CO₂ per year and producing enough oxygen for thousands of people. Local biodiversity has been strengthened, the soil recovered and microclimates rebalanced, ensuring greater water security and quality of life for the entire region. What was once an environmental risk is now a benchmark in socio-environmental transformation led by cooperatives.",
+  },
+  {
+    id: 58,
+    title: "Sicredi uses data to create climate risk map and protect members",
+    markdownTitle:
+      "# Sicredi uses data to create climate risk map and protect members",
+    context:
+      "Sicredi, a nationwide credit union system, already considered the management of climate risks and opportunities a priority, even before the extreme droughts and floods that marked 2024. However, the cooperative was looking to focus its efforts on increasing the organization's resilience and accelerating the transition to a low-carbon economy.",
+    challenge:
+      "The challenge was to improve the way these risks were identified and monitored. In order to evolve its strategy, Sicredi needed a new system capable of quantifying climate risks in a more precise and detailed way.",
+    development:
+      "The strategy was based on the collaborative construction of a robust tool for quantifying climate, physical and transition risks in partnership with a specialized external consultancy. The development involved multidisciplinary technical teams from the credit union, including the Risk, Sustainability, Economics, and Agribusiness teams, as well as executives and focal points from single and central cooperatives. The methodology used was geospatial and sectoral modeling based on approximately 1.3 billion climate data points and analysis of 23 different economic archetypes. With this, the system can identify up to 17 climate threats, generating a climate score for all its members, covering more than 15 million points of interest throughout Brazil. The tool includes interactive dashboards that allow you to view data by cooperative, by member and by type of threat. In addition, the system applies different climate scenarios (from SSP1-2.6 to SSP5-8.5) and projects the risks over time horizons up to 2050, offering a long-term vision for strategic planning. This methodological advance focused on risk management allows Sicredi to define its climate strategy with greater knowledge of the climate risks and opportunities to which its members are subject.",
+    cooperName: "Sicredi Confederation",
+    excerpt:
+      "Sicredi implemented a Climate Risk Quantification system, using 1.3 billion data points to generate a risk score for its members across Brazil. The tool analyzes 17 climate threats and projects scenarios through 2050, enabling the cooperative to develop more resilient products, refine its strategy, and lead the transition to a low-carbon economy within the financial cooperative sector.",
+    categories: ["climate risks", "data", "resilience", "innovation"],
+    branch: "Credit",
+    mainOds: 2,
+    asideOds: [9, 11, 13],
+    state: "BR",
+    objectives:
+      "In order to improve the identification and monitoring of climate risks, Sicredi has implemented the new Climate Risk Quantification system. The central goal of the project was to develop a tool capable of measuring physical and transition risks, generating detailed scores for each aspect of risk. The initiative sought to create a system that would allow Sicredi to define its climate strategy with in-depth knowledge of the risks and opportunities to which its members are subject. The project's main target audience is internal, including employees of the cooperatives, central offices and technical areas of the Sicredi Administrative Center (CAS) who work in the management of climate risks and opportunities. Indirectly, associates and local communities also benefit through more resilient and sustainable products, services and policies.",
+    result:
+      "The implementation of the quantification system allowed Sicredi to structure a strategic front for climate resilience, which today includes several internal areas such as Risks, Sustainability, Insurance, Credit and Sustainable Finance. This front is developing new risk management tools, such as stress tests and indicators, protection solutions, carbon neutral projects, sustainable lines and targeting crop diversification. The project represents a methodological advance in risk management within Brazilian financial cooperatives. By integrating climate science and data intelligence on a national scale, Sicredi not only strengthens its own resilience, but also positions itself as a leader in the climate transition.",
+  },
+  {
+    id: 59,
+    title:
+      "Sicredi Sementes do Sul creates program to certify carbon neutral coffee and connect producers to sustainable markets",
+    markdownTitle:
+      "# Sicredi Sementes do Sul creates program to certify carbon neutral coffee and connect producers to sustainable markets",
+    context:
+      "Sicredi Sementes do Sul, which serves more than 45,000 members in Rio Grande do Sul and Minas Gerais, has identified a growing demand for sustainable products in the coffee market. The agricultural cooperative Costas 5588, which specializes in the production of specialty coffees and is a member of Sicredi Sementes do Sul, reported that its customers were interested in purchasing coffee with the guarantee that its production was carbon neutral.",
+    challenge:
+      "Although many producers already adopt sustainable management, Sicredi Sementes do Sul realized that it could help by creating a clear path to certify their production and, consequently, make their efforts more profitable. What was missing was an opportunity to connect coffee growers with certifying partners and the market that values and pays for products with a neutral carbon footprint.",
+    development:
+      "The strategy began with a pilot stage, with the participation of the Sicredi Sementes do Sul cooperative and the Costas 5588 cooperative. The first phase of the Carbon Neutral Program saw the participation of ten members, with Sicredi Sementes do Sul establishing the connection between the coffee growers and the partners needed to make certification and the transition to more sustainable agriculture possible. To guarantee the credibility and technical rigour of the process, the cooperative has approved specialized consultancies and certifiers. These partners are responsible for applying internationally recognized methodologies, such as the GHG Protocol and IPCC factors, and for measuring the areas of Sicredi Sementes do Sul members. As a result, those who already have sustainable, carbon-neutral management are recommended to hire a specialized consultancy to measure and, consequently, certify their production as carbon neutral. The cooperative has also set up a strong pillar of technical and financial support for its members. For those who need funds to finance the process, the cooperative offers investment lines for this purpose. If the producer needs to make adjustments to his management to reduce emissions and comply with the standards, he can look for other lines of funding and investment to implement the necessary improvements. Therefore, these lines ensure that everyone has the opportunity to participate in the program and attempt certification.",
+    cooperName: "Sicredi Sementes do Sul",
+    excerpt:
+      "Sicredi Sementes do Sul has developed the Carbon Neutral Program to support its cooperative coffee growers in obtaining carbon neutral certification. The initiative connects producers to specialized certifiers and offers financing for the transition, adding value to coffee and opening doors to markets that demand more sustainable products. The pilot project has already certified the 2025 production of ten members.",
+    categories: [
+      "coffee",
+      "carbon neutral",
+      "certification",
+      "intercooperation",
+    ],
+    branch: "Credit",
+    mainOds: 2,
+    asideOds: [8, 12, 13],
+    state: "RS",
+    objectives:
+      "The Sicredi Carbon Neutral Program was born with the main objective of supporting members in the indirect monetization of carbon in their agricultural production. The goal is to connect coffee producers with partners and certifiers who award carbon neutral certification to the members' production, adding value to the product and opening up new markets. It is a non-financial solution that seeks to promote the transition to a low-carbon economy, in line with Sicredi Sementes do Sul's strategic pillar of \"Financing rural producers' transition to sustainable systems\". The program aims to encourage the adoption of responsible production that brings financial returns to producers and demonstrates the importance of cleaner production.",
+    result:
+      "Still in its initial phase, the program is already seeing its first results. The pilot stage involved ten members, who have already had all their production for 2025 certified as carbon neutral. Based on market studies, the cooperative knows that certification adds significant financial value to the product, which has encouraged more producers to engage in the transition to a low-carbon economy. The success of the program tends to demonstrate the relevance and economic viability of more responsible and cleaner production. By pointing the way to certification, Sicredi Sementes do Sul enables the indirect monetization of carbon and also strengthens the competitiveness of small and medium-sized producers.",
+  },
+  {
+    id: 60,
+    title:
+      "Coopernova uses solar energy to reduce milk production costs and strengthen family farming in the state of Mato Grosso",
+    markdownTitle:
+      "# Coopernova uses solar energy to reduce milk production costs and strengthen family farming in the state of Mato Grosso",
+    context:
+      "Founded in 1987, Terranova Mixed Agricultural Cooperative Ltd. (Coopernova) has dairy farming as its main activity. With 1,774 members, more than 65% of whom are family farmers, the cooperative faces the challenges inherent in dairy farming in the region. Producers deal with high production costs that often exceed the prices received for milk.",
+    challenge:
+      "One of the most significant bottlenecks identified by Coopernova was the cost of electricity, which is essential for milking, handling animals and cooling milk. Electricity costs accounted for between 10% and 25% of gross revenue, directly impacting producers' profitability and financial sustainability. Concerned about the reduction in the number of members due to these rising costs, the cooperative decided to look for a solution that could alleviate the economic pressure and strengthen the permanence of families in this activity.",
+    development:
+      "Coopernova's strategy was structured around a phased implementation plan, starting with the cooperative itself and then expanding the benefit to its members. The first stage, which began in 2022, consisted of setting up two solar power plants to meet the energy demand of all Coopernova's commercial, industrial and administrative units. This phase was carried out through an intercooperation with Sicredi Grandes Rios, which provided the necessary financial resources. With the positive results of the first stage, which generated a reduction of more than 80% in the cooperative's energy costs, the second phase of the project began. This phase includes the installation of two additional solar plants, now with the goal of serving member dairy farmers who use community cooling tanks. Funding for this and subsequent phases combines resources from the partnership with Sicredi Grandes Rios, Coopernova's own resources (Reserve Fund and results) and support from the National OCB's pilot program for renewable energies. The project also includes two more stages to universalize access to solar energy among the cooperative members. The third phase, planned for 2026, focuses on installing plants to serve producers with individual tanks and their homes. Finally, the fourth stage, starting in 2027, will extend the benefit to the cooperative's other members who are interested in joining the project, consolidating the energy transition on a large scale.",
+    cooperName: "Terranova Mixed Agricultural Cooperative Ltd. (Coopernova)",
+    excerpt:
+      "Coopernova, a cooperative focused on family farming and dairy production in Mato Grosso, is implementing a solar energy project to reduce the high energy costs of its dairy farmers. In partnership with Sicredi Grandes Rios, the initiative has already installed plants for the cooperative's units and is moving forward to bring clean energy to the producers' cooling tanks and homes, with the aim of saving up to 70% on costs and making the activity more sustainable.",
+    categories: ["solar energy", "cost reduction", "intercooperation"],
+    branch: "Agriculture",
+    mainOds: 7,
+    asideOds: [9, 12, 13],
+    state: "MT",
+    objectives:
+      "Coopernova's solar energy project was born with the main objective of reducing energy costs for its dairy farmer members. The goal was to provide a renewable and affordable source of energy, allowing the savings generated to be reinvested. In addition to the economic gain, the initiative aims to promote environmental sustainability by reducing the carbon footprint of dairy production. The cooperative also seeks to increase the competitiveness of its members, promote energy self-sufficiency and introduce new technologies in the field. The project also aimed to educate and train members about the importance of solar energy and how it works, encouraging sustainable practices on their properties. Finally, solar energy also supports the diversification of activities on farms, and can be used for fruit growing and raising small animals.",
+    result:
+      "Although the project is still underway, the results of the first phase already demonstrate the transformative potential of the initiative, with a reduction of more than 80% in the energy costs of Coopernova's facilities. The expectation for the phases aimed at members is to generate savings of between 60% and 70% in energy costs from the third year of participation, significantly easing the financial burden on members' dairy activities. From an environmental point of view, the project is already helping to reduce the use of diesel generators. The social and economic impact is to improve the living conditions of family farmers, as the reduction in costs tends to increase the surpluses from the activity. By offering a solution to one of the biggest bottlenecks in dairy production, Coopernova not only builds loyalty among its members, but also encourages sustainable practices throughout the production chain.",
+  },
+  {
+    id: 61,
+    title:
+      "Youth cooperative becomes a tool for inclusion in a community in Marajó",
+    markdownTitle:
+      "# Youth cooperative becomes a tool for inclusion in a community in Marajó",
+    context:
+      "Sicoob Cooesa, founded in 1994 by employees of the Legislative Assembly of the State of Pará, has expanded its operations with a strong social commitment. In the heart of Marajó Island, a region rich in natural beauty but marked by profound social vulnerabilities, the community of Santo Ezequiel Moreno lived in isolation.",
+    challenge:
+      "The local school had no internet access, limiting the opportunities and horizons of the children and teenagers. The lack of structured projects and collective spaces left children on the margins, with few prospects of breaking through the barriers imposed by distance and social exclusion. It was in this challenging scenario that an invitation came to take the methodology of the children's cooperatives to one of the most isolated territories in Brazil.",
+    development:
+      "Despite initial challenges due to the distance and lack of infrastructure, the community embraced the proposal. Sicoob Cooesa began the project by installing satellite internet in the school, ensuring that the community was connected and reducing its isolation. From this stage, a learning trail on cooperatives began, which took place over five months in nine face-to-face and online meetings. The process began with raising awareness about the cooperative model among students, parents and the community. With voluntary participation, the young people took modules on citizenship, financial education and democratic management. The participants researched local needs, planned their actions collectively and, at an assembly, officially set up the Marajoara Youth Cooperative, defining its name, logo and boards. The initiative came about thanks to a strong network of partnerships: the OCB-PA System offered educational training, the local school integrated the project into the curriculum and provided space for meetings, families supported the young people's participation, and the extractive cooperative COOPIAÇÁ provided logistical support, food and lodging for the technical teams. With the youth cooperative formalized, the young participants began practical cooking and handicraft projects, as well as the creation of a library with a playroom, which became a new learning center in the community.",
+    cooperName: "Sicoob Cooesa",
+    excerpt:
+      "In one of Brazil's most isolated regions, the island of Marajó (PA), Sicoob Cooesa promoted the creation of the Marajoara Youth Cooperative. The initiative brought satellite internet to the local school and implemented a cooperative education program for children aged 8 to 17. Today, the young people manage their own cooperative, develop local projects and transform the reality of the community.",
+    categories: [
+      "Youth cooperative",
+      "education",
+      "social inclusion",
+      "Marajó",
+    ],
+    branch: "Credit",
+    mainOds: 4,
+    asideOds: [8, 11, 17],
+    state: "PA",
+    objectives:
+      "The central aim of the project was to turn children and teenagers aged between 8 and 17 into protagonists of change in their own territory. The initiative sought to train conscious, cooperative and entrepreneurial citizens from an early age, using financial education, cooperation and appreciation of local culture as tools for social emancipation. More than an educational program, Marajoara Youth Cooperative was conceived as a bet on the future of the community. The goal was to create a pathway for young people to learn, in practice, the importance of collective action and working together to build a more sustainable future.",
+    result:
+      "The implementation of the project has transformed the community and the local school. The children and teenagers have taken over the management of the cooperative, exercising leadership, cooperating and developing projects that speak of identity, culture and the future. The library with playroom, managed by the young cooperative members themselves, has become a space for reading, learning and socializing. The Marajoara Youth Cooperative was recognized by the OCB System and the Sicoob Institute as a project that inspires, brings hope and reverberates community change.",
+  },
+  {
+    id: 62,
+    title:
+      "Cresol strengthens native bee honey production by creating Brazil's first agro-industry with SIF seal",
+    markdownTitle:
+      "# Cresol strengthens native bee honey production by creating Brazil's first agro-industry with SIF seal",
+    context:
+      "Cresol was founded in the interior of Paraná in 1995 with the aim of generating development for its members and their enterprises. Currently, the Cresol System has more than one million cooperative members and has branches in 19 Brazilian states. The municipality of Santa Rosa de Lima, in Santa Catarina, was already recognized for its tradition in agroecology and the great potential of its territory for pollination. However, the local meliponiculture chain faced structural obstacles that limited its development.",
+    challenge:
+      "Production was marked by informality, which resulted in low added value and restricted access to broader and more differentiated markets. The lack of a federal health certificate, the SIF seal, for honey and stingless bee propolis prevented them from being sold throughout the country. In addition, there was a gap in environmental education, with few practical and systematic experiences on pollinators accessible to schools and the community. This scenario threatened not only the economic sustainability of the producers, but also the ecological and educational potential of the region.",
+    development:
+      "The project was implemented in integrated phases, ensuring a complete and structured approach. It all started with a partnership between producers, the school and public authorities, with Cresol providing technical and financial support. The initiative directly benefited the associated meliponiculturists, the school community, consumers and tourists in the region. Technical qualification was an important step, which included the training of a local professional in the USA in honey analysis. The project then progressed to the regularization of the first meliproducts agroindustry with a SIF seal in the country and Cresol supported the action with a specific line of credit for the activity. The next stages focused on education, setting up the apiary at the school, and marketing the products. The mobilization of resources was diversified, combining investments from Cresol, credit from the BNDES and the support of partners such as the town hall, SENAR, universities and the producers themselves.",
+    cooperName: "Cresol Confederation",
+    excerpt:
+      "Cresol, with the support of local partners, has created a project to strengthen the production of honey from native stingless bees. The initiative combines nature conservation with income generation and environmental education in the community. The actions include the creation of the country's first agro-industry for products of this type with a SIF seal, technical training and the installation of a teaching apiary in a school.",
+    categories: ["Educação", "abelhas", "Selo SIF"],
+    branch: "Credit",
+    mainOds: 1,
+    asideOds: [2, 4, 5, 8, 13, 15, 17],
+    state: "PR",
+    objectives:
+      "To change this situation, Cresol, together with the Association of Meliponiculturists of Santa Rosa de Lima and Encostas da Serra Geral (AMESG) and other partners, has created a project focused on three fronts: environmental, economic and educational. The initiative sought to value native bees as a starting point for social and environmental innovation. The project set clear goals. Among them was the regularization of an agro-industry with the seal of the Federal Inspection System (SIF), something unprecedented in Brazil for the sector. It was also planned to train 150 people, including producers and teachers, in good honey handling and marketing practices. Other objectives included setting up an apiary with nine species of bees in a school and sending a technician for international training in the USA. The planting of 500 native plant seedlings and a Bee Festival were also planned to raise the profile of the municipality.",
+    result:
+      "The creation of the agro-industry with the SIF seal has allowed producers to sell their products formally throughout Brazil. International training in sensory analysis has helped to differentiate the region's honeys, adding value and recognizing their quality. In the field of education, the apiary at the school has become a permanent learning space for the students and the planting of native species has helped to strengthen the local ecosystem. These actions culminated in the first Bee Festival, consolidating the city as a reference on the subject.",
+  },
+  {
+    id: 63,
+    title:
+      "Cresol revolutionizes buffalo farming with sustainable management and technical assistance",
+    markdownTitle:
+      "# Cresol revolutionizes buffalo farming with sustainable management and technical assistance",
+    context:
+      "Cresol was founded in 1995 in the interior of Paraná and focuses on the development of its more than 1 million members and the communities where it operates. The financial institution has 59 cooperatives spread across 19 Brazilian states. It is with this philosophy that Cresol has identified an opportunity for impact in the Ribeira Valley, in Paraná. The region has one of the lowest Human Development Indexes (HDI) in the state and a mountainous terrain that limits agriculture.",
+    challenge:
+      "Buffalo farming has become one of the main sources of income for small producers. However, the activity was conducted in an extractive manner, with little or no technical support. The lack of knowledge about proper management resulted in outdated practices that were harmful to the environment. In addition, excessive trampling by animals caused soil erosion and compaction, while uncontrolled access to rivers and springs threatened water resources. Without guidance, the producers didn't invest in soil recovery or in improving the livestock's diet, which limited productivity and income.",
+    development:
+      "The initiative was aimed at small cooperative producers and the community, with a special focus on young farmers, seeking to create opportunities for them to remain in the countryside with economic viability. The first stage consisted of selecting 26 buffalo producers interested in modernizing their farms. Technical teams then carried out diagnostic field visits and held meetings to share knowledge and define individual action plans for each property. The project was implemented through Cresol's Bem Cultivar program. The cooperative partnered with the Center for Sustainable Development and Training in Agroecology (Ceades/Sebrae). Cresol relied on other partnerships, such as the Rural Development Institute of Paraná (IDR-PR) and city halls, to strengthen the regional production chain. The organization financed the project with its own resources, while Ceades/Sebrae contributed its technical expertise, guaranteeing complete support for the producers.",
+    cooperName: "Cresol Confederation",
+    excerpt:
+      "In partnership with Ceades/Sebrae, Cresol has developed a project to support buffalo producers in Paraná. The initiative offers technical assistance to introduce sustainable practices, such as soil correction and growing capiaçu for animal feed. The aim is to increase producers' income, improve their quality of life and reduce the environmental impacts of buffalo farming.",
+    categories: ["Buffaloes", "Soil", "Technical assistance"],
+    branch: "Credit",
+    mainOds: 2,
+    asideOds: [6, 8, 12, 13, 15],
+    state: "PR",
+    objectives:
+      "Cresol created the project to bring technical assistance to a region that has historically lacked support in the buffalo chain. The main objective was to encourage the adoption of good practices that combine care for the environment with increased production and income for farmers, resulting in a better quality of life. The goals were focused on promoting a more conscious and sustainable use of natural resources. This included the introduction of soil correction techniques to recover degraded areas. The cooperative has also encouraged the cultivation of capiaçu, which serves as a food supplement for the buffalo, especially during periods of drought. In addition to guaranteeing the herd's food security, capiaçu requires fewer pesticides, reducing the environmental impact.",
+    result:
+      "After the implementation of the project, the change in the mentality and practices of the producers was remarkable. They began to adopt soil correction and recovery practices, improving pasture quality and productivity. The diversification of production and the cultivation of feed supplements have ensured adequate nutrition for the herd. Proof of this is farmer Pio Rafael Schneider, who, after receiving the guidance, built drinking troughs and an artificial pond for his 10 animals. The measure ensured the well-being of the herd and prevented the buffalo from degrading the riverbanks, in a low-cost solution with a high positive environmental impact. From a climatic point of view, the pasture management practices adopted help to fix carbon in the soil. In addition, buffaloes are highly efficient feed converters, which means they produce more with fewer resources, reducing pressure on the ecosystem.",
+  },
+  {
+    id: 64,
+    title:
+      "Cresol expands access to sanitation and drinking water with new credit line",
+    markdownTitle:
+      "# Cresol expands access to sanitation and drinking water with new credit line",
+    context:
+      "Cresol is a system of financial cooperatives with more than one million members and 11,000 employees. Guided by the desire to offer financial solutions that promote inclusion and growth, the cooperative identified a gap in its product portfolio.",
+    challenge:
+      "The organization did not yet have a credit modality created specifically to finance water and sanitation projects. This absence represented a barrier for cooperative members, especially those on lower incomes, who needed resources to carry out basic improvements. Internally, Cresol was also looking to strengthen its ESG strategy by developing a business portfolio more in line with the green economy. It was necessary to create a financial product that not only met an urgent social need, but also positioned the cooperative as an active player in the country's sustainability agenda.",
+    development:
+      "The Cresol Siga project was aimed at cooperative members and the community, with a special focus on lower-income families, those most affected by the lack of sanitation. The aim was to reach both the cooperative's members and the general population, promoting inclusion and collective well-being. To make the initiative viable, Cresol entered into a strategic partnership with Water.org, which provided the technical expertise to model the financial product. The collaboration also included the support of local entrepreneurs, town halls and associations, who helped connect the cooperative members with suppliers and spread the word about the program. The process began with the formalization of the agreement and the hiring of an exclusive coordinator for the project. Market research was then carried out to understand the real needs of the public and, based on this data, to create the credit modalities. With the product structured, the next step was to engage the internal teams, with training in all the agencies. Finally, the credit line was launched and the trained teams began to actively offer solutions to the cooperative members.",
+    cooperName: "Cresol Confederation",
+    excerpt:
+      "In 2022, Cresol partnered with the NGO Water.org to create Cresol Siga, a line of credit aimed at financing sanitation and water infrastructure. With a focus on lower-income cooperative members, the project has already reached almost 6,000 people and originated a portfolio of more than R$65 million in investments that promote health and sustainability.",
+    categories: [
+      "Saneamento Básico",
+      "Infraestrutura Hídrica",
+      "Financiamento Sustentável",
+    ],
+    branch: "Credit",
+    mainOds: 3,
+    asideOds: [6],
+    state: "PR",
+    objectives:
+      "The central objective was to develop and implement an accessible credit line to finance sustainable investments in water and sanitation infrastructure. The initiative gained momentum in 2022, with the formalization of a strategic partnership with Water.org, a US NGO with global experience in drinking water access projects. The project was designed to go beyond the financial aspect. Cresol has sought to generate a direct social impact by improving the health conditions and well-being of the families it serves, such as building septic tanks, installing rainwater harvesting systems or connecting to the sewage system. At the same time, the initiative aimed to reduce the environmental risks associated with soil and groundwater contamination. Another important goal was to engage employees, training them on the subject so that they could identify and actively support cooperative members in the search for these solutions.",
+    result:
+      "The partnership has generated significant results, as well as improving quality of life. The cooperative has consolidated a sustainable credit portfolio that exceeds R$65 million, distributed over more than 1,900 financing contracts throughout the country. The social impact is even more significant. Using Water.org's metrics, it is estimated that the initiative has already directly benefited more than 5,970 people in six Brazilian states, from the South to the Northeast.",
+  },
+  {
+    id: 65,
+    title:
+      "Recicle a Vida Cooperative raises income for waste pickers and reduces waste at Brasília landfill",
+    markdownTitle:
+      "# Recicle a Vida Cooperative raises income for waste pickers and reduces waste at Brasília landfill",
+    context:
+      "Founded in 2005 by a group of waste pickers in the Federal District, the Recicle a Vida cooperative works to raise community awareness and process recyclable waste.",
+    challenge:
+      "Before the empowerment project began in 2022, member waste pickers faced precarious conditions, with an average income below the minimum wage and no access to basic rights such as health insurance or adequate food. Many of these people, mainly single mothers, did not have decent conditions to support their families. In addition to the social issue, there was a serious environmental problem: tons of recyclable waste were sent to Brasília's landfill, wasting valuable materials and contributing to greenhouse gas emissions. The cooperative's lack of industrial infrastructure prevented it from adding value to the materials collected, especially plastics, limiting the practice of the circular economy and perpetuating a cycle of poverty and environmental degradation.",
+    development:
+      "To achieve its goals, Recicle a Vida has structured its strategy around three fronts. The first was to strengthen social inclusion and formalize the work of waste pickers, ensuring fair pay, benefits such as health insurance, daily meals, social security contributions, paid weekly rest and production bonuses. This action aimed to guarantee decent conditions and safety for the cooperative members. The second front focused on expanding operational capacity and providing specialized services. The cooperative has mobilized resources from large waste generators (companies, shopping malls, condominiums) and with the DF Urban Cleaning Service, expanding its activities in selective collection, sorting, transport and proper final disposal of materials. This expansion was crucial to increasing the volume of waste processed and the cooperative's revenue. The third front was the verticalization of plastic recycling. With funds raised through calls for tenders, support programs from the System and private investment, the cooperative acquired machinery for the industrialization of plastics. It was thus able to set up washing, milling and extrusion lines, adding value to PP (polypropylene) and HDPE (high-density polyethylene) plastics and transforming them into raw materials for industry. The cooperative members were trained for this process through a partnership with SENAC-DF.",
+    cooperName:
+      "“Recicle a Vida” Cooperative of Waste Pickers in the Federal District",
+    excerpt:
+      "Founded in 2005 by waste pickers in the Federal District, Recicle a Vida started a project that has transformed the reality of its 80 cooperative members, most of whom are women. With a focus on productive inclusion and the verticalization of plastic recycling, the cooperative has raised the average income of its members, offering health insurance and meals, as well as diverting more than 300 tons of waste per month from the landfill, becoming a model of social justice and climate action.",
+    categories: [
+      "circular economy",
+      "recycling",
+      "waste pickers",
+      "social inclusion",
+    ],
+    branch: "Workers’ Cooperative",
+    mainOds: 1,
+    asideOds: [3, 5, 8, 10, 11, 12, 13, 16],
+    state: "DF",
+    objectives:
+      "Recicle a Vida's initiative aimed to transform the social and environmental reality linked to waste management. The main focus was to promote the productive inclusion of socially vulnerable waste pickers, guaranteeing decent income generation, better working conditions and access to social protection. The project sought to value the work of these professionals, with special attention to the role of women. In the environmental pillar, the aim was to increase the volume of waste diverted from landfill, correctly disposing of it for recycling and reinserting it into the production chain. The cooperative wanted to verticalize plastic recycling in order to add value to the material and strengthen the practice of the circular economy. With this, the project sought to solve the double problem of the precariousness of the waste pickers and the waste of recyclables.",
+    result:
+      "The implementation of the strategy has generated transformative results. The average income of the 80 cooperative members jumped from less than one minimum wage to R$1,800 a month. Today, everyone has access to health insurance, three meals a day and labor rights, guaranteeing decent conditions, especially for women (68% of the workforce) who are in a vulnerable situation. In the environmental pillar, the impact was also significant. Recicle a Vida is now responsible for diverting more than 300 tons of waste a month from the Brasília landfill. These materials are sent for recycling, composting, or transformed into Refuse-Derived Fuel (RDF). The cooperative stood out as the only one in the Federal District with a plastic extrusion line, adding value to the materials and consolidating the practice of the circular economy. The project demonstrates in practice how cooperatives can be a driving force for social justice and climate action.",
+  },
+  {
+    id: 66,
+    title:
+      "With global partnerships, Sicredi enables R$ 9.6 billion for socio-environmental impact projects",
+    markdownTitle:
+      "# With global partnerships, Sicredi enables R$ 9.6 billion for socio-environmental impact projects",
+    context:
+      "Sicredi has a strong national presence, with 9 million members and more than 45,000 employees. The institution is present throughout the country through more than 2,900 branches, distributed among more than 100 cooperatives. Historically, the institution has supported renewable energy projects and small businesses. However, these actions were isolated and depended exclusively on resources from the domestic market, which limited their scale and potential impact.",
+    challenge:
+      "To expand its operations, the cooperative needed to overcome three key challenges: obtaining accessible, long-term sources of financing; strengthening its international credibility as a safe destination for purpose-driven investments; and creating robust internal mechanisms to measure the initiative's impact.",
+    development:
+      "The strategy to overcome the limitation of domestic capital was to mobilize international resources. Since 2019, Sicredi has raised R$ 9.6 billion in partnerships with dozens of multilateral banks, impact funds, and development agencies, such as IDB Invest, IFC, EIB, CAF, and JICA. In addition to capital, partnerships were crucial for the transfer of knowledge. The international partners brought technical experience for structuring green products and developing impact measurement methodologies. Internally, the process began with a diagnosis of the demands for green credit. This led to the creation of a Sustainable Finance Framework, a guide aligned with international standards (ICMA), which provided the necessary transparency for issuing securities such as Sustainable Finance Bills. The execution involved several areas of the Administrative Center, such as International Finance and Sustainability. The funds raised are passed on to the individual cooperatives, which then offer green and social credit directly to their members.",
+    cooperName: "Sicredi Confederation",
+    excerpt:
+      "Sicredi has structured a sustainable finance strategy by mobilizing R$ 9.6 billion in international resources. In partnership with dozens of multilateral financial institutions and development agencies, the initiative aims to expand green and social credit for cooperative members, promoting lines of renewable energy, sustainable agriculture and female entrepreneurship.",
+    categories: ["Green Credit", "Renewable Energy", "Financing"],
+    branch: "Credit",
+    mainOds: 2,
+    asideOds: [5, 7, 8, 10],
+    state: "BR",
+    objectives:
+      "The main objective of the project was to expand Sicredi's sustainable credit portfolio and encourage the development of new sustainable lines in the cooperatives. The initiative sought to align the institution's activities with Brazil's green transition goals and ESG principles. In addition to financing, Sicredi sought to create a funding model that could be replicated and that would allow it to absorb technical knowledge. The goal was to build solid relationships with the world's leading development finance institutions.",
+    result:
+      "The initiative transformed Sicredi's credit portfolio, consolidating the institution as one of the main financiers of distributed solar energy microgeneration in Brazil. The R$9.6 billion was used to finance thousands of projects, benefiting a wide range of individuals, rural producers and micro and small companies. It is estimated that 175,000 members have already been directly impacted by these credit lines. The concrete results show a significant environmental and social impact. The operations have already prevented the emission of more than 125,000 tons of carbon dioxide equivalent. In addition, more than 50,000 women entrepreneurs have been financed, promoting gender equality and the generation of employment and income.",
+  },
+  {
+    id: 67,
+    title:
+      "After floods in RS, Sicredi structures national climate resilience front",
+    markdownTitle:
+      "# After floods in RS, Sicredi structures national climate resilience front",
+    context:
+      "Sicredi was already treating the evolution of its climate risk management as a priority. However, the cooperative faced structural limitations in its ability to anticipate and respond to extreme events. There was a lack of systemic tools to monitor members' exposure to risks, which increased the risk of financial and social losses.",
+    challenge:
+      "There were no consolidated mechanisms to measure the Greenhouse Gas (GHG) emissions financed and no clear strategies to strengthen the sustainability of the portfolio. This scenario has highlighted the urgent need to structure a systemic and integrated approach to promote adaptation and resilience in the face of climate change.",
+    development:
+      "Sicredi's strategy combined an emergency response with long-term planning. During the crisis in Rio Grande do Sul, the institution activated its Internal Guide to Natural Disasters and implemented more than 30 immediate actions. These actions included priority call centers, extending installments and the term of policies, waiving documents and releasing spare cars. Insurance was an essential mechanism to guarantee financial protection and rapid recovery.\n\nResources were mobilized in a big way: more than R$12 billion in loan and financing installments for affected individual members were extended. Sicredi made R$ 1 billion available via Pronampe Solidário RS for municipalities in disaster and paid out R$ 74 million in indemnities, assisting more than 3,000 claims. In addition, R$92 million was earmarked for donations to communities, as well as clothing, food and hygiene items, with funds coming from the cooperatives, the Sicredi Guarantee Funds and campaigns with society. Based on this learning, Sicredi has structured its long-term climate resilience strategy around three central pillars: \n1) Risk measurement \n2) Measurement and mitigation of funded GHG emissions \n3) Creating resilient solutions for members.",
+    cooperName: "Sicredi Confederation",
+    excerpt:
+      "Sicredi responded to the floods in Rio Grande do Sul with emergency actions, offering more than R$12 billion in loans and paying out R$74 million in insurance claims. Based on this experience, the cooperative set up a national Climate Resilience front. The project aims to measure risks, mitigate financed emissions and create protection solutions, such as agricultural insurance, for its more than 9 million members.",
+    categories: ["Climate resilience", "floods", "risk management"],
+    branch: "Credit",
+    mainOds: 13,
+    asideOds: [],
+    state: "RS",
+    objectives:
+      "The project was born out of the emergency response to the floods in Rio Grande do Sul (Rio Grande do Sul) and its main objective is to structure a Climate Resilience front for the entire Sicredi System. The goal is to strengthen and anticipate the response capacity of the more than 100 cooperatives that make up the system in the face of extreme weather events. The central focus of the initiative is the protection and resilience of members. Although the initial response focused on members and communities in Rio Grande do Sul, the structuring of the new resilience front expands this work to the national level, selecting regions and audiences with high exposure to the issue.",
+    result:
+      "The main consequence of the initiative was the creation of a new internal governance to strengthen climate resilience, involving the Risk, Sustainability, Insurance, Credit and Finance areas. The cooperative has implemented new tools for managing and anticipating climatic events, projecting scenarios and raising awareness throughout the system. There has been a clear evolution in the protection strategies and products offered to members. Private agricultural insurance, for example, grew by 59% in the area protected in the first half of 2025, contrary to the market downturn. Sicredi has also begun mitigation actions and the quantification of financed GHG emissions, advancing its commitment to sustainability and building more resilient communities.",
+  },
 ];

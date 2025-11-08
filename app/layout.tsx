@@ -61,7 +61,9 @@ export default function RootLayout({
   return (
     <html className="h-full" lang="en">
       <body className={`${intro.className} antialiased h-full`}>
-        <Suspense fallback={<div>Cargando...</div>}>
+        <Suspense fallback={<div className="fixed w-full h-full flex items-center justify-center bg-[url(/bg/bg2.png)]">
+        <div>Carregando...</div>
+        </div>}>
           <BaseLayout>{children}</BaseLayout>
         </Suspense>
       </body>

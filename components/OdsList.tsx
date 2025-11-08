@@ -12,12 +12,14 @@ export const OdsList = ({
   showBorder = true,
   classNameList,
   classNameContainer,
+  justIcons = false
 }: {
   odsNumbers: number[];
   showTitle?: boolean;
   showBorder?: boolean;
   classNameList?: string;
   classNameContainer?: string;
+  justIcons?:boolean
 }) => {
   const params = useParams<Params>();
   const locale = (params.lang as keyof typeof ods) || "pt";
@@ -38,14 +40,14 @@ export const OdsList = ({
           });
           return (
             <div
-              className={`w-11 fhdv:portrait:w-16 h-11 fhdv:portrait:h-16 relative ${showBorder ? "border-4" : ""}  border-white ${classNameList}`}
+              className={`w-11 fhdv:portrait:w-16 h-11 fhdv:portrait:h-16 relative ${showBorder ? "border-3" : ""}  border-white ${classNameList}`}
               key={index}
             >
               {dataOds?.seal && (
                 <Link href={`/${locale}/ods/${dataOds.id}`}>
                   <Image
                     sizes="80vw"
-                    src={dataOds.seal}
+                    src={justIcons ? `/ods/icons/${dataOds.id}.svg`  : dataOds.seal}
                     alt={dataOds.name}
                     fill
                   />

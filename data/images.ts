@@ -267,6 +267,10 @@ export const images: Images[] = [
     gallery: ["/images/61/image_(45).png", "/images/61/image_(46).png"],
   },
   {
+    id: 62,
+    gallery: ["/images/62/dbe62a84-8441-48b4-a697-7dc8b38d4df4.jpeg"],
+  },
+  {
     id: 64,
     gallery: ["/images/64/image_(47).png", "/images/64/image_(48).png"],
   },

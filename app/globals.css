@@ -3,23 +3,23 @@
 :root {
   --background: #f4f4f4;
   --foreground: #171717;
-  --color-ods1: #e5243b;
-  --color-ods2: #dda63a;
-  --color-ods3: #4c9f38;
-  --color-ods4: #c5192d;
-  --color-ods5: #ff3a21;
-  --color-ods6: #26bde2;
-  --color-ods7: #fcc30b;
-  --color-ods8: #a21942;
-  --color-ods9: #fd6925;
-  --color-ods10: #dd1367;
-  --color-ods11: #fd9d24;
-  --color-ods12: #bf8b2e;
-  --color-ods13: #3f7e44;
-  --color-ods14: #0a97d9;
-  --color-ods15: #56c02b;
-  --color-ods16: #00689d;
-  --color-ods17: #19486a;
+  --color-ods1: #e5243b; /* Erradicação da Pobreza */
+  --color-ods2: #dda63a; /* Fome Zero e Agricultura Sustentável */
+  --color-ods3: #4c9f38; /* Saúde e Bem-Estar */
+  --color-ods4: #c5192d; /* Educação de Qualidade */
+  --color-ods5: #ff3a21; /* Igualdade de Gênero */
+  --color-ods6: #26bde2; /* Água Limpa e Saneamento */
+  --color-ods7: #fcc30b; /* Energia Acessível e Limpa */
+  --color-ods8: #a21942; /* Trabalho Decente e Crescimento Econômico */
+  --color-ods9: #fd6925; /* Indústria, Inovação e Infraestrutura */
+  --color-ods10: #dd1367; /* Redução das Desigualdades */
+  --color-ods11: #fd9d24; /* Cidades e Comunidades Sustentáveis */
+  --color-ods12: #bf8b2e; /* Consumo e Produção Responsáveis */
+  --color-ods13: #3f7e44; /* Ação Contra a Mudança Global do Clima */
+  --color-ods14: #0a97d9; /* Vida na Água */
+  --color-ods15: #56c02b; /* Vida Terrestre */
+  --color-ods16: #00689d; /* Paz, Justiça e Instituições Eficazes */
+  --color-ods17: #19486a; /* Parcerias e Meios de Implementação */
   --primary: #013544;
   --secondary: #6dc6df;
   --tertiary: #b4ce48;

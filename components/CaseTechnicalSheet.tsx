@@ -122,7 +122,7 @@ export const CaseTechnicalSheet = ({
             title={interfaceData[locale]["excerpt"].value}
             text={data.excerpt}
           />
-          <OdsList odsNumbers={data.asideOds} />
+          <OdsList odsNumbers={data.asideOds} justIcons={true}/>
         </div>
       </div>
       <div className="w-full left-0 flex gap-2 mt-5 relative">

@@ -22,13 +22,13 @@ export const ScreenSaverTransition = () => {
   const initialStateByIndex = (index: number) => {
     switch (index) {
       case 0:
-        return { left: windowWidth > 1200 ? "-150%" : "-300%" };
+        return { left: windowWidth > 1200 ? "-150%" : windowWidth > 500 ? "-300%" : "-600%" };
       case 1:
-        return { right: windowWidth > 1200 ? "-150%" : "-300%" };
+        return { right: windowWidth > 1200 ? "-150%" : windowWidth > 500 ? "-300%" : "-600%" };
       case 2:
-        return { left: windowWidth > 1200 ? "-150%" : "-300%" };
+        return { left: windowWidth > 1200 ? "-150%" : windowWidth > 500 ? "-300%" : "-600%" };
       default:
-        return { left: windowWidth > 1200 ? "-150%" : "-300%" };
+        return { left: windowWidth > 1200 ? "-150%" : windowWidth > 500 ? "-300%" : "-600%" };
     }
   };
 

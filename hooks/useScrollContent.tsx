@@ -1,5 +1,5 @@
 import { MotionValue } from "motion";
-import { Dispatch, RefObject, SetStateAction, useEffect } from "react";
+import { Dispatch, RefObject, SetStateAction, useEffect, useState } from "react";
 
 export const useScrollContent = ({
   contentRef,
@@ -16,6 +16,8 @@ export const useScrollContent = ({
   y: MotionValue<number>;
   data: unknown;
 }) => {
+      const [trackMaxMovement, setTrackMaxMovement] = useState(0)
+
   useEffect(() => {
     const contentElement = contentRef.current;
 
@@ -106,4 +108,23 @@ export const useScrollContent = ({
       setContentScrollHeight(contentRef.current.scrollHeight);
     }
   }, [data, contentRef, setContentScrollHeight]);
+  useEffect(() => {
+    const trackElement = trackRef.current;
+    const thumbElement = thumbRef.current;
+    const contentElement = contentRef.current;
+
+    if (trackElement && thumbElement && contentElement) {
+        const trackHeight = trackElement.clientHeight;
+        const thumbHeight = thumbElement.clientHeight;
+
+        // O mesmo cálculo perfeito:
+        const maxMovement = trackHeight - thumbHeight; 
+
+        setTrackMaxMovement(maxMovement);
+        // Defina a altura de scroll aqui também, se necessário:
+        setContentScrollHeight(contentElement.scrollHeight - contentElement.clientHeight); 
+    }
+  }, [data, contentRef, trackRef, thumbRef, setContentScrollHeight]);
+
+  return trackMaxMovement;
 };

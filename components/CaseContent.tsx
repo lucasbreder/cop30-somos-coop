@@ -7,6 +7,7 @@ import { interfaceData } from "@/data/interface";
 import { useParams } from "next/navigation";
 import { Params } from "@/types/Params";
 import QRCode from "react-qr-code";
+import { CaseQRCode } from "./CaseQRCode";
 
 export const CaseContent = ({ data }: { data: CaseData | CaseCompany }) => {
   const params = useParams<Params>();
@@ -40,21 +41,8 @@ export const CaseContent = ({ data }: { data: CaseData | CaseCompany }) => {
               text={data.result}
             />
           )}
-           <div className="flex gap-5 items-center">
-            <div className="border-r pr-6 border-white">
-              <QRCode size={70} bgColor="transparent" fgColor="currentColor" value="https://somoscooperativismo.coop.br/cop30/cases" />
-            </div>
-            <div className="flex flex-col gap-1">
-              <div className="font-light leading-5 flex-1">
-                {interfaceData[locale]['more'].value}
-              <span className="font-bold block">somoscooperativismo.coop.br/cop30/cases</span></div>
-            </div>
-        </div>
-        </div>
-        <div className="lg:hidden">
-          {data.gallery && <Gallery gallery={data.gallery} />}
-        </div>
-        <div className="lg:hidden">
+          <CaseQRCode />
+           <div className="lg:hidden">
           {"mainOds" in data && "asideOds" in data && (
             <OdsList
               classNameList="2xl:w-16 2xl:h-16"
@@ -65,6 +53,11 @@ export const CaseContent = ({ data }: { data: CaseData | CaseCompany }) => {
             />
           )}
         </div>
+        </div>
+        <div className="lg:hidden">
+          {data.gallery && <Gallery gallery={data.gallery} />}
+        </div>
+       
       </div>
     </div>
   );

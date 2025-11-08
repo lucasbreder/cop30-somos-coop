@@ -15,6 +15,8 @@ import { useScrollContent } from "@/hooks/useScrollContent";
 import { interfaceData } from "@/data/interface";
 import { casesCompany } from "@/data/cases-company";
 import { AnimatedCaseCompany } from "./AnimatedCaseCompany";
+import { PopUp } from "./PopUp";
+import { CaseQRCode } from "./CaseQRCode";
 
 export const CaseCompany = ({
   hasBakground = true,
@@ -227,6 +229,14 @@ export const CaseCompany = ({
             </div>
           )}
         </div>
+         <PopUp contentRef={contentRef}>
+                  <div className="flex flex-col gap-10 items-center justify-center">
+                    <div className="w-25 h-10 relative">
+                      <Image src="/logo/coop-logo1.svg" alt="" fill />
+                    </div>
+                    <CaseQRCode reverse={true}  showBorder={false} />
+                  </div>
+                </PopUp>
       </div>
     );
   }

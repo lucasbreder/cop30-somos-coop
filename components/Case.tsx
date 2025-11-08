@@ -17,6 +17,8 @@ import { useRef, useState } from "react";
 import { useMotionValue, motion } from "motion/react";
 import { useScrollContent } from "@/hooks/useScrollContent";
 import { interfaceData } from "@/data/interface";
+import { PopUp } from "./PopUp";
+import { CaseQRCode } from "./CaseQRCode";
 
 export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
   const params = useParams<Params>();
@@ -28,7 +30,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
   const y = useMotionValue(0);
   const [contentScrollHeight, setContentScrollHeight] = useState(0);
 
-  useScrollContent({
+  const trackMaxMovement = useScrollContent({
     contentRef,
     data: {},
     setContentScrollHeight,
@@ -175,23 +177,19 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
             </header>
             <div
               ref={contentRef}
-              className="basis-10/12 h-full relative flex flex-col overflow-y-scroll no-scrollbar w-10/12 md:w-full"
+              className="pb-10 basis-10/12 h-full relative flex flex-col overflow-y-scroll no-scrollbar w-10/12 md:w-full"
             >
               {dataCase && <CaseContent data={dataCase} />}
             </div>
             {contentScrollHeight > 0 && (
               <div
                 ref={trackRef}
-                className="absolute bottom-0 xl:bottom-20 fhdv:portrait:top-60 fhdv:portrait:bottom-auto right-6 md:right-0 w-4 m-auto h-7/12 md:h-8/12 fhdv:portrait:h-/12 rounded-2xl border border-white flex flex-col justify-start items-center opacity-60"
+                className="absolute bottom-0 xl:bottom-20 fhdv:portrait:top-60 fhdv:portrait:bottom-auto right-6 md:right-0 w-4 m-auto h-7/12 md:h-8/12 fhdv:portrait:h-5/12 rounded-2xl border border-white flex flex-col justify-start items-center opacity-60"
               >
                 <motion.div
                   ref={thumbRef}
                   drag="y"
-                  dragTransition={{
-                    power: 0,
-                    timeConstant: 700,
-                  }}
-                  dragConstraints={trackRef}
+                  dragConstraints={{ top: 0, bottom: trackMaxMovement }}
                   style={{ y }}
                   className="bg-white h-15 w-3 rounded-2xl cursor-grab mt-0.5"
                 />
@@ -204,6 +202,7 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
                   classNameContainer="justify-center"
                   odsNumbers={dataCase.asideOds}
                   showTitle={true}
+                  justIcons={true}
                 />
               </div>
             )}
@@ -219,6 +218,14 @@ export const Case = ({ hasBakground = true }: { hasBakground?: boolean }) => {
             </div>
           )}
         </div>
+        <PopUp contentRef={contentRef}>
+          <div className="flex flex-col gap-10 items-center justify-center">
+            <div className="w-25 h-10 relative">
+              <Image src="/logo/coop-logo1.svg" alt="" fill />
+            </div>
+            <CaseQRCode reverse={true}  showBorder={false} />
+          </div>
+        </PopUp>
       </div>
     );
   }

@@ -8,7 +8,6 @@ import { AnimatedIntroLine } from "./AnimatedIntroLine";
 import { interfaceData } from "@/data/interface";
 import { useParams } from "next/navigation";
 import { Params } from "@/types/Params";
-import AnimatedPulse from "./AnimatedMouse";
 import AnimatedMouse from "./AnimatedMouse";
 
 export const ScreenSaver = ({
