@@ -301,30 +301,29 @@ export const casesPt: Case[] = [
   },
   {
     id: 13,
-    title:
-      "Cooperativa (Fictícia) impulsiona desenvolvimento regional com inovação e impacto social",
+    title: "Coopernorte verticaliza produção e reduz pegada de carbono",
     markdownTitle:
-      "# Cooperativa (Fictícia) impulsiona desenvolvimento regional com inovação e impacto social",
+      "# Coopernorte verticaliza produção e reduz pegada de carbono",
     context:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.\n\nClass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.",
+      "Sendo uma força motriz na produção de grãos no Pará, a Coopernorte identificou um desafio estratégico para seus cooperados e para a região. Antes da implementação do Projeto Agroindústria Coopernorte, o modelo de negócio era altamente dependente da exportação de grãos como milho e arroz in natura. \n\n Essa dependência gerava baixa agregação de valor na origem, deixava os produtores mais vulneráveis às flutuações do mercado externo e criava um paradoxo: o estado produzia a matéria-prima, mas precisava 'importar' alimentos básicos de outras regiões do país. \n\nDesse modo, a logística reversa resultava em altos custos para o consumidor e em uma pegada de carbono elevada devido ao transporte de longa distância.",
     development:
-      "Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien.\n\nProin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus. Aliquam dolor. Vestibulum commodo convallis lectus. Proin non lacus. Morbi eleifend egestas auctor. Sed sed lacus at lectus sagittis egestas. Nam tortor. Nam dui erat, auctor a, dictum eget, egestas sed, ut.",
-    cooperName: "Cooperativa Fictícia de Desenvolvimento (Fictícia)",
+      "A estratégia de implementação da agroindústria foi meticulosamente construída em etapas anuais. Em 2022, a cooperativa focou em pesquisa de mercado e na absorção de conhecimento, realizando intercâmbio com cinco grandes cooperativas do Sul do Brasil (Coamo, Coopavel, Copacol, C.Vale e Lar) para aprender as melhores práticas de agroindustrialização. \n\nO ano de 2023 foi dedicado à preparação, com a captação de recursos junto ao Banco da Amazônia (BASA), capacitação de colaboradores e ampliação da frota logística, financiada pelo Banco Scania. Já em 2024, a agroindústria foi inaugurada, lançando um mix de produtos essenciais da cesta básica. \n\nO público-alvo direto são os mais de 90 cooperados e suas famílias, mas o impacto se estende a comunidades em 64 municípios do Pará e a mais de 500 crianças de escolas públicas e privadas, beneficiadas pelo Projeto Educacional Coopernorte, que foi totalmente integrado à nova realidade da cooperativa.",
+    cooperName: "Cooperativa Agroindustrial Paragominense (Coopernorte)",
     excerpt:
-      "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.",
+      "Para combater a dependência da exportação de grãos e fortalecer a economia local, a Coopernorte investiu na verticalização de sua produção com a criação de uma agroindústria. O projeto agrega valor à produção dos cooperados, garante alimentos essenciais à população de 64 municípios do Pará com preços mais justos e reduz as emissões de carbono ao substituir a logística de longa distância. A iniciativa também fortalece a segurança alimentar e se integra a projetos de educação cooperativista na região.",
     categories: [
-      "Inovação Social",
+      "Segurança alimentar",
       "Economia Local",
-      "Desenvolvimento Sustentável",
+      "Logística sustentável",
     ],
     branch: "Crédito",
-    mainOds: 17,
-    asideOds: [8, 9, 11],
-    state: "SP",
+    mainOds: 2,
+    asideOds: [8, 12, 13],
+    state: "PA",
     objectives:
-      "Fusce convallis tristique dui. Ut ornare elementum ligula. Ut egestas augue eu elit. Vestibulum id dolor in eros elementum facilisis. Praesent turpis. Fusce commodo. Vestibulum egestas nulla sed risus. Curabitur a leo sed elit porta interdum. Aliquam egestas. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.",
+      "O Projeto Agroindústria Coopernorte nasceu com o propósito de reverter esse cenário, verticalizando a produção para agregar valor localmente e reduzir a dependência da exportação. \n\nO objetivo central era claro: transformar os grãos dos cooperados em alimentos de alta qualidade, como arroz e feijão, e disponibilizá-los a um preço justo para a população paraense. Com isso, a cooperativa buscava fortalecer a economia regional, promover a sustentabilidade agrícola e reduzir os impactos ambientais associados à logística. \n\nAlém disso, a iniciativa visava ampliar o impacto do já existente Projeto Educacional Coopernorte, que leva educação alimentar e cooperativista às escolas, agora com a força de incluir produtos de origem local na alimentação das crianças.",
     result:
-      "Nam dui erat, auctor a, dictum eget, egestas sed, ut. Aliquam augue arcu, ornare quis, lacinia a, venenatis sit amet, justo. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.",
+      "Com a agroindústria em operação, a Coopernorte passou a atender 64 municípios paraenses, fortalecendo a segurança alimentar e a economia local com preços, em média, 20% abaixo dos concorrentes de outros estados. \n\nO impacto para os produtores foi direto: mais de 70% dos cooperados já iniciaram entregas para o beneficiamento industrial, o que amplia a renda e agrega valor ao produto na origem. \n\nAo mesmo tempo, o consolidado Projeto Educacional Coopernorte ganhou uma nova dimensão, passando a incluir nos kits distribuídos às crianças os alimentos industrializados pela própria cooperativa. \n\nEssa integração, portanto, reforçou a educação para um consumo consciente e demonstrou, na prática, como o ciclo do cooperativismo pode nutrir e transformar o futuro de novas gerações.",
   },
   {
     id: 14,
